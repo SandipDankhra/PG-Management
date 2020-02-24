@@ -40,7 +40,7 @@ namespace PGManagement.Api.Controllers
         [AllowAnonymousUser]
         public async Task<IActionResult> Post(AuthenticationModel authentication)
         {
-            var user = await LoginUow.Repository<vUser>().SingleOrDefaultAsync(t => t.UserName == authentication.UserName && !t.LoginBlocked);
+            var user = await LoginUow.Repository<vUser>().SingleOrDefaultAsync(t => t.Email == authentication.Email && !t.LoginBlocked);
             if (user != null && PasswordHash.VerifySignature(authentication.Password, user.Password, user.Salt))
             {
                 var token = await ApplicationTokenProvider.GetTokenAsync(user);

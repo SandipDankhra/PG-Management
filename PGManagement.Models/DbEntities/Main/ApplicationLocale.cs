@@ -8,38 +8,38 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("ApplicationLocales", Schema = "dbo")]
+    [Table("ApplicationLocales",Schema="dbo")]
     public partial class ApplicationLocale
     {
-        #region ApplicationLocaleId Annotations
+		#region ApplicationLocaleId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion ApplicationLocaleId Annotations
+		#endregion ApplicationLocaleId Annotations
 
         public int ApplicationLocaleId { get; set; }
 
-        #region LocaleCode Annotations
+		#region LocaleCode Annotations
 
         [Required]
         [MaxLength(50)]
-        #endregion LocaleCode Annotations
+		#endregion LocaleCode Annotations
 
         public string LocaleCode { get; set; }
 
-        #region LocaleName Annotations
+		#region LocaleName Annotations
 
         [Required]
         [MaxLength(300)]
-        #endregion LocaleName Annotations
+		#endregion LocaleName Annotations
 
         public string LocaleName { get; set; }
 
-        #region StatusId Annotations
+		#region StatusId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        #endregion StatusId Annotations
+		#endregion StatusId Annotations
 
         public Status StatusId { get; set; }
 
@@ -47,5 +47,5 @@ namespace PGManagement.Models.Main
         public ApplicationLocale()
         {
         }
-    }
+	}
 }

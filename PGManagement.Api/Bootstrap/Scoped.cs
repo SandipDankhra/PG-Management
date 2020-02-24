@@ -30,7 +30,10 @@ namespace PGManagement.Api.Bootstrap
 
             serviceCollection.AddScoped<ILoginContext, LoginContext>();
             serviceCollection.AddScoped<ILoginUow, LoginUow>();
+                        serviceCollection.AddScoped<IMasterContext, MasterContext>();
+            serviceCollection.AddScoped<IMasterUow, MasterUow>();
             #endregion ContextService
+
 
 
 

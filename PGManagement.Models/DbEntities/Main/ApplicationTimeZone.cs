@@ -8,38 +8,38 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("ApplicationTimeZones", Schema = "dbo")]
+    [Table("ApplicationTimeZones",Schema="dbo")]
     public partial class ApplicationTimeZone
     {
-        #region ApplicationTimeZoneId Annotations
+		#region ApplicationTimeZoneId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion ApplicationTimeZoneId Annotations
+		#endregion ApplicationTimeZoneId Annotations
 
         public int ApplicationTimeZoneId { get; set; }
 
-        #region ApplicationTimeZoneName Annotations
+		#region ApplicationTimeZoneName Annotations
 
         [Required]
         [MaxLength(100)]
-        #endregion ApplicationTimeZoneName Annotations
+		#endregion ApplicationTimeZoneName Annotations
 
         public string ApplicationTimeZoneName { get; set; }
 
-        #region Comment Annotations
+		#region Comment Annotations
 
         [Required]
         [MaxLength(200)]
-        #endregion Comment Annotations
+		#endregion Comment Annotations
 
         public string Comment { get; set; }
 
-        #region StatusId Annotations
+		#region StatusId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        #endregion StatusId Annotations
+		#endregion StatusId Annotations
 
         public Status StatusId { get; set; }
 
@@ -47,5 +47,5 @@ namespace PGManagement.Models.Main
         public ApplicationTimeZone()
         {
         }
-    }
+	}
 }

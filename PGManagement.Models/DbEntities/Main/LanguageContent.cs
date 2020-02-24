@@ -8,63 +8,63 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("LanguageContents", Schema = "dbo")]
+    [Table("LanguageContents",Schema="dbo")]
     public partial class LanguageContent
     {
-        #region LanguageContentId Annotations
+		#region LanguageContentId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion LanguageContentId Annotations
+		#endregion LanguageContentId Annotations
 
         public int LanguageContentId { get; set; }
 
-        #region LanguageContentKeyId Annotations
+		#region LanguageContentKeyId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("LanguageContentKeys", "dbo", "", "LanguageContentKeyId")]
-        #endregion LanguageContentKeyId Annotations
+        [RelationshipTableAttribue("LanguageContentKeys","dbo","","LanguageContentKeyId")]
+		#endregion LanguageContentKeyId Annotations
 
         public int LanguageContentKeyId { get; set; }
 
-        #region ContentType Annotations
+		#region ContentType Annotations
 
         [Required]
         [MaxLength(3)]
-        #endregion ContentType Annotations
+		#endregion ContentType Annotations
 
         public string ContentType { get; set; }
 
-        #region En Annotations
+		#region En Annotations
 
         [Required]
-        #endregion En Annotations
+		#endregion En Annotations
 
         public string En { get; set; }
 
 
         public string Fr { get; set; }
 
-        #region LanguageContentKey Annotations
+		#region LanguageContentKey Annotations
 
         [ForeignKey(nameof(LanguageContentKeyId))]
         [InverseProperty(nameof(PGManagement.Models.Main.LanguageContentKey.LanguageContents))]
-        #endregion LanguageContentKey Annotations
+		#endregion LanguageContentKey Annotations
 
         public virtual LanguageContentKey LanguageContentKey { get; set; }
 
-        #region ComponentLanguageContents Annotations
+		#region ComponentLanguageContents Annotations
 
         [InverseProperty("LanguageContent")]
-        #endregion ComponentLanguageContents Annotations
+		#endregion ComponentLanguageContents Annotations
 
         public virtual ICollection<ComponentLanguageContent> ComponentLanguageContents { get; set; }
 
 
         public LanguageContent()
         {
-            ComponentLanguageContents = new HashSet<ComponentLanguageContent>();
+			ComponentLanguageContents = new HashSet<ComponentLanguageContent>();
         }
-    }
+	}
 }

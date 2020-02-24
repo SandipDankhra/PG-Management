@@ -1,0 +1,11 @@
+D:\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csprojAssemblyReference.cache
+D:\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.AssemblyInfoInputs.cache
+D:\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.AssemblyInfo.cs
+D:\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.deps.json
+D:\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csproj.CopyComplete
+D:\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb

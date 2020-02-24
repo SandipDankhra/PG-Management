@@ -8,32 +8,32 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("ComponentLanguageContents", Schema = "dbo")]
+    [Table("ComponentLanguageContents",Schema="dbo")]
     public partial class ComponentLanguageContent
     {
-        #region ComponentLanguageContentId Annotations
+		#region ComponentLanguageContentId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion ComponentLanguageContentId Annotations
+		#endregion ComponentLanguageContentId Annotations
 
         public int ComponentLanguageContentId { get; set; }
 
-        #region ComponentKeyId Annotations
+		#region ComponentKeyId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("LanguageContentKeys", "dbo", "", "ComponentKeyId")]
-        #endregion ComponentKeyId Annotations
+        [RelationshipTableAttribue("LanguageContentKeys","dbo","","ComponentKeyId")]
+		#endregion ComponentKeyId Annotations
 
         public int ComponentKeyId { get; set; }
 
-        #region LanguageContentId Annotations
+		#region LanguageContentId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("LanguageContents", "dbo", "", "LanguageContentId")]
-        #endregion LanguageContentId Annotations
+        [RelationshipTableAttribue("LanguageContents","dbo","","LanguageContentId")]
+		#endregion LanguageContentId Annotations
 
         public int LanguageContentId { get; set; }
 
@@ -43,19 +43,19 @@ namespace PGManagement.Models.Main
 
         public string Fr { get; set; }
 
-        #region LanguageContentKey Annotations
+		#region LanguageContentKey Annotations
 
         [ForeignKey(nameof(ComponentKeyId))]
         [InverseProperty(nameof(PGManagement.Models.Main.LanguageContentKey.ComponentLanguageContents))]
-        #endregion LanguageContentKey Annotations
+		#endregion LanguageContentKey Annotations
 
         public virtual LanguageContentKey LanguageContentKey { get; set; }
 
-        #region LanguageContent Annotations
+		#region LanguageContent Annotations
 
         [ForeignKey(nameof(LanguageContentId))]
         [InverseProperty(nameof(PGManagement.Models.Main.LanguageContent.ComponentLanguageContents))]
-        #endregion LanguageContent Annotations
+		#endregion LanguageContent Annotations
 
         public virtual LanguageContent LanguageContent { get; set; }
 
@@ -63,5 +63,5 @@ namespace PGManagement.Models.Main
         public ComponentLanguageContent()
         {
         }
-    }
+	}
 }

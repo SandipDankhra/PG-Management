@@ -8,32 +8,32 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("RolePermissions", Schema = "dbo")]
+    [Table("RolePermissions",Schema="dbo")]
     public partial class RolePermission
     {
-        #region RolePermissionId Annotations
+		#region RolePermissionId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion RolePermissionId Annotations
+		#endregion RolePermissionId Annotations
 
         public int RolePermissionId { get; set; }
 
-        #region RoleId Annotations
+		#region RoleId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("Roles", "dbo", "", "RoleId")]
-        #endregion RoleId Annotations
+        [RelationshipTableAttribue("Roles","dbo","","RoleId")]
+		#endregion RoleId Annotations
 
         public int RoleId { get; set; }
 
-        #region ApplicationModuleId Annotations
+		#region ApplicationModuleId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("ApplicationModules", "dbo", "", "ApplicationModuleId")]
-        #endregion ApplicationModuleId Annotations
+        [RelationshipTableAttribue("ApplicationModules","dbo","","ApplicationModuleId")]
+		#endregion ApplicationModuleId Annotations
 
         public int ApplicationModuleId { get; set; }
 
@@ -49,27 +49,27 @@ namespace PGManagement.Models.Main
 
         public Nullable<bool> CanDelete { get; set; }
 
-        #region PermissionPriority Annotations
+		#region PermissionPriority Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        #endregion PermissionPriority Annotations
+		#endregion PermissionPriority Annotations
 
         public int PermissionPriority { get; set; }
 
-        #region ApplicationModule Annotations
+		#region ApplicationModule Annotations
 
         [ForeignKey(nameof(ApplicationModuleId))]
         [InverseProperty(nameof(PGManagement.Models.Main.ApplicationModule.RolePermissions))]
-        #endregion ApplicationModule Annotations
+		#endregion ApplicationModule Annotations
 
         public virtual ApplicationModule ApplicationModule { get; set; }
 
-        #region Role Annotations
+		#region Role Annotations
 
         [ForeignKey(nameof(RoleId))]
         [InverseProperty(nameof(PGManagement.Models.Main.Role.RolePermissions))]
-        #endregion Role Annotations
+		#endregion Role Annotations
 
         public virtual Role Role { get; set; }
 
@@ -77,5 +77,5 @@ namespace PGManagement.Models.Main
         public RolePermission()
         {
         }
-    }
+	}
 }

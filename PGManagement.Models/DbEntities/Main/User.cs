@@ -8,99 +8,150 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("Users", Schema = "dbo")]
+    [Table("Users",Schema="dbo")]
     public partial class User
     {
-        #region UserId Annotations
+		#region UserId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion UserId Annotations
+		#endregion UserId Annotations
 
         public int UserId { get; set; }
 
-        #region ApplicationLocaleId Annotations
+		#region FirstName Annotations
+
+        [MaxLength(50)]
+		#endregion FirstName Annotations
+
+        public string FirstName { get; set; }
+
+		#region LastName Annotations
+
+        [MaxLength(50)]
+		#endregion LastName Annotations
+
+        public string LastName { get; set; }
+
+
+        public Nullable<decimal> MobileNumber { get; set; }
+
+		#region Email Annotations
+
+        [MaxLength(50)]
+		#endregion Email Annotations
+
+        public string Email { get; set; }
+
+		#region ApplicationLocaleId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        #endregion ApplicationLocaleId Annotations
+		#endregion ApplicationLocaleId Annotations
 
         public int ApplicationLocaleId { get; set; }
 
-        #region ApplicationTimeZoneId Annotations
+		#region ApplicationTimeZoneId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        #endregion ApplicationTimeZoneId Annotations
+		#endregion ApplicationTimeZoneId Annotations
 
         public int ApplicationTimeZoneId { get; set; }
 
-        #region LanguageCode Annotations
+		#region LanguageCode Annotations
 
         [Required]
         [MaxLength(3)]
-        #endregion LanguageCode Annotations
+		#endregion LanguageCode Annotations
 
         public string LanguageCode { get; set; }
 
-        #region UserName Annotations
-
-        [Required]
-        [MaxLength(50)]
-        #endregion UserName Annotations
-
-        public string UserName { get; set; }
-
-        #region Password Annotations
+		#region Password Annotations
 
         [Required]
         [MaxLength(132)]
-        #endregion Password Annotations
+		#endregion Password Annotations
 
         public byte[] Password { get; set; }
 
-        #region Salt Annotations
+		#region Salt Annotations
 
         [Required]
         [MaxLength(140)]
-        #endregion Salt Annotations
+		#endregion Salt Annotations
 
         public byte[] Salt { get; set; }
 
-        #region LoginBlocked Annotations
+		#region LoginBlocked Annotations
 
         [Required]
-        #endregion LoginBlocked Annotations
+		#endregion LoginBlocked Annotations
 
         public bool LoginBlocked { get; set; }
 
-        #region StatusId Annotations
+		#region StatusId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        #endregion StatusId Annotations
+		#endregion StatusId Annotations
 
         public Status StatusId { get; set; }
 
-        #region ApplicationUserTokens Annotations
+
+        public Nullable<bool> CanLogin { get; set; }
+
+		#region Rentals Annotations
 
         [InverseProperty("User")]
-        #endregion ApplicationUserTokens Annotations
+		#endregion Rentals Annotations
+
+        public virtual ICollection<Rental> Rentals { get; set; }
+
+		#region ApplicationUserTokens Annotations
+
+        [InverseProperty("User")]
+		#endregion ApplicationUserTokens Annotations
 
         public virtual ICollection<ApplicationUserToken> ApplicationUserTokens { get; set; }
 
-        #region UserRoles Annotations
+		#region UserRoles Annotations
 
         [InverseProperty("User")]
-        #endregion UserRoles Annotations
+		#endregion UserRoles Annotations
 
         public virtual ICollection<UserRole> UserRoles { get; set; }
+
+		#region Employees Annotations
+
+        [InverseProperty("User")]
+		#endregion Employees Annotations
+
+        public virtual ICollection<Employee> Employees { get; set; }
+
+		#region Documents Annotations
+
+        [InverseProperty("User")]
+		#endregion Documents Annotations
+
+        public virtual ICollection<Document> Documents { get; set; }
+
+		#region Requesters Annotations
+
+        [InverseProperty("User")]
+		#endregion Requesters Annotations
+
+        public virtual ICollection<Requester> Requesters { get; set; }
 
 
         public User()
         {
-            ApplicationUserTokens = new HashSet<ApplicationUserToken>();
-            UserRoles = new HashSet<UserRole>();
+			Rentals = new HashSet<Rental>();
+			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
+			UserRoles = new HashSet<UserRole>();
+			Employees = new HashSet<Employee>();
+			Documents = new HashSet<Document>();
+			Requesters = new HashSet<Requester>();
         }
-    }
+	}
 }

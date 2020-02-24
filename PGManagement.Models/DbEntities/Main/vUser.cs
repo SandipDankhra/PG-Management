@@ -7,14 +7,14 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("vUsers", Schema = "dbo")]
+    [Table("vUsers",Schema="dbo")]
     public partial class vUser
     {
-        #region UserId Annotations
+		#region UserId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion UserId Annotations
+		#endregion UserId Annotations
 
         public int UserId { get; set; }
 
@@ -23,9 +23,6 @@ namespace PGManagement.Models.Main
 
 
         public string LanguageCode { get; set; }
-
-
-        public string UserName { get; set; }
 
 
         public byte[] Password { get; set; }
@@ -40,8 +37,11 @@ namespace PGManagement.Models.Main
         public string LocaleCode { get; set; }
 
 
+        public string Email { get; set; }
+
+
         public vUser()
         {
         }
-    }
+	}
 }

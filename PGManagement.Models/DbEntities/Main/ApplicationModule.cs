@@ -8,48 +8,48 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("ApplicationModules", Schema = "dbo")]
+    [Table("ApplicationModules",Schema="dbo")]
     public partial class ApplicationModule
     {
-        #region ApplicationModuleId Annotations
+		#region ApplicationModuleId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion ApplicationModuleId Annotations
+		#endregion ApplicationModuleId Annotations
 
         public int ApplicationModuleId { get; set; }
 
-        #region ModuleMasterId Annotations
+		#region ModuleMasterId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("ModuleMasters", "dbo", "", "ModuleMasterId")]
-        #endregion ModuleMasterId Annotations
+        [RelationshipTableAttribue("ModuleMasters","dbo","","ModuleMasterId")]
+		#endregion ModuleMasterId Annotations
 
         public int ModuleMasterId { get; set; }
 
 
         public Nullable<int> ParentApplicationModuleId { get; set; }
 
-        #region ModuleMaster Annotations
+		#region ModuleMaster Annotations
 
         [ForeignKey(nameof(ModuleMasterId))]
         [InverseProperty(nameof(PGManagement.Models.Main.ModuleMaster.ApplicationModules))]
-        #endregion ModuleMaster Annotations
+		#endregion ModuleMaster Annotations
 
         public virtual ModuleMaster ModuleMaster { get; set; }
 
-        #region RolePermissions Annotations
+		#region RolePermissions Annotations
 
         [InverseProperty("ApplicationModule")]
-        #endregion RolePermissions Annotations
+		#endregion RolePermissions Annotations
 
         public virtual ICollection<RolePermission> RolePermissions { get; set; }
 
 
         public ApplicationModule()
         {
-            RolePermissions = new HashSet<RolePermission>();
+			RolePermissions = new HashSet<RolePermission>();
         }
-    }
+	}
 }

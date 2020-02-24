@@ -1,0 +1,17 @@
+D:\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.csprojAssemblyReference.cache
+D:\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.AssemblyInfoInputs.cache
+D:\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.AssemblyInfo.cs
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Domain.deps.json
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Domain.dll
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Domain.pdb
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Infrastructure.dll
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Infrastructure.pdb
+D:\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.csproj.CopyComplete
+D:\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.dll
+D:\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.pdb

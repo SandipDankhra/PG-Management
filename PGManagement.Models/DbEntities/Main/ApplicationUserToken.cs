@@ -8,61 +8,61 @@ using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("ApplicationUserTokens", Schema = "dbo")]
+    [Table("ApplicationUserTokens",Schema="dbo")]
     public partial class ApplicationUserToken
     {
-        #region ApplicationUserTokenId Annotations
+		#region ApplicationUserTokenId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        #endregion ApplicationUserTokenId Annotations
+		#endregion ApplicationUserTokenId Annotations
 
         public int ApplicationUserTokenId { get; set; }
 
-        #region UserId Annotations
+		#region UserId Annotations
 
         [Range(1, int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("Users", "dbo", "", "UserId")]
-        #endregion UserId Annotations
+        [RelationshipTableAttribue("Users","dbo","","UserId")]
+		#endregion UserId Annotations
 
         public int UserId { get; set; }
 
-        #region SecurityKey Annotations
+		#region SecurityKey Annotations
 
         [Required]
         [MaxLength(200)]
-        #endregion SecurityKey Annotations
+		#endregion SecurityKey Annotations
 
         public string SecurityKey { get; set; }
 
-        #region JwtToken Annotations
+		#region JwtToken Annotations
 
         [Required]
-        #endregion JwtToken Annotations
+		#endregion JwtToken Annotations
 
         public string JwtToken { get; set; }
 
-        #region AudienceType Annotations
+		#region AudienceType Annotations
 
         [Required]
         [MaxLength(50)]
-        #endregion AudienceType Annotations
+		#endregion AudienceType Annotations
 
         public string AudienceType { get; set; }
 
-        #region CreatedDateTime Annotations
+		#region CreatedDateTime Annotations
 
         [Required]
-        #endregion CreatedDateTime Annotations
+		#endregion CreatedDateTime Annotations
 
         public System.DateTimeOffset CreatedDateTime { get; set; }
 
-        #region User Annotations
+		#region User Annotations
 
         [ForeignKey(nameof(UserId))]
         [InverseProperty(nameof(PGManagement.Models.Main.User.ApplicationUserTokens))]
-        #endregion User Annotations
+		#endregion User Annotations
 
         public virtual User User { get; set; }
 
@@ -70,5 +70,5 @@ namespace PGManagement.Models.Main
         public ApplicationUserToken()
         {
         }
-    }
+	}
 }
