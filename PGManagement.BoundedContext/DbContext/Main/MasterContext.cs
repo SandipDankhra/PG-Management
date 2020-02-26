@@ -8,6 +8,8 @@ using PGManagement.BoundedContext.Singleton;
 using RxWeb.Core.Data;
 using RxWeb.Core.Data.Models;
 using RxWeb.Core.Data.BoundedContext;
+using RxWeb.Core.Sanitizers.Enums;
+using RxWeb.Core.Sanitizers;
 
 namespace PGManagement.BoundedContext.Main
 {
@@ -20,12 +22,23 @@ namespace PGManagement.BoundedContext.Main
 		public DbSet<User> Users { get; set; }
 		public DbSet<Bed> Beds { get; set; }
 		public DbSet<Complaint> Complaints { get; set; }
-            #endregion DbSets
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Document> Document { get; set; }
+        public DbSet<vAvailableBed> vAvailableBeds { get; set; }
+        public DbSet<vEmployee> vEmployee { get; set; }
+		public DbSet<Employee> Employee { get; set; }
+		public DbSet<vEmployeeRecord> vEmployeeRecord { get; set; }
+        public DbSet<Requester> Requester { get; set; }
+      
+
+       
+        #endregion DbSets
+
+
 
 
 
     }
-
 
     public interface IMasterContext : IDbContext
     {

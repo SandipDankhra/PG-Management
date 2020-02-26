@@ -8,7 +8,11 @@ using RxWeb.Core;
 using PGManagement.UnitOfWork.DbEntityAudit;
 using PGManagement.BoundedContext.Main;
 using PGManagement.UnitOfWork.Main;
-#endregion Namespace
+using PGManagement.Domain.MasterModule;
+           
+            #endregion Namespace
+
+
 
 
 
@@ -32,14 +36,42 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<ILoginUow, LoginUow>();
                         serviceCollection.AddScoped<IMasterContext, MasterContext>();
             serviceCollection.AddScoped<IMasterUow, MasterUow>();
+            
             #endregion ContextService
+
+
+
 
 
 
 
             #region DomainService
 
+            
+           
+            
+         
+            
+            serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
+            
+            serviceCollection.AddScoped<IvAvailableBedDomain, vAvailableBedDomain>();
+            
+            serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
+            
+            serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
+            
+            serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
             #endregion DomainService
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

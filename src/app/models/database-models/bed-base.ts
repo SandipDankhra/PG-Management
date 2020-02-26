@@ -17,6 +17,13 @@ export class BedBase {
 //#endregion roomId Prop
 
 
+//#region bedNumber Prop
+        @range({minimumNumber:1,maximumNumber:2147483647})
+        @required()
+        bedNumber : number;
+//#endregion bedNumber Prop
+
+
 //#region bedStatus Prop
         @required()
         bedStatus : boolean;

@@ -15,7 +15,6 @@ namespace PGManagement.Models.Main
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-     
 		#endregion ComplaintId Annotations
 
         public int ComplaintId { get; set; }

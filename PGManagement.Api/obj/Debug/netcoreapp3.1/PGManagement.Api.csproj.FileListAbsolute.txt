@@ -87,3 +87,4 @@ D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\staticwebasset
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\staticwebassets\PGManagement.Api.StaticWebAssets.xml
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.dll
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.pdb
+D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.MvcApplicationPartsAssemblyInfo.cs
