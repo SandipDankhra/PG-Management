@@ -1,1 +1,1 @@
-{"Complaints":{"type":"","parent":null}}
+{"Complaints":{"type":"","parent":null},"Flats":{"type":"","parent":null},"Rooms":{"type":"","parent":null},"Beds":{"type":"","parent":null},"BookBeds":{"type":"","parent":null},"--uow":{"type":"","parent":null},"Flat":{"type":"","parent":null},"Room":{"type":"","parent":null},"Bed":{"type":"","parent":null},"BookBed":{"type":"Domain","parent":null},"vBookBed":{"type":"","parent":null},"Payment":{"type":"","parent":null},"CreateBookBed":{"type":"Domain","parent":null},"AvailableBeds":{"type":"Domain","parent":null}}

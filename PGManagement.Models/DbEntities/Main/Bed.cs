@@ -58,18 +58,10 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Requester> Requesters { get; set; }
 
-		#region BookBed Annotations
-
-        [InverseProperty("Bed")]
-		#endregion BookBed Annotations
-
-        public virtual ICollection<BookBed> BookBed { get; set; }
-
 
         public Bed()
         {
 			Requesters = new HashSet<Requester>();
-			BookBed = new HashSet<BookBed>();
         }
 	}
 }
