@@ -61,6 +61,18 @@ namespace PGManagement.Models.Main
         public System.DateTime StartDate { get; set; }
 
 
+        public int RentalId { get; set; }
+
+
+        public int UserId { get; set; }
+
+
+        public int PaymentTypeId { get; set; }
+
+
+        public int PaymentAmount { get; set; }
+
+
         public vBookBed()
         {
         }

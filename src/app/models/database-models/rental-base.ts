@@ -32,7 +32,7 @@ export class RentalBase {
 
 
 //#region isVerfied Prop
-        @required()
+        @prop()
         isVerfied : boolean;
 //#endregion isVerfied Prop
 
