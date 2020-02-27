@@ -1,7 +1,3 @@
-D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.csprojAssemblyReference.cache
-D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.AssemblyInfoInputs.cache
-D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.AssemblyInfo.cs
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\web.config
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\appsettings.json
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -81,10 +77,14 @@ D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\PGManagement.B
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\PGManagement.Infrastructure.pdb
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.csprojAssemblyReference.cache
+D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.AssemblyInfoInputs.cache
+D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.AssemblyInfo.cs
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.RazorTargetAssemblyInfo.cache
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.csproj.CopyComplete
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\staticwebassets\PGManagement.Api.StaticWebAssets.Manifest.cache
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\staticwebassets\PGManagement.Api.StaticWebAssets.xml
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.dll
 D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.pdb
-D:\project\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.MvcApplicationPartsAssemblyInfo.cs

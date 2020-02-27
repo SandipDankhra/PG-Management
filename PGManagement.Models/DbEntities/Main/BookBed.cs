@@ -23,6 +23,7 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
+        [RelationshipTableAttribue("Beds","dbo","","BedId")]
 		#endregion BedId Annotations
 
         public int BedId { get; set; }
@@ -61,6 +62,14 @@ namespace PGManagement.Models.Main
 		#endregion EndDate Annotations
 
         public System.DateTime EndDate { get; set; }
+
+		#region Bed Annotations
+
+        [ForeignKey(nameof(BedId))]
+        [InverseProperty(nameof(PGManagement.Models.Main.Bed.BookBed))]
+		#endregion Bed Annotations
+
+        public virtual Bed Bed { get; set; }
 
 		#region Payment Annotations
 

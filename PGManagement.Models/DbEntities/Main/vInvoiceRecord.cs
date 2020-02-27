@@ -7,7 +7,7 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("vInvoiceRecords",Schema="dbo")]
+    [Table("vInvoiceRecord",Schema="dbo")]
     public partial class vInvoiceRecord
     {
 
@@ -53,6 +53,9 @@ namespace PGManagement.Models.Main
 
 
         public int BedPrice { get; set; }
+
+
+        public int RentalId { get; set; }
 
 
         public vInvoiceRecord()

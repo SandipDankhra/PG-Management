@@ -75,4 +75,10 @@ export class vAvailableBedBase {
         flatNumber : string;
 //#endregion flatNumber Prop
 
+
+//#region bedNumber Prop
+        @gridColumn({visible: true, columnIndex:13, allowSorting: true, headerKey: 'bedNumber', keyColumn: false})
+        bedNumber : number;
+//#endregion bedNumber Prop
+
 }

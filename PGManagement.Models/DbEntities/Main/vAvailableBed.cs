@@ -10,29 +10,6 @@ namespace PGManagement.Models.Main
     [Table("vAvailableBeds",Schema="dbo")]
     public partial class vAvailableBed
     {
-		#region BedId Annotations
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
-		#endregion BedId Annotations
-
-        public int BedId { get; set; }
-
-
-        public int BedNumber { get; set; }
-
-
-        public bool BedStatus { get; set; }
-
-
-        public int BedPrice { get; set; }
-
-
-        public string RoomNumber { get; set; }
-
-
-        public string FlatNumber { get; set; }
-
 
         public string FlatName { get; set; }
 
@@ -42,6 +19,17 @@ namespace PGManagement.Models.Main
 
         public string locality { get; set; }
 
+		#region RoomId Annotations
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.DataAnnotations.Key]
+		#endregion RoomId Annotations
+
+        public int RoomId { get; set; }
+
+
+        public string RoomNumber { get; set; }
+
 
         public int RoomType { get; set; }
 
@@ -49,16 +37,22 @@ namespace PGManagement.Models.Main
         public string RoomSharing { get; set; }
 
 
+        public int BedId { get; set; }
+
+
+        public bool BedStatus { get; set; }
+
+
+        public int BedPrice { get; set; }
+
+
         public int FlatId { get; set; }
 
 
-        public int RoomId { get; set; }
+        public string FlatNumber { get; set; }
 
 
-        public int RoomsRoomId { get; set; }
-
-
-        public int FlatsFlatId { get; set; }
+        public int BedNumber { get; set; }
 
 
         public vAvailableBed()
