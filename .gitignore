@@ -2,7 +2,11 @@
 
 
 # IDEs and editors
-/.vs/
+/.vs
+# VS2019 and VSCode config files.
+.vscode
+.vs
+
 
 
 # IDE - VSCode
