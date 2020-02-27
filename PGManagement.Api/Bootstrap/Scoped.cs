@@ -9,7 +9,8 @@ using PGManagement.UnitOfWork.DbEntityAudit;
 using PGManagement.BoundedContext.Main;
 using PGManagement.UnitOfWork.Main;
 using PGManagement.Domain.MasterModule;
-            #endregion Namespace
+using PGManagement.Domain.UserModule;
+#endregion Namespace
 
 
 
@@ -45,10 +46,12 @@ namespace PGManagement.Api.Bootstrap
 
             
             serviceCollection.AddScoped<ICreateBookBedDomain, CreateBookBedDomain>();
-            
+            serviceCollection.AddScoped<IRolePermissionDomain, RolePermissionDomain>();
+            serviceCollection.AddScoped<IRegistrationDomain, RegistrationDomain>();
+
             #endregion DomainService
 
-            
+
         }
     }
 }
