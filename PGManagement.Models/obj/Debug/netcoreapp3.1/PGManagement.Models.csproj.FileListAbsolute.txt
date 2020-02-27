@@ -13,3 +13,11 @@ E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PG
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\New\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.csprojAssemblyReference.cache
+D:\New\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfoInputs.cache
+D:\New\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
+D:\New\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\New\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\New\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
+D:\New\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\New\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb

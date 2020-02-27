@@ -13,6 +13,7 @@ namespace PGManagement.Domain.MasterModule
         //private ChangePassword ChangePassword { get; set; }
         private User User { get; set; }
 
+
         private IPasswordHash PasswordHash { get; set; }
 
         public ChangePasswordDomain(IMasterUow uow, IPasswordHash passwordHash) {
@@ -52,18 +53,18 @@ namespace PGManagement.Domain.MasterModule
             //await Uow.CommitAsync();
             
         }
-
+        public async Task UpdateAsync(User entity)
+        {
+            await Uow.RegisterDirtyAsync(entity);
+            await Uow.CommitAsync();
+        }
 
         public HashSet<string> UpdateValidation(ChangePassword entity)
         {
             return ValidationMessages;
         }
 
-        public async Task UpdateAsync(User entity)
-        {
-            await Uow.RegisterDirtyAsync(entity);
-            await Uow.CommitAsync();
-        }
+       
 
         public HashSet<string> DeleteValidation(ChangePassword parameters)
         {

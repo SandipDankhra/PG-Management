@@ -46,17 +46,14 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<IRolePermissionDomain, RolePermissionDomain>();
             serviceCollection.AddScoped<IRegistrationDomain, RegistrationDomain>();
 
-
-
-
-            
-            
-            
-            
-            serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
             #endregion DomainService
 
 
+            serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
+
+            serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
+
+            #endregion DomainService
 
         }
     }

@@ -20,3 +20,14 @@ E:\FinalMiniProject\PG-Management\PGManagement.BoundedContext\obj\Debug\netcorea
 E:\FinalMiniProject\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csproj.CopyComplete
 E:\FinalMiniProject\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
 E:\FinalMiniProject\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\New\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csprojAssemblyReference.cache
+D:\New\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.AssemblyInfoInputs.cache
+D:\New\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.AssemblyInfo.cs
+D:\New\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\New\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\New\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.deps.json
+D:\New\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\New\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\New\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\New\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\New\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csproj.CopyComplete
