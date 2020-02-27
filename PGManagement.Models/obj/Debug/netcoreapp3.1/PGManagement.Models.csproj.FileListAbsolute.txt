@@ -1,11 +1,3 @@
-D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.csprojAssemblyReference.cache
-D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfoInputs.cache
-D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
-D:\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
-D:\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
-D:\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
-D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll
-D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.pdb
 E:\FinalMiniProject\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
 E:\FinalMiniProject\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
 E:\FinalMiniProject\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
@@ -14,3 +6,10 @@ E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PG
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfoInputs.cache
+D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
+D:\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
+D:\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.pdb

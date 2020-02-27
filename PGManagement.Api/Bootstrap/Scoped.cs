@@ -8,6 +8,8 @@ using RxWeb.Core;
 using PGManagement.UnitOfWork.DbEntityAudit;
 using PGManagement.BoundedContext.Main;
 using PGManagement.UnitOfWork.Main;
+using PGManagement.Domain.MasterModule;
+using PGManagement.Domain.UserModule;
 #endregion Namespace
 
 
@@ -44,13 +46,8 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<IRolePermissionDomain, RolePermissionDomain>();
             serviceCollection.AddScoped<IRegistrationDomain, RegistrationDomain>();
 
-            #endregion DomainService
+            
 
-
-            
-            
-            
-            
             serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
             #endregion DomainService
 

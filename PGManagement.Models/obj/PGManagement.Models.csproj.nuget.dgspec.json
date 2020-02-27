@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {}
+    "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {}
   },
   "projects": {
-    "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+    "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+        "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
         "projectName": "PGManagement.Models",
-        "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+        "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
         "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-        "outputPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\obj\\",
+        "outputPath": "D:\\project\\PG-Management\\PGManagement.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
