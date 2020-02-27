@@ -93,4 +93,28 @@ export class vBookBedBase {
         startDate : any;
 //#endregion startDate Prop
 
+
+//#region rentalId Prop
+        @gridColumn({visible: true, columnIndex:16, allowSorting: true, headerKey: 'rentalId', keyColumn: false})
+        rentalId : number;
+//#endregion rentalId Prop
+
+
+//#region userId Prop
+        @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'userId', keyColumn: false})
+        userId : number;
+//#endregion userId Prop
+
+
+//#region paymentTypeId Prop
+        @gridColumn({visible: true, columnIndex:18, allowSorting: true, headerKey: 'paymentTypeId', keyColumn: false})
+        paymentTypeId : number;
+//#endregion paymentTypeId Prop
+
+
+//#region paymentAmount Prop
+        @gridColumn({visible: true, columnIndex:19, allowSorting: true, headerKey: 'paymentAmount', keyColumn: false})
+        paymentAmount : number;
+//#endregion paymentAmount Prop
+
 }

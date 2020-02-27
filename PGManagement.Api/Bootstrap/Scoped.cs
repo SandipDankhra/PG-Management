@@ -8,9 +8,9 @@ using RxWeb.Core;
 using PGManagement.UnitOfWork.DbEntityAudit;
 using PGManagement.BoundedContext.Main;
 using PGManagement.UnitOfWork.Main;
-using PGManagement.Domain.UserModule;
 using PGManagement.Domain.MasterModule;
             #endregion Namespace
+
 
 
 
@@ -34,28 +34,21 @@ namespace PGManagement.Api.Bootstrap
 
             serviceCollection.AddScoped<ILoginContext, LoginContext>();
             serviceCollection.AddScoped<ILoginUow, LoginUow>();
-                        serviceCollection.AddScoped<IMasterContext, MasterContext>();
+            serviceCollection.AddScoped<IMasterContext, MasterContext>();
             serviceCollection.AddScoped<IMasterUow, MasterUow>();
-                        serviceCollection.AddScoped<IUserContext, UserContext>();
+
+                       
             serviceCollection.AddScoped<IUserUow, UserUow>();
             #endregion ContextService
-
-
-
-
 
             #region DomainService
 
             
-            serviceCollection.AddScoped<IRegistrationDomain, RegistrationDomain>();
+            serviceCollection.AddScoped<ICreateBookBedDomain, CreateBookBedDomain>();
             
-            serviceCollection.AddScoped<IForgotPasswordDomain, ForgotPasswordDomain>();
-            
-            serviceCollection.AddScoped<IRolePermissionDomain, RolePermissionDomain>();
             #endregion DomainService
 
-
-
+            
         }
     }
 }
