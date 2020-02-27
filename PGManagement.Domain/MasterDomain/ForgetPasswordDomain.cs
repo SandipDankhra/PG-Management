@@ -28,6 +28,7 @@ namespace PGManagement.Domain.MasterModule
                 var otpNumber = rand.Next(1000, 9999);
                 Authentication Authentication = new Authentication() { UserId = mobileValidate.UserId, Otp= otpNumber };
                 await Uow.RegisterNewAsync<Authentication>(Authentication);
+                await Uow.CommitAsync();
                 await Task.FromResult("Successfull");
                 return true;
             }
@@ -53,7 +54,7 @@ namespace PGManagement.Domain.MasterModule
         }
         public async Task AddAsync(Authentication parameter)
         {
-            var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp == parameter.Otp && t.UserId == parameter.UserId);
+            var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp== parameter.Otp && t.UserId == parameter.UserId);
             if (otpvalid != null)
             {
                 await this.UpdateAsync(otpvalid);

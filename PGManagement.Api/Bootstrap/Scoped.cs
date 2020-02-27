@@ -46,6 +46,8 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<IRolePermissionDomain, RolePermissionDomain>();
             serviceCollection.AddScoped<IRegistrationDomain, RegistrationDomain>();
 
+            #endregion DomainService
+
 
             serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
 
