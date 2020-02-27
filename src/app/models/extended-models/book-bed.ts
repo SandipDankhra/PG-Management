@@ -10,8 +10,9 @@ export class BookBed extends BookBedBase
 
 
 //#region Generated Reference Properties
+
 //#region bed Prop
-bed : BedBase;
+        bed : BedBase;
 //#endregion bed Prop
 //#region payment Prop
 payment : PaymentBase;
@@ -21,11 +22,6 @@ rental : RentalBase;
 //#endregion rental Prop
 
 //#endregion Generated Reference Properties
-
-
-
-
-
 
 
 

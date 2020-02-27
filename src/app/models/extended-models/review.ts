@@ -32,9 +32,4 @@ rental : RentalBase;
 
 
 
-
-
-
-
-
 }

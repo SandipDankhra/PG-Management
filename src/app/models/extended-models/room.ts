@@ -36,9 +36,4 @@ beds : BedBase[];
 
 
 
-
-
-
-
-
 }
