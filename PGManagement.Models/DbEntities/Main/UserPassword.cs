@@ -8,6 +8,6 @@ namespace PGManagement.Models.Main
     public partial class User
     {
         [NotMapped]
-        public string UserPassword { get; set; }
+        public string userPassword { get; set; }
     }
 }

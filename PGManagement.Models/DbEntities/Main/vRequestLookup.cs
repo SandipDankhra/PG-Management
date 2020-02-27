@@ -7,31 +7,55 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("vRequestLookup",Schema="dbo")]
+    [Table("vRequestLookups",Schema="dbo")]
     public partial class vRequestLookup
     {
 
-        public string locality { get; set; }
+        public string Expr11 { get; set; }
 
 
-        public string FlatNumber { get; set; }
+        public string Expr12 { get; set; }
 
-		#region RoomType Annotations
+		#region Expr6 Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-		#endregion RoomType Annotations
+		#endregion Expr6 Annotations
 
-        public int RoomType { get; set; }
-
-
-        public string RoomSharing { get; set; }
+        public int Expr6 { get; set; }
 
 
-        public int BedId { get; set; }
+        public string Expr7 { get; set; }
 
 
-        public bool BedStatus { get; set; }
+        public int Expr1 { get; set; }
+
+
+        public bool Expr2 { get; set; }
+
+
+        public string Expr8 { get; set; }
+
+
+        public string Expr13 { get; set; }
+
+
+        public string Expr14 { get; set; }
+
+
+        public int Expr3 { get; set; }
+
+
+        public int Expr4 { get; set; }
+
+
+        public int Expr5 { get; set; }
+
+
+        public int Expr9 { get; set; }
+
+
+        public int Expr10 { get; set; }
 
 
         public vRequestLookup()

@@ -2,6 +2,15 @@
 
 
 # IDEs and editors
+/.vs/
+
+
+# IDE - VSCode
+.vs
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+
+# IDEs and editors
 /.vs
 # VS2019 and VSCode config files.
 .vscode

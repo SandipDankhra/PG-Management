@@ -2131,10 +2131,7 @@
         },
         "runtime": {
           "bin/placeholder/PGManagement.Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "PGManagement.Infrastructure/1.0.0": {
         "type": "project",
@@ -2154,10 +2151,7 @@
         },
         "runtime": {
           "bin/placeholder/PGManagement.Infrastructure.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "PGManagement.Models/1.0.0": {
         "type": "project",

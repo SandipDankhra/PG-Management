@@ -7,7 +7,7 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("vRentalRecord",Schema="dbo")]
+    [Table("vRentalRecords",Schema="dbo")]
     public partial class vRentalRecord
     {
 
@@ -83,6 +83,9 @@ namespace PGManagement.Models.Main
 
 
         public int PaymentAmount { get; set; }
+
+
+        public int UserId { get; set; }
 
 
         public vRentalRecord()

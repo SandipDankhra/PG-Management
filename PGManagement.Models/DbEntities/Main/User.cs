@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using PGManagement.Models.ViewModels;
+
 namespace PGManagement.Models.Main
 {
     [Table("Users",Schema="dbo")]
@@ -69,17 +71,18 @@ namespace PGManagement.Models.Main
 
 		#region Password Annotations
 
-        [Required]
-        [MaxLength(132)]
+        //[Required]
+        //[MaxLength(132)]
 		#endregion Password Annotations
 
         public byte[] Password { get; set; }
 
-		#region Salt Annotations
 
-        [Required]
-        [MaxLength(140)]
-		#endregion Salt Annotations
+        #region Salt Annotations
+
+        //[Required]
+        //[MaxLength(140)]
+        #endregion Salt Annotations
 
         public byte[] Salt { get; set; }
 
@@ -122,6 +125,13 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<UserRole> UserRoles { get; set; }
 
+		#region Authentication Annotations
+
+        [InverseProperty("User")]
+		#endregion Authentication Annotations
+
+        public virtual ICollection<Authentication> Authentication { get; set; }
+
 		#region Employees Annotations
 
         [InverseProperty("User")]
@@ -142,24 +152,18 @@ namespace PGManagement.Models.Main
 		#endregion Requesters Annotations
 
         public virtual ICollection<Requester> Requesters { get; set; }
-
-		#region Auth Annotations
-
-        [InverseProperty("User")]
-		#endregion Auth Annotations
-
-        public virtual ICollection<Auth> Auth { get; set; }
-
+     
 
         public User()
         {
 			Rentals = new HashSet<Rental>();
 			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
 			UserRoles = new HashSet<UserRole>();
+			Authentication = new HashSet<Authentication>();
 			Employees = new HashSet<Employee>();
 			Documents = new HashSet<Document>();
 			Requesters = new HashSet<Requester>();
-			Auth = new HashSet<Auth>();
+            
         }
 	}
 }

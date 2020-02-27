@@ -44,12 +44,8 @@ namespace PGManagement.Models.Main
 
         public int UserId { get; set; }
 
-		#region IsVerfied Annotations
 
-        [Required]
-		#endregion IsVerfied Annotations
-
-        public bool IsVerfied { get; set; }
+        public Nullable<bool> IsVerfied { get; set; }
 
 		#region User Annotations
 

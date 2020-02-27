@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PGManagement\Api\Controllers\MasterModule\" />
+    <Folder Include="Controllers\Api\Module\" />
   </ItemGroup>
 
   <PropertyGroup>
