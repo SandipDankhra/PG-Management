@@ -2131,10 +2131,7 @@
         },
         "runtime": {
           "bin/placeholder/PGManagement.Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "PGManagement.Infrastructure/1.0.0": {
         "type": "project",
@@ -2154,10 +2151,7 @@
         },
         "runtime": {
           "bin/placeholder/PGManagement.Infrastructure.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "PGManagement.Models/1.0.0": {
         "type": "project",
@@ -7222,11 +7216,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
+      "projectUniqueName": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
       "projectName": "PGManagement.Api",
-      "projectPath": "D:\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
+      "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
       "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-      "outputPath": "D:\\project\\PG-Management\\PGManagement.Api\\obj\\",
+      "outputPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7242,20 +7236,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+            "E:\\FinalMiniProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+              "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
             },
-            "D:\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj"
+            "E:\\FinalMiniProject\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj": {
+              "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj"
             },
-            "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj"
+            "E:\\FinalMiniProject\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
+              "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj"
             },
-            "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+            "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+              "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
             },
-            "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
+            "E:\\FinalMiniProject\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
+              "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
             }
           }
         }

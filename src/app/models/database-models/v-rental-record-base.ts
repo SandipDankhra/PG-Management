@@ -141,4 +141,10 @@ export class vRentalRecordBase {
         paymentAmount : number;
 //#endregion paymentAmount Prop
 
+
+//#region userId Prop
+        @gridColumn({visible: true, columnIndex:23, allowSorting: true, headerKey: 'userId', keyColumn: false})
+        userId : number;
+//#endregion userId Prop
+
 }

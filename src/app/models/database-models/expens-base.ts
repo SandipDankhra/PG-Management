@@ -30,10 +30,10 @@ export class ExpensBase {
 //#endregion expenseDetails Prop
 
 
-//#region exapenseDate Prop
+//#region expenseDate Prop
         @required()
-        exapenseDate : Date;
-//#endregion exapenseDate Prop
+        expenseDate : Date;
+//#endregion expenseDate Prop
 
 
 //#region employeeId Prop

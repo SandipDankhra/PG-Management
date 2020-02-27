@@ -85,6 +85,9 @@ namespace PGManagement.Models.Main
         public int PaymentAmount { get; set; }
 
 
+        public int UserId { get; set; }
+
+
         public vRentalRecord()
         {
         }
