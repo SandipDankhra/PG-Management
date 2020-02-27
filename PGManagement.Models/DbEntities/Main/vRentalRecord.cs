@@ -7,7 +7,7 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("vRentalRecords",Schema="dbo")]
+    [Table("vRentalRecord",Schema="dbo")]
     public partial class vRentalRecord
     {
 

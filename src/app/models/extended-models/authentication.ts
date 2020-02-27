@@ -1,7 +1,7 @@
-import {ApplicationUserTokenBase} from '../database-models/application-user-token-base';
+import {AuthenticationBase} from '../database-models/authentication-base';
 import {UserBase} from '../database-models/user-base';
 //Generated Imports
-export class ApplicationUserToken extends ApplicationUserTokenBase 
+export class Authentication extends AuthenticationBase 
 {
 
 
@@ -9,27 +9,8 @@ export class ApplicationUserToken extends ApplicationUserTokenBase
 
 //#region Generated Reference Properties
 //#region user Prop
-user : UserBase;
+        user : UserBase;
 //#endregion user Prop
 
 //#endregion Generated Reference Properties
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -1,31 +1,11 @@
-import {MenuBase} from '../database-models/menu-base';
+import {NoticeBase} from '../database-models/notice-base';
 //Generated Imports
-export class Menu extends MenuBase 
+export class Notice extends NoticeBase 
 {
 
 
 
 
 //#region Generated Reference Properties
-
 //#endregion Generated Reference Properties
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

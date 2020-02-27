@@ -7,7 +7,7 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
-    [Table("vRequestLookups",Schema="dbo")]
+    [Table("vRequestLookup",Schema="dbo")]
     public partial class vRequestLookup
     {
 

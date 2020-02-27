@@ -81,4 +81,10 @@ export class vInvoiceRecordBase {
         bedPrice : number;
 //#endregion bedPrice Prop
 
+
+//#region rentalId Prop
+        @gridColumn({visible: true, columnIndex:13, allowSorting: true, headerKey: 'rentalId', keyColumn: false})
+        rentalId : number;
+//#endregion rentalId Prop
+
 }

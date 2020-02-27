@@ -33,8 +33,12 @@ namespace PGManagement.Models.Main
 
         public string LastName { get; set; }
 
+		#region MobileNumber Annotations
 
-        public Nullable<decimal> MobileNumber { get; set; }
+        [Required]
+		#endregion MobileNumber Annotations
+
+        public decimal MobileNumber { get; set; }
 
 		#region Email Annotations
 
@@ -98,8 +102,26 @@ namespace PGManagement.Models.Main
 
         public Status StatusId { get; set; }
 
+		#region Employees Annotations
 
-        public Nullable<bool> CanLogin { get; set; }
+        [InverseProperty("User")]
+		#endregion Employees Annotations
+
+        public virtual ICollection<Employee> Employees { get; set; }
+
+		#region Documents Annotations
+
+        [InverseProperty("User")]
+		#endregion Documents Annotations
+
+        public virtual ICollection<Document> Documents { get; set; }
+
+		#region Requesters Annotations
+
+        [InverseProperty("User")]
+		#endregion Requesters Annotations
+
+        public virtual ICollection<Requester> Requesters { get; set; }
 
 		#region Rentals Annotations
 
@@ -122,36 +144,23 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<UserRole> UserRoles { get; set; }
 
-		#region Employees Annotations
+		#region Authentication Annotations
 
         [InverseProperty("User")]
-		#endregion Employees Annotations
+		#endregion Authentication Annotations
 
-        public virtual ICollection<Employee> Employees { get; set; }
-
-		#region Documents Annotations
-
-        [InverseProperty("User")]
-		#endregion Documents Annotations
-
-        public virtual ICollection<Document> Documents { get; set; }
-
-		#region Requesters Annotations
-
-        [InverseProperty("User")]
-		#endregion Requesters Annotations
-
-        public virtual ICollection<Requester> Requesters { get; set; }
+        public virtual ICollection<Authentication> Authentication { get; set; }
 
 
         public User()
         {
-			Rentals = new HashSet<Rental>();
-			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
-			UserRoles = new HashSet<UserRole>();
 			Employees = new HashSet<Employee>();
 			Documents = new HashSet<Document>();
 			Requesters = new HashSet<Requester>();
+			Rentals = new HashSet<Rental>();
+			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
+			UserRoles = new HashSet<UserRole>();
+			Authentication = new HashSet<Authentication>();
         }
 	}
 }
