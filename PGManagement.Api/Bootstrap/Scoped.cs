@@ -8,7 +8,9 @@ using RxWeb.Core;
 using PGManagement.UnitOfWork.DbEntityAudit;
 using PGManagement.BoundedContext.Main;
 using PGManagement.UnitOfWork.Main;
-#endregion Namespace
+using PGManagement.Domain.MasterModule;
+            #endregion Namespace
+
 
 
 
@@ -39,7 +41,15 @@ namespace PGManagement.Api.Bootstrap
 
             #region DomainService
 
+            
+            
+            
+            
+            serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
             #endregion DomainService
+
+
+
         }
     }
 }

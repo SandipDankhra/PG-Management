@@ -9,7 +9,7 @@ using PGManagement.BoundedContext.SqlContext;
 namespace PGManagement.Models.Main
 {
     [Table("Expenses",Schema="dbo")]
-    public partial class Expens
+    public partial class Expense
     {
 		#region ExpenseId Annotations
 
@@ -42,12 +42,12 @@ namespace PGManagement.Models.Main
 
         public string ExpenseDetails { get; set; }
 
-		#region ExapenseDate Annotations
+		#region ExpenseDate Annotations
 
         [Required]
-		#endregion ExapenseDate Annotations
+		#endregion ExpenseDate Annotations
 
-        public System.DateTime ExapenseDate { get; set; }
+        public System.DateTime ExpenseDate { get; set; }
 
 		#region EmployeeId Annotations
 
@@ -67,7 +67,7 @@ namespace PGManagement.Models.Main
         public virtual Employee Employee { get; set; }
 
 
-        public Expens()
+        public Expense()
         {
         }
 	}

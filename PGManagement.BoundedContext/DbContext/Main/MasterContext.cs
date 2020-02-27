@@ -16,13 +16,21 @@ namespace PGManagement.BoundedContext.Main
         public MasterContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,ITenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
 
             #region DbSets
-            		public DbSet<vUser> vUsers { get; set; }
+        public DbSet<vUser> vUsers { get; set; }
 		public DbSet<User> Users { get; set; }
 		public DbSet<Bed> Beds { get; set; }
 		public DbSet<Complaint> Complaints { get; set; }
-            #endregion DbSets
 
+        public DbSet<vInvoiceRecord> vInvoiceRecords { get; set; }
 
+        public DbSet<Review> reviews { get; set; }
+
+        public DbSet<Auth> auth { get; set; }
+
+        public DbSet<Expense> expense { get; set; }
+        public DbSet<Employee> employee { get; set; }
+
+        #endregion DbSets
 
     }
 

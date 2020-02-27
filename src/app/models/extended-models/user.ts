@@ -5,6 +5,7 @@ import {UserRoleBase} from '../database-models/user-role-base';
 import {EmployeeBase} from '../database-models/employee-base';
 import {DocumentBase} from '../database-models/document-base';
 import {RequesterBase} from '../database-models/requester-base';
+import {AuthBase} from '../database-models/auth-base';
 //Generated Imports
 export class User extends UserBase 
 {
@@ -31,8 +32,14 @@ documents : DocumentBase[];
 //#region requesters Prop
 requesters : RequesterBase[];
 //#endregion requesters Prop
+//#region auth Prop
+auth : AuthBase[];
+//#endregion auth Prop
 
 //#endregion Generated Reference Properties
+
+
+
 
 
 

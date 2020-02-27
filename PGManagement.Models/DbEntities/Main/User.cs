@@ -143,6 +143,13 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Requester> Requesters { get; set; }
 
+		#region Auth Annotations
+
+        [InverseProperty("User")]
+		#endregion Auth Annotations
+
+        public virtual ICollection<Auth> Auth { get; set; }
+
 
         public User()
         {
@@ -152,6 +159,7 @@ namespace PGManagement.Models.Main
 			Employees = new HashSet<Employee>();
 			Documents = new HashSet<Document>();
 			Requesters = new HashSet<Requester>();
+			Auth = new HashSet<Auth>();
         }
 	}
 }

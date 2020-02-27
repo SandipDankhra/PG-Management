@@ -35,6 +35,13 @@ namespace PGManagement.Models.Main
 
         public int PaymentAmount { get; set; }
 
+		#region PaymentStatus Annotations
+
+        [Required]
+		#endregion PaymentStatus Annotations
+
+        public bool PaymentStatus { get; set; }
+
 		#region BookBed Annotations
 
         [InverseProperty("Payment")]

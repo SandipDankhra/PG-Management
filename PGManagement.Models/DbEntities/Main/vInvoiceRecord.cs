@@ -55,6 +55,9 @@ namespace PGManagement.Models.Main
         public int BedPrice { get; set; }
 
 
+        public int RentalId { get; set; }
+
+
         public vInvoiceRecord()
         {
         }
