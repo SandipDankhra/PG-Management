@@ -37,6 +37,4 @@ componentLanguageContents : ComponentLanguageContentBase[];
 
 
 
-
-
 }

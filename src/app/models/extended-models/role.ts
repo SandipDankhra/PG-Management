@@ -37,6 +37,4 @@ rolePermissions : RolePermissionBase[];
 
 
 
-
-
 }

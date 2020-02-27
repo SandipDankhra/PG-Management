@@ -36,6 +36,4 @@ bookBed : BookBedBase[];
 
 
 
-
-
 }

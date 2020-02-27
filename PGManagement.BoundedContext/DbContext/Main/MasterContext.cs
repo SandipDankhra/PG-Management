@@ -24,7 +24,7 @@ namespace PGManagement.BoundedContext.Main
 
         public DbSet<Review> reviews { get; set; }
 
- 
+        public DbSet<Auth> auth { get; set; }
         public DbSet<Flat> Flat { get; set; }
         public DbSet<Room> Room { get; set; }
         public DbSet<Bed> Bed { get; set; }
@@ -36,6 +36,8 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<Notice> notices { get; set; }
         public DbSet<Expense> expense { get; set; }
         public DbSet<Employee> employee { get; set; }
+        public DbSet<Authentication> authentication { get; set; }
+        #endregion DbSets
 
  
 
