@@ -9,7 +9,6 @@ D:\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagemen
 E:\FinalMiniProject\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
 E:\FinalMiniProject\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
 E:\FinalMiniProject\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
-E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.csprojAssemblyReference.cache
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfoInputs.cache
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
 E:\FinalMiniProject\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll

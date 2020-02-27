@@ -23,7 +23,7 @@ export class UserBase {
 
 
 //#region mobileNumber Prop
-        @prop()
+        @required()
         mobileNumber : number;
 //#endregion mobileNumber Prop
 
@@ -80,12 +80,6 @@ export class UserBase {
         @required()
         statusId : number;
 //#endregion statusId Prop
-
-
-//#region canLogin Prop
-        @prop()
-        canLogin : boolean;
-//#endregion canLogin Prop
 
 
 

@@ -1,4 +1,3 @@
-export {User} from './user';;
 export {ApplicationLocale} from './application-locale';;
 export {ApplicationTimeZone} from './application-time-zone';;
 export {ApplicationModule} from './application-module';;
@@ -15,6 +14,9 @@ export {RolePermission} from './role-permission';;
 export {Role} from './role';;
 export {UserRole} from './user-role';;
 export {Bed} from './bed';;
+export {Notice} from './notice';;
+export {Authentication} from './authentication';;
+export {User} from './user';;
 export {Room} from './room';;
 export {Flat} from './flat';;
 export {Complaint} from './complaint';;

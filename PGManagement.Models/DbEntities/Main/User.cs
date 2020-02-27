@@ -6,8 +6,6 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
-using PGManagement.Models.ViewModels;
-
 namespace PGManagement.Models.Main
 {
     [Table("Users",Schema="dbo")]
@@ -35,8 +33,12 @@ namespace PGManagement.Models.Main
 
         public string LastName { get; set; }
 
+		#region MobileNumber Annotations
 
-        public Nullable<decimal> MobileNumber { get; set; }
+        [Required]
+		#endregion MobileNumber Annotations
+
+        public decimal MobileNumber { get; set; }
 
 		#region Email Annotations
 
@@ -71,18 +73,17 @@ namespace PGManagement.Models.Main
 
 		#region Password Annotations
 
-        //[Required]
-        //[MaxLength(132)]
+        [Required]
+        [MaxLength(132)]
 		#endregion Password Annotations
 
         public byte[] Password { get; set; }
 
+		#region Salt Annotations
 
-        #region Salt Annotations
-
-        //[Required]
-        //[MaxLength(140)]
-        #endregion Salt Annotations
+        [Required]
+        [MaxLength(140)]
+		#endregion Salt Annotations
 
         public byte[] Salt { get; set; }
 
@@ -101,8 +102,26 @@ namespace PGManagement.Models.Main
 
         public Status StatusId { get; set; }
 
+		#region Employees Annotations
 
-        public Nullable<bool> CanLogin { get; set; }
+        [InverseProperty("User")]
+		#endregion Employees Annotations
+
+        public virtual ICollection<Employee> Employees { get; set; }
+
+		#region Documents Annotations
+
+        [InverseProperty("User")]
+		#endregion Documents Annotations
+
+        public virtual ICollection<Document> Documents { get; set; }
+
+		#region Requesters Annotations
+
+        [InverseProperty("User")]
+		#endregion Requesters Annotations
+
+        public virtual ICollection<Requester> Requesters { get; set; }
 
 		#region Rentals Annotations
 
@@ -132,38 +151,16 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Authentication> Authentication { get; set; }
 
-		#region Employees Annotations
-
-        [InverseProperty("User")]
-		#endregion Employees Annotations
-
-        public virtual ICollection<Employee> Employees { get; set; }
-
-		#region Documents Annotations
-
-        [InverseProperty("User")]
-		#endregion Documents Annotations
-
-        public virtual ICollection<Document> Documents { get; set; }
-
-		#region Requesters Annotations
-
-        [InverseProperty("User")]
-		#endregion Requesters Annotations
-
-        public virtual ICollection<Requester> Requesters { get; set; }
-     
 
         public User()
         {
+			Employees = new HashSet<Employee>();
+			Documents = new HashSet<Document>();
+			Requesters = new HashSet<Requester>();
 			Rentals = new HashSet<Rental>();
 			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
-			Employees = new HashSet<Employee>();
-			Documents = new HashSet<Document>();
-			Requesters = new HashSet<Requester>();
-            
         }
 	}
 }
