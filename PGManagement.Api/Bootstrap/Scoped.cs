@@ -14,9 +14,6 @@ using PGManagement.Domain.UserModule;
 
 
 
-
-
-
 namespace PGManagement.Api.Bootstrap
 {
     public static class ScopedExtension
@@ -51,6 +48,12 @@ namespace PGManagement.Api.Bootstrap
 
             #endregion DomainService
 
+
+            serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
+
+            serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
+
+            #endregion DomainService
 
         }
     }

@@ -71,7 +71,6 @@ namespace PGManagement.Models.Main
 
         public string LanguageCode { get; set; }
 
-
 		#region Password Annotations
 
         [Required]
