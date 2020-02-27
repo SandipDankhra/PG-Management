@@ -10,4 +10,5 @@ export class Notice extends NoticeBase
 
 //#endregion Generated Reference Properties
 
+
 }

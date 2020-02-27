@@ -26,8 +26,8 @@ namespace PGManagement.Domain.MasterModule
             {
                 Random rand = new Random();
                 var otpNumber = rand.Next(1000, 9999);
-                Auth auth = new Auth() { UserId = mobileValidate.UserId, AuthOtp = otpNumber };
-                await Uow.RegisterNewAsync<Auth>(auth);
+                Authentication Authentication = new Authentication() { UserId = mobileValidate.UserId, Otp= otpNumber };
+                await Uow.RegisterNewAsync<Authentication>(Authentication);
                 await Task.FromResult("Successfull");
                 return true;
             }
@@ -40,7 +40,7 @@ namespace PGManagement.Domain.MasterModule
         }
 
 
-        public HashSet<string> AddValidation(Auth entity)
+        public HashSet<string> AddValidation(Authentication entity)
         {
 
             return ValidationMessages;
@@ -51,9 +51,9 @@ namespace PGManagement.Domain.MasterModule
 
             throw new NotImplementedException();
         }
-        public async Task AddAsync(Auth parameter)
+        public async Task AddAsync(Authentication parameter)
         {
-            var otpvalid = await Uow.Repository<Auth>().SingleOrDefaultAsync(t => t.AuthOtp == parameter.AuthOtp && t.UserId == parameter.UserId);
+            var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp == parameter.Otp && t.UserId == parameter.UserId);
             if (otpvalid != null)
             {
                 await this.UpdateAsync(otpvalid);
@@ -61,16 +61,16 @@ namespace PGManagement.Domain.MasterModule
 
             /*Random rand = new Random();
             var num = rand.Next(1000, 9999);
-            entity.AuthOtp = num;*/
+            entity.AuthenticationOtp = num;*/
 
             /* await Uow.RegisterNewAsync(entity);
              await Uow.CommitAsync();*/
         }
 
-        public Task<object> GetBy(Auth parameters)
+        public Task<object> GetBy(Authentication parameters)
         {
 
-            /*var otpvalid=await Uow.Repository<Auth>().SingleOrDefaultAsync(t=>t.AuthOtp==parameters.AuthOtp);
+            /*var otpvalid=await Uow.Repository<Authentication>().SingleOrDefaultAsync(t=>t.AuthenticationOtp==parameters.AuthenticationOtp);
             if (otpvalid != null)
             {
                 return true;
@@ -83,7 +83,7 @@ namespace PGManagement.Domain.MasterModule
 
         }
 
-        public HashSet<string> UpdateValidation(Auth entity)
+        public HashSet<string> UpdateValidation(Authentication entity)
         {
             return ValidationMessages;
         }
@@ -91,7 +91,7 @@ namespace PGManagement.Domain.MasterModule
         public async Task UpdateAsync(User parameter)
         {
 
-            PasswordResult passwordResult = PasswordHash.Encrypt(parameter.UserPassword);
+            PasswordResult passwordResult = PasswordHash.Encrypt(parameter.userPassword);
             parameter.Password = passwordResult.Signature;
             parameter.Salt = passwordResult.Salt;
             await Uow.RegisterDirtyAsync(parameter);
@@ -100,12 +100,12 @@ namespace PGManagement.Domain.MasterModule
 
         }
 
-        public HashSet<string> DeleteValidation(Auth parameters)
+        public HashSet<string> DeleteValidation(Authentication parameters)
         {
             return ValidationMessages;
         }
 
-        public Task DeleteAsync(Auth parameters)
+        public Task DeleteAsync(Authentication parameters)
         {
             throw new NotImplementedException();
         }
@@ -118,8 +118,8 @@ namespace PGManagement.Domain.MasterModule
             {
                 Random rand = new Random();
                 var otpNumber = rand.Next(1000, 9999);
-                Auth auth = new Auth() { UserId = mobileValidate.UserId, AuthOtp = otpNumber };
-                await Uow.RegisterNewAsync<Auth>(auth);
+                Authentication Authentication = new Authentication() { UserId = mobileValidate.UserId, AuthenticationOtp = otpNumber };
+                await Uow.RegisterNewAsync<Authentication>(Authentication);
                 await Task.FromResult("Successfull");
                 return true;
             }
@@ -141,7 +141,7 @@ namespace PGManagement.Domain.MasterModule
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(Auth entity)
+        public Task UpdateAsync(Authentication entity)
         {
             throw new NotImplementedException();
         }
@@ -151,5 +151,5 @@ namespace PGManagement.Domain.MasterModule
         private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
     }
 
-    public interface IForgetPasswordDomain : ICoreDomain<Auth, User> { }
+    public interface IForgetPasswordDomain : ICoreDomain<Authentication, User> { }
 }

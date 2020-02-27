@@ -32,12 +32,12 @@ applicationUserTokens : ApplicationUserTokenBase[];
 //#region userRoles Prop
 userRoles : UserRoleBase[];
 //#endregion userRoles Prop
-
 //#region authentication Prop
-        authentication : AuthenticationBase[];
+authentication : AuthenticationBase[];
 //#endregion authentication Prop
 
 //#endregion Generated Reference Properties
+
 
 
 

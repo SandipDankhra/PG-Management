@@ -24,11 +24,5 @@ export class PaymentBase {
 //#endregion paymentAmount Prop
 
 
-//#region paymentStatus Prop
-        @required()
-        paymentStatus : boolean;
-//#endregion paymentStatus Prop
-
-
 
 }

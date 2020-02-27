@@ -10,7 +10,7 @@ namespace PGManagement.Api.Controllers.MasterModule
     [ApiController]
     [Route("api/[controller]")]
 	
-	public class ForgetPasswordController : BaseDomainController<Auth, User>
+	public class ForgetPasswordController : BaseDomainController<Authentication, User>
 
     {
         public ForgetPasswordController(IForgetPasswordDomain domain):base(domain) {}
