@@ -4,11 +4,11 @@
     "model": "PGManagement.Models",
     "context": "PGManagement.BoundedContext",
     "domain": "PGManagement.Domain",
-	"unitOfWork": "PGManagement.UnitOfWork",
+    "unitOfWork": "PGManagement.UnitOfWork",
     "infrastructure": "PGManagement.Infrastructure",
-    "azureFunctionHttp":"",
-    "portal":"",
-    "azureFunctionBackground":""
+    "azureFunctionHttp": "",
+    "portal": "PGManagement-Portal",
+    "azureFunctionBackground": ""
   },
   "path": {
     "dbConnection": {

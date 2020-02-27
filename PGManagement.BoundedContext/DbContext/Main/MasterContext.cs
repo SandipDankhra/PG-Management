@@ -32,7 +32,7 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<BookBed> BookBed { get; set; }
         public DbSet<Payment> Payment { get; set; }
        
-
+        public DbSet<vEmployee> vEmployees { get; set; }
         public DbSet<Expense> expense { get; set; }
         public DbSet<Employee> employee { get; set; }
         #endregion DbSets
