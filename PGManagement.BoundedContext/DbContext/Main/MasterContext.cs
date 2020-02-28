@@ -33,6 +33,7 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<Menu> Menus { get; set; }
         public DbSet<vEmployee> vEmployees { get; set; }
        
+   
         public DbSet<Expense> expense { get; set; }
         public DbSet<Employee> employee { get; set; }
         public DbSet<Authentication> authentication { get; set; }

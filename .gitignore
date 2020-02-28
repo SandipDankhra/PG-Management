@@ -36,6 +36,12 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+PGManagement.Api\obj\Debug\netcoreapp3.1
+PGManagement.BoundedContext\obj\Debug\netcoreapp3.1
+PGManagement.Domain\obj\Debug\netcoreapp3.1
+PGManagement.Infrastructure\obj\Debug\netcoreapp3.1
+PGManagement.Models\obj\Debug\netcoreapp3.1
+PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1
 
 # Visual Studio 2015
 .vs/
