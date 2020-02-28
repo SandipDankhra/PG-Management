@@ -7,7 +7,7 @@
 	"unitOfWork": "PGManagement.UnitOfWork",
     "infrastructure": "PGManagement.Infrastructure",
     "azureFunctionHttp":"",
-    "portal":"",
+    "portal":"PGManagement-Portal",
     "azureFunctionBackground":""
   },
   "path": {
