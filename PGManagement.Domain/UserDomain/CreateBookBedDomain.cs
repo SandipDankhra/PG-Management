@@ -21,13 +21,13 @@ namespace PGManagement.Domain.MasterModule
             DbContextManager = dbContextManager;
         }
 
-        public  Task<object> GetAsync(BookBed parameters)
+        public  Task<object> GetAsync(CreateBookBed parameters)
         {
             //return await Uow.Repository<BookBed>().AllAsync();
             throw new NotImplementedException();
         }
 
-        public  Task<object> GetBy(BookBed parameters)
+        public  Task<object> GetBy(CreateBookBed parameters)
         {
            // return await Uow.Repository<BookBed>().SingleOrDefaultAsync(a => a.BookBedId == parameters.BookBedId);
             //  return await Uow.Repository<BookBed>().FindByAsync(t=>t.BookBedId==parameters.BookBedId);
@@ -89,41 +89,12 @@ namespace PGManagement.Domain.MasterModule
             //throw new NotImplementedException();
         }
 
-        public async Task<object> GetAsync(CreateBookBed parameters)
-        {
-            return await Uow.Repository<BookBed>().AllAsync();
-        }
-
-        public async Task<object> GetBy(CreateBookBed parameters)
-        {
-            return await Uow.Repository<BookBed>().FindByAsync(a => a.RentalId == parameters.RentalId);
-            //  return await Uow.Repository<BookBed>().FindByAsync(t=>t.RentalId==parameters.RentalId);
-        }
-
-        public HashSet<string> AddValidation(BookBed entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public HashSet<string> UpdateValidation(BookBed entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task AddAsync(BookBed entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(BookBed entity)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public IMasterUow Uow { get; set; }
 
         private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
     }
 
-    public interface ICreateBookBedDomain : ICoreDomain<BookBed, CreateBookBed> { }
+    public interface ICreateBookBedDomain : ICoreDomain<CreateBookBed, CreateBookBed> { }
 }

@@ -7,13 +7,6 @@ namespace PGManagement.Models.ViewModels
 {
     public class CreateBookBed
     {
-		
-        #region BedId Annotations
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
-        #endregion BedId Annotations
-
         public int BedId { get; set; }
 
         public int RentalId { get; set; }

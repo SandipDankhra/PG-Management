@@ -11,7 +11,7 @@ namespace PGManagement.Api.Controllers.MasterModule
     [ApiController]
     [Route("api/[controller]")]
 	
-	public class CreateBookBedController : BaseDomainController<BookBed, CreateBookBed>
+	public class CreateBookBedController : BaseDomainController<CreateBookBed, CreateBookBed>
 
     {
         public CreateBookBedController(ICreateBookBedDomain domain):base(domain) {}

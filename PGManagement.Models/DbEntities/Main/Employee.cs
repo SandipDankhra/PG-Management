@@ -56,12 +56,12 @@ namespace PGManagement.Models.Main
         [InverseProperty("Employee")]
 		#endregion Expenses Annotations
 
-        public virtual ICollection<Expens> Expenses { get; set; }
+        public virtual ICollection<Expenses> Expenses { get; set; }
 
 
         public Employee()
         {
-			Expenses = new HashSet<Expens>();
+			Expenses = new HashSet<Expenses>();
         }
 	}
 }
