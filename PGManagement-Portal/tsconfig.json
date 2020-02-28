@@ -19,6 +19,10 @@
       "@app/database-models": [
         "src/app/models/database-models"
       ],
+      
+      "@app/custom-models": [
+        "src/app/models/custom-models"
+      ],
       "@app/models": [
         "src/app/models/extended-models"
       ],
@@ -34,7 +38,7 @@
       "dom"
     ],    
   },
-  
+
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
