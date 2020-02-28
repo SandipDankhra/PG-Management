@@ -10,10 +10,10 @@ namespace PGManagement.Api.Controllers.UserModule
     [ApiController]
     [Route("api/[controller]")]
 	
-	public class BedController : BaseController<Bed,Bed,Bed>
+	public class PaymentController : BaseController<Payment,Payment,Payment>
 
     {
-        public BedController(IUserUow uow):base(uow) {}
+        public PaymentController(IMasterUow uow):base(uow) {}
 
     }
 }

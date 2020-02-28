@@ -10,12 +10,12 @@ export class Room extends RoomBase
 
 //#region Generated Reference Properties
 //#region flat Prop
-        flat : FlatBase;
+flat : FlatBase;
 //#endregion flat Prop
-
 //#region beds Prop
-        beds : BedBase[];
+beds : BedBase[];
 //#endregion beds Prop
 
 //#endregion Generated Reference Properties
+
 }

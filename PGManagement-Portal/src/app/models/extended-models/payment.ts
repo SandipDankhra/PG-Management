@@ -9,8 +9,9 @@ export class Payment extends PaymentBase
 
 //#region Generated Reference Properties
 //#region bookBed Prop
-        bookBed : BookBedBase[];
+bookBed : BookBedBase[];
 //#endregion bookBed Prop
 
 //#endregion Generated Reference Properties
+
 }

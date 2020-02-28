@@ -10,12 +10,12 @@ export class Requester extends RequesterBase
 
 //#region Generated Reference Properties
 //#region bed Prop
-        bed : BedBase;
+bed : BedBase;
 //#endregion bed Prop
-
 //#region user Prop
-        user : UserBase;
+user : UserBase;
 //#endregion user Prop
 
 //#endregion Generated Reference Properties
+
 }

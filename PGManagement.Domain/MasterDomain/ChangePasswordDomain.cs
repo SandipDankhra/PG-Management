@@ -5,6 +5,7 @@ using RxWeb.Core;
 using PGManagement.UnitOfWork.Main;
 using PGManagement.Models.Main;
 using RxWeb.Core.Security.Cryptography;
+using PGManagement.Models.ViewModels;
 
 namespace PGManagement.Domain.MasterModule
 {
