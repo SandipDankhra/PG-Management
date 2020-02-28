@@ -25,6 +25,7 @@ export {Expens} from './expens';;
 export {Document} from './document';;
 export {Payment} from './payment';;
 export {Menu} from './menu';;
+export {CreateBookBed} from './custom-models/CreateBookBed';;
 export {Requester} from './requester';;
 export {Review} from './review';;
 export {vAvailableBed} from './v-available-bed';;

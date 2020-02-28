@@ -13,7 +13,7 @@ namespace PGManagement.Api.Controllers.UserModule
 	public class RoomController : BaseController<Room,Room,Room>
 
     {
-        public RoomController(IUserUow uow):base(uow) {}
+        public RoomController(IMasterUow uow):base(uow) {}
 
     }
 }

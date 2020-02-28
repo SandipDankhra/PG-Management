@@ -13,7 +13,7 @@ namespace PGManagement.Api.Controllers.UserModule
 	public class FlatController : BaseController<Flat,Flat,Flat>
 
     {
-        public FlatController(IUserUow uow):base(uow) {}
+        public FlatController(IMasterUow uow):base(uow) {}
 
     }
 }

@@ -10,12 +10,12 @@ export class Employee extends EmployeeBase
 
 //#region Generated Reference Properties
 //#region user Prop
-        user : UserBase;
+user : UserBase;
 //#endregion user Prop
-
 //#region expenses Prop
-        expenses : ExpensBase[];
+expenses : ExpensBase[];
 //#endregion expenses Prop
 
 //#endregion Generated Reference Properties
+
 }

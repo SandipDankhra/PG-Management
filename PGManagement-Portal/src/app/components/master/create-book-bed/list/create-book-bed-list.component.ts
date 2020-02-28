@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from "@angular/core"
 import { List } from "@rxweb/generics"
 import { AbstractCreateBookBed } from '../domain/abstract-create-book-bed';
-import { CreateBookBed } from "@app/models";
+import { CreateBookBed } from "@app/custom-models";
 import { Subscription } from 'rxjs';
 
 @Component({
-    selector:"app-create-book-bed-list",
-    templateUrl:'./create-book-bed-list.component.html'
+    selector: "app-create-book-bed-list",
+    templateUrl: './create-book-bed-list.component.html'
 })
 export class CreateBookBedListComponent extends AbstractCreateBookBed implements OnInit, OnDestroy {
     createBookBed: List<CreateBookBed>;

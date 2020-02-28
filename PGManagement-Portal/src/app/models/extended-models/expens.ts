@@ -9,8 +9,9 @@ export class Expens extends ExpensBase
 
 //#region Generated Reference Properties
 //#region employee Prop
-        employee : EmployeeBase;
+employee : EmployeeBase;
 //#endregion employee Prop
 
 //#endregion Generated Reference Properties
+
 }

@@ -9,8 +9,9 @@ export class Flat extends FlatBase
 
 //#region Generated Reference Properties
 //#region rooms Prop
-        rooms : RoomBase[];
+rooms : RoomBase[];
 //#endregion rooms Prop
 
 //#endregion Generated Reference Properties
+
 }

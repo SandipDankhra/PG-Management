@@ -9,8 +9,9 @@ export class Authentication extends AuthenticationBase
 
 //#region Generated Reference Properties
 //#region user Prop
-        user : UserBase;
+user : UserBase;
 //#endregion user Prop
 
 //#endregion Generated Reference Properties
+
 }

@@ -15,32 +15,27 @@ export class User extends UserBase
 
 //#region Generated Reference Properties
 //#region employees Prop
-        employees : EmployeeBase[];
+employees : EmployeeBase[];
 //#endregion employees Prop
-
 //#region documents Prop
-        documents : DocumentBase[];
+documents : DocumentBase[];
 //#endregion documents Prop
-
 //#region requesters Prop
-        requesters : RequesterBase[];
+requesters : RequesterBase[];
 //#endregion requesters Prop
-
 //#region rentals Prop
-        rentals : RentalBase[];
+rentals : RentalBase[];
 //#endregion rentals Prop
-
 //#region applicationUserTokens Prop
-        applicationUserTokens : ApplicationUserTokenBase[];
+applicationUserTokens : ApplicationUserTokenBase[];
 //#endregion applicationUserTokens Prop
-
 //#region userRoles Prop
-        userRoles : UserRoleBase[];
+userRoles : UserRoleBase[];
 //#endregion userRoles Prop
-
 //#region authentication Prop
-        authentication : AuthenticationBase[];
+authentication : AuthenticationBase[];
 //#endregion authentication Prop
 
 //#endregion Generated Reference Properties
+
 }

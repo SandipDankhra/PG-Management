@@ -146,6 +146,54 @@ var routings = [
 			path: "room",
 			loadChildren: () => import("../user/room/room.module").then(m => m.RoomModule)
 		},
+        {
+			path: "bed",
+			loadChildren: () => import("../master/bed/bed.module").then(m => m.BedModule)
+		},
+        {
+			path: "create-book-bed",
+			loadChildren: () => import("../master/create-book-bed/create-book-bed.module").then(m => m.CreateBookBedModule)
+		},
+        {
+			path: "flat",
+			loadChildren: () => import("../master/flat/flat.module").then(m => m.FlatModule)
+		},
+        {
+			path: "payment",
+			loadChildren: () => import("../master/payment/payment.module").then(m => m.PaymentModule)
+		},
+        {
+			path: "room",
+			loadChildren: () => import("../master/room/room.module").then(m => m.RoomModule)
+		},
+        {
+			path: "web-.config",
+			loadChildren: () => import("../master/web-.config/web-.config.module").then(m => m.web.configModule)
+		},
+        {
+			path: "bed",
+			loadChildren: () => import("../master/bed/bed.module").then(m => m.BedModule)
+		},
+        {
+			path: "create-book-bed",
+			loadChildren: () => import("../master/create-book-bed/create-book-bed.module").then(m => m.CreateBookBedModule)
+		},
+        {
+			path: "flat",
+			loadChildren: () => import("../master/flat/flat.module").then(m => m.FlatModule)
+		},
+        {
+			path: "payment",
+			loadChildren: () => import("../master/payment/payment.module").then(m => m.PaymentModule)
+		},
+        {
+			path: "room",
+			loadChildren: () => import("../master/room/room.module").then(m => m.RoomModule)
+		},
+        {
+			path: "web-.config",
+			loadChildren: () => import("../master/web-.config/web-.config.module").then(m => m.web.configModule)
+		},
 //generated code
 //])
 

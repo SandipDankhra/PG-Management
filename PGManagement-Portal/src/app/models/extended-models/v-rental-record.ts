@@ -7,5 +7,7 @@ export class vRentalRecord extends vRentalRecordBase
 
 
 //#region Generated Reference Properties
+
 //#endregion Generated Reference Properties
+
 }
