@@ -12,7 +12,7 @@ import { LoggedInMiddleware } from '../../domain/security/middleware/logged-in.m
 })
 export class LoginComponent extends CoreComponent implements OnInit {
     ngOnInit(): void {
-        console.log("Login hello");
+
     }
 
 }
