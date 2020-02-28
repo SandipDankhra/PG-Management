@@ -21,10 +21,10 @@ namespace PGManagement.Domain.MasterModule
             DbContextManager = dbContextManager;
         }
 
-        public  Task<object> GetAsync(CreateBookBed parameters)
+        public async Task<object> GetAsync(CreateBookBed parameters)
         {
-            //return await Uow.Repository<BookBed>().AllAsync();
-            throw new NotImplementedException();
+            return await Uow.Repository<BookBed>().AllAsync();
+            //throw new NotImplementedException();
         }
 
         public  Task<object> GetBy(CreateBookBed parameters)
