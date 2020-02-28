@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core"
 import { List } from "@rxweb/generics"
 import { AbstractRegistration } from '../domain/abstract-registration';
-import { Registration } from "@app/models";
+import { User } from '@app/models';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,11 +9,11 @@ import { Subscription } from 'rxjs';
     templateUrl:'./registration-list.component.html'
 })
 export class RegistrationListComponent extends AbstractRegistration implements OnInit, OnDestroy {
-    registration: List<Registration>;
+    registration: List<User>;
     subscription: Subscription;
 
     ngOnInit(): void {
-        this.subscription = this.get().subscribe((t: List<Registration>) => {
+        this.subscription = this.get().subscribe((t: List<User>) => {
             this.registration = t;
         })
     }
