@@ -7,7 +7,6 @@ using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
 using RxWeb.Core.Sanitizers.Enums;
-
 namespace PGManagement.Models.Main
 {
     [Table("Documents",Schema="dbo")]
