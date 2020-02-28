@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { ActivatedRoute } from '@angular/router';
 
-import { CreateBookBed } from '@app/models';
+import { CreateBookBed } from '@app/custom-models';
 
 @Component({
     selector: "app-create-book-bed-edit",

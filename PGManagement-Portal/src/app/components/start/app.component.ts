@@ -8,12 +8,12 @@ import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit{
-  
-  isShowDashboard:boolean = false;
+export class AppComponent implements OnInit {
 
-  constructor(private browserStorage: BrowserStorage, private router: Router) {}
-  
+  isShowDashboard: boolean = false;
+
+  constructor(private browserStorage: BrowserStorage, private router: Router) { }
+
   ngOnInit(): void {
     HttpClientConfig.register({
       hostURIs: [{
@@ -32,7 +32,8 @@ export class AppComponent implements OnInit{
         ) {
           this.browserStorage.local.clearAll();
           // this.baseToastr.error("Timeout")
-          this.router.navigate(["/login"])
+
+          this.router.navigate(["/login"]);
         }
         // else if (response.statusCode == HttpResponseCode.InternalServerError) {
         //   this.baseToastr.error("Error occur")

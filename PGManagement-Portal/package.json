@@ -29,6 +29,7 @@
     "@rxweb/localization": "0.0.2-beta2",
     "@rxweb/reactive-form-validators": "^1.9.9-beta2",
     "@rxweb/sanitizers": "0.0.1-1",
+    "@rxweb/storage": "0.0.2-beta2",
     "rxjs": "^6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

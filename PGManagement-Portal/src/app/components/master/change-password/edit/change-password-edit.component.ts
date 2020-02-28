@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { ActivatedRoute } from '@angular/router';
 
-import { ChangePassword } from '@app/models';
+import { ChangePassword } from '@app/custom-models';
 
 @Component({
     selector: "app-change-password-edit",

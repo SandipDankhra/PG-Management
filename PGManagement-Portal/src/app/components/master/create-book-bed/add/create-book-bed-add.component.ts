@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
-import { CreateBookBed } from '@app/models';
+import { CreateBookBed } from '@app/custom-models';
 import { AbstractCreateBookBed } from '../domain/abstract-create-book-bed';
 
 @Component({
