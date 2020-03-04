@@ -2,13 +2,14 @@ import { Routes, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from
 import { RouteProvider } from "@rxweb/angular-router"
 import { Injectable } from '@angular/core';
 var routings = [
-    {
-        path: '', redirectTo: 'login', pathMatch: 'full',
-    },
-    {
-        path: "login",
-        loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
+	{
+		path: '', redirectTo: 'login', pathMatch: 'full',
 	},
+	{
+		path: "login",
+		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
+	},
+
 	{
 		path: "change-password",
 		loadChildren: () => import("../master/change-password/change-password.module").then(m => m.ChangePasswordModule)
@@ -121,32 +122,48 @@ var routings = [
 		path: "v-invoice-record",
 		loadChildren: () => import("../master/v-invoice-record/v-invoice-record.module").then(m => m.vInvoiceRecordModule)
 	},
+
 	{
 		path: "bed",
-		loadChildren: () => import("../user/bed/bed.module").then(m => m.BedModule)
+		loadChildren: () => import("../master/bed/bed.module").then(m => m.BedModule)
 	},
 	{
 		path: "create-book-bed",
-		loadChildren: () => import("../user/create-book-bed/create-book-bed.module").then(m => m.CreateBookBedModule)
+		loadChildren: () => import("../master/create-book-bed/create-book-bed.module").then(m => m.CreateBookBedModule)
 	},
 	{
 		path: "flat",
-		loadChildren: () => import("../user/flat/flat.module").then(m => m.FlatModule)
+		loadChildren: () => import("../master/flat/flat.module").then(m => m.FlatModule)
 	},
 	{
 		path: "payment",
-		loadChildren: () => import("../user/payment/payment.module").then(m => m.PaymentModule)
-	},
-	{
-		path: "registration",
-		loadChildren: () => import("../user/registration/registration.module").then(m => m.RegistrationModule)
+		loadChildren: () => import("../master/payment/payment.module").then(m => m.PaymentModule)
 	},
 	{
 		path: "room",
-		loadChildren: () => import("../user/room/room.module").then(m => m.RoomModule)
+		loadChildren: () => import("../master/room/room.module").then(m => m.RoomModule)
+	},
+	{
+		path: "bed",
+		loadChildren: () => import("../master/bed/bed.module").then(m => m.BedModule)
+	},
+	{
+		path: "create-book-bed",
+		loadChildren: () => import("../master/create-book-bed/create-book-bed.module").then(m => m.CreateBookBedModule)
+	},
+	{
+		path: "flat",
+		loadChildren: () => import("../master/flat/flat.module").then(m => m.FlatModule)
+	},
+	{
+		path: "payment",
+		loadChildren: () => import("../master/payment/payment.module").then(m => m.PaymentModule)
+	},
+	{
+		path: "room",
+		loadChildren: () => import("../master/room/room.module").then(m => m.RoomModule)
 	},
 ]
-       
 //generated code
 //])
 

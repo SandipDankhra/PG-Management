@@ -5,14 +5,14 @@ import { Subscription } from 'rxjs';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { ActivatedRoute } from '@angular/router';
 
-import { ForgetPassword } from '@app/models';
+import { User, Authentication } from '@app/models';
 
 @Component({
     selector: "app-forget-password-edit",
     templateUrl: './forget-password-edit.component.html'
 })
 export class ForgetPasswordEditComponent extends AbstractForgetPassword implements OnInit, OnDestroy {
-    forgetPassword: ForgetPassword;
+    authentication: Authentication;
     subscription: Subscription;
     id: number;
 
@@ -25,7 +25,7 @@ export class ForgetPasswordEditComponent extends AbstractForgetPassword implemen
 
     ngOnInit(): void {
         this.get({ params: [this.id] }).subscribe(t => {
-            this.forgetPasswordFormGroup = this.formBuilder.formGroup(ForgetPassword,t) as IFormGroup<ForgetPassword>;
+            this.forgetPasswordFormGroup = this.formBuilder.formGroup(Authentication, t) as IFormGroup<Authentication>;
         })
     }
 

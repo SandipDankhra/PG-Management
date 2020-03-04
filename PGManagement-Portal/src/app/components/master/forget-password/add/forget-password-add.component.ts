@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
-import { ForgetPassword } from '@app/models';
+import { User, Authentication } from '@app/models';
 import { AbstractForgetPassword } from '../domain/abstract-forget-password';
 
 @Component({
@@ -11,7 +11,7 @@ import { AbstractForgetPassword } from '../domain/abstract-forget-password';
     templateUrl: './forget-password-add.component.html'
 })
 export class ForgetPasswordAddComponent extends AbstractForgetPassword implements OnInit, OnDestroy {
-    forgetPassword: ForgetPassword;
+    authentication: Authentication;
     subscription: Subscription;
 
     constructor(private formBuilder: RxFormBuilder) {
@@ -19,8 +19,8 @@ export class ForgetPasswordAddComponent extends AbstractForgetPassword implement
     }
 
     ngOnInit(): void {
-        this.forgetPassword = new ForgetPassword();
-        this.forgetPasswordFormGroup = this.formBuilder.formGroup(this.forgetPassword) as IFormGroup<ForgetPassword>;
+        this.authentication = new Authentication();
+        this.forgetPasswordFormGroup = this.formBuilder.formGroup(this.authentication) as IFormGroup<Authentication>;
     }
 
     ngOnDestroy(): void {

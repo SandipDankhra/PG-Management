@@ -9,8 +9,9 @@ export class Complaint extends ComplaintBase
 
 //#region Generated Reference Properties
 //#region rental Prop
-        rental : RentalBase;
+rental : RentalBase;
 //#endregion rental Prop
 
 //#endregion Generated Reference Properties
+
 }

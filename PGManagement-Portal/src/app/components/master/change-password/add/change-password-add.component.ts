@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
-import { ChangePassword } from '@app/models';
+import { ChangePassword } from '@app/custom-models';
 import { AbstractChangePassword } from '../domain/abstract-change-password';
 
 @Component({

@@ -1,21 +1,20 @@
-import {EmployeeBase} from '../database-models/employee-base';
-import {UserBase} from '../database-models/user-base';
-import {ExpensBase} from '../database-models/expens-base';
+import { EmployeeBase } from '../database-models/employee-base';
+import { UserBase } from '../database-models/user-base';
+import { ExpenseBase } from '../database-models/expense-base';
 //Generated Imports
-export class Employee extends EmployeeBase 
-{
+export class Employee extends EmployeeBase {
 
 
 
 
-//#region Generated Reference Properties
-//#region user Prop
-        user : UserBase;
-//#endregion user Prop
+    //#region Generated Reference Properties
+    //#region user Prop
+    user: UserBase;
+    //#endregion user Prop
+    //#region expenses Prop
+    expenses: ExpenseBase[];
+    //#endregion expenses Prop
 
-//#region expenses Prop
-        expenses : ExpensBase[];
-//#endregion expenses Prop
+    //#endregion Generated Reference Properties
 
-//#endregion Generated Reference Properties
 }

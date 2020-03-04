@@ -14,9 +14,14 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+
     "paths": {
       "@app/database-models": [
         "src/app/models/database-models"
+      ],
+      
+      "@app/custom-models": [
+        "src/app/models/custom-models"
       ],
       "@app/models": [
         "src/app/models/extended-models"
@@ -31,8 +36,9 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],    
   },
+
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

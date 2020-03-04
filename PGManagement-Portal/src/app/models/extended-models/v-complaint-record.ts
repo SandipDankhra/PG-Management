@@ -7,5 +7,7 @@ export class vComplaintRecord extends vComplaintRecordBase
 
 
 //#region Generated Reference Properties
+
 //#endregion Generated Reference Properties
+
 }

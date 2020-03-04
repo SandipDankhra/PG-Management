@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
-import { Registration } from '@app/models';
+import { User } from '@app/models';
 import { AbstractRegistration } from '../domain/abstract-registration';
 
 @Component({
@@ -11,7 +11,7 @@ import { AbstractRegistration } from '../domain/abstract-registration';
     templateUrl: './registration-add.component.html'
 })
 export class RegistrationAddComponent extends AbstractRegistration implements OnInit, OnDestroy {
-    registration: Registration;
+    registration: User;
     subscription: Subscription;
 
     constructor(private formBuilder: RxFormBuilder) {
@@ -19,8 +19,8 @@ export class RegistrationAddComponent extends AbstractRegistration implements On
     }
 
     ngOnInit(): void {
-        this.registration = new Registration();
-        this.registrationFormGroup = this.formBuilder.formGroup(this.registration) as IFormGroup<Registration>;
+        this.registration = new User();
+        this.registrationFormGroup = this.formBuilder.formGroup(this.registration) as IFormGroup<User>;
     }
 
     ngOnDestroy(): void {

@@ -7,5 +7,7 @@ export class Menu extends MenuBase
 
 
 //#region Generated Reference Properties
+
 //#endregion Generated Reference Properties
+
 }

@@ -11,16 +11,15 @@ export class Bed extends BedBase
 
 //#region Generated Reference Properties
 //#region room Prop
-        room : RoomBase;
+room : RoomBase;
 //#endregion room Prop
-
 //#region requesters Prop
-        requesters : RequesterBase[];
+requesters : RequesterBase[];
 //#endregion requesters Prop
-
 //#region bookBed Prop
-        bookBed : BookBedBase[];
+bookBed : BookBedBase[];
 //#endregion bookBed Prop
 
 //#endregion Generated Reference Properties
+
 }

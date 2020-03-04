@@ -12,20 +12,18 @@ export class Rental extends RentalBase
 
 //#region Generated Reference Properties
 //#region user Prop
-        user : UserBase;
+user : UserBase;
 //#endregion user Prop
-
 //#region bookBed Prop
-        bookBed : BookBedBase[];
+bookBed : BookBedBase[];
 //#endregion bookBed Prop
-
 //#region complaints Prop
-        complaints : ComplaintBase[];
+complaints : ComplaintBase[];
 //#endregion complaints Prop
-
 //#region reviews Prop
-        reviews : ReviewBase[];
+reviews : ReviewBase[];
 //#endregion reviews Prop
 
 //#endregion Generated Reference Properties
+
 }
