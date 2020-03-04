@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core"
 import { List } from "@rxweb/generics"
 import { AbstractFlat } from '../domain/abstract-flat';
-import { Flat } from "@app/models";
+import { Flat } from '@app/models';
 import { Subscription } from 'rxjs';
 
 @Component({
