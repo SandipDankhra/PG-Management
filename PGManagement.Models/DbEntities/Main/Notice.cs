@@ -13,8 +13,9 @@ namespace PGManagement.Models.Main
     {
 		#region NoticeId Annotations
 
-        [Range(1,int.MaxValue)]
-        [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.DataAnnotations.Key]
+        [RelationshipTableAttribue("Users","dbo","","NoticeId")]
 		#endregion NoticeId Annotations
 
         public int NoticeId { get; set; }
@@ -27,6 +28,14 @@ namespace PGManagement.Models.Main
 
 
         public Nullable<int> CreatedBy { get; set; }
+
+		#region User Annotations
+
+        [ForeignKey(nameof(NoticeId))]
+        [InverseProperty(nameof(PGManagement.Models.Main.User.Notice))]
+		#endregion User Annotations
+
+        public virtual User User { get; set; }
 
 
         public Notice()

@@ -18,14 +18,14 @@ export class ComplaintEditComponent extends AbstractComplaint implements OnInit,
 
     constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
-        this.activatedRoute.queryParams.subscribe(t => {
+        this.activatedRoute.params.subscribe(t => {
             this.id = t['id'];
         })
     }
 
     ngOnInit(): void {
         this.get({ params: [this.id] }).subscribe(t => {
-            this.complaintFormGroup = this.formBuilder.formGroup(Complaint,t) as IFormGroup<Complaint>;
+            this.complaintFormGroup = this.formBuilder.formGroup(Complaint, t) as IFormGroup<Complaint>;
         })
     }
 

@@ -2,6 +2,7 @@ import {UserBase} from '../database-models/user-base';
 import {EmployeeBase} from '../database-models/employee-base';
 import {DocumentBase} from '../database-models/document-base';
 import {RequesterBase} from '../database-models/requester-base';
+import {NoticeBase} from '../database-models/notice-base';
 import {RentalBase} from '../database-models/rental-base';
 import {ApplicationUserTokenBase} from '../database-models/application-user-token-base';
 import {UserRoleBase} from '../database-models/user-role-base';
@@ -23,6 +24,9 @@ documents : DocumentBase[];
 //#region requesters Prop
 requesters : RequesterBase[];
 //#endregion requesters Prop
+//#region notice Prop
+notice : NoticeBase[];
+//#endregion notice Prop
 //#region rentals Prop
 rentals : RentalBase[];
 //#endregion rentals Prop
@@ -37,5 +41,7 @@ authentication : AuthenticationBase[];
 //#endregion authentication Prop
 
 //#endregion Generated Reference Properties
+
+
 
 }

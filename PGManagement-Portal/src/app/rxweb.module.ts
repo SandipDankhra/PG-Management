@@ -1,4 +1,4 @@
-import { routerModule,IMultilingual } from '@rxweb/angular-router';
+import { routerModule, IMultilingual } from '@rxweb/angular-router';
 import { NgModule } from '@angular/core';
 
 
@@ -14,10 +14,11 @@ import { AuthResolver } from './domain/security/authentication-resolver';
     authorization: AuthorizationResolver,
     middlewares: [GlobalMultilingualContentResolver, ComponentMultilingualContentResolver],
     //childMultilingualResolver: ComponentMultilingualContentResolver,
-    urlEncryption:true
+    // urlEncryption: true
 })
 @NgModule({
     declarations: [
+
     ],
     imports: [
     ],

@@ -20,4 +20,10 @@ export class AppGrid extends GridDesigner {
         this.maxPerPage = 25;
         this.pagingSource = [25, 50, 75, 100];
     }
+    refresh(elementId) {
+        let element = document.getElementById(elementId);
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+    }
 }

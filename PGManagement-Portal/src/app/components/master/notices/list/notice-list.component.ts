@@ -5,8 +5,8 @@ import { Notice } from "@app/models";
 import { Subscription } from 'rxjs';
 
 @Component({
-    selector:"app-notice-list",
-    templateUrl:'./notice-list.component.html'
+    selector: "app-notice-list",
+    templateUrl: './notice-list.component.html'
 })
 export class NoticeListComponent extends AbstractNotice implements OnInit, OnDestroy {
     notices: List<Notice>;
@@ -18,7 +18,11 @@ export class NoticeListComponent extends AbstractNotice implements OnInit, OnDes
         })
     }
 
-
+    onDelete(id: number) {
+        this.delete({ params: [id], body: {} }).subscribe(t => {
+            console.log(t);
+        })
+    }
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();

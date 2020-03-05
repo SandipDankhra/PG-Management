@@ -40,6 +40,7 @@ namespace PGManagement.Domain.UserModule
             entity.Salt = passwordResult.Salt;
             await Uow.RegisterNewAsync(entity);
             await Uow.CommitAsync();
+
         }
 
         public HashSet<string> UpdateValidation(User entity)

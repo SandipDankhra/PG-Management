@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
-import { IAuthResolver } from '@rxweb/angular-router'
+import { IAuthResolver, CoreComponent } from '@rxweb/angular-router'
+import { BrowserStorage } from '../services/browser-storage';
+import { RxHttp } from '@rxweb/http';
 
 @Injectable({
     providedIn: 'root',
 })
-export class AuthResolver implements IAuthResolver {
+export class AuthResolver extends CoreComponent implements IAuthResolver {
 
+    constructor(private storageData: BrowserStorage, private http: RxHttp) {
+        super();
+    }
     resolveAuth(): Promise<{ [key: string]: any; }> | { [key: string]: any; } {
         var promise = new Promise<{ [key: string]: any; }>((resolve, reject) => {
-            resolve(undefined)
+            var auth = this.storageData.local.get('auth');
+            if (auth) {
+                this.http.get({ path: 'api/Authorize/access' }).subscribe(t => {
+                    resolve(t);
+                })
+            }
+
         })
         return promise;
     }

@@ -10,4 +10,6 @@ export class vExpense extends vExpenseBase
 
 //#endregion Generated Reference Properties
 
+
+
 }

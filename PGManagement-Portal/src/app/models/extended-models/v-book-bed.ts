@@ -10,4 +10,6 @@ export class vBookBed extends vBookBedBase
 
 //#endregion Generated Reference Properties
 
+
+
 }
