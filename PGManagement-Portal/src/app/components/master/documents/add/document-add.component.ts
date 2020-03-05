@@ -22,6 +22,11 @@ export class DocumentAddComponent extends AbstractDocument implements OnInit, On
         this.document = new Document();
         this.documentFormGroup = this.formBuilder.formGroup(this.document) as IFormGroup<Document>;
     }
+    submit(){
+        this.post({body:{documentType:1,}}).subscribe(t=>{
+            t
+        })
+    }
 
     ngOnDestroy(): void {
         if (this.subscription)

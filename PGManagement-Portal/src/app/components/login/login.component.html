@@ -1,80 +1,73 @@
-<section id="Login" class="contact">
-    <div class="container">
+<body class="hold-transition login-page">
 
-        <div class="section-title">
-            <h2>Login</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../index2.html"><b>Admin</b>LTE</a>
         </div>
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Sign in to start your session</p>
 
-        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-
-            <form role="form" class="php-email-form" [formGroup]="loginFormGroup">
-                <div class="form-row">
-                    <div class="col-lg-2 form-group">
-                        <label for="mobileNumber">Enter Mobile Number : </label>
+                <form [formGroup]="loginFormGroup">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" formControlName="email" placeholder="Mobile Number">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-10 form-group">
-                        <input type="text" class="form-control" placeholder="Mobile Number" data-rule="minlen:10"
-                            minlength="10" maxlength="10" data-msg="Please enter mobile number"
-                            formControlName="mobileNumber" />
-                        <div class="validate"></div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
                     </div>
+                    <div class="row">
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" (click)="login()" class="btn btn-primary btn-block">Sign In</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
 
+                <div class="social-auth-links text-center mb-3">
+                    <p>- OR -</p>
+                    <a href="#" class="btn btn-block btn-primary">
+                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                    </a>
+                    <a href="#" class="btn btn-block btn-danger">
+                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                    </a>
                 </div>
-                <div class="form-row">
-                    <div class="col-lg-2 form-group">
-                        <label for="password">Enter Password : </label>
-                    </div>
-                    <div class="col-lg-10 form-group">
-                        <input type="password" class="form-control" placeholder="password" data-rule="minlen:8"
-                            data-msg="Please enter password" formControlName="userPassword" />
-                        <div class="validate"></div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-lg-2 form-group">
-                        <label for=""> </label>
-                    </div>
-                    <div class="col-lg-10 form-group">
-                        <button type="submit" (click)="loginUser()">Submit</button>
-                        <p style="margin-top: 1.5rem;">
-                            <a href="#" [routerLink]="['/registration']">Don't have an
-                                account? Register Here</a>
-                        </p>
-                        <p>
-                            <a href="#" [routerLink]="['/forgetpassword']">Forget password ?</a>
-                        </p>
-                    </div>
-                </div>
+                <!-- /.social-auth-links -->
 
-            </form>
-        </div>
-        <br>
-
-        <div class="row">
-
-            <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
-                <div class="info-box">
-                    <i class="bx bx-map"></i>
-                    <h3>Our Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
+                <p class="mb-1">
+                    <a href="forgot-password.html">I forgot my password</a>
+                </p>
+                <p class="mb-0">
+                    <a href="register.html" class="text-center">Register a new membership</a>
+                </p>
             </div>
-
-            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                <div class="info-box">
-                    <i class="bx bx-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>info@example.com<br>contact@example.com</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="info-box ">
-                    <i class="bx bx-phone-call"></i>
-                    <h3>Call Us</h3>
-                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-                </div>
-            </div>
+            <!-- /.login-card-body -->
         </div>
     </div>
-</section>
+</body>

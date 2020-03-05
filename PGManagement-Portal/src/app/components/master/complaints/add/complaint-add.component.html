@@ -1,1 +1,35 @@
-<h1>Complaints ADD</h1>
+<div class="card card-warning">
+    <div class="card-header">
+        <h3 class="card-title">General Elements</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <form role="form" [formGroup]="complaintFormGroup">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" placeholder="Title" formControlName="complaintName">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- textarea -->
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="3" placeholder="Description"
+                            formControlName="complaintDescription"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- /.card-body -->
+</div>

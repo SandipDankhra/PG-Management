@@ -1,7 +1,7 @@
 import { RxHttp } from "@rxweb/http";
 import { IFormGroup } from '@rxweb/reactive-form-validators';
-import { Flat } from '@app/models';
+import { FlatBase } from "../../../../models/database-models/flat-base";
 
 export class AbstractFlat extends RxHttp {
-    flatFormGroup: IFormGroup<Flat>
+    flatFormGroup: IFormGroup<FlatBase>
 }

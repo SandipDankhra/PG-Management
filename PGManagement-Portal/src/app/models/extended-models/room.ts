@@ -19,4 +19,5 @@ beds : BedBase[];
 //#endregion Generated Reference Properties
 
 
+
 }
