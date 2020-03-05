@@ -14,4 +14,5 @@ rental : RentalBase;
 
 //#endregion Generated Reference Properties
 
+
 }

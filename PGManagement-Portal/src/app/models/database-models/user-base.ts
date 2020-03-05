@@ -35,53 +35,45 @@ export class UserBase {
 
 
         //#region applicationLocaleId Prop
-        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
-        @required()
+        @prop()
         applicationLocaleId: number;
         //#endregion applicationLocaleId Prop
 
 
         //#region applicationTimeZoneId Prop
-        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
-        @required()
+        @prop()
         applicationTimeZoneId: number;
         //#endregion applicationTimeZoneId Prop
 
 
         //#region languageCode Prop
-        @required()
         @maxLength({ value: 3 })
         languageCode: string;
         //#endregion languageCode Prop
 
 
         //#region password Prop
-        @required()
+
         @maxLength({ value: 132 })
         password: any;
         //#endregion password Prop
 
-        //#region password Prop
-        @required()
-        @maxLength({ value: 132 })
-        userPassword: any;
-        //#endregion password Prop
-
 
         //#region salt Prop
-        @required()
+     
         @maxLength({ value: 140 })
         salt: any;
         //#endregion salt Prop
 
 
         //#region loginBlocked Prop
-        @required()
+        @prop({ defaultValue: 1 })
         loginBlocked: boolean;
         //#endregion loginBlocked Prop
 
 
         //#region statusId Prop
+        @prop({ defaultValue: 1 })
         @range({ minimumNumber: 1, maximumNumber: 2147483647 })
         @required()
         statusId: number;

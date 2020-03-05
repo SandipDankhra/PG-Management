@@ -10,4 +10,5 @@ export class vEmployeeRecord extends vEmployeeRecordBase
 
 //#endregion Generated Reference Properties
 
+
 }

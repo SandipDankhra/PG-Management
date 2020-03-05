@@ -10,4 +10,5 @@ export class vAvailableBed extends vAvailableBedBase
 
 //#endregion Generated Reference Properties
 
+
 }

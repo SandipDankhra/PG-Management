@@ -10,4 +10,5 @@ export class ApplicationTimeZone extends ApplicationTimeZoneBase
 
 //#endregion Generated Reference Properties
 
+
 }

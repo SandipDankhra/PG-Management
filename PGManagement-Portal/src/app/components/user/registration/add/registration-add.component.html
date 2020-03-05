@@ -1,1 +1,140 @@
-<h1>Registration ADD</h1>
+<section id="Registration" class="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Registration</h2>
+        </div>
+
+        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+
+            <form action="#" role="form" class="php-email-form" [formGroup]="registrationFormGroup">
+                <div class="form-row">
+                    <div class="col-lg-6 form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="First Name"
+                            data-rule="minlen:4" data-msg="Please enter first name" formControlName="firstName" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" data-rule="minlen:4"
+                            data-msg="Please enter last name" formControlName="lastName" />
+                        <div class="validate"></div>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-6 form-group">
+                        <input type="email" class="form-control" placeholder="Email" data-rule="email"
+                            data-msg="Please enter email" formControlName="email" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <input type="text" class="form-control" placeholder="Mobile Number" data-rule="minlen:10"
+                            minlength="10" maxlength="10" data-msg="Please enter mobile number"
+                            formControlName="mobileNumber" />
+                        <div class="validate"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-lg-6 form-group">
+                        <input type="password" class="form-control" placeholder="Password" data-rule="minlen:8"
+                            data-msg="Please enter password" formControlName="userPassword" />
+                        <div class="validate"></div>
+                    </div>
+                    <!-- <div class="col-lg-6 form-group">
+                        <input type="password" class="form-control" placeholder="Confirm Password" data-rule="minlen:6"
+                            data-msg="Please enter confirm password" formControlName="confirmPassword" />
+                        <div class="validate"></div>
+                    </div> -->
+                </div>
+
+                <div class="form-row">
+                 
+                    <div class="col-lg-12 form-group">
+                        <button type="submit" (click)="registerUser()">Submit</button>
+                     
+                        <p>
+                            <a href="#" [routerLink]="['/login']">Already have an
+                                account? Sign in</a>
+                        </p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <br>
+
+        <div class="row">
+
+            <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+                <div class="info-box">
+                    <i class="bx bx-map"></i>
+                    <h3>Our Address</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-box">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@example.com<br>contact@example.com</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-box ">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Us</h3>
+                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Contact Us Section -->
+<!-- <div class="card" style="width: 70rem;">
+    <div class="row">
+
+       <a [routerLink]="['/client-index']" routerLinkActive="router-link-active" >Home</a>
+           
+                <div class="section_title">
+                    <h1>Registration</h1>
+                </div>
+                <form class="contact_form" [formGroup]="registrationFormGroup">
+                    <div class="row">
+                        <div class="col-lg-6 ">
+                            <input type="text" class="contact_input" placeholder="first name"
+                                formControlName="firstName" required="required">
+                        </div>
+                        <div class="col-lg-6 contact_form_col">
+                            <input type="text" class="contact_input" placeholder="last name" formControlName="lastName"
+                                required="required">
+                        </div>  
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="email" class="contact_input" placeholder="email" formControlName="email"
+                                required="required">
+                        </div>
+                        <div class="col-lg-6 contact_form_col">
+                            <input type="text" class="contact_input" placeholder="mobile number"
+                                formControlName="mobileNumber" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="password" class="contact_input" placeholder="password"
+                                formControlName="userPassword" required="required">
+                        </div>
+                        <div class="col-lg-6 contact_form_col">
+                            <input type="password" class="contact_input" placeholder="confirm password"
+                                formControlName="confirmPassword" required="required">
+                        </div>
+                    </div>
+                    <button class="contact_button trans_200" (click)="registerUser()">Send message</button>
+                </form>
+        
+    </div>
+</div>
+ -->

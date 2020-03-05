@@ -18,8 +18,12 @@ namespace PGManagement.Models.Main
 		#endregion AuthenticationId Annotations
 
         public int AuthenticationId { get; set; }
+        [NotMapped]
+        public int MobileNumber { get; set; }
+        [NotMapped]
+        public string userPassword { get; set; }
 
-		#region UserId Annotations
+        #region UserId Annotations
 
         [Range(1,int.MaxValue)]
         [Required]

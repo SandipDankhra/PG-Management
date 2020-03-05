@@ -1,15 +1,30 @@
 import { Routes, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 import { RouteProvider } from "@rxweb/angular-router"
 import { Injectable } from '@angular/core';
+import { ClientIndexComponent } from '../user/client-index.componet';
+import { RegistrationAddComponent } from '../user/registration/add/registration-add.component';
+
+
 var routings = [
 	{
-		path: '', redirectTo: 'login', pathMatch: 'full',
+		path: '', redirectTo: 'client-index', pathMatch: 'full',
 	},
 	{
 		path: "login",
 		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
 	},
-
+	{
+		path: "client-login",
+		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
+	},
+	{
+		path: "client-index",
+		component: ClientIndexComponent
+	},
+	{
+		path: "registration",
+		component: RegistrationAddComponent
+	},
 	{
 		path: "change-password",
 		loadChildren: () => import("../master/change-password/change-password.module").then(m => m.ChangePasswordModule)
@@ -30,10 +45,10 @@ var routings = [
 		path: "expense",
 		loadChildren: () => import("../master/expense/expense.module").then(m => m.ExpenseModule)
 	},
-	{
-		path: "forget-password",
-		loadChildren: () => import("../master/forget-password/forget-password.module").then(m => m.ForgetPasswordModule)
-	},
+	// {
+	// 	path: "forget-password",
+	// 	loadChildren: () => import("../master/forget-password/forget-password.module").then(m => m.ForgetPasswordModule)
+	// },
 	{
 		path: "menu",
 		loadChildren: () => import("../master/menu/menu.module").then(m => m.MenuModule)
@@ -87,7 +102,7 @@ var routings = [
 		loadChildren: () => import("../master/expense/expense.module").then(m => m.ExpenseModule)
 	},
 	{
-		path: "forget-password",
+		path: "forgetpassword",
 		loadChildren: () => import("../master/forget-password/forget-password.module").then(m => m.ForgetPasswordModule)
 	},
 	{
