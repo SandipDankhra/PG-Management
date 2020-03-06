@@ -3,22 +3,26 @@ import { List } from "@rxweb/generics"
 import { AbstractRequester } from '../domain/abstract-requester';
 import { Requester } from "@app/models";
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
-    selector:"app-requester-list",
-    templateUrl:'./requester-list.component.html'
+    selector: "app-requester-list",
+    templateUrl: './requester-list.component.html'
 })
 export class RequesterListComponent extends AbstractRequester implements OnInit, OnDestroy {
     requester: List<Requester>;
     subscription: Subscription;
-    result:any;
+    result: any;
 
+    constructor(private router: Router) {
+        super();
+    }
     ngOnInit(): void {
         this.subscription = this.get().subscribe((t: List<Requester>) => {
             this.requester = t;
         })
     }
-    confirmRequest(){
+    confirmRequest() {
 
     }
 

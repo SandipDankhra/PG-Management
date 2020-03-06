@@ -64,6 +64,8 @@ namespace PGManagement.Models.Main
         public string LanguageCode { get; set; }
 
 		#region Password Annotations
+
+        [Required]
         [MaxLength(132)]
 		#endregion Password Annotations
 
@@ -71,6 +73,7 @@ namespace PGManagement.Models.Main
 
 		#region Salt Annotations
 
+        [Required]
         [MaxLength(140)]
 		#endregion Salt Annotations
 

@@ -1,10 +1,27 @@
 import { Routes, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 import { RouteProvider } from "@rxweb/angular-router"
 import { Injectable } from '@angular/core';
+import { ClientIndexComponent } from '../user/client-index.componet';
+import { RegistrationAddComponent } from '../user/registration/add/registration-add.component';
 var routings = [
 	// {
 	// 	path: '', redirectTo: 'login', pathMatch: 'full',
 	// },
+	{
+		path: '', redirectTo: 'client-index', pathMatch: 'full',
+	},
+	{
+		path: "login",
+		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
+	},
+	{
+		path: "client-index",
+		component: ClientIndexComponent
+	},
+	{
+		path: "registration",
+		component: RegistrationAddComponent
+	},
 	{
 		path: "login",
 		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
