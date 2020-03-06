@@ -1,28 +1,28 @@
 import { Component, OnInit, OnDestroy } from "@angular/core"
 import { Subscription } from 'rxjs';
-import {ActivatedRoute,Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
 import { Bed } from '@app/models';
 import { AbstractBed } from '../domain/abstract-bed';
 import { anonymous } from '@rxweb/angular-router';
-@anonymous()
+
 @Component({
     selector: "app-bed-add",
     templateUrl: './bed-add.component.html'
 })
 export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
     bed: Bed;
-    result:any;
-    roomId:number;
+    result: any;
+    roomId: number;
     subscription: Subscription;
 
-    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute,private router:Router) {
+    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute, private router: Router) {
         super();
-       
+
     }
 
-    onAddBed(){
+    onAddBed() {
         this.activatedRoute.params.subscribe(a => {
             this.roomId = a['id'];
         })
@@ -32,7 +32,7 @@ export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
             body: {
                 RoomId: this.roomId,
                 bedNumber: this.bedFormGroup.controls.bedNumber.value,
-                bedStatus:this.bedFormGroup.controls.bedStatus.value,
+                bedStatus: this.bedFormGroup.controls.bedStatus.value,
                 bedPrice: this.bedFormGroup.controls.bedPrice.value
             }
 
@@ -51,7 +51,7 @@ export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
         this.bedFormGroup = this.formBuilder.formGroup(this.bed) as IFormGroup<Bed>;
     }
 
-    onShowBed(){
+    onShowBed() {
         this.router.navigateByUrl('/bed');
     }
 

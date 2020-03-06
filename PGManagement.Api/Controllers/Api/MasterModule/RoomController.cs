@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PGManagement.Api.Controllers.UserModule
 {
-    [AllowAnonymous]
+    
     [ApiController]
     [Route("api/[controller]")]
 	

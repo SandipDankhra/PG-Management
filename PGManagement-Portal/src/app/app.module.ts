@@ -15,6 +15,7 @@ import { RegistrationAddComponent } from './components/user/registration/add/reg
 import { ClientIndexComponent } from './components/user/client-index.componet';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ApplicationBroadcaster } from './temp-service/application-broadcaster';
 const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules, onSameUrlNavigation: 'reload' });
 
 @NgModule({
@@ -27,11 +28,11 @@ const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModul
     BrowserModule,
     route,
     RxWebModule,
-    FormsModule, ReactiveFormsModule, RxReactiveFormsModule,BrowserAnimationsModule,ToastrModule.forRoot({
-      positionClass: 'toast-top-center',timeOut: 2000
+    FormsModule, ReactiveFormsModule, RxReactiveFormsModule, BrowserAnimationsModule, ToastrModule.forRoot({
+      positionClass: 'toast-top-center', timeOut: 2000
     })
   ],
-  providers: [RxHttp, BaseToastr, ModalView, LoginService],
+  providers: [RxHttp, BaseToastr, ModalView, LoginService, ApplicationBroadcaster],
   bootstrap: [AppComponent],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]

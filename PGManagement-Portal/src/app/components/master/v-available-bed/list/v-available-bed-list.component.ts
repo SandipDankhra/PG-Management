@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 import { anonymous } from '@rxweb/angular-router';
 import { Router } from '@angular/router';
 
-@anonymous()
+
 @Component({
     selector: "app-v-available-bed-list",
     templateUrl: './v-available-bed-list.component.html'
@@ -15,13 +15,13 @@ export class vAvailableBedListComponent extends AbstractvAvailableBed implements
     vAvailableBed: List<vAvailableBed>;
     subscription: Subscription;
     getbedNumber: number;
-    getbedId:number;
+    getbedId: number;
     result: any;
-    getuserId:any;
+    getuserId: any;
 
     constructor(private router: Router) {
         super();
-        
+
     }
     ngOnInit(): void {
         this.subscription = this.get().subscribe((t: List<vAvailableBed>) => {
@@ -29,7 +29,7 @@ export class vAvailableBedListComponent extends AbstractvAvailableBed implements
         })
     }
 
-    getBedNumber(BedNumber: number,BedId:number) {
+    getBedNumber(BedNumber: number, BedId: number) {
         this.getbedNumber = BedNumber;
         this.getbedId = BedId;
     }
@@ -46,11 +46,11 @@ export class vAvailableBedListComponent extends AbstractvAvailableBed implements
 
     }
 
-    onSelect(val:HTMLInputElement){
+    onSelect(val: HTMLInputElement) {
         console.log(val.value);
 
         //this.selectedData = this.someData.filter(x => x.value == val)
-      }
+    }
 
     ngOnDestroy(): void {
         if (this.subscription)

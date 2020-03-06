@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PGManagement.Api.Controllers.MasterModule
 {
-    [AllowAnonymous]
+    
     [ApiController]
 	[Route("api/[controller]")]
     public class SearchExpenseController : ControllerBase

@@ -5,7 +5,7 @@ import { Menu } from "@app/models";
 import { Subscription } from 'rxjs';
 import { anonymous } from '@rxweb/angular-router';
 
-@anonymous()
+
 @Component({
     selector: "app-menu-list",
     templateUrl: './menu-list.component.html'

@@ -9,7 +9,7 @@ using PGManagement.Models.ViewModels;
 
 namespace PGManagement.Api.Controllers.MasterModule
 {
-    [AllowAnonymous]
+    
     [ApiController]
     [Route("api/[controller]")]
    

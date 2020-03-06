@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
 import { ROUTES } from './routing';
 import { AuthFilter } from 'src/app/temp-service/AuthFilter';
+import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadcaster';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,15 @@ export class AppComponent implements OnInit {
 
   route = ROUTES;
   isShowDashboard: boolean = false;
+  isShowSidebar: boolean = false;
 
-  constructor(private browserStorage: BrowserStorage, private router: Router) { }
+
+  constructor(private browserStorage: BrowserStorage, private router: Router, private applicationBroadcaster: ApplicationBroadcaster) { }
 
   ngOnInit(): void {
-    console.log("hello");
+    this.applicationBroadcaster.menuLevelSubscriber.subscribe(t => { this.isShowSidebar = t });
+
+    console.log("sidebar " + this.isShowSidebar);
     HttpClientConfig.register({
       hostURIs: [{
         name: 'server',
@@ -30,7 +35,7 @@ export class AppComponent implements OnInit {
         default: true,
         uri: "http://localhost:4200"// 'https://localhost:44376' 
       }],
-      filters: [{model:AuthFilter}],
+      filters: [{ model: AuthFilter }],
       onError: (response: HttpResponse) => {
         if (response.statusCode == 401
         ) {
@@ -51,7 +56,7 @@ export class AppComponent implements OnInit {
     var auth = this.browserStorage.local.get("auth");
     console.log("hey:" + auth);
     if (auth) {
-      this.router.navigate(["/client-index"])
+      // this.router.navigate(["/client-index"])
       this.isShowDashboard = true;
     }
     else {
