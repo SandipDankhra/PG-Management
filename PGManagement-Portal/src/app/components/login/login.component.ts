@@ -55,7 +55,6 @@ export class LoginComponent extends CoreComponent implements OnInit {
         //     console.log(t);
         // })
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
-            // debugger
             if (response.failedLogin) {
             }
             else {
