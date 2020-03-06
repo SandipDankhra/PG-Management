@@ -1,4 +1,4 @@
-import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ExpenseListComponent } from './list/expense-list.component';
@@ -7,7 +7,7 @@ import { ExpenseEditComponent } from './edit/expense-edit.component';
 
 const ROUTES: Routes = [
     {
-        path: '',
+        path: 'list',
         component: ExpenseListComponent
     },
     {
@@ -18,6 +18,7 @@ const ROUTES: Routes = [
         path: ':id',
         component:  ExpenseEditComponent
     },
+    
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forChild(ROUTES);

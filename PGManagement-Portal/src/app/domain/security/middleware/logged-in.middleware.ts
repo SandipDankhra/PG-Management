@@ -11,6 +11,7 @@ export class LoggedInMiddleware implements IMiddleware {
     invoke(user: { [key: string]: any; }, activateRouteSnapshot: any): boolean | Promise<boolean> {
         var auth = this.storage.local.get('auth');
         if (auth)
+
             this.router.navigate(['login']);
         return true;
     }

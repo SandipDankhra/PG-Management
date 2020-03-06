@@ -14,7 +14,10 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "paths": {
       "@app/enums": [
         "src/app/enums"
@@ -22,7 +25,6 @@
       "@app/database-models": [
         "src/app/models/database-models"
       ],
-      
       "@app/custom-models": [
         "src/app/models/custom-models"
       ],
@@ -34,12 +36,7 @@
         "src/custom-templates/grid"
       ]
     },
-    "lib": [
-      "es2018",
-      "dom"
-    ],    
   },
-
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

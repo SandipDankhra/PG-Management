@@ -1,1 +1,17 @@
 <h1>Documents ADD</h1>
+
+<!-- form start -->
+<form [formGroup]="documentFormGroup">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label>Document</label>
+        <select formControlName="documentTypeId">
+          <option *ngFor="let key of keys" [value]="key">{{documentTypeEnum[key]}}
+                     </option>
+        </select>
+        <input type="file" formControlName="document" class="form-control"/>
+      </div>
+        <button type="button" class="btn btn-info btn-flat" (click)="onUpload()">Upload</button>
+        <div>{{result | json}}</div>
+      </div>
+    </form> 

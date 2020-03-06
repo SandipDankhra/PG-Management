@@ -11,6 +11,7 @@ namespace PGManagement.Api.Controllers.UserModule
     [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
+    [AllowAnonymous]
 	
 	public class BedController : BaseController<Bed,Bed,Bed>
 

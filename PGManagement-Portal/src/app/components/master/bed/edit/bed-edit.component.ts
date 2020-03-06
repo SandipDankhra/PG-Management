@@ -18,14 +18,17 @@ export class BedEditComponent extends AbstractBed implements OnInit, OnDestroy {
 
     constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
-        this.activatedRoute.queryParams.subscribe(t => {
-            this.id = t['id'];
-        })
+
     }
 
     ngOnInit(): void {
+        this.activatedRoute.params.subscribe(t => {
+            this.id = t['id'];
+        })
+        console.log(this.id);
         this.get({ params: [this.id] }).subscribe(t => {
-            this.bedFormGroup = this.formBuilder.formGroup(Bed,t) as IFormGroup<Bed>;
+            this.bedFormGroup = this.formBuilder.formGroup(Bed, t) as IFormGroup<Bed>;
+            console.log(t);
         })
     }
 

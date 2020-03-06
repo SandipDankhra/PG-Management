@@ -6377,11 +6377,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FinalMiniProject\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
+      "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
       "projectName": "PGManagement.UnitOfWork",
-      "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
+      "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
       "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-      "outputPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.UnitOfWork\\obj\\",
+      "outputPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6397,8 +6397,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\FinalMiniProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-              "projectPath": "E:\\FinalMiniProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+            "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
             }
           }
         }

@@ -10,4 +10,9 @@ namespace PGManagement.Models.Main
         [NotMapped]
         public string userPassword { get; set; }
     }
+    public partial class Authentication
+    {
+        [NotMapped]
+        public string userPassword { get; set; }
+    }
 }

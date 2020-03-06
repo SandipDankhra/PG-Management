@@ -13,7 +13,6 @@ import { AbstractComplaint } from '../domain/abstract-complaint';
 export class ComplaintAddComponent extends AbstractComplaint implements OnInit, OnDestroy {
     complaint: Complaint;
     subscription: Subscription;
-
     constructor(private formBuilder: RxFormBuilder) {
         super();
     }
@@ -22,7 +21,13 @@ export class ComplaintAddComponent extends AbstractComplaint implements OnInit, 
         this.complaint = new Complaint();
         this.complaintFormGroup = this.formBuilder.formGroup(this.complaint) as IFormGroup<Complaint>;
     }
+    submit() {
+        // let json = JSON.stringify([{ "RoleId": 1, "ApplicationModuleId": 1, "CanView": 1, "CanAdd": 1, "CanEdit": 1, "CanDelete": 1, "PermissionPriority": 1 }, { "RoleId": 1, "ApplicationModuleId": 1, "CanView": 0, "CanAdd": 0, "CanEdit": 1, "CanDelete": 1, "PermissionPriority": 1 }]);
+        this.post({ body: { complaintName: this.complaintFormGroup.controls.complaintName.value, complaintDescription: this.complaintFormGroup.controls.complaintDescription.value, rentalId: 1 } }).subscribe(t => {
+            console.log(t);
+        });
 
+    }
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();

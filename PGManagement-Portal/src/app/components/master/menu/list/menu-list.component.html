@@ -1,1 +1,28 @@
-<h1>Menu LIST</h1>
+<form action="" class="card" style="border-radius: 1px;  margin:5rem">
+    <h1 align="center">Menu List </h1>
+    <table class="table" style="border: 2cm; border-radius: 2px;">
+        <thead>
+            <tr>
+                <th scope="col">Days</th>
+                <th scope="col">BreakFast</th>
+                <th scope="col">Lunch</th>
+                <th scope="col">Dinner</th>
+                <th scope="col">Operation</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let menu of menus">
+            <tr>
+
+                <td>{{menu.day}}</td>
+                <td>{{menu.breakFast}}</td>
+                <td>{{menu.lunch}}</td>
+                <td>{{menu.dinner}}</td>
+                <td>
+                    <button [routerLink]="[menu.day]" routerLinkActive="router-link-active"
+                        class="btn btn-outline-secondary">Edit</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</form>

@@ -11,13 +11,16 @@ import { Subscription } from 'rxjs';
 export class RequesterListComponent extends AbstractRequester implements OnInit, OnDestroy {
     requester: List<Requester>;
     subscription: Subscription;
+    result:any;
 
     ngOnInit(): void {
         this.subscription = this.get().subscribe((t: List<Requester>) => {
             this.requester = t;
         })
     }
+    confirmRequest(){
 
+    }
 
     ngOnDestroy(): void {
         if (this.subscription)

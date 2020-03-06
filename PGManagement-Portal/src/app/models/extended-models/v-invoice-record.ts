@@ -10,4 +10,7 @@ export class vInvoiceRecord extends vInvoiceRecordBase
 
 //#endregion Generated Reference Properties
 
+
+
+
 }

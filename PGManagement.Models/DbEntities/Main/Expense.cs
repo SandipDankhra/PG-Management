@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using RxWeb.Core.Sanitizers.Enums;
+
 namespace PGManagement.Models.Main
 {
     [Table("Expenses",Schema="dbo")]
@@ -52,10 +54,10 @@ namespace PGManagement.Models.Main
 		#region EmployeeId Annotations
 
         [Range(1,int.MaxValue)]
-        [Required]
-        [RelationshipTableAttribue("Employees","dbo","","EmployeeId")]
-		#endregion EmployeeId Annotations
 
+        [RelationshipTableAttribue("Employees", "dbo", "", "EmployeeId")]
+        #endregion EmployeeId Annotations
+        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
         public int EmployeeId { get; set; }
 
 		#region Employee Annotations

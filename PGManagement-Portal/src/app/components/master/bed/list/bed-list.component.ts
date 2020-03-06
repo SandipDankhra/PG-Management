@@ -6,8 +6,8 @@ import { Subscription } from 'rxjs';
 import { anonymous } from '@rxweb/angular-router';
 @anonymous()
 @Component({
-    selector:"app-bed-list",
-    templateUrl:'./bed-list.component.html'
+    selector: "app-bed-list",
+    templateUrl: './bed-list.component.html'
 })
 export class BedListComponent extends AbstractBed implements OnInit, OnDestroy {
     bed: List<Bed>;

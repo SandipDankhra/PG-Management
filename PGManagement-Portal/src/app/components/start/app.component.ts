@@ -3,6 +3,8 @@ import { HttpClientConfig, HttpResponse } from '@rxweb/http';
 import { BrowserStorage } from 'src/app/domain/services/browser-storage';
 import { Router } from '@angular/router';
 import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
+import { ROUTES } from './routing';
+import { AuthFilter } from 'src/app/temp-service/AuthFilter';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,13 @@ import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
 })
 export class AppComponent implements OnInit {
 
+  route = ROUTES;
   isShowDashboard: boolean = false;
 
   constructor(private browserStorage: BrowserStorage, private router: Router) { }
 
   ngOnInit(): void {
+    console.log("hello");
     HttpClientConfig.register({
       hostURIs: [{
         name: 'server',
@@ -24,9 +28,9 @@ export class AppComponent implements OnInit {
       {
         name: 'local',
         default: true,
-        uri: "https://localhost:44352"// 'https://localhost:44376' 
+        uri: "http://localhost:4200"// 'https://localhost:44376' 
       }],
-      filters: [],
+      filters: [{model:AuthFilter}],
       onError: (response: HttpResponse) => {
         if (response.statusCode == 401
         ) {
@@ -39,20 +43,23 @@ export class AppComponent implements OnInit {
         //   this.baseToastr.error("Error occur")
         // }
         else if (response.statusCode == 403) {
-          // this.router.navigate(["/unauthorized"]);
+          this.router.navigate(["/unauthorized"]);
         }
       }
     })
-    // var auth = this.browserStorage.local.get("auth");
-    // if (auth) {
-    //   this.router.navigate(["/users"])
-    //   this.isShowDashboard = true;
-    // }
-    // else {
-    //   this.browserStorage.local.clearAll();
-    //   this.router.navigate(["/login"])
-    //   this.isShowDashboard = false;
-    // }
+    console.log("before auth");
+    var auth = this.browserStorage.local.get("auth");
+    console.log("hey:" + auth);
+    if (auth) {
+      this.router.navigate(["/client-index"])
+      this.isShowDashboard = true;
+    }
+    else {
+      this.browserStorage.local.clearAll();
+      // console.log("Login");
+      // this.router.navigate(["/login"]);
+      this.isShowDashboard = false;
+    }
 
     ReactiveFormConfig.set({
       "validationMessage": {

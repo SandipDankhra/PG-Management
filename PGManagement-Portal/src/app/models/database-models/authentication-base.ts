@@ -9,6 +9,11 @@ export class AuthenticationBase {
         authenticationId : number;
 //#endregion authenticationId Prop
 
+@prop()
+userPassword:string;
+@prop()
+mobileNumber:string;
+
 
 //#region userId Prop
         @range({minimumNumber:1,maximumNumber:2147483647})
