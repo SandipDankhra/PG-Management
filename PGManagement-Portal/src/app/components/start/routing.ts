@@ -4,11 +4,13 @@ import { Injectable } from '@angular/core';
 import { ClientIndexComponent } from '../user/client-index.componet';
 import { RegistrationAddComponent } from '../user/registration/add/registration-add.component';
 var routings = [
-	// {
-	// 	path: '', redirectTo: 'login', pathMatch: 'full',
-	// },
 	{
 		path: '', redirectTo: 'client-index', pathMatch: 'full',
+	},
+
+	{
+		path: "clientlogin",
+		loadChildren: () => import("../user/clientlogin/clientlogin.module").then(m => m.clientLoginModule),
 	},
 	{
 		path: "login",
