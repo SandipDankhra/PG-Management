@@ -23,7 +23,7 @@ namespace PGManagement.Domain.MasterModule
 
         public async Task<object> GetAsync(CreateBookBed parameters)
         {
-            return await Uow.Repository<BookBed>().AllAsync();
+            return await Uow.Repository<vBookBed>().AllAsync();
             //throw new NotImplementedException();
         }
 
@@ -59,6 +59,7 @@ namespace PGManagement.Domain.MasterModule
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 DbContextManager.RollbackTransaction();
             }
            

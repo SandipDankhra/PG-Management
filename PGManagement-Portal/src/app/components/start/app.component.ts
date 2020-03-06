@@ -33,26 +33,26 @@ export class AppComponent implements OnInit {
           this.browserStorage.local.clearAll();
           // this.baseToastr.error("Timeout")
 
-          this.router.navigate(["/login"]);
+          // this.router.navigate(["/login"]);
         }
         // else if (response.statusCode == HttpResponseCode.InternalServerError) {
         //   this.baseToastr.error("Error occur")
         // }
         else if (response.statusCode == 403) {
-          this.router.navigate(["/unauthorized"]);
+          // this.router.navigate(["/unauthorized"]);
         }
       }
     })
-    var auth = this.browserStorage.local.get("auth");
-    if (auth) {
-      this.router.navigate(["/users"])
-      this.isShowDashboard = true;
-    }
-    else {
-      this.browserStorage.local.clearAll();
-      this.router.navigate(["/login"])
-      this.isShowDashboard = false;
-    }
+    // var auth = this.browserStorage.local.get("auth");
+    // if (auth) {
+    //   this.router.navigate(["/users"])
+    //   this.isShowDashboard = true;
+    // }
+    // else {
+    //   this.browserStorage.local.clearAll();
+    //   this.router.navigate(["/login"])
+    //   this.isShowDashboard = false;
+    // }
 
     ReactiveFormConfig.set({
       "validationMessage": {

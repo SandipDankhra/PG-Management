@@ -17,9 +17,9 @@ namespace PGManagement.Domain.UserModule
             PasswordHash = passwordHash;
         }
 
-        public Task<object> GetAsync(User parameters)
+        public async Task<object> GetAsync(User parameters)
         {
-            throw new NotImplementedException();
+            return await Uow.Repository<User>().AllAsync();
         }
 
         public Task<object> GetBy(User parameters)

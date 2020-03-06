@@ -2,9 +2,9 @@ import { Routes, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from
 import { RouteProvider } from "@rxweb/angular-router"
 import { Injectable } from '@angular/core';
 var routings = [
-	{
-		path: '', redirectTo: 'login', pathMatch: 'full',
-	},
+	// {
+	// 	path: '', redirectTo: 'login', pathMatch: 'full',
+	// },
 	{
 		path: "login",
 		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),

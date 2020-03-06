@@ -11,6 +11,7 @@ namespace PGManagement.Models.Main
     public partial class vBookBed
     {
 
+        public int BookBedId { get; set; }
         public string FirstName { get; set; }
 
 

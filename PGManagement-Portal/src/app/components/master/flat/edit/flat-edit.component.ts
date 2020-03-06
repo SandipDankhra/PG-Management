@@ -1,3 +1,4 @@
+
 import { Component, OnInit, OnDestroy } from "@angular/core"
 import { AbstractFlat } from '../domain/abstract-flat';
 
@@ -19,7 +20,7 @@ export class FlatEditComponent extends AbstractFlat implements OnInit, OnDestroy
     constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
         this.activatedRoute.queryParams.subscribe(t => {
-            this.id = t['id'];
+            this.id = t['flatId'];
         })
     }
 

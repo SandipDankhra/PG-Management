@@ -2,14 +2,13 @@ import { prop, propObject, propArray, required, maxLength, range } from "@rxweb/
 export class CreateBookBed {
 
     //#region bookBedId Prop
-    @prop()
+
     bookBedId: number;
     //#endregion bookBedId Prop
 
 
     //#region bedId Prop
     @range({ minimumNumber: 1, maximumNumber: 2147483647 })
-    @required()
     bedId: number;
     //#endregion bedId Prop
 

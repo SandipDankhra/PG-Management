@@ -6,8 +6,11 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using Microsoft.AspNetCore.Authorization;
+
 namespace PGManagement.Models.Main
 {
+   
     [Table("Beds",Schema="dbo")]
     public partial class Bed
     {

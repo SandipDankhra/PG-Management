@@ -16,6 +16,9 @@
     ],
 
     "paths": {
+      "@app/enums": [
+        "src/app/enums"
+      ],
       "@app/database-models": [
         "src/app/models/database-models"
       ],
@@ -26,9 +29,7 @@
       "@app/models": [
         "src/app/models/extended-models"
       ],
-      "@app/enums": [
-        "src/app/enums"
-      ],
+     
       "@app/grid-custom-templates": [
         "src/custom-templates/grid"
       ]
