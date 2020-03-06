@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { RxRoutingModule } from "@rxweb/angular-router"
 
-import { LoginComponent } from './login.component';
-import { LOGIN_ROUTES } from './login.routing';
+import {LoginComponent } from './clientlogin.component';
+import { LOGIN_ROUTES } from './clientlogin.routing';
 
 
 
@@ -18,5 +18,5 @@ import { LOGIN_ROUTES } from './login.routing';
     ],
     exports: [RouterModule]
 })
-export class LoginModule { }
+export class clientLoginModule { }
 

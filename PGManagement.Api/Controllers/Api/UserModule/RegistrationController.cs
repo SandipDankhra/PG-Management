@@ -11,11 +11,10 @@ namespace PGManagement.Api.Controllers.UserModule
     [ApiController]
     [Route("api/[controller]")]
     [AllowAnonymous]
-	
-	public class RegistrationController : BaseDomainController<User, User>
+    public class RegistrationController : BaseDomainController<User, User>
 
     {
-        public RegistrationController(IRegistrationDomain domain):base(domain) {}
+        public RegistrationController(IRegistrationDomain domain) : base(domain) { }
 
     }
 }

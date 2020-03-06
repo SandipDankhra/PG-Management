@@ -10,23 +10,23 @@
             <form role="form" class="php-email-form" [formGroup]="loginFormGroup">
                 <div class="form-row">
                     <div class="col-lg-2 form-group">
-                        <label for="mobileNumber">Enter Mobile Number : </label>
+                        <label for="mobileNumber">MobileNumber : </label>
                     </div>
                     <div class="col-lg-10 form-group">
                         <input type="text" class="form-control" placeholder="Mobile Number" data-rule="minlen:10"
                             minlength="10" maxlength="10" data-msg="Please enter mobile number"
-                            formControlName="mobileNumber" />
+                            formControlName="email" />
                         <div class="validate"></div>
                     </div>
 
                 </div>
                 <div class="form-row">
                     <div class="col-lg-2 form-group">
-                        <label for="password">Enter Password : </label>
+                        <label for="password">Password : </label>
                     </div>
                     <div class="col-lg-10 form-group">
                         <input type="password" class="form-control" placeholder="password" data-rule="minlen:8"
-                            data-msg="Please enter password" formControlName="userPassword" />
+                            data-msg="Please enter password" formControlName="password" />
                         <div class="validate"></div>
                     </div>
                 </div>

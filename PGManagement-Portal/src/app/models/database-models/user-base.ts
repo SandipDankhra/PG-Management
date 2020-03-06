@@ -11,12 +11,14 @@ export class UserBase {
 
 
 //#region firstName Prop
+        @required()
         @maxLength({ value: 50 })
         firstName : string;
 //#endregion firstName Prop
 
 
 //#region lastName Prop
+        @required()
         @maxLength({ value: 50 })
         lastName : string;
 //#endregion lastName Prop
@@ -29,27 +31,25 @@ export class UserBase {
 
 
 //#region email Prop
+        @required()
         @maxLength({ value: 50 })
         email : string;
 //#endregion email Prop
 
 
 //#region applicationLocaleId Prop
-        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
-        @required()
+        @prop()
         applicationLocaleId : number;
 //#endregion applicationLocaleId Prop
 
 
 //#region applicationTimeZoneId Prop
-        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
-        @required()
+        @prop()
         applicationTimeZoneId : number;
 //#endregion applicationTimeZoneId Prop
 
 
 //#region languageCode Prop
-        @required()
         @maxLength({ value: 3 })
         languageCode : string;
 //#endregion languageCode Prop
@@ -70,18 +70,15 @@ export class UserBase {
 
 
 //#region loginBlocked Prop
-        @required()
+        @prop()
         loginBlocked : boolean;
 //#endregion loginBlocked Prop
 
 
 //#region statusId Prop
-        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
-        @required()
+        @prop({defaultValue:1})
         statusId : number;
 //#endregion statusId Prop
-
-
 
 
 

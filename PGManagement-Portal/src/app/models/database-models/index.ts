@@ -1,4 +1,4 @@
-export {NoticeBase} from './notice-base';;
+export {UserBase} from './user-base';;
 export {ApplicationLocaleBase} from './application-locale-base';;
 export {ApplicationTimeZoneBase} from './application-time-zone-base';;
 export {ApplicationModuleBase} from './application-module-base';;
@@ -15,8 +15,8 @@ export {RolePermissionBase} from './role-permission-base';;
 export {RoleBase} from './role-base';;
 export {UserRoleBase} from './user-role-base';;
 export {BedBase} from './bed-base';;
+export {NoticeBase} from './notice-base';;
 export {AuthenticationBase} from './authentication-base';;
-export {UserBase} from './user-base';;
 export {RoomBase} from './room-base';;
 export {FlatBase} from './flat-base';;
 export {ComplaintBase} from './complaint-base';;

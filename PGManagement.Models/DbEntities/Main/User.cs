@@ -21,6 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region FirstName Annotations
 
+        [Required]
         [MaxLength(50)]
 		#endregion FirstName Annotations
 
@@ -28,6 +29,7 @@ namespace PGManagement.Models.Main
 
 		#region LastName Annotations
 
+        [Required]
         [MaxLength(50)]
 		#endregion LastName Annotations
 
@@ -42,38 +44,26 @@ namespace PGManagement.Models.Main
 
 		#region Email Annotations
 
+        [Required]
         [MaxLength(50)]
 		#endregion Email Annotations
 
         public string Email { get; set; }
 
-		#region ApplicationLocaleId Annotations
 
-        [Range(1, int.MaxValue)]
-        [Required]
-		#endregion ApplicationLocaleId Annotations
+        public Nullable<int> ApplicationLocaleId { get; set; }
 
-        public int ApplicationLocaleId { get; set; }
 
-		#region ApplicationTimeZoneId Annotations
-
-        [Range(1, int.MaxValue)]
-        [Required]
-		#endregion ApplicationTimeZoneId Annotations
-
-        public int ApplicationTimeZoneId { get; set; }
+        public Nullable<int> ApplicationTimeZoneId { get; set; }
 
 		#region LanguageCode Annotations
 
-        [Required]
         [MaxLength(3)]
 		#endregion LanguageCode Annotations
 
         public string LanguageCode { get; set; }
 
 		#region Password Annotations
-
-        [Required]
         [MaxLength(132)]
 		#endregion Password Annotations
 
@@ -81,54 +71,16 @@ namespace PGManagement.Models.Main
 
 		#region Salt Annotations
 
-        [Required]
         [MaxLength(140)]
 		#endregion Salt Annotations
 
         public byte[] Salt { get; set; }
 
-		#region LoginBlocked Annotations
 
-        [Required]
-		#endregion LoginBlocked Annotations
+        public Nullable<bool> LoginBlocked { get; set; }
 
-        public bool LoginBlocked { get; set; }
-
-		#region StatusId Annotations
-
-        [Range(1, int.MaxValue)]
-        [Required]
-		#endregion StatusId Annotations
 
         public Status StatusId { get; set; }
-
-		#region Employees Annotations
-
-        [InverseProperty("User")]
-		#endregion Employees Annotations
-
-        public virtual ICollection<Employee> Employees { get; set; }
-
-		#region Documents Annotations
-
-        [InverseProperty("User")]
-		#endregion Documents Annotations
-
-        public virtual ICollection<Document> Documents { get; set; }
-
-		#region Requesters Annotations
-
-        [InverseProperty("User")]
-		#endregion Requesters Annotations
-
-        public virtual ICollection<Requester> Requesters { get; set; }
-
-		#region Notice Annotations
-
-        [InverseProperty("User")]
-		#endregion Notice Annotations
-
-        public virtual ICollection<Notice> Notice { get; set; }
 
 		#region Rentals Annotations
 
@@ -158,17 +110,37 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Authentication> Authentication { get; set; }
 
+		#region Employees Annotations
+
+        [InverseProperty("User")]
+		#endregion Employees Annotations
+
+        public virtual ICollection<Employee> Employees { get; set; }
+
+		#region Documents Annotations
+
+        [InverseProperty("User")]
+		#endregion Documents Annotations
+
+        public virtual ICollection<Document> Documents { get; set; }
+
+		#region Requesters Annotations
+
+        [InverseProperty("User")]
+		#endregion Requesters Annotations
+
+        public virtual ICollection<Requester> Requesters { get; set; }
+
 
         public User()
         {
-			Employees = new HashSet<Employee>();
-			Documents = new HashSet<Document>();
-			Requesters = new HashSet<Requester>();
-			Notice = new HashSet<Notice>();
 			Rentals = new HashSet<Rental>();
 			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
+			Employees = new HashSet<Employee>();
+			Documents = new HashSet<Document>();
+			Requesters = new HashSet<Requester>();
         }
 	}
 }

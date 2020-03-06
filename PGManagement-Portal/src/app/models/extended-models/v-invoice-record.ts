@@ -12,4 +12,5 @@ export class vInvoiceRecord extends vInvoiceRecordBase
 
 
 
+
 }

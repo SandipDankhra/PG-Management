@@ -8,9 +8,10 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PGManagement.Api.Controllers.MasterModule
 {
-    [AllowAnonymous]
+   
     [ApiController]
     [Route("api/[controller]")]
+    [AllowAnonymous]
 	//[Access(1)]
 	public class ReviewsController : BaseController<Review,Review,Review>
 

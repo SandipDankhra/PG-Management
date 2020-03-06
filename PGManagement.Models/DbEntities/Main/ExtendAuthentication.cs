@@ -5,14 +5,9 @@ using System.Text;
 
 namespace PGManagement.Models.Main
 {
-    public partial class User
-    {
-        [NotMapped]
-        public string userPassword { get; set; }
-    }
     public partial class Authentication
     {
         [NotMapped]
-        public string userPassword { get; set; }
+        public int MobileNumber { get; set; }
     }
 }

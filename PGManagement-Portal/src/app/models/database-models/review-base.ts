@@ -25,8 +25,7 @@ export class ReviewBase {
 
 //#region rentalId Prop
         @range({minimumNumber:1,maximumNumber:2147483647})
-    //    @required()
-        @prop({defaultValue:1})
+        @required()
         rentalId : number;
 //#endregion rentalId Prop
 

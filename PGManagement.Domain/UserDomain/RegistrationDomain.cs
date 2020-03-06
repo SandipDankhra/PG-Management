@@ -12,7 +12,8 @@ namespace PGManagement.Domain.UserModule
     public class RegistrationDomain : IRegistrationDomain
     {
         private IPasswordHash PasswordHash { get; set; }
-        public RegistrationDomain(IUserUow uow, IPasswordHash passwordHash) {
+        public RegistrationDomain(IUserUow uow, IPasswordHash passwordHash)
+        {
             this.Uow = uow;
             PasswordHash = passwordHash;
         }
@@ -26,7 +27,7 @@ namespace PGManagement.Domain.UserModule
         {
             throw new NotImplementedException();
         }
-        
+
 
         public HashSet<string> AddValidation(User entity)
         {
@@ -35,12 +36,11 @@ namespace PGManagement.Domain.UserModule
 
         public async Task AddAsync(User entity)
         {
-            PasswordResult passwordResult= PasswordHash.Encrypt(entity.userPassword);
+            PasswordResult passwordResult = PasswordHash.Encrypt(entity.userPassword);
             entity.Password = passwordResult.Signature;
             entity.Salt = passwordResult.Salt;
             await Uow.RegisterNewAsync(entity);
             await Uow.CommitAsync();
-
         }
 
         public HashSet<string> UpdateValidation(User entity)

@@ -7,7 +7,7 @@ import { AbstractReview } from '../domain/abstract-review';
 import { anonymous, routerModule } from '@rxweb/angular-router';
 import { Router } from '@angular/router';
 
-@anonymous()
+
 @Component({
     selector: "app-review-add",
     templateUrl: './review-add.component.html',
@@ -32,6 +32,7 @@ export class ReviewAddComponent extends AbstractReview implements OnInit, OnDest
         this.toastr.success('Thank you feedback !!!!');
     }
     sendReview() {
+        this.review.rentalId=1;
         this.post({ body: this.review }).subscribe(t => {
             this.result = t;
         })

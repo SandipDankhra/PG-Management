@@ -9,7 +9,7 @@ import { RxHttp, http } from '@rxweb/http';
 import { Router } from '@angular/router';
 
 
-@anonymous()
+
 @Component({
     selector: "app-registration-add",
     templateUrl: './registration-add.component.html',
@@ -33,9 +33,9 @@ export class RegistrationAddComponent extends AbstractRegistration implements On
         this.post({ body: this.registration }).subscribe(t => {
             this.result = t
             // console.log(t);
-            this.router.navigate(['client-index']);
+            // this.router.navigate(['client-index']);
         })
-        this.registrationFormGroup.reset();
+        // this.registrationFormGroup.reset();
         // this.registrationFormGroup.controls.confirmPassword.reset();
     }
 

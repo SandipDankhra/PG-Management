@@ -37,7 +37,8 @@ namespace PGManagement.Api.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymousUser]
+        //[AllowAnonymousUser]
+        [AllowAnonymous]
         public async Task<IActionResult> Post(AuthenticationModel authentication)
         {
 
