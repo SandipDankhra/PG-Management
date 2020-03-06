@@ -21,6 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region FirstName Annotations
 
+        [Required]
         [MaxLength(50)]
 		#endregion FirstName Annotations
 
@@ -28,6 +29,7 @@ namespace PGManagement.Models.Main
 
 		#region LastName Annotations
 
+        [Required]
         [MaxLength(50)]
 		#endregion LastName Annotations
 
@@ -42,6 +44,7 @@ namespace PGManagement.Models.Main
 
 		#region Email Annotations
 
+        [Required]
         [MaxLength(50)]
 		#endregion Email Annotations
 
@@ -61,8 +64,6 @@ namespace PGManagement.Models.Main
         public string LanguageCode { get; set; }
 
 		#region Password Annotations
-
-        [Required]
         [MaxLength(132)]
 		#endregion Password Annotations
 
@@ -70,24 +71,14 @@ namespace PGManagement.Models.Main
 
 		#region Salt Annotations
 
-        [Required]
         [MaxLength(140)]
 		#endregion Salt Annotations
 
         public byte[] Salt { get; set; }
 
-		#region LoginBlocked Annotations
 
-        [Required]
-		#endregion LoginBlocked Annotations
+        public Nullable<bool> LoginBlocked { get; set; }
 
-        public bool LoginBlocked { get; set; }
-
-		#region StatusId Annotations
-
-        [Range(1, int.MaxValue)]
-        [Required]
-		#endregion StatusId Annotations
 
         public Status StatusId { get; set; }
 
@@ -126,19 +117,19 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Employee> Employees { get; set; }
 
-		#region Requesters Annotations
-
-        [InverseProperty("User")]
-		#endregion Requesters Annotations
-
-        public virtual ICollection<Requester> Requesters { get; set; }
-
 		#region Documents Annotations
 
         [InverseProperty("User")]
 		#endregion Documents Annotations
 
         public virtual ICollection<Document> Documents { get; set; }
+
+		#region Requesters Annotations
+
+        [InverseProperty("User")]
+		#endregion Requesters Annotations
+
+        public virtual ICollection<Requester> Requesters { get; set; }
 
 
         public User()
@@ -148,8 +139,8 @@ namespace PGManagement.Models.Main
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
 			Employees = new HashSet<Employee>();
-			Requesters = new HashSet<Requester>();
 			Documents = new HashSet<Document>();
+			Requesters = new HashSet<Requester>();
         }
 	}
 }

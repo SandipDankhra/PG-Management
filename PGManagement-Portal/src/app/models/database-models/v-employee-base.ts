@@ -40,6 +40,12 @@ export class vEmployeeBase {
 //#endregion email Prop
 
 
+//#region canLogin Prop
+        @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'canLogin', keyColumn: false})
+        canLogin : any;
+//#endregion canLogin Prop
+
+
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
         mobileNumber : number;

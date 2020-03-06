@@ -4,13 +4,16 @@ import {ApplicationUserTokenBase} from '../database-models/application-user-toke
 import {UserRoleBase} from '../database-models/user-role-base';
 import {AuthenticationBase} from '../database-models/authentication-base';
 import {EmployeeBase} from '../database-models/employee-base';
-import {RequesterBase} from '../database-models/requester-base';
 import {DocumentBase} from '../database-models/document-base';
+import {RequesterBase} from '../database-models/requester-base';
+import { prop } from '@rxweb/reactive-form-validators';
 //Generated Imports
 export class User extends UserBase 
 {
 
 
+    @prop()
+    userPassword:string;
 
 
 //#region Generated Reference Properties
@@ -29,22 +32,14 @@ authentication : AuthenticationBase[];
 //#region employees Prop
 employees : EmployeeBase[];
 //#endregion employees Prop
-//#region requesters Prop
-requesters : RequesterBase[];
-//#endregion requesters Prop
 //#region documents Prop
 documents : DocumentBase[];
 //#endregion documents Prop
+//#region requesters Prop
+requesters : RequesterBase[];
+//#endregion requesters Prop
 
 //#endregion Generated Reference Properties
-
-
-
-
-
-
-
-
 
 
 

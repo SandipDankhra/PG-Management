@@ -5,8 +5,8 @@ import { Bed } from "@app/models";
 import { Subscription } from 'rxjs';
 
 @Component({
-    selector:"app-bed-list",
-    templateUrl:'./bed-list.component.html'
+    selector: "app-bed-list",
+    templateUrl: './bed-list.component.html'
 })
 export class BedListComponent extends AbstractBed implements OnInit, OnDestroy {
     bed: List<Bed>;

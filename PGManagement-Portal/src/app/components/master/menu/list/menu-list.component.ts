@@ -3,19 +3,30 @@ import { List } from "@rxweb/generics"
 import { AbstractMenu } from '../domain/abstract-menu';
 import { Menu } from "@app/models";
 import { Subscription } from 'rxjs';
+import { anonymous } from '@rxweb/angular-router';
 
+@anonymous()
 @Component({
-    selector:"app-menu-list",
-    templateUrl:'./menu-list.component.html'
+    selector: "app-menu-list",
+    templateUrl: './menu-list.component.html'
 })
 export class MenuListComponent extends AbstractMenu implements OnInit, OnDestroy {
-    menu: List<Menu>;
+    menus: List<Menu>;
     subscription: Subscription;
+    result: any;
 
     ngOnInit(): void {
+        this.Get()
+    }
+
+    Get() {
         this.subscription = this.get().subscribe((t: List<Menu>) => {
-            this.menu = t;
+            this.menus = t;
         })
+    }
+
+    editMenu() {
+
     }
 
 

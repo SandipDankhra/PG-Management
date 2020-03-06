@@ -17,12 +17,4 @@ rooms : RoomBase[];
 
 
 
-
-
-
-
-
-
-
-
 }

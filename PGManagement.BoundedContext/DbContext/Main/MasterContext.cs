@@ -19,8 +19,10 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<vUser> vUsers { get; set; }
 		public DbSet<User> Users { get; set; }
 		public DbSet<Complaint> Complaints { get; set; }
+        public DbSet<vComplaintRecord> vComplaintRecords { get; set; }
 
         public DbSet<vInvoiceRecord> vInvoiceRecords { get; set; }
+        public DbSet<vAvailableBed> vAvailableBed { get; set; }
 
         public DbSet<Review> reviews { get; set; }
         public DbSet<Notice> Notices { get; set; }

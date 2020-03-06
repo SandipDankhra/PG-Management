@@ -8,16 +8,8 @@ import { ForgetPasswordEditComponent } from './edit/forget-password-edit.compone
 const ROUTES: Routes = [
     {
         path: '',
-        component: ForgetPasswordListComponent
-    },
-    {
-        path: 'add',
         component: ForgetPasswordAddComponent
-    },
-    {
-        path: ':id',
-        component:  ForgetPasswordEditComponent
-    },
+    }
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forChild(ROUTES);

@@ -17,12 +17,4 @@ rental : RentalBase;
 
 
 
-
-
-
-
-
-
-
-
 }

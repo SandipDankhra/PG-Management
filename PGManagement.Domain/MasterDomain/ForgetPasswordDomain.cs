@@ -11,6 +11,7 @@ namespace PGManagement.Domain.MasterModule
     public class ForgetPasswordDomain : IForgetPasswordDomain
     {
         private IPasswordHash PasswordHash { get; set; }
+
         public ForgetPasswordDomain(IMasterUow uow,IPasswordHash passwordHash)
         {
             this.Uow = uow;
@@ -28,8 +29,8 @@ namespace PGManagement.Domain.MasterModule
                 var otpNumber = rand.Next(1000, 9999);
                 Authentication Authentication = new Authentication() { UserId = mobileValidate.UserId, Otp = otpNumber };
                 await Uow.RegisterNewAsync<Authentication>(Authentication);
-                await Task.FromResult("Successfull");
-                return true;
+                await Uow.CommitAsync();
+                return mobileValidate.UserId;
             }
             else
             {
@@ -40,95 +41,41 @@ namespace PGManagement.Domain.MasterModule
         }
 
 
-        public HashSet<string> AddValidation(Authentication entity)
-        {
-
-            return ValidationMessages;
-        }
-
-        public Task AddAsync(User parameter)
-        {
-
-            throw new NotImplementedException();
-        }
+         
         public async Task AddAsync(Authentication parameter)
         {
             var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp== parameter.Otp && t.UserId == parameter.UserId);
-            if (otpvalid != null)
-            {
-                await this.UpdateAsync(otpvalid);
-            }
-
-            /*Random rand = new Random();
-            var num = rand.Next(1000, 9999);
-            entity.AuthenticationOtp = num;*/
-
-            /* await Uow.RegisterNewAsync(entity);
-             await Uow.CommitAsync();*/
+            
         }
 
-        public Task<object> GetBy(Authentication parameters)
+     
+
+        public async Task UpdateAsync(Authentication entity)
         {
+            User user;
+            user = await Uow.Repository<User>().FindByKeyAsync(entity.UserId);
+            //user.FirstName = "Rutva";
+            PasswordResult passwordResult = PasswordHash.Encrypt(entity.userPassword);
+            user.Password = passwordResult.Signature;
+            user.Salt = passwordResult.Salt;
+            await Uow.RegisterDirtyAsync(user);
+            await Uow.CommitAsync();
+        }
 
-            /*var otpvalid=await Uow.Repository<Authentication>().SingleOrDefaultAsync(t=>t.AuthenticationOtp==parameters.AuthenticationOtp);
-            if (otpvalid != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }*/
+        public Task<object> GetAsync(User parameters)
+        {
             throw new NotImplementedException();
+        }
 
+        public HashSet<string> AddValidation(Authentication entity)
+        {
+            //throw new NotImplementedException();
+            return ValidationMessages;
         }
 
         public HashSet<string> UpdateValidation(Authentication entity)
         {
             return ValidationMessages;
-        }
-
-        public async Task UpdateAsync(User parameter)
-        {
-
-            PasswordResult passwordResult = PasswordHash.Encrypt(parameter.userPassword);
-            parameter.Password = passwordResult.Signature;
-            parameter.Salt = passwordResult.Salt;
-            await Uow.RegisterDirtyAsync(parameter);
-            await Uow.CommitAsync();
-
-
-        }
-
-        public HashSet<string> DeleteValidation(Authentication parameters)
-        {
-            return ValidationMessages;
-        }
-
-        public Task DeleteAsync(Authentication parameters)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<object> GetAsync(User parameters)
-        {
-            /*var mobileValidate = await Uow.Repository<User>().SingleOrDefaultAsync(t => t.MobileNumber == parameters.MobileNumber);
-
-            if (mobileValidate != null)
-            {
-                Random rand = new Random();
-                var otpNumber = rand.Next(1000, 9999);
-                Authentication Authentication = new Authentication() { UserId = mobileValidate.UserId, AuthenticationOtp = otpNumber };
-                await Uow.RegisterNewAsync<Authentication>(Authentication);
-                await Task.FromResult("Successfull");
-                return true;
-            }
-            else
-            {
-                return "Invalid Mobile number";
-            }*/
-            throw new NotImplementedException();
-
         }
 
         public HashSet<string> DeleteValidation(User parameters)
@@ -137,11 +84,6 @@ namespace PGManagement.Domain.MasterModule
         }
 
         public Task DeleteAsync(User parameters)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(Authentication entity)
         {
             throw new NotImplementedException();
         }

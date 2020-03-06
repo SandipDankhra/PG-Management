@@ -24,7 +24,7 @@ export class RegistrationEditComponent extends AbstractRegistration implements O
 
     ngOnInit(): void {
         this.get({ params: [this.id] }).subscribe(t => {
-            this.registrationFormGroup = this.formBuilder.formGroup(UserBase,t) as IFormGroup<UserBase>;
+            this.registrationFormGroup = this.formBuilder.formGroup(User, t) as IFormGroup<User>;
         })
     }
 

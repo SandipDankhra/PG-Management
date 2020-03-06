@@ -13,12 +13,4 @@ export class vAvailableBed extends vAvailableBedBase
 
 
 
-
-
-
-
-
-
-
-
 }

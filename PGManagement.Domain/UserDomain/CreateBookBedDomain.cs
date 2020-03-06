@@ -55,7 +55,7 @@ namespace PGManagement.Domain.MasterModule
                 spParameters[6] = new SqlParameter() { ParameterName = "startDate", Value = entity.StartDate };
                 spParameters[7] = new SqlParameter() { ParameterName = "endDate", Value = entity.EndDate };
                 await DbContextManager.StoreProc<StoreProcResult>("[dbo].spBookBed ", spParameters);
-                await DbContextManager.CommitAsync();
+                 await DbContextManager.CommitAsync();
             }
             catch (Exception e)
             {
