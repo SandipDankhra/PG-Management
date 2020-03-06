@@ -58,6 +58,21 @@ namespace PGManagement.Models.Main
         public int RentalId { get; set; }
 
 
+        public Nullable<System.DateTimeOffset> CreateDate { get; set; }
+
+
+        public System.DateTime StartDate { get; set; }
+
+
+        public System.DateTime EndDate { get; set; }
+
+
+        public int BedNumber { get; set; }
+
+
+        public string Email { get; set; }
+
+
         public vInvoiceRecord()
         {
         }

@@ -1,5 +1,60 @@
-<h1>Rental LIST</h1>
-
-<div id="user-list">
-    <!-- <rx-grid [design]="userGrid"></rx-grid> -->
-</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <!-- <th scope="col">Role Name</th> -->
+      <th scope="col">Name</th>
+      <th scope="col">Rental City</th>
+      <th scope="col">Rental Type</th>
+      
+      <!-- <th scope="col">Last Name</th> -->
+      <th scope="col">Email</th>
+      
+      <th scope="col">Room Number</th>
+      <th scope="col">Room Type</th>
+      <th scope="col">Address</th>
+      <th scope="col">Bed Price</th>
+      <th scope="col">Flat Number</th>
+      <!-- <th scope="col">Flat Name</th> -->
+      <th scope="col">Bed Number</th>
+      <th scope="col">Room Sharing</th>
+      
+      <!-- <th scope="col">Application Object Name</th> -->
+      <th scope="col">Mobile Number</th>
+      <!-- <th scope="col">Document Type ID</th> -->
+      <th scope="col">Document Url</th>
+      <th scope="col">Upload Date Time</th>
+      
+      <!-- <th scope="col">Payment Type ID</th> -->
+      <th scope="col">Payment Amount</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let rental of vrental">
+    <tr>
+      <!-- <th>{{rental.roleName}}</th> -->
+      <td>{{rental.firstName + ' ' + rental.lastName}}</td>
+      <!-- <td>{{rental.lastName}}</td> -->
+      <td>{{rental.rentalCity}}</td>
+      <td>{{rental.rentalType}}</td>
+      
+      <td>{{rental.email}}</td>
+      <td>{{rental.roomNumber}}</td>
+      <td>{{rental.roomType}}</td>
+      <td>{{rental.address}}</td>
+      <td>{{rental.bedPrice}}</td>
+      <!-- <td>{{rental.flatNumber}}</td> -->
+      <td>{{rental.flatName}}</td>
+      <td>{{rental.bedNumber}}</td>
+      <td>{{rental.roomSharing}}</td>
+      <!-- <td>{{rental.applicationObjectName}}</td> -->
+      <td>{{rental.mobileNumber}}</td>
+      <!-- <td>{{rental.documentTypeId}}</td> -->
+      <td>{{rental.uploadDateTime}}</td>
+      <!-- <td>{{rental.paymentTypeId}}</td> -->
+      <td>{{rental.paymentAmount}}</td>
+      <td>{{rental.startDate}}</td>
+      <td>{{rental.endDate}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -6,7 +6,8 @@ import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { ActivatedRoute } from '@angular/router';
 
 import { Room } from '@app/models';
-
+import { anonymous } from '@rxweb/angular-router';
+@anonymous()
 @Component({
     selector: "app-room-edit",
     templateUrl: './room-edit.component.html'
@@ -18,7 +19,7 @@ export class RoomEditComponent extends AbstractRoom implements OnInit, OnDestroy
 
     constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
-        this.activatedRoute.queryParams.subscribe(t => {
+        this.activatedRoute.params.subscribe(t => {
             this.id = t['id'];
         })
     }

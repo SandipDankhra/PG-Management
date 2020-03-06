@@ -15,7 +15,7 @@ namespace PGManagement.Domain.MasterModule
 
         public async Task<object> GetAsync(vAvailableBed parameters)
         {
-            return await Uow.Repository<vAvailableBed>().FindByAsync(t => t.BedStatus == false);  
+            return await Uow.Repository<vAvailableBed>().FindByAsync(t => t.BedStatus == true);  
         }
 
         public Task<object> GetBy(vAvailableBed parameters)

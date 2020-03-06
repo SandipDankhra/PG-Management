@@ -7,7 +7,7 @@ import { RentalEditComponent } from './edit/rental-edit.component';
 
 const ROUTES: Routes = [
     {
-        path: '',
+        path: 'list',
         component: RentalListComponent
     },
     {

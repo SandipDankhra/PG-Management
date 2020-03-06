@@ -11,7 +11,7 @@ const ROUTES: Routes = [
         component: BedListComponent
     },
     {
-        path: 'add',
+        path: 'add/:id',
         component: BedAddComponent
     },
     {

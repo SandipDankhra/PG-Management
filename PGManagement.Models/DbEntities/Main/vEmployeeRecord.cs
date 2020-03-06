@@ -37,10 +37,16 @@ namespace PGManagement.Models.Main
         public string Email { get; set; }
 
 
-        public Nullable<decimal> MobileNumber { get; set; }
+        public decimal MobileNumber { get; set; }
 
 
         public string ApplicationObjectName { get; set; }
+
+
+        public int EmployeeId { get; set; }
+
+
+        public int UserId { get; set; }
 
 
         public vEmployeeRecord()

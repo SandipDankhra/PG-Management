@@ -20,7 +20,7 @@ export class RentalAddComponent extends AbstractRental implements OnInit, OnDest
 
     ngOnInit(): void {
         this.rental = new Rental();
-        this.rentalFormGroup = this.formBuilder.formGroup(this.rental) as IFormGroup<Rental>;
+       
     }
 
     ngOnDestroy(): void {

@@ -19,7 +19,6 @@ export class ComplaintListComponent extends AbstractComplaint implements OnInit,
         this.complaints = new List<vComplaintRecord>();
         this.subscription = this.get().subscribe((t: List<vComplaintRecord>) => {
             this.complaints = t;
-            debugger;
         })
     }
 

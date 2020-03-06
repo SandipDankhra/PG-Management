@@ -55,9 +55,6 @@ namespace PGManagement.Models.Main
         public string FlatName { get; set; }
 
 
-        public int BedId { get; set; }
-
-
         public string RoomSharing { get; set; }
 
 
@@ -67,7 +64,7 @@ namespace PGManagement.Models.Main
         public string ApplicationObjectName { get; set; }
 
 
-        public Nullable<decimal> MobileNumber { get; set; }
+        public decimal MobileNumber { get; set; }
 
 
         public int DocumentTypeId { get; set; }
@@ -83,6 +80,9 @@ namespace PGManagement.Models.Main
 
 
         public int PaymentAmount { get; set; }
+
+
+        public int BedNumber { get; set; }
 
 
         public vRentalRecord()

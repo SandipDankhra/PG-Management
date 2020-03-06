@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
         default: true,
         uri: "http://localhost:4200"// 'https://localhost:44376' 
       }],
-      filters: [{ model: AuthFilter }],
+      filters: [{model:AuthFilter}],
       onError: (response: HttpResponse) => {
         if (response.statusCode == 401
         ) {
@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     var auth = this.browserStorage.local.get("auth");
     console.log("hey:" + auth);
     if (auth) {
-      this.router.navigate(["/complaints"])
+      this.router.navigate(["/client-index"])
       this.isShowDashboard = true;
     }
     else {

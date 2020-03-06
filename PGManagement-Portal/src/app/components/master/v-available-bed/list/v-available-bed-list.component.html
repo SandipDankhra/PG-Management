@@ -1,1 +1,76 @@
-<h1>vAvailableBed LIST</h1>
+<form action="" class="card">
+    <div class="form-row card-header">
+        <div class="col-lg-10">
+            <h3>AvailableBed LIST</h3>
+        </div>
+        <!-- <div class="col-lg-2 card-body" >
+            <select id="locality" style="height: 2.6rem; width: 9.4rem;" (change)="onSelect(select)" #select>
+                <option value="" disabled="" selected="">Select locality</option>
+                <option value="loc" *ngFor="let loc of vAvailableBed">{{loc.locality}}</option>
+                <option value="hello">hello</option>
+                <option value="hello123">hello123</option>
+            </select>
+        </div> -->
+    </div>
+    <table class="table" style="border: 2cm; border-radius: 2px;">
+
+        <thead>
+            <tr>
+                <th scope="col">FlatName</th>
+                <th scope="col">FlatNumber</th>
+                <th scope="col">Locality</th>
+                <th scope="col">Address</th>
+                <th scope="col">RoomNumber</th>
+                <th scope="col">RoomSharing</th>
+                <th scope="col">BedNumber</th>
+                <th scope="col">BedPrice</th>
+                <th scope="col">BookBed</th>
+
+            </tr>
+        </thead>
+        <tbody *ngFor="let bed of vAvailableBed">
+            <tr>
+                <!-- {{bed.bedId}} -->
+                <td>{{bed.flatName}}</td>
+                <td>{{bed.flatNumber}}</td>
+                <td>{{bed.locality}}</td>
+                <td>{{bed.address}}</td>
+                <td>{{bed.roomNumber}}</td>
+                <td>{{bed.roomSharing}}</td>
+                <td>{{bed.bedNumber}}</td>
+                <td>{{bed.bedPrice}}</td>
+
+                <td>
+                    <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal"
+                        (click)="getBedNumber(bed.bedNumber,bed.bedId)">Request Bed</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rental Request</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bed Number : {{getbedNumber}} {{getbedId}}
+                    <br>
+                    Are you sure ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="sendRequest()" data-dismiss="modal">Confirm
+                        Request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -11,12 +11,13 @@ const ROUTES: Routes = [
         component: RoomListComponent
     },
     {
-        path: 'add',
+        path: 'add/:id',
         component: RoomAddComponent
     },
+ 
     {
         path: ':id',
-        component:  RoomEditComponent
+        component: RoomEditComponent
     },
 ];
 

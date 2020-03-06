@@ -52,9 +52,13 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<IChangePasswordDomain, ChangePasswordDomain>();
 
             serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
+            serviceCollection.AddScoped<IvAvailableBedDomain, vAvailableBedDomain>();
 
             
+            
+            serviceCollection.AddScoped<IEmployeeDomain, EmployeeDomain>();
             #endregion DomainService
+
         }
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { anonymous, middleware } from '@rxweb/angular-router'
+import { anonymous, middleware, route } from '@rxweb/angular-router'
 import { multilingual } from '@rxweb/localization'
 import { CoreComponent } from '@rxweb/angular-router';
 import { LoggedInMiddleware } from '../../domain/security/middleware/logged-in.middleware';
@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { RxHttp } from "@rxweb/http";
 import { LoginService } from './login.service';
 import { BaseToastr } from 'src/app/domain/customize-design/toastr';
+import { Router } from '@angular/router';
 // export class AuthFilter extends AbstractRequestFilter {
 //     constructor(private browserStorage: BrowserStorage) { super() }
 //     onRequest = (context: XhrContext) => {
@@ -30,7 +31,8 @@ import { BaseToastr } from 'src/app/domain/customize-design/toastr';
 })
 export class LoginComponent extends CoreComponent implements OnInit {
     loginFormGroup: FormGroup;
-    constructor(private browserStorage: BrowserStorage, private loginService: LoginService, private formBuilder: FormBuilder, private http: RxHttp) {
+    constructor(private browserStorage: BrowserStorage, private loginService: LoginService,private router:Router,
+         private formBuilder: FormBuilder, private http: RxHttp) {
         super();
     }
     ngOnInit(): void {
@@ -56,6 +58,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
         // })
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
             if (response.failedLogin) {
+                
             }
             else {
                 // this.showComponent = false;
@@ -67,6 +70,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
                 this.browserStorage.local.save('lcode', response.languageCode);
                 this.browserStorage.local.save('userId', response.userId);
                 console.log(response.validationMessage)
+                this.router.navigate(["client-index"]);
             }
             // this.spin = false;
             // this.routers.navigate(["/users"]);
