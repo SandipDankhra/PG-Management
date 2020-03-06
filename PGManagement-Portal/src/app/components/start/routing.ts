@@ -25,8 +25,8 @@ var routings = [
 		component: RegistrationAddComponent
 	},
 	{
-		path: "login",
-		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
+		path: "clientlogin",
+		loadChildren: () => import("../user/clientlogin/clientlogin.module").then(m => m.clientLoginModule),
 	},
 
 	{
