@@ -82,12 +82,6 @@ export class vRentalRecordBase {
 //#endregion flatName Prop
 
 
-//#region bedId Prop
-        @gridColumn({visible: true, columnIndex:13, allowSorting: true, headerKey: 'bedId', keyColumn: false})
-        bedId : number;
-//#endregion bedId Prop
-
-
 //#region roomSharing Prop
         @gridColumn({visible: true, columnIndex:14, allowSorting: true, headerKey: 'roomSharing', keyColumn: false})
         roomSharing : string;
@@ -108,7 +102,7 @@ export class vRentalRecordBase {
 
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
-        mobileNumber : any;
+        mobileNumber : number;
 //#endregion mobileNumber Prop
 
 
@@ -140,5 +134,11 @@ export class vRentalRecordBase {
         @gridColumn({visible: true, columnIndex:22, allowSorting: true, headerKey: 'paymentAmount', keyColumn: false})
         paymentAmount : number;
 //#endregion paymentAmount Prop
+
+
+//#region bedNumber Prop
+        @gridColumn({visible: true, columnIndex:22, allowSorting: true, headerKey: 'bedNumber', keyColumn: false})
+        bedNumber : number;
+//#endregion bedNumber Prop
 
 }

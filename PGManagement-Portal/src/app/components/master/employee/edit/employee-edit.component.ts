@@ -5,30 +5,48 @@ import { Subscription } from 'rxjs';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { ActivatedRoute } from '@angular/router';
 
-import { Employee } from '@app/models';
+import { vEmployeeRecord, vEmployeeRec, Employee } from '@app/models';
 
 @Component({
     selector: "app-employee-edit",
     templateUrl: './employee-edit.component.html'
 })
 export class EmployeeEditComponent extends AbstractEmployee implements OnInit, OnDestroy {
-    employee: Employee;
+    employee: vEmployeeRec;
     subscription: Subscription;
-    id: number;
-
+    id: any;
+    isload: boolean=true;
+result:any;
     constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
-        this.activatedRoute.queryParams.subscribe(t => {
-            this.id = t['id'];
-        })
+        // this.id = this.activatedRoute.snapshot.paramMap.get('id');
+        this.activatedRoute.params.subscribe(t=>(this.id=t.id));
     }
 
     ngOnInit(): void {
-        this.get({ params: [this.id] }).subscribe(t => {
-            this.employeeFormGroup = this.formBuilder.formGroup(Employee,t) as IFormGroup<Employee>;
+        this.isload=false;
+        console.log("id"+this.id);
+        this.get({params:[this.id],queryParams:{employeeId:this.id}} ).subscribe((t:vEmployeeRec) => {
+            console.log(t);
+            this.employee= new vEmployeeRec();
+            // this.employeeFormGroup = this.formBuilder.formGroup(this.employee) as IFormGroup<vEmployeeRec>;
+            this.employeeFormGroup = this.formBuilder.formGroup<vEmployeeRec>(vEmployeeRec,t) as IFormGroup<vEmployeeRec>;
+            // this.employeeFormGroup.controls.firstName.setValue(t.firstName);
+            // this.employeeFormGroup.controls.firstName.patchValue(t[0].firstName);
+            this.isload=true;
         })
     }
 
+    saveChanges(){
+        this.post({body:this.employee}).subscribe(t=>{
+            this.result=t;
+        }) 
+    }
+
+
+    // onCancel(){
+    //     this.employeeFormGroup.reset();
+    // }
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();

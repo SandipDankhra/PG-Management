@@ -87,4 +87,34 @@ export class vInvoiceRecordBase {
         rentalId : number;
 //#endregion rentalId Prop
 
+
+//#region createDate Prop
+        @gridColumn({visible: true, columnIndex:14, allowSorting: true, headerKey: 'createDate', keyColumn: false})
+        createDate : any;
+//#endregion createDate Prop
+
+
+//#region startDate Prop
+        @gridColumn({visible: true, columnIndex:15, allowSorting: true, headerKey: 'startDate', keyColumn: false})
+        startDate : any;
+//#endregion startDate Prop
+
+
+//#region endDate Prop
+        @gridColumn({visible: true, columnIndex:16, allowSorting: true, headerKey: 'endDate', keyColumn: false})
+        endDate : any;
+//#endregion endDate Prop
+
+
+//#region bedNumber Prop
+        @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'bedNumber', keyColumn: false})
+        bedNumber : number;
+//#endregion bedNumber Prop
+
+
+//#region email Prop
+        @gridColumn({visible: true, columnIndex:18, allowSorting: true, headerKey: 'email', keyColumn: false})
+        email : string;
+//#endregion email Prop
+
 }

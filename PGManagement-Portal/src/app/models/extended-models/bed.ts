@@ -22,4 +22,15 @@ bookBed : BookBedBase[];
 
 //#endregion Generated Reference Properties
 
+
+
+
+
+
+
+
+
+
+
+
 }

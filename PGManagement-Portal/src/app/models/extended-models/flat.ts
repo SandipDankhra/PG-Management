@@ -14,4 +14,15 @@ rooms : RoomBase[];
 
 //#endregion Generated Reference Properties
 
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -18,4 +18,15 @@ rolePermissions : RolePermissionBase[];
 
 //#endregion Generated Reference Properties
 
+
+
+
+
+
+
+
+
+
+
+
 }

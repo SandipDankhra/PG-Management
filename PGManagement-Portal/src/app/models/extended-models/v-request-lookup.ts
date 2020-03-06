@@ -10,4 +10,15 @@ export class vRequestLookup extends vRequestLookupBase
 
 //#endregion Generated Reference Properties
 
+
+
+
+
+
+
+
+
+
+
+
 }

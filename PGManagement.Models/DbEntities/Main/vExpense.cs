@@ -34,10 +34,13 @@ namespace PGManagement.Models.Main
         public string ExpenseDetails { get; set; }
 
 
-        public System.DateTime ExapenseDate { get; set; }
+        public decimal MobileNumber { get; set; }
 
 
-        public Nullable<decimal> MobileNumber { get; set; }
+        public System.DateTime ExpenseDate { get; set; }
+
+
+        public int ExpenseId { get; set; }
 
 
         public vExpense()

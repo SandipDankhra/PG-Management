@@ -35,6 +35,7 @@ namespace PGManagement.Domain.UserModule
 
         public async Task AddAsync(User entity)
         {
+
             PasswordResult passwordResult= PasswordHash.Encrypt(entity.userPassword);
             entity.Password = passwordResult.Signature;
             entity.Salt = passwordResult.Salt;

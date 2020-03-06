@@ -47,25 +47,14 @@ namespace PGManagement.Models.Main
 
         public string Email { get; set; }
 
-		#region ApplicationLocaleId Annotations
 
-        [Range(1, int.MaxValue)]
-        [Required]
-		#endregion ApplicationLocaleId Annotations
+        public Nullable<int> ApplicationLocaleId { get; set; }
 
-        public int ApplicationLocaleId { get; set; }
 
-		#region ApplicationTimeZoneId Annotations
-
-        [Range(1, int.MaxValue)]
-        [Required]
-		#endregion ApplicationTimeZoneId Annotations
-
-        public int ApplicationTimeZoneId { get; set; }
+        public Nullable<int> ApplicationTimeZoneId { get; set; }
 
 		#region LanguageCode Annotations
 
-        [Required]
         [MaxLength(3)]
 		#endregion LanguageCode Annotations
 
@@ -102,27 +91,6 @@ namespace PGManagement.Models.Main
 
         public Status StatusId { get; set; }
 
-		#region Employees Annotations
-
-        [InverseProperty("User")]
-		#endregion Employees Annotations
-
-        public virtual ICollection<Employee> Employees { get; set; }
-
-		#region Documents Annotations
-
-        [InverseProperty("User")]
-		#endregion Documents Annotations
-
-        public virtual ICollection<Document> Documents { get; set; }
-
-		#region Requesters Annotations
-
-        [InverseProperty("User")]
-		#endregion Requesters Annotations
-
-        public virtual ICollection<Requester> Requesters { get; set; }
-
 		#region Rentals Annotations
 
         [InverseProperty("User")]
@@ -151,16 +119,37 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Authentication> Authentication { get; set; }
 
+		#region Employees Annotations
+
+        [InverseProperty("User")]
+		#endregion Employees Annotations
+
+        public virtual ICollection<Employee> Employees { get; set; }
+
+		#region Requesters Annotations
+
+        [InverseProperty("User")]
+		#endregion Requesters Annotations
+
+        public virtual ICollection<Requester> Requesters { get; set; }
+
+		#region Documents Annotations
+
+        [InverseProperty("User")]
+		#endregion Documents Annotations
+
+        public virtual ICollection<Document> Documents { get; set; }
+
 
         public User()
         {
-			Employees = new HashSet<Employee>();
-			Documents = new HashSet<Document>();
-			Requesters = new HashSet<Requester>();
 			Rentals = new HashSet<Rental>();
 			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
+			Employees = new HashSet<Employee>();
+			Requesters = new HashSet<Requester>();
+			Documents = new HashSet<Document>();
         }
 	}
 }

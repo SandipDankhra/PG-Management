@@ -54,7 +54,10 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<IForgetPasswordDomain, ForgetPasswordDomain>();
 
             
+            
+            serviceCollection.AddScoped<IEmployeeDomain, EmployeeDomain>();
             #endregion DomainService
+
         }
     }
 }
