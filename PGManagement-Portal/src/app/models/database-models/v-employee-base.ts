@@ -48,7 +48,7 @@ export class vEmployeeBase {
 
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
-        mobileNumber : any;
+        mobileNumber : number;
 //#endregion mobileNumber Prop
 
 }

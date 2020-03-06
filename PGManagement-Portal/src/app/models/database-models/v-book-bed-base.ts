@@ -4,6 +4,8 @@ import { gridColumn } from "@rxweb/grid"
 
 export class vBookBedBase {
 
+        @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'bookBedId', keyColumn: true})
+        BookbedId : number;
 //#region firstName Prop
         @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'firstName', keyColumn: false})
         firstName : string;

@@ -10,9 +10,10 @@ namespace PGManagement.Api.Controllers.MasterModule
 {
     [ApiController]
     [Route("api/[controller]")]
-    
+    [AllowAnonymous]
 	
-	public class ComplaintsController : BaseController<Complaint,vComplaintRecord,Complaint>
+	public class ComplaintsController : BaseController<Complaint,Complaint,Complaint>
+
     {
         public ComplaintsController(IMasterUow uow):base(uow) {}
 

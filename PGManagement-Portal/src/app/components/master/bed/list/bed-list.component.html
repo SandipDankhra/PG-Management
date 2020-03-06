@@ -1,1 +1,52 @@
 <h1>Bed LIST</h1>
+
+<div class="card">
+  <div class="container">
+  <div class="card-header">
+    <h3 class="card-title">Bed List </h3>
+    
+  </div>
+  
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>                  
+        <tr>
+          <th style="width: 10px">Bed Number</th>
+          
+          <th>Bed Status</th>
+          <th>Bed Price</th>
+          
+          <!-- <th style="width: 10px">Update</th> -->
+          <!-- <th style="width: 130px">Add Bed</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bt of bed">
+          <td>{{bt.bedNumber}}</td>
+          <td>{{bt.bedStatus}}</td>
+          <td>{{bt.bedPrice}}</td>
+          
+          <!-- <td><button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" 
+            (click)="EditRoom()">Update</button></td> -->
+          <!-- <td><button class="card-title" type="button" class="btn btn-secondary btn-sm"  data-toggle="modal" 
+              >Add Room</button></td>   -->
+
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-footer clearfix">
+    <ul class="pagination pagination-sm m-0 float-right">
+      <li class="page-item"><a class="page-link" href="#">«</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+

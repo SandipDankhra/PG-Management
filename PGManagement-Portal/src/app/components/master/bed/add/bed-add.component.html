@@ -1,1 +1,41 @@
-<h1>Bed ADDagdsadsgadgdsgsagasdg</h1>
+<h1>Bed ADD</h1>
+
+<div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">ADD Bed of Room  </h3>
+    </div>
+    
+    <form role="form" [formGroup]="bedFormGroup">
+      <div class="card-body">
+        <div class="form-group">
+          <label >Bed Number</label>
+          <input type="text" class="form-control" placeholder="Enter Bed Number" formControlName="bedNumber">
+        </div>
+        
+        <div class="form-group">
+            <label >Bed Status</label>
+            <input type="text" class="form-control"  placeholder="Enter Bed Status" formControlName="bedStatus">
+        </div>
+
+        <div class="form-group">
+            <label >Bed Price</label>
+            <input type="text" class="form-control"  placeholder="Enter Bed Price" formControlName="bedPrice">
+        </div>
+
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" (click)="onAddBed()">Add Bed</button>
+        </div>
+
+        <div class="card-footer">
+          <button type="button" class="btn btn-secondary" (click)="onShowBed()">Show Bed List</button>
+        </div>
+        <!-- <div class="card-footer">
+          <button type="button" class="btn btn-secondary" (click)="onShowRoom()">Show Room</button>
+        </div> -->
+   
+      </div>
+      
+
+    
+    </form>
+  </div>

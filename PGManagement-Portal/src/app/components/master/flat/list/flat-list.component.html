@@ -1,1 +1,54 @@
-<h1>Flat LIST</h1>
+<h1>FLAT LIST</h1>
+<div class="card">
+  <div class="container">
+  <div class="card-header">
+    <h3 class="card-title">FLAT Table</h3>
+    
+  </div>
+  <div class="card-header">
+    <button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#exampleModal"
+    (click)="AddFlat()">ADD Flat</button>
+  </div>
+  <!-- /.card-header -->
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>                  
+        <tr>
+          <th style="width: 10px">Flat Number</th>
+          <th>Flat Name</th>
+          <th>Address</th>
+          <th>Locality</th>
+          <th style="width: 10px">Update</th>
+          <th style="width: 130px">Add Room</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ft of flat">
+          <td>{{ft.flatNumber}}</td>
+          <td>{{ft.flatName}}</td>
+          <td>{{ft.address}}</td>
+          <td>{{ft.locality}}</td>
+          <td><button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" 
+            (click)="EditFlat()">Update</button></td>
+          <td><button class="card-title" type="button" class="btn btn-secondary btn-sm"  data-toggle="modal" 
+              [routerLink]="['/room/add/',ft.flatId]">Add Room</button></td>  
+
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>
+  <!-- /.card-body -->
+  <div class="card-footer clearfix">
+    <ul class="pagination pagination-sm m-0 float-right">
+      <li class="page-item"><a class="page-link" href="#">«</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
