@@ -4,15 +4,15 @@ import { gridColumn } from "@rxweb/grid"
 
 export class AuthenticationBase {
 
+        @prop()
+        mobileNumber:number;
+
+        @prop()
+        userPassword:string;
 //#region authenticationId Prop
         @prop()
         authenticationId : number;
 //#endregion authenticationId Prop
-
-@prop()
-userPassword:string;
-@prop()
-mobileNumber:string;
 
 
 //#region userId Prop

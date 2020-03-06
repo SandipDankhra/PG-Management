@@ -39,4 +39,22 @@ export class vRequestBase {
         bedStatus : boolean;
 //#endregion bedStatus Prop
 
+
+//#region userId Prop
+        @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'userId', keyColumn: false})
+        userId : number;
+//#endregion userId Prop
+
+
+//#region firstName Prop
+        @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'firstName', keyColumn: false})
+        firstName : string;
+//#endregion firstName Prop
+
+
+//#region lastName Prop
+        @gridColumn({visible: true, columnIndex:8, allowSorting: true, headerKey: 'lastName', keyColumn: false})
+        lastName : string;
+//#endregion lastName Prop
+
 }
