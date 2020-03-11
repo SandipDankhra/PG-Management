@@ -48,7 +48,7 @@ export class vEmployeeRecordBase {
 
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
-        mobileNumber : number;
+        mobileNumber : any;
 //#endregion mobileNumber Prop
 
 
@@ -56,17 +56,5 @@ export class vEmployeeRecordBase {
         @gridColumn({visible: true, columnIndex:8, allowSorting: true, headerKey: 'applicationObjectName', keyColumn: false})
         applicationObjectName : string;
 //#endregion applicationObjectName Prop
-
-
-//#region employeeId Prop
-        @gridColumn({visible: true, columnIndex:9, allowSorting: true, headerKey: 'employeeId', keyColumn: false})
-        employeeId : number;
-//#endregion employeeId Prop
-
-
-//#region userId Prop
-        @gridColumn({visible: true, columnIndex:10, allowSorting: true, headerKey: 'userId', keyColumn: false})
-        userId : number;
-//#endregion userId Prop
 
 }

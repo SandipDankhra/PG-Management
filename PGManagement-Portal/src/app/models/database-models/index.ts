@@ -1,5 +1,3 @@
-export {DocumentBase} from './document-base';;
-export {ExpensBase} from './expens-base';;
 export {UserBase} from './user-base';;
 export {ApplicationLocaleBase} from './application-locale-base';;
 export {ApplicationTimeZoneBase} from './application-time-zone-base';;
@@ -23,6 +21,8 @@ export {RoomBase} from './room-base';;
 export {FlatBase} from './flat-base';;
 export {ComplaintBase} from './complaint-base';;
 export {EmployeeBase} from './employee-base';;
+export {ExpenseBase} from './expense-base';;
+export {DocumentBase} from './document-base';;
 export {PaymentBase} from './payment-base';;
 export {MenuBase} from './menu-base';;
 export {RequesterBase} from './requester-base';;

@@ -5,6 +5,8 @@ import { CreateBookBedListComponent } from './list/create-book-bed-list.componen
 import { CreateBookBedAddComponent } from './add/create-book-bed-add.component';
 import { CreateBookBedEditComponent } from './edit/create-book-bed-edit.component';
 
+import {vInvoiceRecordAddComponent} from '../v-invoice-record/add/v-invoice-record-add.component';
+
 const ROUTES: Routes = [
     {
         path: '',
@@ -17,6 +19,10 @@ const ROUTES: Routes = [
     {
         path: ':id',
         component:  CreateBookBedEditComponent
+    },
+    {
+        path: ' :id',
+        component:  vInvoiceRecordAddComponent
     },
 ];
 

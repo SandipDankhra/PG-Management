@@ -4,8 +4,6 @@ import { gridColumn } from "@rxweb/grid"
 
 export class vBookBedBase {
 
-        @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'bookBedId', keyColumn: true})
-        BookbedId : number;
 //#region firstName Prop
         @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'firstName', keyColumn: false})
         firstName : string;
@@ -86,7 +84,7 @@ export class vBookBedBase {
 
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:13, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
-        mobileNumber : any;
+        mobileNumber : number;
 //#endregion mobileNumber Prop
 
 
@@ -118,5 +116,11 @@ export class vBookBedBase {
         @gridColumn({visible: true, columnIndex:18, allowSorting: true, headerKey: 'paymentAmount', keyColumn: false})
         paymentAmount : number;
 //#endregion paymentAmount Prop
+
+
+//#region bookBedId Prop
+        @gridColumn({visible: true, columnIndex:19, allowSorting: true, headerKey: 'bookBedId', keyColumn: false})
+        bookBedId : number;
+//#endregion bookBedId Prop
 
 }
