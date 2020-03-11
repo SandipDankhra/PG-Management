@@ -6,7 +6,7 @@ import { BrowserStorage } from '../domain/services/browser-storage'
 export class AuthFilter extends AbstractRequestFilter implements ResponseFilter {
 
   constructor(private browserStorage: BrowserStorage, private router: Router, private baseToastr: BaseToastr) {
-    super()
+    super();
     this.browserStorage = new BrowserStorage();
   }
 

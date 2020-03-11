@@ -8,7 +8,7 @@ import { AbstractExpense } from '../domain/abstract-expense';
 import { anonymous } from '@rxweb/angular-router';
 
 
-@anonymous()
+
 @Component({
     selector: "app-expense-add",
     templateUrl: './expense-add.component.html'
@@ -16,7 +16,7 @@ import { anonymous } from '@rxweb/angular-router';
 export class ExpenseAddComponent extends AbstractExpense implements OnInit, OnDestroy {
     expense: Expense;
     subscription: Subscription;
-    result:any;
+    result: any;
     constructor(private formBuilder: RxFormBuilder) {
         super();
     }
@@ -26,14 +26,14 @@ export class ExpenseAddComponent extends AbstractExpense implements OnInit, OnDe
         this.expenseFormGroup = this.formBuilder.formGroup(this.expense) as IFormGroup<Expense>;
     }
 
-    onSubmit(){    
-        this.post({body:this.expenseFormGroup.value}).subscribe(t=>{
-            this.result=t;
-            this.expenseFormGroup.reset();           
+    onSubmit() {
+        this.post({ body: this.expenseFormGroup.value }).subscribe(t => {
+            this.result = t;
+            this.expenseFormGroup.reset();
         })
 
 
-        
+
     }
 
     ngOnDestroy(): void {

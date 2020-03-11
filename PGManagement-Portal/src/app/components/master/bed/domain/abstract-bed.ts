@@ -7,7 +7,7 @@ import { anonymous } from '@rxweb/angular-router';
     hostKey: "server",
     path: "api/bed",
 })
-@anonymous()
+
 export class AbstractBed extends RxHttp {
     bedFormGroup: IFormGroup<Bed>
 }

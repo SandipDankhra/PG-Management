@@ -5,9 +5,9 @@ import { RxFormBuilder, IFormGroup, RxFormGroup } from '@rxweb/reactive-form-val
 import { RoomTypeEnum } from '@app/enums';
 import { Room } from '@app/models';
 import { AbstractRoom } from '../domain/abstract-room';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { anonymous } from '@rxweb/angular-router';
-@anonymous()
+
 @Component({
     selector: "app-room-add",
     templateUrl: './room-add.component.html'
@@ -20,9 +20,9 @@ export class RoomAddComponent extends AbstractRoom implements OnInit, OnDestroy 
     subscription: Subscription;
     flatId: number;
 
-    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute,private router:Router) {
+    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute, private router: Router) {
         super();
-       
+
     }
 
     ngOnInit(): void {
@@ -42,7 +42,7 @@ export class RoomAddComponent extends AbstractRoom implements OnInit, OnDestroy 
             body: {
                 FlatId: this.flatId,
                 roomNumber: this.roomFormGroup.controls.roomNumber.value,
-                roomType:this.roomFormGroup.controls.roomType.value,
+                roomType: this.roomFormGroup.controls.roomType.value,
                 roomSharing: this.roomFormGroup.controls.roomSharing.value
             }
 
@@ -54,7 +54,7 @@ export class RoomAddComponent extends AbstractRoom implements OnInit, OnDestroy 
         //console.log(this.roomFormGroup.controls.roomType.value);
         this.roomFormGroup.reset();
     }
-    onShowRoom(){
+    onShowRoom() {
         this.router.navigateByUrl('/room');
     }
 

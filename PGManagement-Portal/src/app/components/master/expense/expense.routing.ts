@@ -7,7 +7,7 @@ import { ExpenseEditComponent } from './edit/expense-edit.component';
 
 const ROUTES: Routes = [
     {
-        path: 'list',
+        path: '',
         component: ExpenseListComponent
     },
     {
@@ -16,9 +16,9 @@ const ROUTES: Routes = [
     },
     {
         path: ':id',
-        component:  ExpenseEditComponent
+        component: ExpenseEditComponent
     },
-    
+
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forChild(ROUTES);

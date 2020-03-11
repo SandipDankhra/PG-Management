@@ -10,6 +10,7 @@ import { RxHttp } from "@rxweb/http";
 import { LoginService } from './login.service';
 import { BaseToastr } from 'src/app/domain/customize-design/toastr';
 import { Router } from '@angular/router';
+import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadcaster';
 // export class AuthFilter extends AbstractRequestFilter {
 //     constructor(private browserStorage: BrowserStorage) { super() }
 //     onRequest = (context: XhrContext) => {
@@ -18,10 +19,10 @@ import { Router } from '@angular/router';
 //     }
 // }
 // @xhrFilter()
-
+@anonymous()
 @middleware([LoggedInMiddleware])
 @multilingual("loginComponent")
-@anonymous()
+
 @Component({
     templateUrl: './login.component.html',
 })
@@ -31,13 +32,20 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent extends CoreComponent implements OnInit {
     loginFormGroup: FormGroup;
-    constructor(private browserStorage: BrowserStorage, private loginService: LoginService,private router:Router,
-         private formBuilder: FormBuilder, private http: RxHttp) {
+    constructor(private browserStorage: BrowserStorage, private loginService: LoginService, private router: Router,
+        private formBuilder: FormBuilder, private http: RxHttp, private applicationBroadcaster: ApplicationBroadcaster) {
         super();
     }
     ngOnInit(): void {
-
         console.log("hello");
+        this.applicationBroadcaster.activeMenu(true);
+        var auth = this.browserStorage.local.get('auth');
+        if (auth) {
+            this.router.navigate(["/complaints"]);
+        }
+
+
+
         // this.browserStorage.local.save('Authentication', '');
         this.loginFormGroup = this.formBuilder.group({
             email: [''],
@@ -57,21 +65,15 @@ export class LoginComponent extends CoreComponent implements OnInit {
         //     console.log(t);
         // })
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
-            // debugger
             if (response.failedLogin) {
-                
+
             }
             else {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
                 this.browserStorage.local.save('auth', response);
-                this.browserStorage.local.save('x-request', response.key);
-                this.browserStorage.local.save('userName', response.fullName);
-                this.browserStorage.local.save('userEmail', response.emailId);
-                this.browserStorage.local.save('lcode', response.languageCode);
-                this.browserStorage.local.save('userId', response.userId);
-                console.log(response.validationMessage)
-                this.router.navigate(["client-index"]);
+
+                this.router.navigate(["complaints"]);
             }
             // this.spin = false;
             // this.routers.navigate(["/users"]);

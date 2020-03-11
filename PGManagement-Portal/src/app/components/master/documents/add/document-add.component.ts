@@ -9,7 +9,7 @@ import { AbstractDocument } from '../domain/abstract-document';
 import { DocumentTypeEnum } from "src/app/enums/document-type.enum";
 import { anonymous } from '@rxweb/angular-router';
 
-@anonymous()
+
 @Component({
     selector: "app-document-add",
     templateUrl: './document-add.component.html'

@@ -4,11 +4,11 @@ import { CreateBookBed } from '@app/custom-models';
 import { anonymous } from '@rxweb/angular-router';
 
 
-@anonymous()
+
 @http({
-    hostKey:'server',
-    path:'api/CreateBookBed'
-    
+    hostKey: 'server',
+    path: 'api/CreateBookBed'
+
 })
 
 

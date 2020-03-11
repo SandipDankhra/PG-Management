@@ -8,49 +8,46 @@ import { Subscription } from 'rxjs';
 import { vExpense } from "@app/models";
 import { anonymous } from '@rxweb/angular-router';
 
-@anonymous()
+
 @Component({
-    selector:"app-expense-list",
-    templateUrl:'./expense-list.component.html'
+    selector: "app-expense-list",
+    templateUrl: './expense-list.component.html'
 })
 export class ExpenseListComponent extends AbstractExpense implements OnInit, OnDestroy {
     // expense: List<Expense>;
-    vexpense:List<vExpense>;
+    vexpense: List<vExpense>;
     subscription: Subscription;
-    result:any;
-    id:Number;
-    searchText:any;
-//    constructor(private http:RxHttp){
-//        super();
-//        this.post('https://localhost:44352/api/expensesearch')
-//    }
+    result: any;
+    id: Number;
+    searchText: any;
+    //    constructor(private http:RxHttp){
+    //        super();
+    //        this.post('https://localhost:44352/api/expensesearch')
+    //    }
 
     ngOnInit(): void {
         this.Get();
     }
-    Get()
-    {
+    Get() {
         this.subscription = this.get().subscribe((t: List<vExpense>) => {
             this.vexpense = t;
             console.log(this.vexpense);
         })
     }
-    Delete(id:number) 
-    {
-       this.id=id;
+    Delete(id: number) {
+        this.id = id;
     }
 
-    onConfirm(){
+    onConfirm() {
         this.delete({ params: [this.id], body: {} }).subscribe(res => {
             this.result = res;
-       })
+        })
         location.reload();
     }
 
-    onSearch(startDate:HTMLInputElement,endDate:HTMLInputElement)
-    {
-        this.post({ path:'api/SearchExpense', body:{startDate:startDate.value,lastDate:endDate.value}}).subscribe((res:any)=>{
-            this.vexpense=JSON.parse(res);
+    onSearch(startDate: HTMLInputElement, endDate: HTMLInputElement) {
+        this.post({ path: 'api/SearchExpense', body: { startDate: startDate.value, lastDate: endDate.value } }).subscribe((res: any) => {
+            this.vexpense = JSON.parse(res);
             console.log(this.vexpense);
         })
     }

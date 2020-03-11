@@ -8,26 +8,26 @@ import { vRentalRecord } from '@app/models';
 import { anonymous } from '@rxweb/angular-router';
 
 
-@anonymous()
+
 @Component({
-    selector:"app-rental-list",
-    templateUrl:'./rental-list.component.html'
+    selector: "app-rental-list",
+    templateUrl: './rental-list.component.html'
 })
 export class RentalListComponent extends AbstractRental implements OnInit, OnDestroy {
-    vrental:List<vRentalRecord>;
+    vrental: List<vRentalRecord>;
     subscription: Subscription;
-    result:any;
+    result: any;
 
- 
+
 
     ngOnInit(): void {
-        this.subscription = this.get().subscribe((t:List<vRentalRecord> ) => {
+        this.subscription = this.get().subscribe((t: List<vRentalRecord>) => {
             this.result = t;
         })
-      
+
     }
 
- 
+
 
     ngOnDestroy(): void {
         if (this.subscription)
