@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy } from "@angular/core"
 import {Router} from "@angular/router"
 import { Subscription, from } from 'rxjs';
-
+import{RxwebValidators}from '@rxweb/reactive-form-validators';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
 import { Flat } from '@app/models';
 import { AbstractFlat } from '../domain/abstract-flat';
 import { anonymous } from '@rxweb/angular-router';
+import { FormGroup } from '@angular/forms';
 
 @anonymous()
 @Component({
@@ -15,6 +16,7 @@ import { anonymous } from '@rxweb/angular-router';
 })
 export class FlatAddComponent extends AbstractFlat implements OnInit, OnDestroy {
     flat: Flat;
+    // flatFormGroup:FormGroup;
     result:any;
     subscription: Subscription;
 
@@ -23,8 +25,16 @@ export class FlatAddComponent extends AbstractFlat implements OnInit, OnDestroy 
     }
 
     ngOnInit(): void {
+        
         this.flat = new Flat();
         this.flatFormGroup = this.formBuilder.formGroup(this.flat) as IFormGroup<Flat>;
+        // this.flatFormGroup=this.formBuilder.group({
+        //     flatNumber:['',RxwebValidators.required()],
+        //     flatName:['',RxwebValidators.required()],
+        //     address:['',RxwebValidators.required()],
+        //     locality:['',RxwebValidators.required()],
+        // })
+        
     }
 
     onAddFlat(){

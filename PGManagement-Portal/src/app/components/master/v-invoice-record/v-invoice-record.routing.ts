@@ -11,7 +11,7 @@ const ROUTES: Routes = [
         component: vInvoiceRecordListComponent
     },
     {
-        path: 'add',
+        path: 'add/:id',
         component: vInvoiceRecordAddComponent
     },
     {
