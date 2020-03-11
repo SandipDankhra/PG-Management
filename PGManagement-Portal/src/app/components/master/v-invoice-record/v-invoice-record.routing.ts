@@ -7,11 +7,11 @@ import { vInvoiceRecordEditComponent } from './edit/v-invoice-record-edit.compon
 
 const ROUTES: Routes = [
     {
-        path: 'zxcbz',
+        path: '',
         component: vInvoiceRecordListComponent
     },
     {
-        path: 'zcxvadd',
+        path: 'add/:id',
         component: vInvoiceRecordAddComponent
     },
     {
