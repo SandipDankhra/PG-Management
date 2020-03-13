@@ -21,7 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region ApplicationObjectTypeId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("ApplicationObjectTypes","dbo","","ApplicationObjectTypeId")]
 		#endregion ApplicationObjectTypeId Annotations
@@ -38,7 +38,7 @@ namespace PGManagement.Models.Main
 
 		#region StatusId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
 		#endregion StatusId Annotations
 

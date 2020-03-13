@@ -21,7 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region RoleId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("Roles","dbo","","RoleId")]
 		#endregion RoleId Annotations
@@ -30,7 +30,7 @@ namespace PGManagement.Models.Main
 
 		#region ApplicationModuleId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("ApplicationModules","dbo","","ApplicationModuleId")]
 		#endregion ApplicationModuleId Annotations
@@ -51,7 +51,7 @@ namespace PGManagement.Models.Main
 
 		#region PermissionPriority Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
 		#endregion PermissionPriority Annotations
 

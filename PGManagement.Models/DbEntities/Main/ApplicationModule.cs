@@ -21,7 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region ModuleMasterId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("ModuleMasters","dbo","","ModuleMasterId")]
 		#endregion ModuleMasterId Annotations

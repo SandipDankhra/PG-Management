@@ -1,4 +1,6 @@
-<h1>Flat ADD</h1>
+
+<div class="container">
+  
 
 <div class="card card-primary">
     <div class="card-header">
@@ -10,31 +12,39 @@
       <div class="card-body">
         <div class="form-group">
           <label >Flat Number</label>
-          <input type="text" class="form-control" placeholder="Enter Flat Number" formControlName="flatNumber">
+          <input type="text" class="form-control" placeholder="Enter Flat Number" formControlName="flatNumber" >
+          <small class="form-text text-danger" *ngIf="flatFormGroup.controls.flatNumber.errors">{{flatFormGroup.controls.flatNumber.errorMessage}}<br/></small>
+          
         </div>
         <div class="form-group">
           <label >Flat Name</label>
           <input type="text" class="form-control"  placeholder="Enter Flat Name" formControlName="flatName">
+          <small class="form-text text-danger" *ngIf="flatFormGroup.controls.flatName.errors">{{flatFormGroup.controls.flatName.errorMessage}}<br/></small>
         </div>
         <div class="form-group">
             <label >Flat address</label>
             <input type="text" class="form-control"  placeholder="Enter Flat address" formControlName="address">
+            <small class="form-text text-danger" *ngIf="flatFormGroup.controls.address.errors">{{flatFormGroup.controls.address.errorMessage}}<br/></small>
         </div>
         <div class="form-group">
             <label >Flat locality</label>
             <input type="text"  class="form-control"  placeholder="Enter Flat locality" formControlName="locality">
+            <small class="form-text text-danger" *ngIf="flatFormGroup.controls.locality.errors">{{flatFormGroup.controls.locality.errorMessage}}<br/></small>
+          
         </div>
    
       </div>
-      <!-- /.card-body -->
-
+      
       <div class="card-footer">
         <button [disabled]="!flatFormGroup.valid" type="submit" class="btn btn-primary" (click)="onAddFlat()">ADD Flat</button>
         
       </div>
+      
       <div class="card-footer">
-        
         <button type="button" class="btn btn-secondary" (click)="onGoBack()">Go to Previous Page</button>
-      </div>
+      </div>  
+        
+      
     </form>
   </div>
+</div>

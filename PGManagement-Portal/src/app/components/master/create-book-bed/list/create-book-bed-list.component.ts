@@ -5,7 +5,10 @@ import { CreateBookBed } from "@app/custom-models";
 import { Subscription } from 'rxjs';
 import { PaymentTypeEnum } from '@app/enums';
 import { vBookBed } from '@app/models';
-import {Route, Router} from '@angular/router'
+import { AppGrid } from 'src/app/domain/app-grid';
+import { Router } from '@angular/router';
+// import { SummaryViewModel } from 'src/app/view-model/summary-view-model';
+
 
 
 @Component({
@@ -16,8 +19,10 @@ export class CreateBookBedListComponent extends AbstractCreateBookBed implements
     createBookBed: List<vBookBed>;
     subscription: Subscription;
     paymentTypeIdEnum:any;
-    result:any; 
-    constructor( private router:Router)
+    // summaryGrid:AppGrid;
+    // summaryList:SummaryViewModel[];
+
+    constructor(private router:Router)
     {
         super();
         this.paymentTypeIdEnum=PaymentTypeEnum;
@@ -26,16 +31,18 @@ export class CreateBookBedListComponent extends AbstractCreateBookBed implements
         this.subscription = this.get().subscribe((t: List<vBookBed>) => {
             console.log(t);
             this.createBookBed = t;
+            // this.summaryGrid = new AppGrid(this.summaryList,SummaryViewModel,{actions:{onInvitedLink:this.createBookBed.bind(this),
+            //     onAcceptedLink:this.firstName.bind(this),
+                
+            //      }});
         })
     }
 
     Invoice(){
-        // this.post({path:'api/vInvoiceRecord' ,body:{}}).subscribe(res=>
-        //     {
-        //         this.result=res;
-        //     })
-            this.router.navigate(['/v-invoice-record','cbt.bookBedId']);
 
+    }
+    onHomePage(){
+        this.router.navigateByUrl('');
     }
 
 

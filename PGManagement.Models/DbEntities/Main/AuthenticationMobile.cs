@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PGManagement.Models.Main
 {
-    public partial class vEmployee
+    public partial class Authentication
     {
         [NotMapped]
-        public string employeePassword { get; set; }
+        public decimal MobileNumber { get; set; }
     }
 }

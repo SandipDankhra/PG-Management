@@ -1,7 +1,7 @@
-<h1>BookBed LIST</h1>
 
+<!-- <div class="container"> -->
 <div class="card">
-  <div class="container">
+  
   <div class="card-header">
     <h3 class="card-title">Book Bed List </h3>
     
@@ -12,11 +12,19 @@
       <thead>                  
         <tr>
           
+          <th>Full Name</th>
+          <th>Mobile Number</th>
+          <th>Flat Name</th>
+          <th>Flat Number</th>
+          <th>Room Number</th>
+         
+          <!-- <th>Bed Price</th> -->
+          <th>Rental City</th>
+          <!-- <th>Rental Type</th> -->
+          <th>Room Sharing</th>
+
           
-          <th style="width: 10px">Bed Id</th>
-          <th>Rental Id</th>
-          <!-- <th>User Id</th> -->
-          <th>Payment Type Id</th>
+          <!-- <th>Payment Type Id</th> -->
           <th>Payment Amount</th>
           <th>Start Date</th>
           <th>End Date</th>
@@ -27,14 +35,20 @@
       </thead>
       <tbody>
         <tr *ngFor="let cbt of createBookBed">
-          <!-- <td>{{bt.bedNumber}}</td>
-          <td>{{bt.bedStatus}}</td>
-          <td>{{bt.bedPrice}}</td> -->
+          
+          <td>{{cbt.firstName}} {{cbt.lastName}}</td>
+          <td>{{cbt.mobileNumber}}</td>
+          <td>{{cbt.flatName}}</td>
+          <td>{{cbt.flatNumber}}</td>
+          <td>{{cbt.roomNumber}}</td>  
+         
+          <!-- <td>{{cbt.bedPrice}}</td> -->
+          <td>{{cbt.rentalCity}}</td>
+        
+          <!-- <td>{{rentalTypeIdEnum[cbt.rentalType]}}</td> -->
 
-          <td>{{cbt.bedId}}</td>
-          <td>{{cbt.rentalId}}</td>
-          <!-- <td>{{cbt.userId}}</td> -->
-            <td>{{paymentTypeIdEnum[cbt.paymentTypeId]}}</td>
+          <td>{{cbt.roomSharing}}</td>
+            <!-- <td>{{paymentTypeIdEnum[cbt.paymentTypeId]}}</td> -->
             <td>{{cbt.paymentAmount}}</td>
             <td>{{cbt.startDate}}</td>
             <td>{{cbt.endDate}}</td>
@@ -51,6 +65,7 @@
   </div>
 
   <div class="card-footer clearfix">
+    <button class="btn btn-primary" type="button" (click)="onHomePage()">Go to Home Page</button>
     <ul class="pagination pagination-sm m-0 float-right">
       <li class="page-item"><a class="page-link" href="#">«</a></li>
       <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -60,5 +75,5 @@
     </ul>
   </div>
 </div>
-</div>
+<!-- </div> -->
 

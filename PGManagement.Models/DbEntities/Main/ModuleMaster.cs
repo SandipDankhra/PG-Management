@@ -29,7 +29,7 @@ namespace PGManagement.Models.Main
 
 		#region StatusId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
 		#endregion StatusId Annotations
 

@@ -1,4 +1,4 @@
-import { prop,propObject,propArray,required,maxLength,range  } from "@rxweb/reactive-form-validators"
+import { prop,propObject,propArray,required,maxLength,range ,alphaNumeric,alpha } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 
@@ -13,6 +13,7 @@ export class FlatBase {
 //#region flatNumber Prop
         @required()
         @maxLength({value:50})
+        @alphaNumeric()
         flatNumber : string;
 //#endregion flatNumber Prop
 
@@ -20,6 +21,7 @@ export class FlatBase {
 //#region flatName Prop
         @required()
         @maxLength({value:50})
+       
         flatName : string;
 //#endregion flatName Prop
 
@@ -33,9 +35,8 @@ export class FlatBase {
 //#region locality Prop
         @required()
         @maxLength({value:50})
+        
         locality : string;
 //#endregion locality Prop
-
-
 
 }

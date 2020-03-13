@@ -22,15 +22,16 @@ export class FlatListComponent extends AbstractFlat implements OnInit, OnDestroy
     ngOnInit(): void {
         this.subscription = this.get().subscribe((t: List<Flat>) => {
             this.flat = t;
+            console.log(t);
         })
     }
 
     AddFlat() {
         this.router.navigateByUrl('/flat/add');
     }
-    EditFlat() {
-        this.router.navigateByUrl('/flat/edit');
-    }
+    // EditFlat() {
+    //     this.router.navigateByUrl('/flat/edit');
+    // }
 
 
     // DeleteFlat(id:number){

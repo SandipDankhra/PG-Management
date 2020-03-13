@@ -15,7 +15,6 @@ namespace PGManagement.Models.Main
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        [OnAction("POST", RxWeb.Core.Sanitizers.Enums.ActionValueType.NameClaimIdentifier)]
 		#endregion EmployeeId Annotations
 
         public int EmployeeId { get; set; }

@@ -1,4 +1,4 @@
-<h1>Bed LIST</h1>
+<div class="container">
 
 <div class="card">
   <div class="container">
@@ -11,10 +11,15 @@
     <table class="table table-bordered">
       <thead>                  
         <tr>
+          <th style="width: 10px">Flat Number</th>
+          <th>Flat Name</th>
+          <th style="width: 10px">Room Number</th>
+          
           <th style="width: 10px">Bed Number</th>
           
           <th>Bed Status</th>
           <th>Bed Price</th>
+          
           
           <!-- <th style="width: 10px">Update</th> -->
           <!-- <th style="width: 130px">Add Bed</th> -->
@@ -22,12 +27,15 @@
       </thead>
       <tbody>
         <tr *ngFor="let bt of bed">
+          <td>{{bt.flatNumber}}</td>
+          <td>{{bt.flatName}}</td>
+          <td>{{bt.roomNumber}}</td>
           <td>{{bt.bedNumber}}</td>
           <td>{{bt.bedStatus}}</td>
           <td>{{bt.bedPrice}}</td>
           
           <!-- <td><button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" 
-            (click)="EditRoom()">Update</button></td> -->
+            (click)="editBed()">Update</button></td> -->
           <!-- <td><button class="card-title" type="button" class="btn btn-secondary btn-sm"  data-toggle="modal" 
               >Add Room</button></td>   -->
 
@@ -46,7 +54,10 @@
       <li class="page-item"><a class="page-link" href="#">3</a></li>
       <li class="page-item"><a class="page-link" href="#">»</a></li>
     </ul>
+    <button type="button" class="btn btn-secondary" (click)="onHome()">Go to Home Page</button>
+    
   </div>
+</div>
 </div>
 </div>
 
