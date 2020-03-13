@@ -1,6 +1,6 @@
-<h1>FLAT LIST</h1>
+<div class="container">
 <div class="card">
-  <div class="container">
+  
   <div class="card-header">
     <h3 class="card-title">FLAT Table</h3>
     
@@ -29,7 +29,7 @@
           <td>{{ft.address}}</td>
           <td>{{ft.locality}}</td>
           <td><button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" 
-            (click)="EditFlat()">Update</button></td>
+            [routerLink]="[ft.flatId]"  >Update</button></td>
           <td><button class="card-title" type="button" class="btn btn-secondary btn-sm"  data-toggle="modal" 
               [routerLink]="['/room/add/',ft.flatId]">Add Room</button></td>  
 

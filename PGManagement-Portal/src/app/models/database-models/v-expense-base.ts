@@ -40,21 +40,15 @@ export class vExpenseBase {
 //#endregion expenseDetails Prop
 
 
+//#region exapenseDate Prop
+        @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'exapenseDate', keyColumn: false})
+        exapenseDate : any;
+//#endregion exapenseDate Prop
+
+
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
-        mobileNumber : number;
+        mobileNumber : any;
 //#endregion mobileNumber Prop
-
-
-//#region expenseDate Prop
-        @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'expenseDate', keyColumn: false})
-        expenseDate : any;
-//#endregion expenseDate Prop
-
-
-//#region expenseId Prop
-        @gridColumn({visible: true, columnIndex:8, allowSorting: true, headerKey: 'expenseId', keyColumn: false})
-        expenseId : number;
-//#endregion expenseId Prop
 
 }

@@ -12,7 +12,7 @@ namespace PGManagement.Api.Controllers.UserModule
     [ApiController]
     [Route("api/[controller]")]
 	
-	public class RoomController : BaseController<Room,Room,Room>
+	public class RoomController : BaseController<Room,vRoom,Room>
 
     {
         public RoomController(IMasterUow uow):base(uow) {}

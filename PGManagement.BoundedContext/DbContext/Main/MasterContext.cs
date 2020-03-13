@@ -38,6 +38,10 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<vEmployeeRec> vEmployeeRecs { get; set; }
         public DbSet<User> User { get; set; }
 
+        public DbSet<vBed> vBeds { get; set; }
+
+        public DbSet<vRoom> vRooms { get; set; }
+
         public DbSet<Employee>Employees { get; set; }
         public DbSet<Expense> expense { get; set; }
         public DbSet<vExpense> vExpense { get; set; }

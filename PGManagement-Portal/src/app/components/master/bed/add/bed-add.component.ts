@@ -6,6 +6,7 @@ import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { Bed } from '@app/models';
 import { AbstractBed } from '../domain/abstract-bed';
 import { anonymous } from '@rxweb/angular-router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: "app-bed-add",
@@ -17,15 +18,16 @@ export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
     roomId: number;
     subscription: Subscription;
 
-    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute, private router: Router) {
+    constructor(private toast:ToastrService,private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute, private router: Router) {
         super();
+        this.activatedRoute.params.subscribe(a => {
+            this.roomId = a['id'];
+        })
 
     }
 
     onAddBed() {
-        this.activatedRoute.params.subscribe(a => {
-            this.roomId = a['id'];
-        })
+        
 
         // this.post({body:this.room}).subscribe(t=>{
         this.post({
@@ -39,6 +41,7 @@ export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
 
         }).subscribe(t => {
             this.result = t;
+            this.onSuccess();
 
         })
         //console.log(this.roomFormGroup.controls.roomType.value);
@@ -49,6 +52,7 @@ export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.bed = new Bed();
         this.bedFormGroup = this.formBuilder.formGroup(this.bed) as IFormGroup<Bed>;
+        this.bedFormGroup.controls.roomId.patchValue(this.roomId);
     }
 
     onShowBed() {
@@ -60,4 +64,12 @@ export class BedAddComponent extends AbstractBed implements OnInit, OnDestroy {
             this.subscription.unsubscribe();
     }
 
+
+    onSuccess(){
+        this.toast.success("Bed added succesfully");
+    }
+
+    onGoBack(){
+        this.router.navigateByUrl('/room');
+    }
 }

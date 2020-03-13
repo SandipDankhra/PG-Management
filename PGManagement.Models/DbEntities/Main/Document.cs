@@ -46,7 +46,6 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
-        [OnAction("POST", RxWeb.Core.Sanitizers.Enums.ActionValueType.NameClaimIdentifier)]
         [RelationshipTableAttribue("Users","dbo","","UserId")]
 		#endregion UserId Annotations
 

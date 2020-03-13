@@ -13,19 +13,19 @@ namespace PGManagement.Models.Main
     {
 		#region NoticeId Annotations
 
-        [Range(1,int.MaxValue)]
-        [Required]
-		#endregion NoticeId Annotations
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.DataAnnotations.Key]
+        #endregion NoticeId Annotations
 
         public int NoticeId { get; set; }
 
 
         public string NoticeDescription { get; set; }
 
+        [OnAction("POST",RxWeb.Core.Sanitizers.Enums.ActionValueType.DateTimeOffsetUtc)]
+        public Nullable<System.DateTimeOffset> CreatedDate { get; set; }
 
-        public Nullable<System.DateTime> CreatedDate { get; set; }
-
-
+        [OnAction("POST", RxWeb.Core.Sanitizers.Enums.ActionValueType.NameClaimIdentifier)]
         public Nullable<int> CreatedBy { get; set; }
 
 

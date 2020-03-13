@@ -5,14 +5,22 @@ export class Authentication extends AuthenticationBase
 {
 
 
-    mobileNumber
+    
 
 //#region Generated Reference Properties
 //#region user Prop
+userPassword:string;
 user : UserBase;
 //#endregion user Prop
 
 //#endregion Generated Reference Properties
+
+
+
+
+
+
+
 
 
 

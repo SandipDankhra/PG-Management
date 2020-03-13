@@ -11,7 +11,6 @@ namespace PGManagement.Models.Main
     [Table("Authentication",Schema="dbo")]
     public partial class Authentication
     {
-        
 		#region AuthenticationId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

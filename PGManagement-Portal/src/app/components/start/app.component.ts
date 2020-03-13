@@ -80,12 +80,14 @@ export class AppComponent implements OnInit {
         "range": "You need to enter appropriate value in this field",
         "maxNumber": "You can not enter value more than #n#",
         "numeric": "Only number required",
+        
         "email": "Please enter valid email address",
         "latitude": "Please enter a valid latitude",
         "longitude": "Please enter a valid longitude",
         "url": "{{0}} Is not the correct url pattern.",
+        //"range1to15":"Enter number between 1 to 15",
         "password": "Password length should be of 8 to 20 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
-      }, "reactiveForm": { "errorMessageBindingStrategy": 1 }
+      }
     });
   }
 

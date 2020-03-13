@@ -1,4 +1,4 @@
-import { prop,propObject,propArray,required,maxLength,range  } from "@rxweb/reactive-form-validators"
+import { prop,propObject,propArray,required,maxLength,range, password  } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 
@@ -11,14 +11,12 @@ export class UserBase {
 
 
 //#region firstName Prop
-        @required()
         @maxLength({ value: 50 })
         firstName : string;
 //#endregion firstName Prop
 
 
 //#region lastName Prop
-        @required()
         @maxLength({ value: 50 })
         lastName : string;
 //#endregion lastName Prop
@@ -31,25 +29,27 @@ export class UserBase {
 
 
 //#region email Prop
-        @required()
         @maxLength({ value: 50 })
         email : string;
 //#endregion email Prop
 
 
 //#region applicationLocaleId Prop
-        @prop()
+        @range({minimumNumber:1,maximumNumber:2147483647})
+        @required()
         applicationLocaleId : number;
 //#endregion applicationLocaleId Prop
 
 
 //#region applicationTimeZoneId Prop
-        @prop()
+        @range({minimumNumber:1,maximumNumber:2147483647})
+        @required()
         applicationTimeZoneId : number;
 //#endregion applicationTimeZoneId Prop
 
 
 //#region languageCode Prop
+        @required()
         @maxLength({ value: 3 })
         languageCode : string;
 //#endregion languageCode Prop
@@ -57,7 +57,11 @@ export class UserBase {
 
 //#region password Prop
         @required()
+        // @password({})
         @maxLength({ value: 132 })
+        userPassword:string;
+
+
         password : any;
 //#endregion password Prop
 
@@ -70,13 +74,14 @@ export class UserBase {
 
 
 //#region loginBlocked Prop
-        @prop()
+        @required()
         loginBlocked : boolean;
 //#endregion loginBlocked Prop
 
 
 //#region statusId Prop
-        @prop({defaultValue:1})
+        @range({minimumNumber:1,maximumNumber:2147483647})
+        @required()
         statusId : number;
 //#endregion statusId Prop
 

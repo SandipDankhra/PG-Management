@@ -21,7 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region UserId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("Users","dbo","","UserId")]
 		#endregion UserId Annotations

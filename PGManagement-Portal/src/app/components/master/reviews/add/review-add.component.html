@@ -26,6 +26,8 @@
                             <input id="rating1" type="radio" name="rating" value="1" formControlName="rating">
                             <label for="rating1">1</label>
                         </span>
+                        <small class="form-text text-danger"
+                            *ngIf="reviewFormGroup.controls.rating.errors">{{reviewFormGroup.controls.rating.errorMessage}}<br /></small>
                         <span id="errRating"></span>
                     </div>
 
@@ -45,7 +47,7 @@
                         <label for=""> </label>
                     </div>
                     <div class="col-lg-10 form-group">
-                        <button type="submit" (click)="sendReview()">Submit feedback</button>
+                        <button type="submit" [disabled]="!reviewFormGroup.controls.rating.valid" (click)="sendReview()">Submit feedback</button>
                     </div>
                 </div>            
 

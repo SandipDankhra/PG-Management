@@ -12,7 +12,7 @@ namespace PGManagement.Api.Controllers.UserModule
     [ApiController]
     [Route("api/[controller]")]
 	
-	public class BedController : BaseController<Bed,Bed,Bed>
+	public class BedController : BaseController<Bed,vBed,Bed>
 
     {
         public BedController(IMasterUow uow):base(uow) {}

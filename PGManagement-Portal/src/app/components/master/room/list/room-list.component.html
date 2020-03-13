@@ -1,8 +1,8 @@
-<h1>Room LIST</h1>
+<div class="container">
 <div class="card">
   <div class="container">
   <div class="card-header">
-    <h3 class="card-title">Room Table of flat </h3>
+    <h3 class="card-title">Room Table List </h3>
     
   </div>
   
@@ -10,6 +10,10 @@
     <table class="table table-bordered">
       <thead>                  
         <tr>
+          <!-- <th style="width: 10px">FlatId</th> -->
+          <th style="width: 10px">Flat Number</th>
+          <th>Flat Name</th>
+          <th>Locality</th>
           <th style="width: 10px">Room Number</th>
           <th>Room Type</th>
           <th>Room Sharing</th>
@@ -20,6 +24,10 @@
       </thead>
       <tbody>
         <tr *ngFor="let rt of room">
+          <!-- <td>{{rt.flatId}}</td> -->
+          <td>{{rt.flatNumber}}</td>
+          <td>{{rt.flatName}}</td>
+          <td>{{rt.locality}}</td>
           <td>{{rt.roomNumber}}</td>
           <td>{{rt.roomType}}</td>
           <td>{{rt.roomSharing}}</td>
@@ -45,6 +53,7 @@
       <li class="page-item"><a class="page-link" href="#">»</a></li>
     </ul>
   </div>
+</div>
 </div>
 </div>
 
