@@ -46,6 +46,7 @@ export class CreateBookBedAddComponent extends AbstractCreateBookBed implements 
         this.key = Object.keys(this.paymentTypeEnum).filter(Number);
         this.get({ path: 'api/Registration' }).subscribe((t: List<User>) => {
             this.users = t;
+            
         })
         this.createBookBed.bedId = this.id;
         this.createBookBedFormgroup = this.formBuilder.group({

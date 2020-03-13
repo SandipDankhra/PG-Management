@@ -5,21 +5,20 @@ import { gridColumn } from "@rxweb/grid"
 export class NoticeBase {
 
 //#region noticeId Prop
-        @range({minimumNumber:1,maximumNumber:2147483647})
-        @required()
+        @prop()
         noticeId : number;
 //#endregion noticeId Prop
 
 
 //#region noticeDescription Prop
-        @prop()
+        @required()
         noticeDescription : string;
 //#endregion noticeDescription Prop
 
 
 //#region createdDate Prop
         @prop()
-        createdDate : Date;
+        createdDate : any;
 //#endregion createdDate Prop
 
 
@@ -27,5 +26,7 @@ export class NoticeBase {
         @prop()
         createdBy : number;
 //#endregion createdBy Prop
+
+
 
 }

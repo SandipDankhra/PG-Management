@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientConfig, HttpResponse } from '@rxweb/http';
+import { HttpClientConfig, HttpResponse, RxHttp, http } from '@rxweb/http';
 import { BrowserStorage } from 'src/app/domain/services/browser-storage';
 import { Router } from '@angular/router';
 import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
@@ -7,23 +7,30 @@ import { ROUTES } from './routing';
 import { AuthFilter } from 'src/app/temp-service/AuthFilter';
 import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadcaster';
 
+@http({ path: 'api/notices', hostKey: 'server', })
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
+export class AppComponent extends RxHttp implements OnInit {
 
-  route = ROUTES;
+  route;
   isShowDashboard: boolean = false;
-  isShowSidebar: boolean = false;
+  isShowSidebar: boolean;
+  userName: string = "Taher";
+  notices: any;
 
-
-  constructor(private browserStorage: BrowserStorage, private router: Router, private applicationBroadcaster: ApplicationBroadcaster) { }
+  constructor(private browserStorage: BrowserStorage, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private http: RxHttp) { super() }
 
   ngOnInit(): void {
-    this.applicationBroadcaster.menuLevelSubscriber.subscribe(t => { this.isShowSidebar = t });
 
+    this.isShowSidebar = this.browserStorage.local.get("showMenu");
     console.log("sidebar " + this.isShowSidebar);
+    this.http.get('assets/sidebar.json').subscribe((response: any) => {
+
+      this.route = response.links;
+      console.log(this.route);
+    })
     HttpClientConfig.register({
       hostURIs: [{
         name: 'server',
@@ -45,7 +52,7 @@ export class AppComponent implements OnInit {
           // this.router.navigate(["/login"]);
         }
         // else if (response.statusCode == HttpResponseCode.InternalServerError) {
-        //   this.baseToastr.error("Error occur")
+        // this.baseToastr.error("Error occur")
         // }
         else if (response.statusCode == 403) {
           this.router.navigate(["/unauthorized"]);
@@ -87,6 +94,9 @@ export class AppComponent implements OnInit {
         "password": "Password length should be of 8 to 20 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
       }, "reactiveForm": { "errorMessageBindingStrategy": 1 }
     });
+    this.get().subscribe(t => {
+      this.notices = t;
+    })
   }
 
   loginClicked(isClicked: boolean): void {
@@ -95,6 +105,9 @@ export class AppComponent implements OnInit {
       this.router.navigate(["/users"])
       setTimeout(() => { this.isShowDashboard = true; }, 50)
     }
+  }
+  logout() {
+    this.browserStorage.local.clearAll();
   }
 
 }

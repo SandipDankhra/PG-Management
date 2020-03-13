@@ -16,13 +16,15 @@ import { ClientIndexComponent } from './components/user/client-index.componet';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ApplicationBroadcaster } from './temp-service/application-broadcaster';
+import { DashboardComponent } from './components/master/dashboard/dashboard.component'
 const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules, onSameUrlNavigation: 'reload' });
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientIndexComponent,
-    RegistrationAddComponent
+    RegistrationAddComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -37,4 +39,7 @@ const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModul
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+  client: boolean = true;
+  admin: boolean = false;
+}

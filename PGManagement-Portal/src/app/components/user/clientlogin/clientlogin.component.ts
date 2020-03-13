@@ -64,7 +64,8 @@ export class LoginComponent extends CoreComponent implements OnInit {
             }
             // this.spin = false;
             // this.routers.navigate(["/users"]);
+            this.router.navigate(["/client-index"]);
         })
-        this.router.navigate(["/client-index"]);
+
     }
 }

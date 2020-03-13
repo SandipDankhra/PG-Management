@@ -16,11 +16,7 @@ namespace PGManagement.Models.Main
 
         public string RentalCity { get; set; }
 
-		#region RentalType Annotations
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
-		#endregion RentalType Annotations
+		
 
         public int RentalType { get; set; }
 
@@ -55,13 +51,13 @@ namespace PGManagement.Models.Main
         public string FlatName { get; set; }
 
 
+        public int BedId { get; set; }
+
+
         public string RoomSharing { get; set; }
 
 
         public System.DateTime EndDate { get; set; }
-
-
-        public string ApplicationObjectName { get; set; }
 
 
         public decimal MobileNumber { get; set; }
@@ -83,6 +79,16 @@ namespace PGManagement.Models.Main
 
 
         public int BedNumber { get; set; }
+
+
+        public int UserId { get; set; }
+
+        #region RentalId Annotations
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.DataAnnotations.Key]
+        #endregion RentalId Annotations
+        public int RentalId { get; set; }
 
 
         public vRentalRecord()

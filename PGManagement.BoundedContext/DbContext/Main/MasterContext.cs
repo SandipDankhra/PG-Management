@@ -26,6 +26,7 @@ namespace PGManagement.BoundedContext.Main
 
         public DbSet<Review> reviews { get; set; }
         public DbSet<Notice> Notices { get; set; }
+        public DbSet<vNotice> vNotices { get; set; }
         public DbSet<Flat> Flat { get; set; }
         public DbSet<Room> Room { get; set; }
         public DbSet<Bed> Bed { get; set; }

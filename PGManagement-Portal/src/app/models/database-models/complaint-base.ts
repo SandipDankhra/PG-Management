@@ -36,5 +36,11 @@ export class ComplaintBase {
 //#endregion complaintStatus Prop
 
 
+//#region createdDate Prop
+        @prop()
+        createdDate : Date;
+//#endregion createdDate Prop
+
+
 
 }

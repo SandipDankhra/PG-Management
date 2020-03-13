@@ -5,6 +5,7 @@ import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 
 import { Notice } from '@app/models';
 import { AbstractNotice } from '../domain/abstract-notice';
+import { Router } from '@angular/router';
 
 @Component({
     selector: "app-notice-add",
@@ -14,8 +15,9 @@ export class NoticeAddComponent extends AbstractNotice implements OnInit, OnDest
     notice: Notice;
     subscription: Subscription;
 
-    constructor(private formBuilder: RxFormBuilder) {
+    constructor(private formBuilder: RxFormBuilder, private router: Router) {
         super();
+
     }
 
     ngOnInit(): void {
@@ -23,8 +25,9 @@ export class NoticeAddComponent extends AbstractNotice implements OnInit, OnDest
         this.noticeFormGroup = this.formBuilder.formGroup(this.notice) as IFormGroup<Notice>;
     }
     submit() {
-        this.post({ body: { complaintName: this.noticeFormGroup.controls.noticeDescription.value, createdBy: 5 } }).subscribe(t => {
+        this.post({ body: { noticeDescription: this.noticeFormGroup.controls.noticeDescription.value, createdBy: 5 } }).subscribe(t => {
             console.log(t);
+            this.router.navigateByUrl('/notices');
         });
     }
 

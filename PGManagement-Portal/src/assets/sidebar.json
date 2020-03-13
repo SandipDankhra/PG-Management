@@ -1,0 +1,247 @@
+{
+  "links": [
+    {
+      "title": "dashboard",
+      "uri": "dashboard",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "clientlogin",
+      "uri": "clientlogin",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "login",
+      "uri": "login",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "client-index",
+      "uri": "client-index",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "registration",
+      "uri": "registration",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "change-password",
+      "uri": "change-password",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "complaints",
+      "uri": "complaints",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "complaints/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "documents",
+      "uri": "documents",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "documents/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "employee",
+      "uri": "employee",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "employee/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "expense",
+      "uri": "expense",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "expense/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "forget-password",
+      "uri": "forget-password",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "menu",
+      "uri": "menu",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "menu/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "notices",
+      "uri": "notices",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "notices/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "rental",
+      "uri": "rental",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "rental/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "requester",
+      "uri": "requester",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "requester/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "reviews",
+      "uri": "reviews",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "reviews/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "role-permission",
+      "uri": "role-permission",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "role-permission/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "v-available-bed",
+      "uri": "v-available-bed",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "v-available-bed/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "v-invoice-record",
+      "uri": "v-invoice-record",
+      "isOpen": true,
+      "isActive": true
+    },
+    {
+      "title": "bed",
+      "uri": "bed",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "bed/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "create-book-bed",
+      "uri": "create-book-bed",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "create-book-bed/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "flat",
+      "uri": "flat",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "flat/add",
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "title": "room",
+      "uri": "room",
+      "isOpen": true,
+      "isActive": true,
+      "childrens": [
+        {
+          "title": "Add",
+          "uri": "room/add",
+          "isActive": true
+        }
+      ]
+    }
+  ]
+}

@@ -14,11 +14,12 @@ import { ComplaintSharedModule } from './complaint-shared.module';
 
 @NgModule({
     imports: [
-        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,ComplaintSharedModule,
+        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule, ComplaintSharedModule,
         ROUTING
     ],
-    declarations: [ComplaintListComponent,ComplaintEditComponent,ComplaintAddComponent],
+    declarations: [ComplaintListComponent, ComplaintEditComponent, ComplaintAddComponent],
     exports: [RouterModule],
+    bootstrap: [],
     providers: []
 })
 export class ComplaintModule { }

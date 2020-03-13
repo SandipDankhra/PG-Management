@@ -35,10 +35,12 @@
           <li><a href="#">Team</a></li> -->
 
         <li><a href="#">Contact Us</a></li>
-        <div *ngIf="isLogin;else logout">
-          <li><a href="#" [routerLink]="['/clientlogin']" routerLinkActive="router-link-active">Login</a></li>
-          <li><a href="#" [routerLink]="['/registration']" routerLinkActive="router-link-active">Register</a></li>
-        </div>
+
+        <li *ngIf="isLogin;else logout"><a href="#" [routerLink]="['/clientlogin']"
+            routerLinkActive="router-link-active">Login</a></li>
+        <li *ngIf="isLogin"><a href="#" [routerLink]="['/registration']"
+            routerLinkActive="router-link-active">Register</a></li>
+
         <ng-template #logout>
           <li><a href="#" (click)="onLogout()">Logout</a></li>
         </ng-template>

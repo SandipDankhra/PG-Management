@@ -50,6 +50,9 @@ namespace PGManagement.Models.Main
 
         public bool ComplaintStatus { get; set; }
 
+
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+
 		#region Rental Annotations
 
         [ForeignKey(nameof(RentalId))]

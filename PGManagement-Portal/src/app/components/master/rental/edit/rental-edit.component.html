@@ -1,114 +1,114 @@
 <h1>Rental EDIT</h1>
 
-<section class="content" >
+<section class="content">
 	<div class="container-fluid">
-	  <div class="row" >
-		<div class="col-md-3" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto;" >
+		<div class="row" *ngIf="show">
+			<div class="col-md-9" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto;">
 
-		  <!-- Profile Image -->
-		  <div class="card card-primary card-outline">
-			<div class="card-body box-profile">
-			  <div class="text-center">
-				<img class="profile-user-img img-fluid img-circle"
-					 src="../../../../../assets/dist/img/avatar.png"
-					 alt="User profile picture">
-			  </div>
-			  <h3 class="profile-username text-center">{{vrental.firstName + ' ' + vrental.lastName}}</h3>
-			  <p class="text-muted text-center">{{vrental.roleName}}</p>
+				<!-- Profile Image -->
+				<div class="card card-primary card-outline">
+					<div class="card-body box-profile">
+						<div class="text-center">
+							<img class="profile-user-img img-fluid img-circle"
+								src="../../../../../assets/dist/img/avatar.png" alt="User profile picture">
+						</div>
+						<h3 class="profile-username text-center">{{vrental.firstName + ' ' + vrental.lastName}}</h3>
+						<p class="text-muted text-center">{{vrental.roleName}}</p>
 
-			  <ul class="list-group list-group-unbordered mb-3">
-				<li class="list-group-item">
-				  <b>Rental Type</b> <a class="float-right">{{vrental.rentalType}}</a>
-				</li>
-				<li class="list-group-item">
-				  <b>Email</b> <a class="float-right">{{vrental.email}}</a>
-				</li>
-				<li class="list-group-item">
-				  <b>Address</b> <a class="float-right">{{vrental.address}}</a>
-				</li>	
+						<ul class="list-group list-group-unbordered mb-3">
+							<li class="list-group-item">
+								<b>Rental Type</b> <a class="float-right">{{vrental.rentalType}}</a>
+							</li>
+							<li class="list-group-item">
+								<b>Email</b> <a class="float-right">{{vrental.email}}</a>
+							</li>
+							<li class="list-group-item">
+								<b>Address</b> <a class="float-right">{{vrental.address}}</a>
+							</li>
 
-				<li class="list-group-item">
-					<b>Flat Number</b> <a class="float-right">{{vrental.flatNumber}}</a>
-				  </li>
-				  <li class="list-group-item">
-					<b>Room Number</b> <a class="float-right">{{vrental.roomNumber}}</a>
-				  </li>
-				  <li class="list-group-item">
-					<b>Bed Number</b> <a class="float-right">{{vrental.bedNumber}}</a>
-				  </li>	
+							<li class="list-group-item">
+								<b>Flat Number</b> <a class="float-right">{{vrental.flatNumber}}</a>
+							</li>
+							<li class="list-group-item">
+								<b>Room Number</b> <a class="float-right">{{vrental.roomNumber}}</a>
+							</li>
+							<li class="list-group-item">
+								<b>Bed Number</b> <a class="float-right">{{vrental.bedNumber}}</a>
+							</li>
 
-				  <li class="list-group-item">
-					<b>Payment</b> <a class="float-right">{{vrental.paymentAmount}}</a>
-				  </li>
-				  <li class="list-group-item">
-					<b>Room Number</b> <a class="float-right">{{vrental.roomNumber}}</a>
-				  </li>
-				 
+							<li class="list-group-item">
+								<b>Payment</b> <a class="float-right">{{vrental.paymentAmount}}</a>
+							</li>
+							<li class="list-group-item">
+								<b>Room Number</b> <a class="float-right">{{vrental.roomNumber}}</a>
+							</li>
 
 
-				  
-				  <li class="list-group-item">
-					<b>Duration</b> 
-				  </li>
-				  <li class="list-group-item">
-					<b>Start Date</b> <a class="float-right">{{vrental.startDate}}</a>
-				  </li>
-				  <li class="list-group-item">
-					<b>End Date</b> <a class="float-right">{{vrental.endDate}}</a>
-				  </li>	
-			  </ul>
 
-			  <!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
+
+							<li class="list-group-item">
+								<b>Duration</b>
+							</li>
+							<li class="list-group-item">
+								<b>Start Date</b> <a class="float-right">{{vrental.startDate}}</a>
+							</li>
+							<li class="list-group-item">
+								<b>End Date</b> <a class="float-right">{{vrental.endDate}}</a>
+							</li>
+						</ul>
+
+						<!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
+					</div>
+					<!-- /.card-body -->
+				</div>
+				<!-- /.card -->
+
+				<!-- About Me Box -->
+				<div class="card card-primary">
+					<div class="card-header">
+						<h3 class="card-title">About Me</h3>
+					</div>
+					<!-- /.card-header -->
+					<div class="card-body">
+						<strong><i class="fas fa-book mr-1"></i> Education</strong>
+
+						<p class="text-muted">
+							B.S. in Computer Science from the University of Tennessee at Knoxville
+						</p>
+
+						<hr>
+
+						<strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+
+						<p class="text-muted">Malibu, California</p>
+
+						<hr>
+
+						<strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+
+						<p class="text-muted">
+							<span class="tag tag-danger">UI Design</span>
+							<span class="tag tag-success">Coding</span>
+							<span class="tag tag-info">Javascript</span>
+							<span class="tag tag-warning">PHP</span>
+							<span class="tag tag-primary">Node.js</span>
+						</p>
+
+						<hr>
+
+						<strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+
+						<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum
+							enim neque.</p>
+					</div>
+					<!-- /.card-body -->
+				</div>
+				<!-- /.card -->
 			</div>
-			<!-- /.card-body -->
-		  </div>
-		  <!-- /.card -->
+			<!-- /.col -->
 
-		  <!-- About Me Box -->
-		  <div class="card card-primary">
-			<div class="card-header">
-			  <h3 class="card-title">About Me</h3>
-			</div>
-			<!-- /.card-header -->
-			<div class="card-body">
-			  <strong><i class="fas fa-book mr-1"></i> Education</strong>
-
-			  <p class="text-muted">
-				B.S. in Computer Science from the University of Tennessee at Knoxville
-			  </p>
-
-			  <hr>
-
-			  <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-
-			  <p class="text-muted">Malibu, California</p>
-
-			  <hr>
-
-			  <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
-
-			  <p class="text-muted">
-				<span class="tag tag-danger">UI Design</span>
-				<span class="tag tag-success">Coding</span>
-				<span class="tag tag-info">Javascript</span>
-				<span class="tag tag-warning">PHP</span>
-				<span class="tag tag-primary">Node.js</span>
-			  </p>
-
-			  <hr>
-
-			  <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
-
-			  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
-			</div>
-			<!-- /.card-body -->
-		  </div>
-		  <!-- /.card -->
+			<!-- /.col -->
 		</div>
-		<!-- /.col -->
-		
-		<!-- /.col -->
-	  </div>
-	  <!-- /.row -->
+		<!-- /.row -->
 	</div><!-- /.container-fluid -->
-  </section>
+</section>

@@ -3,11 +3,14 @@ import { RouteProvider } from "@rxweb/angular-router"
 import { Injectable } from '@angular/core';
 import { ClientIndexComponent } from '../user/client-index.componet';
 import { RegistrationAddComponent } from '../user/registration/add/registration-add.component';
+import { DashboardComponent } from '../master/dashboard/dashboard.component';
 var routings = [
 	{
-		path: '', redirectTo: 'client-index', pathMatch: 'full',
+		path: '', redirectTo: 'dashboard', pathMatch: 'full',
 	},
-
+	{
+		path: 'dashboard', component: DashboardComponent
+	},
 	{
 		path: "clientlogin",
 		loadChildren: () => import("../user/clientlogin/clientlogin.module").then(m => m.clientLoginModule),

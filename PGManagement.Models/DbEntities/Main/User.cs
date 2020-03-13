@@ -134,6 +134,13 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Requester> Requesters { get; set; }
 
+		#region Notice Annotations
+
+        [InverseProperty("User")]
+		#endregion Notice Annotations
+
+        public virtual ICollection<Notice> Notice { get; set; }
+
 
         public User()
         {
@@ -144,6 +151,7 @@ namespace PGManagement.Models.Main
 			Employees = new HashSet<Employee>();
 			Documents = new HashSet<Document>();
 			Requesters = new HashSet<Requester>();
+			Notice = new HashSet<Notice>();
         }
 	}
 }

@@ -4,6 +4,12 @@ import { gridColumn } from "@rxweb/grid"
 
 export class vInvoiceRecordBase {
 
+//#region bookBedId Prop
+        @gridColumn({visible: true, columnIndex:19, allowSorting: true, headerKey: 'bookBedId', keyColumn: false})
+        bookBedId : number;
+//#endregion bookBedId Prop
+
+
 //#region firstName Prop
         @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'firstName', keyColumn: false})
         firstName : string;
@@ -88,10 +94,10 @@ export class vInvoiceRecordBase {
 //#endregion rentalId Prop
 
 
-//#region createDate Prop
-        @gridColumn({visible: true, columnIndex:14, allowSorting: true, headerKey: 'createDate', keyColumn: false})
-        createDate : any;
-//#endregion createDate Prop
+//#region bedNumber Prop
+        @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'bedNumber', keyColumn: false})
+        bedNumber : number;
+//#endregion bedNumber Prop
 
 
 //#region startDate Prop
@@ -106,10 +112,10 @@ export class vInvoiceRecordBase {
 //#endregion endDate Prop
 
 
-//#region bedNumber Prop
-        @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'bedNumber', keyColumn: false})
-        bedNumber : number;
-//#endregion bedNumber Prop
+//#region createDate Prop
+        @gridColumn({visible: true, columnIndex:14, allowSorting: true, headerKey: 'createDate', keyColumn: false})
+        createDate : any;
+//#endregion createDate Prop
 
 
 //#region email Prop

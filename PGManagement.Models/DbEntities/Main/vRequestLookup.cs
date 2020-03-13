@@ -11,7 +11,7 @@ namespace PGManagement.Models.Main
     public partial class vRequestLookup
     {
 
-        public string Locality { get; set; }
+        public string locality { get; set; }
 
 
         public string FlatNumber { get; set; }
