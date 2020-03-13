@@ -5,7 +5,7 @@ import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { CreateEmployee } from '@app/custom-models';
 import { vEmployee } from '@app/models';
 import { AbstractEmployee } from '../domain/abstract-employee';
-import { anonymous } from '@rxweb/angular-router';
+
 
 @Component({
     selector: "app-employee-add",
@@ -26,13 +26,24 @@ export class EmployeeAddComponent extends AbstractEmployee implements OnInit, On
     }
 
     onSubmit() {
+        if(this.createEmployeeFormGroup.valid){
         this.post({ body: this.employee }).subscribe(t => {
             this.result = t;
+            console.log(this.result);
+            if(this.result==0){
+                this.createEmployeeFormGroup.reset();
+            }
         })
+    }
+        this.createEmployeeFormGroup.submitted = true;
 
-        this.createEmployeeFormGroup.reset();
+      //  this.createEmployeeFormGroup.reset();
 
     }
+
+   
+
+
 
     onReset() {
         this.createEmployeeFormGroup.reset();

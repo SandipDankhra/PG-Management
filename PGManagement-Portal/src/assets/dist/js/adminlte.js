@@ -571,7 +571,7 @@
         $(Selector.BODY).removeClass(ClassName.COLLAPSED);
 
         if (this._options.enableRemember) {
-          localStorage.setItem("remember" + EVENT_KEY, ClassName.OPEN);
+          localStorage.setItemItem("remember" + EVENT_KEY, ClassName.OPEN);
         }
 
         var shownEvent = $.Event(Event.SHOWN);
@@ -588,7 +588,7 @@
         $(Selector.BODY).addClass(ClassName.COLLAPSED);
 
         if (this._options.enableRemember) {
-          localStorage.setItem("remember" + EVENT_KEY, ClassName.COLLAPSED);
+          localStorage.setItemItem("remember" + EVENT_KEY, ClassName.COLLAPSED);
         }
 
         var collapsedEvent = $.Event(Event.COLLAPSED);
@@ -623,7 +623,7 @@
 
       _proto.remember = function remember() {
         if (this._options.enableRemember) {
-          var toggleState = localStorage.getItem("remember" + EVENT_KEY);
+          var toggleState = localStorage.getItemItem("remember" + EVENT_KEY);
 
           if (toggleState == ClassName.COLLAPSED) {
             if (this._options.noTransitionAfterReload) {

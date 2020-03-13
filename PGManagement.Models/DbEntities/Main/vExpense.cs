@@ -10,13 +10,28 @@ namespace PGManagement.Models.Main
     [Table("vExpense",Schema="dbo")]
     public partial class vExpense
     {
-		#region UserId Annotations
+		#region ExpenseId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-		#endregion UserId Annotations
+		#endregion ExpenseId Annotations
 
-        public int UserId { get; set; }
+        public int ExpenseId { get; set; }
+
+
+        public string ExpenseType { get; set; }
+
+
+        public int ExpenseAmount { get; set; }
+
+
+        public string ExpenseDetails { get; set; }
+
+
+        public System.DateTime ExpenseDate { get; set; }
+
+
+        public int EmployeeId { get; set; }
 
 
         public string FirstName { get; set; }
@@ -25,22 +40,7 @@ namespace PGManagement.Models.Main
         public string LastName { get; set; }
 
 
-        public int ExpenseAmount { get; set; }
-
-
-        public string ExpenseType { get; set; }
-
-
-        public string ExpenseDetails { get; set; }
-
-
-        public decimal MobileNumber { get; set; }
-
-
-        public System.DateTime ExpenseDate { get; set; }
-
-
-        public int ExpenseId { get; set; }
+        public int UserId { get; set; }
 
 
         public vExpense()

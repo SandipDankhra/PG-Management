@@ -30,7 +30,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        var auth = this.browserStorage.local.get('auth');
+        var auth = localStorage.getItem('auth');
         if (!auth) {
 
             this.router.navigate(["/clientlogin"]);
@@ -43,7 +43,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
 
 
     loginUser() {
-        // console.log(this.browserStorage.local.get('auth'));
+        // console.log(localStorage.getItem('auth'));
         // this.http.post({ hostUri: 'https://localhost:44352', path: 'api/Authentication', body: { email: this.loginFormGroup.controls.email.value, password: this.loginFormGroup.controls.password.value } }).subscribe(t => {
         //     console.log(t);
         // })
@@ -54,12 +54,12 @@ export class LoginComponent extends CoreComponent implements OnInit {
             else {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
-                this.browserStorage.local.save('auth', response);
-                this.browserStorage.local.save('x-request', response.key);
-                this.browserStorage.local.save('userName', response.fullName);
-                this.browserStorage.local.save('userEmail', response.emailId);
-                this.browserStorage.local.save('lcode', response.languageCode);
-                this.browserStorage.local.save('userId', response.userId);
+                localStorage.setItem('auth', response);
+                localStorage.setItem('x-request', response.key);
+                localStorage.setItem('userName', response.fullName);
+                localStorage.setItem('userEmail', response.emailId);
+                localStorage.setItem('lcode', response.languageCode);
+                localStorage.setItem('userId', response.userId);
                 console.log(response.validationMessage)
             }
             // this.spin = false;

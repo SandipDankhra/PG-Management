@@ -5,14 +5,14 @@ import { Subscription } from 'rxjs';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { ActivatedRoute } from '@angular/router';
 
-import { Expense } from '@app/models';
+import { Expens } from '@app/models';
 
 @Component({
     selector: "app-expense-edit",
     templateUrl: './expense-edit.component.html'
 })
 export class ExpenseEditComponent extends AbstractExpense implements OnInit, OnDestroy {
-    expense: Expense;
+    expens: Expens;
     subscription: Subscription;
     id: number;
 
@@ -25,7 +25,7 @@ export class ExpenseEditComponent extends AbstractExpense implements OnInit, OnD
 
     ngOnInit(): void {
         this.get({ params: [this.id] }).subscribe(t => {
-            this.expenseFormGroup = this.formBuilder.formGroup(Expense,t) as IFormGroup<Expense>;
+            this.expenseFormGroup = this.formBuilder.formGroup(Expens,t) as IFormGroup<Expens>;
         })
     }
 

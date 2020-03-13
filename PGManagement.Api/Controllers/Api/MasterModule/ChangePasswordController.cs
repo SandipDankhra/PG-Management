@@ -11,7 +11,6 @@ namespace PGManagement.Api.Controllers.MasterModule
 {
     [ApiController]
     [Route("api/[controller]")]
-    [AllowAnonymous]
 	
 	public class ChangePasswordController : BaseDomainController<ChangePassword, ChangePassword>
 

@@ -120,6 +120,13 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Employee> Employees { get; set; }
 
+		#region Expenses Annotations
+
+        [InverseProperty("User")]
+		#endregion Expenses Annotations
+
+        public virtual ICollection<Expens> Expenses { get; set; }
+
 		#region Documents Annotations
 
         [InverseProperty("User")]
@@ -142,6 +149,7 @@ namespace PGManagement.Models.Main
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
 			Employees = new HashSet<Employee>();
+			Expenses = new HashSet<Expens>();
 			Documents = new HashSet<Document>();
 			Requesters = new HashSet<Requester>();
         }

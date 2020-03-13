@@ -16,7 +16,7 @@ export class ClientIndexComponent implements OnInit {
 
     }
     ngOnInit(): void {
-        var auth = this.browserStorage.local.get('auth');
+        var auth = localStorage.getItem('auth');
         if (auth) {
             this.isLogin = false;
         }

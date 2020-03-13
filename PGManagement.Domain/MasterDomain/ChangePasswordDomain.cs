@@ -22,12 +22,27 @@ namespace PGManagement.Domain.MasterModule
             PasswordHash = passwordHash;
         }
 
-        public Task<object> GetAsync(ChangePassword parameters)
+        public async Task<object> GetAsync(ChangePassword parameters)
         {
-            throw new NotImplementedException();
+            User user = Uow.Repository<User>().SingleOrDefault(t => t.UserId == parameters.UserId);
+            bool password = PasswordHash.VerifySignature(parameters.OldPassword.ToString(), user.Password, user.Salt);
+            if (password)
+            {
+
+                PasswordResult passwordResult = PasswordHash.Encrypt(parameters.NewPassword);
+                user.Password = passwordResult.Signature;
+                user.Salt = passwordResult.Salt;
+                await this.UpdateAsync(user);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
         }
 
-        public Task<object> GetBy(ChangePassword parameters)
+        public  Task<object> GetBy(ChangePassword parameters)
         {
             throw new NotImplementedException();
         }
@@ -38,21 +53,22 @@ namespace PGManagement.Domain.MasterModule
             return ValidationMessages;
         }
 
-        public async Task AddAsync(ChangePassword entity)
+        public  Task AddAsync(ChangePassword entity)
         {
-            User user = Uow.Repository<User>().SingleOrDefault(t => t.UserId == entity.UserId);
-            bool password = PasswordHash.VerifySignature(entity.OldPassword.ToString(), user.Password, user.Salt);
-            if (password)
-            {
+            throw new NotImplementedException();
+            //User user = Uow.Repository<User>().SingleOrDefault(t => t.UserId == entity.UserId);
+            //bool password = PasswordHash.VerifySignature(entity.OldPassword.ToString(), user.Password, user.Salt);
+            //if (password)
+            //{
 
-                PasswordResult passwordResult = PasswordHash.Encrypt(entity.NewPassword);
-                user.Password = passwordResult.Signature;
-                user.Salt = passwordResult.Salt;
-                await this.UpdateAsync(user);
-            }
+            //    PasswordResult passwordResult = PasswordHash.Encrypt(entity.NewPassword);
+            //    user.Password = passwordResult.Signature;
+            //    user.Salt = passwordResult.Salt;
+            //    await this.UpdateAsync(user);
+            //}
             //await Uow.RegisterNewAsync(entity);
             //await Uow.CommitAsync();
-            
+
         }
         public async Task UpdateAsync(User entity)
         {

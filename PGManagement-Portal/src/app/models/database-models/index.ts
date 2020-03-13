@@ -21,7 +21,7 @@ export {RoomBase} from './room-base';;
 export {FlatBase} from './flat-base';;
 export {ComplaintBase} from './complaint-base';;
 export {EmployeeBase} from './employee-base';;
-export {ExpenseBase} from './expense-base';;
+export {ExpensBase} from './expens-base';;
 export {DocumentBase} from './document-base';;
 export {PaymentBase} from './payment-base';;
 export {MenuBase} from './menu-base';;

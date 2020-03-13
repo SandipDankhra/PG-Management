@@ -25,16 +25,7 @@ namespace PGManagement.Domain.MasterModule
             PasswordHash = passwordHash;
             DbContextManager = dbContextManager;
         }
-        public HashSet<string> AddValidation(EmployeeCreate entity)
-        {
-            return ValidationMessages;
-           
-        }
-
-        public HashSet<string> UpdateValidation(EmployeeCreate entity)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public async Task AddAsync(EmployeeCreate entity)
         {
@@ -43,7 +34,7 @@ namespace PGManagement.Domain.MasterModule
             await DbContextManager.BeginTransactionAsync();
             try
             {
-                var spParameters = new SqlParameter[9];
+                var spParameters = new SqlParameter[10];
                 spParameters[0] = new SqlParameter() { ParameterName = "FirstName", Value = entity.FirstName };
                 spParameters[1] = new SqlParameter() { ParameterName = "LastName", Value = entity.LastName };
                 spParameters[2] = new SqlParameter() { ParameterName = "Email", Value = entity.Email };
@@ -51,8 +42,9 @@ namespace PGManagement.Domain.MasterModule
                 spParameters[4] = new SqlParameter() { ParameterName = "Password", Value = passwordResult.Signature };
                 spParameters[5] = new SqlParameter() { ParameterName = "Salt", Value = passwordResult.Salt };
                 spParameters[6] = new SqlParameter() { ParameterName = "LoginBlocked", Value = entity.LoginBlocked };
-                spParameters[7] = new SqlParameter() { ParameterName = "Salary", Value = entity.Salary};
-                spParameters[8] = new SqlParameter() { ParameterName = "JoinDate", Value = entity.JoinDate};
+                spParameters[7] = new SqlParameter() { ParameterName = "StatusId", Value = entity.StatusId};
+                spParameters[8] = new SqlParameter() { ParameterName = "Salary", Value = entity.Salary};
+                spParameters[9] = new SqlParameter() { ParameterName = "JoinDate", Value = entity.JoinDate};
 
                 await DbContextManager.StoreProc<StoreProcResult>("[dbo].spEmployeeCreate", spParameters);
                 await DbContextManager.CommitAsync();
@@ -79,25 +71,37 @@ namespace PGManagement.Domain.MasterModule
             //await Uow.CommitAsync();
         }
 
-        public Task UpdateAsync(EmployeeCreate entity)
+        public async Task UpdateAsync(EmployeeCreate entity)
         {
-            throw new NotImplementedException();
+            await DbContextManager.BeginTransactionAsync();
+            try
+            {
+                var spParameters = new SqlParameter[7];
+                spParameters[0] = new SqlParameter() { ParameterName = "EmpId", Value = entity.EmployeeId };
+                spParameters[1] = new SqlParameter() { ParameterName = "FirstName", Value = entity.FirstName };
+                spParameters[2] = new SqlParameter() { ParameterName = "LastName", Value = entity.LastName };
+                spParameters[3] = new SqlParameter() { ParameterName = "Email", Value = entity.Email };
+                spParameters[4] = new SqlParameter() { ParameterName = "MobileNumber", Value = entity.MobileNumber };
+                spParameters[5] = new SqlParameter() { ParameterName = "Salary", Value = entity.Salary };
+                spParameters[6] = new SqlParameter() { ParameterName = "JoinDate", Value = entity.JoinDate };
+
+                await DbContextManager.StoreProc<StoreProcResult>("[dbo].spEmployeeUpdate", spParameters);
+                await DbContextManager.CommitAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                DbContextManager.RollbackTransaction();
+            }
         }
 
-        public async Task<object> GetAsync(EmployeeCreate parameters)
-        {
-            return await Uow.Repository<vEmployeeRecord>().AllAsync();
-        }
+     
 
-        public Task<object> GetBy(EmployeeCreate parameters)
-        {
-            throw new NotImplementedException();
-        }
-
-        public HashSet<string> DeleteValidation(EmployeeCreate parameters)
-        {
-            throw new NotImplementedException();
-        }
+       
+        //public HashSet<string> DeleteValidation(EmployeeCreate parameters)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         //public async Task DeleteAsync(EmployeeCreate parameters)
         //{
@@ -106,10 +110,7 @@ namespace PGManagement.Domain.MasterModule
         //    await Uow.CommitAsync();
         //}
 
-        public async Task<object> GetAsync(vEmployeeRecord parameters)
-        {
-            return await Uow.Repository<vEmployeeRecord>().AllAsync();
-        }
+        
 
         public async Task<object> GetBy(vEmployeeRec parameters)
         {
@@ -121,16 +122,16 @@ namespace PGManagement.Domain.MasterModule
             return ValidationMessages;
         }
 
-        //public async Task DeleteAsync(vEmployeeRecord parameters)
-        //{
-        //    Employee employee= await Uow.Repository<Employee>().SingleAsync(t => t.EmployeeId == parameters.EmployeeId);
-        //    await Uow.RegisterDeletedAsync<Employee>(employee);
-        //    await Uow.CommitAsync();
-        //}
+            //public async Task DeleteAsync(vEmployeeRecord parameters)
+            //{
+            //    Employee employee= await Uow.Repository<Employee>().SingleAsync(t => t.EmployeeId == parameters.EmployeeId);
+            //    await Uow.RegisterDeletedAsync<Employee>(employee);
+            //    await Uow.CommitAsync();
+            //}
 
         public async Task<object> GetAsync(vEmployeeRec parameters)
         {
-            return await Uow.Repository<vEmployeeRecord>().AllAsync();
+            return await Uow.Repository<vEmployeeRec>().AllAsync();
         }
 
         public HashSet<string> DeleteValidation(vEmployeeRec parameters)
@@ -140,9 +141,20 @@ namespace PGManagement.Domain.MasterModule
 
         public async Task DeleteAsync(vEmployeeRec parameters)
         {
-            Employee employee = await Uow.Repository<Employee>().SingleAsync(t => t.EmployeeId == parameters.EmployeeId);
+            Employee employee = await Uow.Repository<Employee>().SingleOrDefaultAsync(t => t.EmployeeId == parameters.EmployeeId);
             await Uow.RegisterDeletedAsync<Employee>(employee);
             await Uow.CommitAsync();
+        }
+
+        public HashSet<string> AddValidation(EmployeeCreate entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public HashSet<string> UpdateValidation(EmployeeCreate entity)
+        {
+            return ValidationMessages;
+            //throw new NotImplementedException();
         }
 
         //public async Task DeleteAsync(vEmployeeRecord parameters)

@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { RxFormBuilder, IFormGroup, RxwebValidators } from '@rxweb/reactive-form-validators';
 
-import { Expense } from '@app/models';
+import { Expens } from '@app/models';
 import { AbstractExpense } from '../domain/abstract-expense';
 import { anonymous } from '@rxweb/angular-router';
 
@@ -14,7 +14,7 @@ import { anonymous } from '@rxweb/angular-router';
     templateUrl: './expense-add.component.html'
 })
 export class ExpenseAddComponent extends AbstractExpense implements OnInit, OnDestroy {
-    expense: Expense;
+    expens: Expens;
     subscription: Subscription;
     result: any;
     constructor(private formBuilder: RxFormBuilder) {
@@ -22,19 +22,24 @@ export class ExpenseAddComponent extends AbstractExpense implements OnInit, OnDe
     }
 
     ngOnInit(): void {
-        this.expense = new Expense();
-        this.expenseFormGroup = this.formBuilder.formGroup(this.expense) as IFormGroup<Expense>;
+        this.expens = new Expens();
+        this.expenseFormGroup = this.formBuilder.formGroup(this.expens) as IFormGroup<Expens>;
     }
 
     onSubmit() {
-        this.post({ body: this.expenseFormGroup.value }).subscribe(t => {
+        this.post({ body: this.expens }).subscribe(t => {
             this.result = t;
+            if(this.result)
+            {
             this.expenseFormGroup.reset();
+            }
         })
-
-
-
+        this.expenseFormGroup.submitted=true;
     }
+
+    // onReset() {
+    //     this.expenseFormGroup.reset();
+    // }
 
     ngOnDestroy(): void {
         if (this.subscription)

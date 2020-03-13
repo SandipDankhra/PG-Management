@@ -67,6 +67,7 @@ export class CreateBookBedAddComponent extends AbstractCreateBookBed implements 
     // }
 
     submit() {
+        
 
     }
     ngOnDestroy(): void {

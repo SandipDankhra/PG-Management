@@ -1,76 +1,77 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using RxWeb.Core.Annotations;
-using RxWeb.Core.Data.Annotations;
-using RxWeb.Core.Sanitizers;
-using PGManagement.Models.Enums.Main;
-using PGManagement.BoundedContext.SqlContext;
-using RxWeb.Core.Sanitizers.Enums;
+//using System;
+//using System.Collections.Generic;
+//using System.ComponentModel.DataAnnotations.Schema;
+//using RxWeb.Core.Annotations;
+//using RxWeb.Core.Data.Annotations;
+//using RxWeb.Core.Sanitizers;
+//using PGManagement.Models.Enums.Main;
+//using PGManagement.BoundedContext.SqlContext;
+//using RxWeb.Core.Sanitizers.Enums;
 
-namespace PGManagement.Models.Main
-{
-    [Table("Expenses",Schema="dbo")]
-    public partial class Expense
-    {
-		#region ExpenseId Annotations
+//namespace PGManagement.Models.Main
+//{
+//    [Table("Expenses", Schema = "dbo")]
+//    public partial class Expense
+//    {
+//        #region ExpenseId Annotations
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
-		#endregion ExpenseId Annotations
+//        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+//        [System.ComponentModel.DataAnnotations.Key]
+//        #endregion ExpenseId Annotations
 
-        public int ExpenseId { get; set; }
+//        public int ExpenseId { get; set; }
 
-		#region ExpenseType Annotations
+//        #region ExpenseType Annotations
 
-        [Required]
-        [MaxLength(50)]
-		#endregion ExpenseType Annotations
+//        [Required]
+//        [MaxLength(50)]
+//        #endregion ExpenseType Annotations
 
-        public string ExpenseType { get; set; }
+//        public string ExpenseType { get; set; }
 
-		#region ExpenseAmount Annotations
+//        #region ExpenseAmount Annotations
 
-        [Range(1,int.MaxValue)]
-        [Required]
-		#endregion ExpenseAmount Annotations
+//        [Range(1, int.MaxValue)]
+//        [Required]
+//        #endregion ExpenseAmount Annotations
 
-        public int ExpenseAmount { get; set; }
+//        public int ExpenseAmount { get; set; }
 
-		#region ExpenseDetails Annotations
+//        #region ExpenseDetails Annotations
 
-        [Required]
-		#endregion ExpenseDetails Annotations
+//        [Required]
+//        #endregion ExpenseDetails Annotations
 
-        public string ExpenseDetails { get; set; }
+//        public string ExpenseDetails { get; set; }
 
-		#region ExpenseDate Annotations
+//        #region ExpenseDate Annotations
 
-        [Required]
-		#endregion ExpenseDate Annotations
+//        [Required]
+//        #endregion ExpenseDate Annotations
 
-        public System.DateTime ExpenseDate { get; set; }
+//        public System.DateTime ExpenseDate { get; set; }
 
-		#region EmployeeId Annotations
+//        #region EmployeeId Annotations
 
-        [Range(1,int.MaxValue)]
+//        [Range(1, int.MaxValue)]
+//        [Required]
+//        [RelationshipTableAttribue("Users", "dbo", "", "EmployeeId")]
+//        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
+//        #endregion EmployeeId Annotations
 
-        [RelationshipTableAttribue("Employees", "dbo", "", "EmployeeId")]
-        #endregion EmployeeId Annotations
-        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
-        public int EmployeeId { get; set; }
+//        public int EmployeeId { get; set; }
 
-		#region Employee Annotations
+//        #region User Annotations
 
-        [ForeignKey(nameof(EmployeeId))]
-        [InverseProperty(nameof(PGManagement.Models.Main.Employee.Expenses))]
-		#endregion Employee Annotations
+//        [ForeignKey(nameof(EmployeeId))]
+//        [InverseProperty(nameof(PGManagement.Models.Main.User.Expenses))]
+//        #endregion User Annotations
 
-        public virtual Employee Employee { get; set; }
+//        public virtual User User { get; set; }
 
 
-        public Expense()
-        {
-        }
-	}
-}
+//        public Expense()
+//        {
+//        }
+//    }
+//}

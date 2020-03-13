@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
       }
     })
     console.log("before auth");
-    var auth = this.browserStorage.local.get("auth");
+    var auth = localStorage.getItem("auth");
     console.log("hey:" + auth);
     if (auth) {
       // this.router.navigate(["/client-index"])
@@ -84,8 +84,10 @@ export class AppComponent implements OnInit {
         "latitude": "Please enter a valid latitude",
         "longitude": "Please enter a valid longitude",
         "url": "{{0}} Is not the correct url pattern.",
-        "password": "Password length should be of 8 to 20 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
-      }, "reactiveForm": { "errorMessageBindingStrategy": 1 }
+        "password": "Password length should be of minimum 5 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
+      }
+      // },"reactiveForm":{"errorMessageBindingStrategy":1}
+
     });
   }
 

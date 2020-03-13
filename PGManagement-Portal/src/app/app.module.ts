@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
+import { RestrictInputDirective } from 'src/app/domain/custom-directives/restrict-input';
+
 import { ROUTES } from './components/start/routing';
 import { AppComponent } from './components/start/app.component';
 import { RouterModule, PreloadAllModules } from '@angular/router';
@@ -22,7 +24,7 @@ const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModul
   declarations: [
     AppComponent,
     ClientIndexComponent,
-    RegistrationAddComponent
+    RegistrationAddComponent,RestrictInputDirective
   ],
   imports: [
     BrowserModule,

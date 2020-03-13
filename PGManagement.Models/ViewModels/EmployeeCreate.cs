@@ -29,13 +29,18 @@ namespace PGManagement.Models.ViewModels
         [Required]
         public decimal MobileNumber { get; set; }
 
-        [Required]
         public string employeePassword { get; set; }
 
         [Required]
         public bool LoginBlocked { get; set; }
+        [Required]
+        public int StatusId { get; set; }
 
-       
+
+        public int EmployeeId { get; set; }
+
+
+
 
     }
 }

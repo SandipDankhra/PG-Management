@@ -21,7 +21,7 @@ export {Room} from './room';;
 export {Flat} from './flat';;
 export {Complaint} from './complaint';;
 export {Employee} from './employee';;
-export {Expense} from './expense';;
+export {Expens} from './expens';;
 export {Document} from './document';;
 export {Payment} from './payment';;
 export {Menu} from './menu';;

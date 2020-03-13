@@ -13,7 +13,7 @@ namespace PGManagement.Api.Controllers.MasterModule
     [ApiController]
     [Route("api/[controller]")]
 	
-	public class ExpenseController : BaseController<Expense,vExpense, Expense>
+	public class ExpenseController : BaseController<Expens,vExpense, Expens>
 
     {
         public ExpenseController(IMasterUow uow):base(uow) {}

@@ -1,7 +1,7 @@
-import {DocumentBase} from '../database-models/document-base';
+import {ExpensBase} from '../database-models/expens-base';
 import {UserBase} from '../database-models/user-base';
 //Generated Imports
-export class Document extends DocumentBase 
+export class Expens extends ExpensBase 
 {
 
 
@@ -13,21 +13,5 @@ user : UserBase;
 //#endregion user Prop
 
 //#endregion Generated Reference Properties
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

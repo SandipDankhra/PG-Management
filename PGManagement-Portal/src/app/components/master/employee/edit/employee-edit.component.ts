@@ -3,7 +3,7 @@ import { AbstractEmployee } from '../domain/abstract-employee';
 
 import { Subscription } from 'rxjs';
 import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { vEmployeeRecord, vEmployeeRec, Employee } from '@app/models';
 
@@ -17,7 +17,7 @@ export class EmployeeEditComponent extends AbstractEmployee implements OnInit, O
     id: any;
     isload: boolean=true;
 result:any;
-    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
+    constructor(private router:Router ,private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
         // this.id = this.activatedRoute.snapshot.paramMap.get('id');
         this.activatedRoute.params.subscribe(t=>(this.id=t.id));
@@ -32,13 +32,13 @@ result:any;
             // this.employeeFormGroup = this.formBuilder.formGroup(this.employee) as IFormGroup<vEmployeeRec>;
             this.employeeFormGroup = this.formBuilder.formGroup<vEmployeeRec>(vEmployeeRec,t) as IFormGroup<vEmployeeRec>;
             // this.employeeFormGroup.controls.firstName.setValue(t.firstName);
-            // this.employeeFormGroup.controls.firstName.patchValue(t[0].firstName);
+            this.employeeFormGroup.controls.employeeId.patchValue(t.employeeId);    
             this.isload=true;
         })
     }
 
     saveChanges(){
-        this.post({body:this.employee}).subscribe(t=>{
+        this.put({params:[this.id],body:this.employeeFormGroup.value}).subscribe(t=>{
             this.result=t;
         }) 
     }

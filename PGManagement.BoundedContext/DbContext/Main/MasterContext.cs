@@ -39,7 +39,7 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<User> User { get; set; }
 
         public DbSet<Employee>Employees { get; set; }
-        public DbSet<Expense> expense { get; set; }
+        public DbSet<Expens> expens { get; set; }
         public DbSet<vExpense> vExpense { get; set; }
         public DbSet<Authentication> authentication { get; set; }
         public DbSet<vRentalRecord> vRentalRecords { get; set; }

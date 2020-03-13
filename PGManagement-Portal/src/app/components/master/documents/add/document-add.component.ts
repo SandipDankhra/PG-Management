@@ -7,7 +7,7 @@ import { Document } from '@app/models';
 import { AbstractDocument } from '../domain/abstract-document';
 
 import { DocumentTypeEnum } from "src/app/enums/document-type.enum";
-import { anonymous } from '@rxweb/angular-router';
+
 
 
 @Component({

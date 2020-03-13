@@ -28,10 +28,20 @@ export class vInvoiceRecordEditComponent extends AbstractvInvoiceRecord implemen
     ngOnInit(): void {
         console.log(this.id);
         this.get({ params: [this.id] }).subscribe((t:vInvoiceRecord) => {
+            debugger;
             // this.vInvoiceRecordFormGroup = this.formBuilder.formGroup(vInvoiceRecord,t) as IFormGroup<vInvoiceRecord>;
             console.log(t);
+                     
+            
+           
+            // let newd = t.createDate.toString();    
+            // var newdate = newd.split(' '); 
+            // var newdate 
+            // // this.vInvoiceRecord.createDate = newdate[0]+newdate[1] + newdate[2];
+            // let invoiceDate=newdate[0]+newdate[1] + newdate[2];
             this.vInvoiceRecord=t;
             this.isShow=true;
+
         })
     }
     
