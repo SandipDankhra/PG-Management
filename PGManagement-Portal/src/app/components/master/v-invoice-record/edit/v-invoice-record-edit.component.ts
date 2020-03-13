@@ -15,19 +15,26 @@ export class vInvoiceRecordEditComponent extends AbstractvInvoiceRecord implemen
     vInvoiceRecord: vInvoiceRecord;
     subscription: Subscription;
     id: number;
-
+    invoice:any;
+    isShow:boolean=false;
     constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute) {
         super();
-        this.activatedRoute.queryParams.subscribe(t => {
+        this.activatedRoute.params.subscribe(t => {
             this.id = t['id'];
+            // console.log(t);
         })
     }
 
     ngOnInit(): void {
-        this.get({ params: [this.id] }).subscribe(t => {
-            this.vInvoiceRecordFormGroup = this.formBuilder.formGroup(vInvoiceRecord,t) as IFormGroup<vInvoiceRecord>;
+        console.log(this.id);
+        this.get({ params: [this.id] }).subscribe((t:vInvoiceRecord) => {
+            // this.vInvoiceRecordFormGroup = this.formBuilder.formGroup(vInvoiceRecord,t) as IFormGroup<vInvoiceRecord>;
+            console.log(t);
+            this.vInvoiceRecord=t;
+            this.isShow=true;
         })
     }
+    
 
     ngOnDestroy(): void {
         if (this.subscription)

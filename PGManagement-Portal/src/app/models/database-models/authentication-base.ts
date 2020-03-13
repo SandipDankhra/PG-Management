@@ -8,8 +8,8 @@ export class AuthenticationBase {
         @prop()
         authenticationId : number;
 //#endregion authenticationId Prop
-
-
+@prop()
+userPassword:string
 //#region userId Prop
         @range({ minimumNumber: 1, maximumNumber: 2147483647 })
         @required()

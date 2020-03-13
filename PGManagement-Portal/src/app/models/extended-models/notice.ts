@@ -16,7 +16,4 @@ export class Notice extends NoticeBase
 
 
 
-
-
-
 }

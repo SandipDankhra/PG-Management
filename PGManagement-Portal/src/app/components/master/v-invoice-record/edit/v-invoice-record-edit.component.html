@@ -1,1 +1,137 @@
 <h1>vInvoiceRecord EDIT</h1>
+
+
+<div class="wrapper" *ngIf="isShow">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Invoice</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Invoice</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+  
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <!-- <div class="callout callout-info">
+                <h5><i class="fas fa-info"></i> Note:</h5>
+                This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+              </div> -->
+  
+  
+              <!-- Main content -->
+              <div class="invoice p-3 mb-3">
+                <!-- title row -->
+                <div class="row">
+                  <div class="col-12">
+                    <h4>
+                      <i class="fas fa-globe"></i> PG Management System
+                      <small class="float-right">Date:</small><small class="float-right">{{vInvoiceRecord.createDate}}</small>
+                    </h4>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- info row -->
+                <div class="row invoice-info">
+                  <div class="col-sm-4 invoice-col">
+                   <b>About Rental</b>
+                    <address>
+                      <h5>Name:</h5><strong>{{vInvoiceRecord.firstName +" "+vInvoiceRecord.lastName}}</strong><br>                   
+                      Email:<p>{{vInvoiceRecord.email}}</p><br>
+                     Address: <p>{{vInvoiceRecord.address}}</p>
+                    </address>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4 invoice-col">
+                    <b>About Flat</b>
+                    <address>
+                      <strong>{{vInvoiceRecord.flatName}}</strong><br>
+                      Locality: <p>{{vInvoiceRecord.locality}}</p><br>                  
+                    </address>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4 invoice-col">
+                    <b>Rental</b><br>
+                    <address>
+                    RentalCity:<p>{{vInvoiceRecord.rentalCity}}</p><br>
+                    Rental Type: <p>{{vInvoiceRecord.rentalType}}</p><br>
+                    Room Type: <p>{{vInvoiceRecord.roomType}}</p><br>
+                    Room Sharing: <p>{{vInvoiceRecord.roomSharing}}</p><br>
+                    Bed ID: <p>{{vInvoiceRecord.bedId}}</p><br>
+                    Rental ID: <p>{{vInvoiceRecord.rentalId}}</p><br>
+                  </address>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+  
+                <!-- Table row -->
+                <div class="row">
+                  <div class="col-12 table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                      <tr>
+                        <th>Flat Number</th>
+                        <th>Room Number</th>
+                        <th>Bed Number</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Bed Price</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>{{vInvoiceRecord.flatNumber}}</td>
+                        <td>{{vInvoiceRecord.roomNumber}}</td>
+                        <td>{{vInvoiceRecord.bedNumber}}</td>
+                        <td>{{vInvoiceRecord.startDate}}</td>
+                        <td>{{vInvoiceRecord.endDate}}</td>
+                        <td>{{vInvoiceRecord.bedPrice}}</td>
+                      </tr>
+                  
+                      </table>
+                    
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+  
+                <!-- this row will not appear when printing -->
+                <div class="row no-print">
+                  <div class="col-12">
+                    <a   onclick="print()" target="_blank" class="btn btn-default float-right"><i class="fas fa-print" ></i> Print</a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- /.invoice -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  
+  
+  </div>
+  <!-- ./wrapper -->
+  
+  <script type="text/javascript"> 
+  function print(){
+      window.addEventListener("load", window.print());
+  }
+    </script>

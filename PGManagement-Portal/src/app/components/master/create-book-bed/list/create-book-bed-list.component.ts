@@ -5,6 +5,7 @@ import { CreateBookBed } from "@app/custom-models";
 import { Subscription } from 'rxjs';
 import { PaymentTypeEnum } from '@app/enums';
 import { vBookBed } from '@app/models';
+import {Route, Router} from '@angular/router'
 
 
 @Component({
@@ -15,8 +16,8 @@ export class CreateBookBedListComponent extends AbstractCreateBookBed implements
     createBookBed: List<vBookBed>;
     subscription: Subscription;
     paymentTypeIdEnum:any;
-
-    constructor()
+    result:any; 
+    constructor( private router:Router)
     {
         super();
         this.paymentTypeIdEnum=PaymentTypeEnum;
@@ -29,6 +30,11 @@ export class CreateBookBedListComponent extends AbstractCreateBookBed implements
     }
 
     Invoice(){
+        // this.post({path:'api/vInvoiceRecord' ,body:{}}).subscribe(res=>
+        //     {
+        //         this.result=res;
+        //     })
+            this.router.navigate(['/v-invoice-record','cbt.bookBedId']);
 
     }
 

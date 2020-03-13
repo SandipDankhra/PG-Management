@@ -10,6 +10,14 @@ namespace PGManagement.Models.Main
     [Table("vInvoiceRecord",Schema="dbo")]
     public partial class vInvoiceRecord
     {
+		#region BookBedId Annotations
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.DataAnnotations.Key]
+		#endregion BookBedId Annotations
+
+        public int BookBedId { get; set; }
+
 
         public string FirstName { get; set; }
 
@@ -19,11 +27,6 @@ namespace PGManagement.Models.Main
 
         public string RentalCity { get; set; }
 
-		#region RentalType Annotations
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
-		#endregion RentalType Annotations
 
         public int RentalType { get; set; }
 
@@ -56,6 +59,21 @@ namespace PGManagement.Models.Main
 
 
         public int RentalId { get; set; }
+
+
+        public int BedNumber { get; set; }
+
+
+        public System.DateTime StartDate { get; set; }
+
+
+        public System.DateTime EndDate { get; set; }
+
+
+        public Nullable<System.DateTimeOffset> CreateDate { get; set; }
+
+
+        public string Email { get; set; }
 
 
         public vInvoiceRecord()

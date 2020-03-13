@@ -22,14 +22,14 @@
         </div>
         <div class="form-group">
             <label >Flat locality</label>
-            <input type="text" class="form-control"  placeholder="Enter Flat locality" formControlName="locality">
+            <input type="text"  class="form-control"  placeholder="Enter Flat locality" formControlName="locality">
         </div>
    
       </div>
       <!-- /.card-body -->
 
       <div class="card-footer">
-        <button type="submit" class="btn btn-primary" (click)="onAddFlat()">ADD Flat</button>
+        <button [disabled]="!flatFormGroup.valid" type="submit" class="btn btn-primary" (click)="onAddFlat()">ADD Flat</button>
         
       </div>
       <div class="card-footer">
