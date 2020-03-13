@@ -7,6 +7,7 @@ import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
 import { Flat } from '@app/models';
 import { AbstractFlat } from '../domain/abstract-flat';
 import { anonymous } from '@rxweb/angular-router';
+import {  ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class FlatAddComponent extends AbstractFlat implements OnInit, OnDestroy 
     result: any;
     subscription: Subscription;
 
-    constructor(private formBuilder: RxFormBuilder, private router: Router) {
+    constructor(private formBuilder: RxFormBuilder, private router: Router, private toastr:ToastrService) {
         super();
     }
 
@@ -28,13 +29,16 @@ export class FlatAddComponent extends AbstractFlat implements OnInit, OnDestroy 
     }
 
     onAddFlat() {
+        console.log(this.flatFormGroup.valid);
         this.post({ body: this.flat }).subscribe(t => {
             this.result = t;
-            console.log(this.result);
+            //console.log(this.result);
+            this.onSuccess();
+            this.router.navigateByUrl('/flat');
         })
 
         this.flatFormGroup.reset();
-        this.router.navigateByUrl('/flat');
+       
     }
     onGoBack() {
         this.router.navigateByUrl('/flat');
@@ -43,6 +47,11 @@ export class FlatAddComponent extends AbstractFlat implements OnInit, OnDestroy 
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();
+    }
+
+    onSuccess(){
+        this.toastr.success("Flat added successfully");
+        // location.reload();
     }
 
 }

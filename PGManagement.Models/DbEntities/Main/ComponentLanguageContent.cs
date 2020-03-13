@@ -21,7 +21,7 @@ namespace PGManagement.Models.Main
 
 		#region ComponentKeyId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("LanguageContentKeys","dbo","","ComponentKeyId")]
 		#endregion ComponentKeyId Annotations
@@ -30,7 +30,7 @@ namespace PGManagement.Models.Main
 
 		#region LanguageContentId Annotations
 
-        [Range(1, int.MaxValue)]
+        [Range(1,int.MaxValue)]
         [Required]
         [RelationshipTableAttribue("LanguageContents","dbo","","LanguageContentId")]
 		#endregion LanguageContentId Annotations

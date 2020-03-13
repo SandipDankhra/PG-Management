@@ -11,10 +11,12 @@ import { ForgetPasswordListComponent } from './list/forget-password-list.compone
 import { ForgetPasswordEditComponent } from './edit/forget-password-edit.component';
 import { ForgetPasswordAddComponent } from './add/forget-password-add.component';
 import { ForgetPasswordSharedModule } from './forget-password-shared.module';
+import { ClientHeaderModule } from '../../user/clientheader/clientheader.module';
+import { ClientFooterModule } from '../../user/clientfooter/clientfooter.module';
 
 @NgModule({
     imports: [
-        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,ForgetPasswordSharedModule,
+        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,ForgetPasswordSharedModule,ClientHeaderModule,ClientFooterModule,
         ROUTING
     ],
     declarations: [ForgetPasswordListComponent,ForgetPasswordEditComponent,ForgetPasswordAddComponent],

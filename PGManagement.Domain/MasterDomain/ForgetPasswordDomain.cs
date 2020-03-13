@@ -18,7 +18,7 @@ namespace PGManagement.Domain.MasterModule
             PasswordHash = passwordHash;
         }
 
-        public async  Task<object> GetBy(User parameters)
+        public async  Task<object> GetBy(Authentication parameters)
         {
 
             var mobileValidate = await Uow.Repository<User>().SingleOrDefaultAsync(t => t.MobileNumber == parameters.MobileNumber);
@@ -42,10 +42,11 @@ namespace PGManagement.Domain.MasterModule
 
 
          
-        public async Task AddAsync(Authentication parameter)
+        public  Task AddAsync(Authentication parameter)
         {
-            var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp== parameter.Otp && t.UserId == parameter.UserId);
-            
+            //var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp== parameter.Otp && t.UserId == parameter.UserId);
+            throw new NotImplementedException();
+
         }
 
      
@@ -62,9 +63,10 @@ namespace PGManagement.Domain.MasterModule
             await Uow.CommitAsync();
         }
 
-        public Task<object> GetAsync(User parameters)
+        public async Task<object> GetAsync(Authentication parameters)
         {
-            throw new NotImplementedException();
+            return await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp == parameters.Otp && t.UserId == parameters.UserId);
+
         }
 
         public HashSet<string> AddValidation(Authentication entity)
@@ -78,12 +80,12 @@ namespace PGManagement.Domain.MasterModule
             return ValidationMessages;
         }
 
-        public HashSet<string> DeleteValidation(User parameters)
+        public HashSet<string> DeleteValidation(Authentication parameters)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(User parameters)
+        public Task DeleteAsync(Authentication parameters)
         {
             throw new NotImplementedException();
         }
@@ -93,5 +95,5 @@ namespace PGManagement.Domain.MasterModule
         private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
     }
 
-    public interface IForgetPasswordDomain : ICoreDomain<Authentication, User> { }
+    public interface IForgetPasswordDomain : ICoreDomain<Authentication, Authentication> { }
 }

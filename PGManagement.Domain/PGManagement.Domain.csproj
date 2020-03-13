@@ -12,10 +12,6 @@
     <ProjectReference Include="..\PGManagement.Infrastructure\PGManagement.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MasterDomain\" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>

@@ -4,6 +4,7 @@ import {ApplicationUserTokenBase} from '../database-models/application-user-toke
 import {UserRoleBase} from '../database-models/user-role-base';
 import {AuthenticationBase} from '../database-models/authentication-base';
 import {EmployeeBase} from '../database-models/employee-base';
+import {ExpensBase} from '../database-models/expens-base';
 import {DocumentBase} from '../database-models/document-base';
 import {RequesterBase} from '../database-models/requester-base';
 import {NoticeBase} from '../database-models/notice-base';
@@ -32,6 +33,9 @@ authentication : AuthenticationBase[];
 //#region employees Prop
 employees : EmployeeBase[];
 //#endregion employees Prop
+//#region expenses Prop
+expenses : ExpensBase[];
+//#endregion expenses Prop
 //#region documents Prop
 documents : DocumentBase[];
 //#endregion documents Prop
@@ -43,15 +47,6 @@ notice : NoticeBase[];
 //#endregion notice Prop
 
 //#endregion Generated Reference Properties
-
-
-
-
-
-
-
-
-
 
 
 

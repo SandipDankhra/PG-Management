@@ -22,7 +22,8 @@ export class RentalListComponent extends AbstractRental implements OnInit, OnDes
 
     ngOnInit(): void {
         this.subscription = this.get().subscribe((t: List<vRentalRecord>) => {
-            this.result = t;
+            console.log(t);
+            this.vrental = t;
         })
 
     }

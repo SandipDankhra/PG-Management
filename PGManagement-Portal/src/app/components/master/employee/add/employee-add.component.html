@@ -1,97 +1,121 @@
 <h1>Employee ADD</h1>
 
 <!-- /.card -->
-            <!-- Horizontal Form -->
-            <div class="card card-info">
-                <div class="card-header">
-                  <h3 class="card-title">Employee Create Form </h3>
-                </div>
-                <!-- /.card-header -->
-                <!-- form start -->
-                <form class="form-horizontal" [formGroup]="createEmployeeFormGroup">
-                  <div class="card-body">
-                    <div class="form-group row">
-                        <label for="inputText3" class="col-sm-2 col-form-label" >First name</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" formControlName="firstName" id="inputText3" placeholder="ex->Shiv">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputText3" class="col-sm-2 col-form-label">Last Name</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" formControlName="lastName" id="inputText3" placeholder="ex->Dubey">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label  class="col-sm-2 col-form-label">Salary</label>
-                        <div class="col-sm-10">
-                          <input type="number" class="form-control" formControlName="salary"  placeholder="Salary">
-                        </div>
-                      </div>
+<!-- Horizontal Form -->
+<div class="card card-info">
+  <div class="card-header">
+    <h3 class="card-title">Employee Create Form </h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form class="form-horizontal" [formGroup]="createEmployeeFormGroup">
+    <div class="card-body">
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">First name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="firstName" placeholder="Shiv" app-restrict-input="" >
+          <small class="form-text text-danger"
+            *ngIf="createEmployeeFormGroup.controls.firstName.errors">{{createEmployeeFormGroup.controls.firstName.errorMessage}}<br /></small>
+        </div>
 
-                      
-                        <!-- Date dd/mm/yyyy -->
-                        <div class="form-group row">
-                            <label for="inputDate3" class="col-sm-2 col-form-label">Date of joining</label>
-                            <div class="col-sm-10">
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                            </div>
-                            
-                            <input type="date" class="form-control" formControlName="joinDate" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
-                          </div></div>
-                          <!-- /.input group -->
-                        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="lastName" placeholder="Dubey">
+          <small class="form-text text-danger"
+            *ngIf="createEmployeeFormGroup.controls.lastName.errors">{{createEmployeeFormGroup.controls.lastName.errorMessage}}<br /></small>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Salary</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="salary" placeholder="Salary">
+          <small class="form-text text-danger"
+            *ngIf="createEmployeeFormGroup.controls.salary.errors">{{createEmployeeFormGroup.controls.salary.errorMessage}}<br /></small>
+        </div>
+      </div>
 
 
-                      <!-- <div class="form-group row">
+      <!-- Date dd/mm/yyyy -->
+      <div class="form-group row">
+        <label for="inputDate3" class="col-sm-2 col-form-label">Date of joining</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+            </div>
+
+            <input type="date" class="form-control" formControlName="joinDate" data-inputmask-alias="datetime"
+              data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+            <div>
+              <small class="form-text text-danger" *ngIf="createEmployeeFormGroup.controls.joinDate.errors">{{createEmployeeFormGroup.controls.joinDate.errorMessage}}<br/></small>
+            </div>
+
+          </div>
+        </div>
+        <!-- /.input group -->
+      </div>
+
+
+      <!-- <div class="form-group row">
                         <label for="inputDate3" class="col-sm-2 col-form-label">Date of joining</label>
                         <div class="col-sm-10">
                           <input type="date" class="form-control" id="inputDate3" placeholder="Date">
                         </div>
                       </div> -->
-                    <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                      <div class="col-sm-10">
-                        <input type="email" class="form-control" formControlName="email" id="inputEmail3" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                      <div class="col-sm-10">
-                        <input type="password" class="form-control" formControlName="employeePassword" id="inputPassword3" placeholder="Password">
-                      </div>
-                    </div>
-
-<!-- phone mask -->
-<div class="form-group row">
-    <label for="inputNumber3" class="col-sm-2 col-form-label">Mobile Number</label>
-    <div class="col-sm-10">
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" formControlName="email" id="inputEmail3" placeholder="Email">
+          <small class="form-text text-danger"
+            *ngIf="createEmployeeFormGroup.controls.email.errors">{{createEmployeeFormGroup.controls.email.errorMessage}}<br /></small>
+        </div>
       </div>
-      
-      <input type="text" class="form-control" formControlName="mobileNumber"
-             data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-    </div></div>
-    <!-- /.input group -->
-  </div>
-  <!-- /.form group -->
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" formControlName="employeePassword" id="inputPassword3"
+            placeholder="Password">
+          <small class="form-text text-danger"
+            *ngIf="createEmployeeFormGroup.controls.employeePassword.errors">{{createEmployeeFormGroup.controls.employeePassword.errorMessage}}<br /></small>
+        </div>
+      </div>
 
-                    <div class="form-group row">
-                        <label for="text" class="col-sm-2 col-form-label">Login Status</label>
-                        <div class="col-sm-10">
-                          <input type="bit" class="form-control" id="inputNumber3" formControlName="loginBlocked" placeholder="True/False">
-                        </div>
-                      </div>
-                    
+      <!-- phone mask -->
+      <div class="form-group row">
+        <label for="inputNumber3" class="col-sm-2 col-form-label">Mobile Number</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-phone"></i></span>
+            </div>
+
+            <input type="text" class="form-control" formControlName="mobileNumber"
+              data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
+            <small class="form-text text-danger"
+              *ngIf="createEmployeeFormGroup.controls.mobileNumber.errors">{{createEmployeeFormGroup.controls.mobileNumber.errorMessage}}<br /></small>
+          </div>
+        </div>
+        <!-- /.input group -->
+      </div>
+      <!-- /.form group -->
+
+      <div class="form-group row">
+        <label for="text" class="col-sm-2 col-form-label">Login Status</label>
+        <div class="col-sm-10">
+          <input type="bit" class="form-control" id="inputNumber3" formControlName="loginBlocked"
+            placeholder="True/False" disabled>
+          <small class="form-text text-danger"
+            *ngIf="createEmployeeFormGroup.controls.loginBlocked.errors">{{createEmployeeFormGroup.controls.loginBlocked.errorMessage}}<br /></small>
+        </div>
+      </div>
 
 
 
-                     
-                    <!-- <div class="form-group row">
+
+
+      <!-- <div class="form-group row">
                       <div class="offset-sm-2 col-sm-10">
                         <div class="form-check">
                           <input type="checkbox" class="form-check-input" id="exampleCheck2">
@@ -99,19 +123,21 @@
                         </div>
                       </div>
                     </div> -->
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-info float-md-none" (click)="onSubmit()">Submit</button>
-                    <button type="submit" class="btn btn-default float-md-none" (click)="onReset()">Reset</button>
-                  </div>
-                  <!-- /.card-footer -->
-                </form>
-              </div>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer ">
+      <button type="submit" class="btn btn-info float-md-none" 
+        (click)="onSubmit()">Submit</button>
+      <button type="submit" class="btn btn-default float-md-none" (click)="onReset()">Reset</button>
+      <button type="submit" class="btn btn-default float-right" [routerLink]="['../']">Go to list</button>
+    </div>
+    <!-- /.card-footer -->
+  </form>
+</div>
 <script>
-     $("input[data-bootstrap-switch]").each(function(){
-      $(this).bootstrapSwitch('state', $(this).prop('checked'));
-    });
- //Datemask dd/mm/yyyy
- $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+  $("input[data-bootstrap-switch]").each(function () {
+    $(this).bootstrapSwitch('state', $(this).prop('checked'));
+  });
+  //Datemask dd/mm/yyyy
+  $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
 </script>

@@ -34,6 +34,9 @@ namespace PGManagement.Models.Main
         public bool BedStatus { get; set; }
 
 
+        public int RequesterId { get; set; }
+
+
         public vRequestLookup()
         {
         }

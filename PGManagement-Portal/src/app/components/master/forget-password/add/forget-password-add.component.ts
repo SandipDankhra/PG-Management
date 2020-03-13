@@ -38,8 +38,8 @@ export class ForgetPasswordAddComponent extends AbstractForgetPassword implement
     }
     confirmOtp()
     {
-        this.post({body:{UserId:this.result,Otp:this.forgetPasswordFormGroup.controls.otp.value}}).subscribe(res=>{
-            if(res==0)
+        this.get({queryParams:{UserId:this.result,Otp:this.forgetPasswordFormGroup.controls.otp.value}}).subscribe(res=>{
+            if(res!=null)
             {
                 this.showpasswordBlock=true;
             }
@@ -49,8 +49,7 @@ export class ForgetPasswordAddComponent extends AbstractForgetPassword implement
     
     changePassword(){
         this.put({params:[this.result],body:{UserId:this.result,userPassword:this.forgetPasswordFormGroup.controls.userPassword.value,
-            Otp:this.forgetPasswordFormGroup.controls.otp.value}}).subscribe(res=>{
-            debugger;        
+            Otp:this.forgetPasswordFormGroup.controls.otp.value}}).subscribe(res=>{       
             this.result=res;
             console.log(res);
         })

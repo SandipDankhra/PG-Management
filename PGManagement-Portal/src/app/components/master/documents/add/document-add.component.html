@@ -1,17 +1,42 @@
-<h1>Documents ADD</h1>
-
 <!-- form start -->
-<form [formGroup]="documentFormGroup">
+<!-- <form [formGroup]="documentFormGroup">
     <div class="col-sm-6">
       <div class="form-group">
-        <label>Document</label>
-        <select formControlName="documentTypeId">
-          <option *ngFor="let key of keys" [value]="key">{{documentTypeEnum[key]}}
-                     </option>
+        <label for="exampleInputFile">Document</label>
+        <div class="input-group">
+          <div class="custom-file">
+        <select formControlName="documentTypeId" data-toggle="dropdown">
+          <option *ngFor="let key of keys" [value]="key" >{{documentTypeEnum[key]}}</option>
         </select>
-        <input type="file" formControlName="document" class="form-control"/>
+        <input type="file" formControlName="document"  class="custom-file-input"  id="exampleInputFile" class="form-control"/>
+      </div>
+      </div>
       </div>
         <button type="button" class="btn btn-info btn-flat" (click)="onUpload()">Upload</button>
         <div>{{result | json}}</div>
       </div>
-    </form> 
+    </form>  -->
+
+
+<form [formGroup]="documentFormGroup">
+  <div class="form-group">
+    <label for="exampleInputFile">Document</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <select formControlName="documentTypeId">
+          <option value="" selected disabled>Action</option>
+          <option *ngFor="let key of keys" [value]="key" >{{documentTypeEnum[key]}}</option>
+        </select>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" formControlName="document" id="exampleInputFile">
+        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+      </div>
+      <div class="input-group-append">
+        <span class="input-group-text" id="" (click)="onUpload()">Upload</span>
+      </div>
+    </div>
+  </div>
+</form>
+
+

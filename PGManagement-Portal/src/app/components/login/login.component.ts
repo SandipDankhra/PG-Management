@@ -8,13 +8,13 @@ import { BrowserStorage } from 'src/app/domain/services/browser-storage';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { RxHttp } from "@rxweb/http";
 import { LoginService } from './login.service';
-import { BaseToastr } from 'src/app/domain/customize-design/toastr';
+
 import { Router } from '@angular/router';
 import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadcaster';
 // export class AuthFilter extends AbstractRequestFilter {
 //     constructor(private browserStorage: BrowserStorage) { super() }
 //     onRequest = (context: XhrContext) => {
-//         context.request.headers.Authorization = this.browserStorage.local.get('Authorization');
+//         context.request.headers.Authorization = localStorage.getItem('Authorization');
 //         this.onRequestExecuting(context);
 //     }
 // }
@@ -39,32 +39,33 @@ export class LoginComponent extends CoreComponent implements OnInit {
     ngOnInit(): void {
         console.log("hello");
         this.applicationBroadcaster.activeMenu(true);
-        var auth = this.browserStorage.local.get('auth');
+        var auth = localStorage.getItem('auth');
         if (auth) {
             this.router.navigate(["/complaints"]);
         }
 
 
 
-        // this.browserStorage.local.save('Authentication', '');
+        // localStorage.setItem('Authentication', '');
         this.loginFormGroup = this.formBuilder.group({
             email: [''],
             password: ['']
         })
         // this.http.get({ hostUri: 'https://localhost:44352', path: 'api/Authentication' }).subscribe(t => {
-        //     // this.browserStorage.local.save('Authentication', t);
+        //     // localStorage.setItem('Authentication', t);
         //     document.cookie = "requestContext='abc'";
-        //     this.browserStorage.local.save('auth', t);
+        //     localStorage.setItem('auth', t);
         //     console.log(t);
         // })
 
     }
     login() {
-        // console.log(this.browserStorage.local.get('auth'));
+        // console.log(localStorage.getItem('auth'));
         // this.http.post({ hostUri: 'https://localhost:44352', path: 'api/Authentication', body: { email: this.loginFormGroup.controls.email.value, password: this.loginFormGroup.controls.password.value } }).subscribe(t => {
         //     console.log(t);
         // })
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
+            console.log(this.loginFormGroup.value);
             if (response.failedLogin) {
 
             }
@@ -72,11 +73,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
                 this.browserStorage.local.save('auth', response);
-                this.browserStorage.local.save('x-request', response.key);
-                this.browserStorage.local.save('userName', response.fullName);
-                this.browserStorage.local.save('userEmail', response.emailId);
-                this.browserStorage.local.save('lcode', response.languageCode);
-                this.browserStorage.local.save('userId', response.userId);
+
                 this.router.navigate(["complaints"]);
             }
             // this.spin = false;

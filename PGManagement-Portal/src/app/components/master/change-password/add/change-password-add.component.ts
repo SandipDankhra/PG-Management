@@ -13,6 +13,7 @@ import { AbstractChangePassword } from '../domain/abstract-change-password';
 export class ChangePasswordAddComponent extends AbstractChangePassword implements OnInit, OnDestroy {
     changePassword: ChangePassword;
     subscription: Subscription;
+    isShow=false;
 
     constructor(private formBuilder: RxFormBuilder) {
         super();
@@ -21,8 +22,27 @@ export class ChangePasswordAddComponent extends AbstractChangePassword implement
     ngOnInit(): void {
         this.changePassword = new ChangePassword();
         this.changePasswordFormGroup = this.formBuilder.formGroup(this.changePassword) as IFormGroup<ChangePassword>;
+        this.changePassword.userId = 5;//component interaction userid fro rental profile
     }
+// checkOld(){
+// this.get().subscribe(t=>{
+//     console.log(t)
+//     this.changePassword.oldPassword=t;
+//     if(this.changePasswordFormGroup.controls.oldPassword.value==this.changePassword.oldPassword)
+//     {
+//         this.isShow=true;
+//     }
+// })
+// }
+    
 
+
+onSubmit(){
+    this.get({queryParams:this.changePassword}).subscribe(t=>{
+console.log(t);
+    })
+    
+}
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();

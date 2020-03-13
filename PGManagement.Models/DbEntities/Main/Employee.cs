@@ -15,7 +15,6 @@ namespace PGManagement.Models.Main
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-        [OnAction("POST", RxWeb.Core.Sanitizers.Enums.ActionValueType.NameClaimIdentifier)]
 		#endregion EmployeeId Annotations
 
         public int EmployeeId { get; set; }
@@ -52,17 +51,9 @@ namespace PGManagement.Models.Main
 
         public virtual User User { get; set; }
 
-		#region Expenses Annotations
-
-        [InverseProperty("Employee")]
-		#endregion Expenses Annotations
-
-        public virtual ICollection<Expense> Expenses { get; set; }
-
 
         public Employee()
         {
-			Expenses = new HashSet<Expense>();
         }
 	}
 }

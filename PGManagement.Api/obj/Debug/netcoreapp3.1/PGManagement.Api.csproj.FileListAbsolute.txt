@@ -268,3 +268,5 @@ E:\FinalMiniProject\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\PGMan
 E:\FinalMiniProject\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.RazorTargetAssemblyInfo.cache
 E:\FinalMiniProject\PG-Management\PGManagement.Api\obj\Debug\netcoreapp3.1\PGManagement.Api.csproj.CopyComplete
 D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\Controllers\Api\MasterModule\web.config
+D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\project\PG-Management\PGManagement.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll

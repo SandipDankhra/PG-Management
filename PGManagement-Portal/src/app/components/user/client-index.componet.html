@@ -1,55 +1,4 @@
-<!-- ======= Top Bar ======= -->
-<section id="topbar" class="d-none d-lg-block">
-  <div class="container clearfix">
-    <div class="contact-info float-left">
-      <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
-      <i class="icofont-phone"></i> +1 5589 55488 55
-    </div>
-    <div class="social-links float-right">
-      <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-      <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-      <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-      <a href="#" class="skype"><i class="icofont-skype"></i></a>
-      <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ======= Header ======= -->
-<header id="header">
-  <div class="container">
-
-    <div class="logo float-left">
-      <h1 class="text-light"><a href="index.html"><span>Mamba</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/client/img/logo.png" alt="" class="img-fluid"></a>-->
-    </div>
-
-    <nav class="nav-menu float-right d-none d-lg-block">
-      <ul>
-        <li class="active"><a href="#" [routerLink]="['/client-index']" routerLinkActive="router-link-active">Home</a>
-        </li>
-        <!-- <li><a href="#">About Us</a></li>
-           <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Team</a></li> -->
-
-        <li><a href="#">Contact Us</a></li>
-
-        <li *ngIf="isLogin;else logout"><a href="#" [routerLink]="['/clientlogin']"
-            routerLinkActive="router-link-active">Login</a></li>
-        <li *ngIf="isLogin"><a href="#" [routerLink]="['/registration']"
-            routerLinkActive="router-link-active">Register</a></li>
-
-        <ng-template #logout>
-          <li><a href="#" (click)="onLogout()">Logout</a></li>
-        </ng-template>
-      </ul>
-    </nav><!-- .nav-menu -->
-
-  </div>
-</header><!-- End Header -->
-
+<app-clientheader></app-clientheader>
 <!-- ======= Hero Section ======= -->
 <section id="hero">
   <div class="hero-container">
@@ -63,11 +12,13 @@
         <div class="carousel-item active" style="background-image: url('assets/client/img/slide/slide-1.jpg');">
           <div class="carousel-container">
             <div class="carousel-content container">
-              <h2 class="animated fadeInDown">Welcome to <span>Mamba</span></h2>
-              <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat
-                sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque
-                accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+              <h2 class="animated fadeInDown">Welcome to <span>Pg Management</span></h2>
+              <p class="animated fadeInUp">Paying Guest & Pg Management System
+                Do you own a PG? Finding diificulty in managing entire activities of your PG from rent collection to
+                tracking your PG performance?
+                Try our award winning PG Management Software which completely automates entire PG Management process.
+              </p>
+              <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
             </div>
           </div>
         </div>
@@ -76,27 +27,15 @@
         <div class="carousel-item" style="background-image: url('assets/client/img/slide/slide-2.jpg');">
           <div class="carousel-container">
             <div class="carousel-content container">
-              <h2 class="animated fadeInDown">Lorem Ipsum Dolor</h2>
-              <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat
-                sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque
-                accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+              <h2 class="animated fadeInDown">Why Pg Management</h2>
+              <p class="animated fadeInUp">Managing different aspects of PG business such as managing multiple PG's ,
+                keeping track of tenants and their payments, tracking daily income and expense, generating expense and
+                income reports, tracking daily transactions of multiple PG's are huge problems for any PG owner.</p>
+              <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
             </div>
           </div>
         </div>
 
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url('assets/client/img/slide/slide-3.jpg');">
-          <div class="carousel-container">
-            <div class="carousel-content container">
-              <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</h2>
-              <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat
-                sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque
-                accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
-            </div>
-          </div>
-        </div>
 
       </div>
 
@@ -122,7 +61,7 @@
       <div class="row no-gutters">
         <div class="col-lg-6 video-box">
           <img src="assets/client/img/about.jpg" class="img-fluid" alt="">
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+          <a href="https://www.youtube.com/watch?v=FBMsE8axeVc" class="venobox play-btn mb-4" data-vbtype="video"
             data-autoplay="true"></a>
         </div>
 
@@ -130,8 +69,9 @@
 
           <div class="section-title">
             <h2>About Us</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-              consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+            <p>Paying Guest & Pg Management System
+              Do you own a PG? Finding diificulty in managing entire activities of your PG from rent collection to
+              tracking your PG performance?</p>
           </div>
 
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -219,9 +159,9 @@
         <div class="col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
+            <li data-filter=".filter-app">Home</li>
+            <li data-filter=".filter-card">Bed</li>
+            <!-- <li data-filter=".filter-web">Web</li> -->
           </ul>
         </div>
       </div>
@@ -230,12 +170,12 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/h1.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+              <h4>Home 1</h4>
+              <p>Home</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/h1.jfif" data-gall="portfolioGallery" class="venobox"
                   title="App 1"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
@@ -243,29 +183,29 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/w3.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/w3.jfif" data-gall="portfolioGallery" class="venobox"
                   title="Web 3"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/h2.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+              <h4>Home 2</h4>
+              <p>Home</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/h2.jfif" data-gall="portfolioGallery" class="venobox"
                   title="App 2"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
@@ -275,12 +215,12 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/b1.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Bed 1</h4>
+              <p>Bed</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/b1.jfif" data-gall="portfolioGallery" class="venobox"
                   title="Card 2"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
@@ -288,29 +228,29 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/w1.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
+              <h4>Web 1</h4>
               <p>Web</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/w1.jfif" data-gall="portfolioGallery" class="venobox"
                   title="Web 2"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/h3.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
+              <h4>Home 3</h4>
+              <p>Home</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/h3.jfif" data-gall="portfolioGallery" class="venobox"
                   title="App 3"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
@@ -320,12 +260,12 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/b2.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
+              <h4>Bed 2</h4>
+              <p>Bed</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/b2.jfif" data-gall="portfolioGallery" class="venobox"
                   title="Card 1"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
@@ -335,12 +275,12 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/b3.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
+              <h4>Bed 3</h4>
+              <p>Bed</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/b3.jfif" data-gall="portfolioGallery" class="venobox"
                   title="Card 3"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
@@ -348,20 +288,20 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
-            <img src="assets/client/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <img src="assets/client/img/portfolio/w2.jfif" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
+              <h4>Web 2</h4>
               <p>Web</p>
               <div class="portfolio-links">
-                <a href="assets/client/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox"
+                <a href="assets/client/img/portfolio/w2.jfif" data-gall="portfolioGallery" class="venobox"
                   title="Web 3"><i class="icofont-eye"></i></a>
                 <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -369,7 +309,7 @@
   </section><!-- End Our Portfolio Section -->
 
   <!-- ======= Our Team Section ======= -->
-  <section id="team" class="team">
+  <!-- <section id="team" class="team">
     <div class="container">
 
       <div class="section-title">
@@ -446,78 +386,52 @@
       </div>
 
     </div>
-  </section><!-- End Our Team Section -->
+  </section> -->
+  <!-- End Our Team Section -->
 
   <!-- ======= Frequently Asked Questions Section ======= -->
   <section id="faq" class="faq section-bg">
     <div class="container">
 
       <div class="section-title">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Reviews</h2>
       </div>
 
-      <div class="row  d-flex align-items-stretch">
+      <div class="row  d-flex align-items-stretch" *ngFor="let review of reviews index as i">
 
-        <div class="col-lg-6 faq-item" data-aos="fade-up">
-          <h4>Non consectetur a erat nam at lectus urna duis?</h4>
+        <div class="col-lg-12 faq-item" data-aos="fade-up">
+          <h4> Reviewer : {{review.firstName +" "+ review.lastName}}</h4>
+
           <p>
-            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida.
-            Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+            <b>Rating :</b>
+            <span class="starRating">
+              <input disabled id="rating5" type="radio" name="{{i}}" [checked]="review.rating==5">
+              <label for="rating5">5</label>
+              <input disabled id="rating4" type="radio" name="{{i}}" [checked]="review.rating==4">
+              <label for="rating4">4</label>
+              <input disabled id="rating3" type="radio" name="{{i}}" [checked]="review.rating==3">
+              <label for="rating3">3</label>
+              <input disabled id="rating2" type="radio" name="{{i}}" [checked]="review.rating==2">
+              <label for="rating2">2</label>
+              <input disabled id="rating1" type="radio" name="{{i}}" [checked]="review.rating==1">
+              <label for="rating1">1</label>
+            </span>
           </p>
-        </div>
 
-        <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
-          <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
-          <p>
-            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec
-            ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper
-            dignissim.
-          </p>
-        </div>
-
-        <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
-          <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
-          <p>
-            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-            integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-            Lectus urna duis convallis convallis tellus.
-          </p>
-        </div>
-
-        <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
-          <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
-          <p>
-            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec
-            ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper
-            dignissim.
-          </p>
-        </div>
-
-        <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
-          <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
-          <p>
-            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel
-            risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis
-            blandit turpis cursus in
-          </p>
-        </div>
-
-        <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
-          <h4>Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?</h4>
-          <p>
-            Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc
-            vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in
-            metus vulputate eu scelerisque.
+          <p style="text-align: justify;">
+            {{review.reviewDescription}}
           </p>
         </div>
 
       </div>
+      <a href="#" target="_blank" [routerLink]="['/client-reviews']" routerLinkActive="router-link-active">View more
+        reviews.....</a>
 
     </div>
   </section><!-- End Frequently Asked Questions Section -->
 
-  <!-- ======= Contact Us Section ======= -->
-  <section id="contact" class="contact">
+  <!-- ======= Contact Us ======= -->
+  <section id="Contact Us" class="services">
     <div class="container">
 
       <div class="section-title">
@@ -525,141 +439,39 @@
       </div>
 
       <div class="row">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="bx bx-map"></i></div>
+          <h3 class="title">Our Address</h3>
+          <p class="description">Ekyarth, Malabar County Rd,<br>
+            Ahmedabad, Gujarat 382481 </p>
+          <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+            occaecati cupiditate non provident</p> -->
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="bx bx-envelope"></i></div>
+          <h3 class="title">Email Us</h3>
+          <p class="description">contact@pgmanagement.com</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon"><i class="bx bx-phone-call"></i></div>
+          <h3 class="title">Call Us</h3>
+          <p class="description">+91 9696969696</p>
+        </div>
+      </div>
+      <div class="row" align="center">
+        <div class="col-lg-12">
+          <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="1000" height="500" id="gmap_canvas"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34908.8149639245!2d72.53417988584873!3d23.121347873615633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83288f21809b%3A0xd549875a26872c63!2sEkyarth!5e0!3m2!1sen!2sin!4v1584095569920!5m2!1sen!2sin"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a></div>
 
-        <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>Our Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
           </div>
         </div>
-
-        <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Us</h3>
-            <p>info@example.com<br>contact@example.com</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="info-box ">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Us</h3>
-            <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-          </div>
-        </div>
-
-        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="form-row">
-              <div class="col-lg-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="col-lg-6 form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                  data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required"
-                data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
-
       </div>
 
     </div>
   </section><!-- End Contact Us Section -->
 
 </main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="footer-top">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6 footer-info">
-          <h3>Mamba</h3>
-          <p>
-            A108 Adam Street <br>
-            NY 535022, USA<br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
-          </p>
-          <div class="social-links mt-3">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Subscribe">
-          </form>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Mamba</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </div>
-</footer><!-- End Footer -->
-
-<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+<app-clientfooter></app-clientfooter>

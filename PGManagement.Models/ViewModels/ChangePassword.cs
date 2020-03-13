@@ -9,7 +9,7 @@ namespace PGManagement.Models.ViewModels
     public  class ChangePassword
     {
 
-        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
+        [OnAction("GET", ActionValueType.NameClaimIdentifier)]
         public int UserId { get; set; }
 
         public string OldPassword { get; set; }

@@ -4,15 +4,16 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Employee Record</h3>
+          <h3 class="card-title">Employee Record</h3><br>
+          <button class="btn btn-primary float-left" [routerLink]="['add']">Add Employee</button>
           <div class="card-tools">
-            <!-- <div class="col-12">
+            <div class="col-12">
               <input type="text" name="table_search" class="form-control float-center" class="fas fa-search"
                 placeholder=" &#61442; search by name / amount / type / date " [(ngModel)]="searchText"
                 autocomplete="off">
-            </div> -->
+            </div>
   
-            <!-- <button class="btn btn-primary" [routerLink]="['../add']">Add Expense</button> -->
+           
             <!-- <div class="input-group input-group-sm" style="width: 500px;">
               <input type="date" name="table_search" class="form-control float-right" #startDate>
   
@@ -42,7 +43,7 @@
                 <th>Salary</th>
               </tr>
             </thead>
-            <tbody *ngFor="let emp of vemployee">
+            <tbody *ngFor="let emp of vemployee | filter:searchText">
               <tr>
                 <td>{{emp.firstName +" "+ emp.lastName}}</td>
                 <td>{{emp.roleName}}</td>
@@ -52,9 +53,9 @@
                 <td>{{emp.mobileNumber}}</td>
                 <td>{{emp.salary}}</td>
                 <td><button type="button" class="btn btn-default btn-sm"
-                   [routerLink]="['../../edit',emp.employeeId]">Edit</button></td>
+                   [routerLink]="[emp.employeeId]">Edit</button></td>
                 <td><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal"
-                    (click)="Delete(emp.employeeId)">Delete</button></td>
+                    (click)="Delete(emp.employeeId,emp.userId)">Delete</button></td>
               </tr>
             </tbody>
           </table>

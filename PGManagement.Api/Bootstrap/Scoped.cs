@@ -59,8 +59,9 @@ namespace PGManagement.Api.Bootstrap
             serviceCollection.AddScoped<IEmployeeDomain, EmployeeDomain>();
             
             serviceCollection.AddScoped<InoticeDomain, noticeDomain>();
+                        
+            serviceCollection.AddScoped<IvRequesterDomain, vRequesterDomain>();
             #endregion DomainService
-
 
         }
     }

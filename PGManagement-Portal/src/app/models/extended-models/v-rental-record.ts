@@ -23,4 +23,5 @@ export class vRentalRecord extends vRentalRecordBase
 
 
 
+
 }

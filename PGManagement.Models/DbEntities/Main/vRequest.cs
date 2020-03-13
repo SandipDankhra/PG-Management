@@ -43,6 +43,12 @@ namespace PGManagement.Models.Main
         public string LastName { get; set; }
 
 
+        public int BedNumber { get; set; }
+
+
+        public int RequesterId { get; set; }
+
+
         public vRequest()
         {
         }

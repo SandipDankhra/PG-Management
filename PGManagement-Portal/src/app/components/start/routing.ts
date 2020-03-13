@@ -1,6 +1,5 @@
 import { Routes, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { RouteProvider } from "@rxweb/angular-router"
-import { Injectable } from '@angular/core';
+
 import { ClientIndexComponent } from '../user/client-index.componet';
 import { RegistrationAddComponent } from '../user/registration/add/registration-add.component';
 import { DashboardComponent } from '../master/dashboard/dashboard.component';
@@ -10,10 +9,6 @@ var routings = [
 	},
 	{
 		path: 'dashboard', component: DashboardComponent
-	},
-	{
-		path: "clientlogin",
-		loadChildren: () => import("../user/clientlogin/clientlogin.module").then(m => m.clientLoginModule),
 	},
 	{
 		path: "login",
@@ -75,6 +70,10 @@ var routings = [
 	{
 		path: "reviews",
 		loadChildren: () => import("../master/reviews/review.module").then(m => m.ReviewModule)
+	},
+	{
+		path: "client-reviews",
+		loadChildren: () => import("../user/clientreviews/client-review.module").then(m => m.clientreviewModule)
 	},
 	{
 		path: "role-permission",

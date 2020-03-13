@@ -54,6 +54,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -93,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -163,7 +167,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -231,7 +235,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -318,7 +322,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -388,7 +392,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -444,7 +448,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

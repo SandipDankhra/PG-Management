@@ -1,3 +1,5 @@
+<app-clientheader></app-clientheader>
+
 <section id="Review" class="contact">
     <div class="container">
 
@@ -26,6 +28,8 @@
                             <input id="rating1" type="radio" name="rating" value="1" formControlName="rating">
                             <label for="rating1">1</label>
                         </span>
+                        <small class="form-text text-danger"
+                            *ngIf="reviewFormGroup.controls.rating.errors">{{reviewFormGroup.controls.rating.errorMessage}}<br /></small>
                         <span id="errRating"></span>
                     </div>
 
@@ -45,7 +49,7 @@
                         <label for=""> </label>
                     </div>
                     <div class="col-lg-10 form-group">
-                        <button type="submit" (click)="sendReview()">Submit feedback</button>
+                        <button type="submit" [disabled]="!reviewFormGroup.controls.rating.valid" (click)="sendReview()">Submit feedback</button>
                     </div>
                 </div>            
 
@@ -53,32 +57,38 @@
         </div>
         <br>
 
-        <div class="row">
+          <!-- ======= Contact Us ======= -->
+  <section id="Contact Us" class="services">
+    <div class="container">
 
-            <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
-                <div class="info-box">
-                    <i class="bx bx-map"></i>
-                    <h3>Our Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-            </div>
+      <!-- <div class="section-title">
+        <h2>Contact Us</h2>
+      </div> -->
 
-            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                <div class="info-box">
-                    <i class="bx bx-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>info@example.com<br>contact@example.com</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="info-box ">
-                    <i class="bx bx-phone-call"></i>
-                    <h3>Call Us</h3>
-                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="bx bx-map"></i></div>
+          <h3 class="title">Our Address</h3>
+          <p class="description">A108 Adam Street, <br />New York, NY 535022</p>
+          <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+            occaecati cupiditate non provident</p> -->
         </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="bx bx-envelope"></i></div>
+          <h3 class="title">Email Us</h3>
+          <p class="description">contact@pgmanagement.com</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon"><i class="bx bx-phone-call"></i></div>
+          <h3 class="title">Call Us</h3>
+          <p class="description">+91 9696969696</p>
+        </div>
+      </div>
+    
+
+    </div>
+  </section><!-- End Contact Us Section -->
     </div>
 </section>
 
+<app-clientfooter></app-clientfooter>

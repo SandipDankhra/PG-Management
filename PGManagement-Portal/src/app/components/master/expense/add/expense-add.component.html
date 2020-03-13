@@ -1,37 +1,67 @@
- <!-- form start -->
- <form [formGroup]="expenseFormGroup">
-    <div class="card-body">
-    
-      <div class="form-group">
-        <label>Expense Amount</label>
-        <input class="form-control" formControlName="expenseAmount"  placeholder="">
-      </div>
-      <div class="form-group">
-        <label>Expense Type</label>
-        <input class="form-control" formControlName="expenseType"  placeholder="">
-      </div>
-      <div class="form-group">
-        <label>Expense Details</label>
-        <input  class="form-control" formControlName="expenseDetails" placeholder="">
-      </div>
-      <div class="form-group">
-        <label>Expense Date</label>
-        <input class="form-control" formControlName="expenseDate" type=""  placeholder="">
-      </div>
-      <!-- <div class="form-group">
-        <label>Employee Id</label>
-        <input class="form-control" formControlName="employeeId"  placeholder="">
-      </div> -->
-    </div>
-    <!-- /.card-body -->
+<h1>Expense ADD</h1>
 
-    <div class="card-footer">
-     
-    </div>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Confirm
-</button>
+<!-- /.card -->
+<!-- Horizontal Form -->
+<div class="card card-info">
+  <div class="card-header">
+    <h3 class="card-title">Expense Form </h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form class="form-horizontal" [formGroup]="expenseFormGroup">
+    <div class="card-body">
+      <div class="form-group row">
+        <label for="inputNumber3" class="col-sm-2 col-form-label">Expense Amount</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="expenseAmount" id="inputText3" placeholder="">
+          <small class="form-text text-danger"
+            *ngIf="expenseFormGroup.controls.expenseAmount.errors">{{expenseFormGroup.controls.expenseAmount.errorMessage}}<br /></small>
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Expense Type</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="expenseType" id="inputText3" placeholder="">
+          <small class="form-text text-danger"
+            *ngIf="expenseFormGroup.controls.expenseType.errors">{{expenseFormGroup.controls.expenseType.errorMessage}}<br /></small>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Expense Details</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="expenseDetails" placeholder="">
+          <small class="form-text text-danger"
+            *ngIf="expenseFormGroup.controls.expenseDetails.errors">{{expenseFormGroup.controls.expenseDetails.errorMessage}}<br /></small>
+        </div>
+      </div>
+
+
+      <!-- Date dd/mm/yyyy -->
+      <div class="form-group row">
+        <label for="inputDate3" class="col-sm-2 col-form-label">Expense Date</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+            </div>
+
+            <input type="date" class="form-control" formControlName="expenseDate" data-inputmask-alias="datetime"
+              data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+            <div>
+              <small class="form-text text-danger" *ngIf="expenseFormGroup.controls.expenseDate.errors">{{expenseFormGroup.controls.expenseDate.errorMessage}}<br/></small>
+            </div>
+
+          </div>
+        </div>
+        <!-- /.input group -->
+      </div>
+
+      <button type="button" class="btn btn-info float-md-none"  data-toggle="modal" data-target="#exampleModal">
+        Submit
+      </button>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -48,12 +78,29 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success" (click)="onSubmit()" data-dismiss="modal">Save Changes</button>
+        <button type="submit" class="btn btn-success" (click)="onSubmit()" data-dismiss="modal">Confirm</button>
       </div>
     </div>
   </div>
 </div>
 
-<button class="btn btn-primary" [routerLink]="['../list']">Go To List</button>
+<button class="btn btn-default float-md-none" [routerLink]="['../']">Go To List</button>
+
+
+
+     <!-- <div class="card-footer ">
+      <button type="submit" class="btn btn-info float-md-none" 
+        (click)="onSubmit()">Submit</button>
+      <button type="submit" class="btn btn-default float-md-none" (click)="onReset()">Reset</button>
+    </div> -->
+    </div>
+    <!-- /.card-footer -->    
   </form>
- 
+</div>
+<script>
+  $("input[data-bootstrap-switch]").each(function () {
+    $(this).bootstrapSwitch('state', $(this).prop('checked'));
+  });
+  //Datemask dd/mm/yyyy
+  $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+</script>

@@ -7,6 +7,7 @@ import { Room } from '@app/models';
 import { AbstractRoom } from '../domain/abstract-room';
 import { ActivatedRoute, Router } from '@angular/router';
 import { anonymous } from '@rxweb/angular-router';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: "app-room-add",
@@ -20,8 +21,11 @@ export class RoomAddComponent extends AbstractRoom implements OnInit, OnDestroy 
     subscription: Subscription;
     flatId: number;
 
-    constructor(private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute, private router: Router) {
+    constructor(private toast:ToastrService,private formBuilder: RxFormBuilder, private activatedRoute: ActivatedRoute, private router: Router) {
         super();
+        this.activatedRoute.params.subscribe(a => {
+            this.flatId = a['id'];
+        })
 
     }
 
@@ -30,12 +34,11 @@ export class RoomAddComponent extends AbstractRoom implements OnInit, OnDestroy 
         this.room = new Room();
         this.keys = Object.keys(this.roomTypeEnum).filter(Number);
         this.roomFormGroup = this.formBuilder.formGroup(this.room) as IFormGroup<Room>;
+        this.roomFormGroup.controls.flatId.patchValue(this.flatId);
 
     }
     onAddRoom() {
-        this.activatedRoute.params.subscribe(a => {
-            this.flatId = a['id'];
-        })
+       
 
         // this.post({body:this.room}).subscribe(t=>{
         this.post({
@@ -44,23 +47,35 @@ export class RoomAddComponent extends AbstractRoom implements OnInit, OnDestroy 
                 roomNumber: this.roomFormGroup.controls.roomNumber.value,
                 roomType: this.roomFormGroup.controls.roomType.value,
                 roomSharing: this.roomFormGroup.controls.roomSharing.value
+                
             }
+
 
 
         }).subscribe(t => {
             this.result = t;
+            this.onSuccess();
 
         })
         //console.log(this.roomFormGroup.controls.roomType.value);
         this.roomFormGroup.reset();
     }
     onShowRoom() {
+        //this.onSuccess();
         this.router.navigateByUrl('/room');
     }
 
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();
+    }
+
+    onSuccess(){
+        this.toast.success("Room Added Succesfully");
+    }
+
+    onGoBack(){
+        this.router.navigateByUrl('/flat');
     }
 
 

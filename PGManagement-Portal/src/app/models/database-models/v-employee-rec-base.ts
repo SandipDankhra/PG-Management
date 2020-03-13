@@ -1,4 +1,4 @@
-import { prop,propObject,propArray,required,maxLength,range  } from "@rxweb/reactive-form-validators"
+import { prop,propObject,propArray,required,maxLength,range ,numeric,alpha,mask,email, NumericValueType } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 
@@ -6,6 +6,7 @@ export class vEmployeeRecBase {
 
 //#region salary Prop
         @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'salary', keyColumn: true})
+        @numeric({acceptValue:NumericValueType.PositiveNumber  ,allowDecimal:true })
         salary : number;
 //#endregion salary Prop
 
@@ -18,24 +19,29 @@ export class vEmployeeRecBase {
 
 //#region firstName Prop
         @gridColumn({visible: true, columnIndex:2, allowSorting: true, headerKey: 'firstName', keyColumn: false})
+        @alpha()
         firstName : string;
 //#endregion firstName Prop
 
 
 //#region lastName Prop
         @gridColumn({visible: true, columnIndex:3, allowSorting: true, headerKey: 'lastName', keyColumn: false})
+        @alpha()
         lastName : string;
 //#endregion lastName Prop
 
 
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:4, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
+        @numeric({acceptValue:NumericValueType.PositiveNumber  ,allowDecimal:false })
+        @mask({mask:'(999)-999 9999' })
         mobileNumber : number;
 //#endregion mobileNumber Prop
 
 
 //#region email Prop
         @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'email', keyColumn: false})
+        @email()
         email : string;
 //#endregion email Prop
 

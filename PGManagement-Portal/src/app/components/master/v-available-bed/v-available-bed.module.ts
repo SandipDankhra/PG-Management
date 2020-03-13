@@ -11,10 +11,12 @@ import { vAvailableBedListComponent } from './list/v-available-bed-list.componen
 import { vAvailableBedEditComponent } from './edit/v-available-bed-edit.component';
 import { vAvailableBedAddComponent } from './add/v-available-bed-add.component';
 import { vAvailableBedSharedModule } from './v-available-bed-shared.module';
+import { ClientHeaderModule } from '../../user/clientheader/clientheader.module';
+import { ClientFooterModule } from '../../user/clientfooter/clientfooter.module';
 
 @NgModule({
     imports: [
-        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,vAvailableBedSharedModule,
+        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,vAvailableBedSharedModule,ClientHeaderModule,ClientFooterModule,
         ROUTING
     ],
     declarations: [vAvailableBedListComponent,vAvailableBedEditComponent,vAvailableBedAddComponent],

@@ -45,12 +45,12 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Authorization/3.1.0": {
+      "Microsoft.AspNetCore.Authorization/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "3.1.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
-          "Microsoft.Extensions.Options": "3.1.0"
+          "Microsoft.AspNetCore.Metadata": "3.1.2",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.2",
+          "Microsoft.Extensions.Options": "3.1.2"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
@@ -168,13 +168,13 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Metadata/3.1.0": {
+      "Microsoft.AspNetCore.Metadata/3.1.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {}
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {}
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
@@ -510,7 +510,7 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.1": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -577,7 +577,7 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.1": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -595,11 +595,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.1": {
+      "Microsoft.Extensions.Options/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.1",
-          "Microsoft.Extensions.Primitives": "3.1.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.2",
+          "Microsoft.Extensions.Primitives": "3.1.2"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
@@ -608,7 +608,7 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.1": {
+      "Microsoft.Extensions.Primitives/3.1.2": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
@@ -2231,10 +2231,10 @@
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/3.1.0": {
-      "sha512": "R/0qFIu1m7jJFD0OuLIjLXC0uYQxFwwW7ylVvGgUPUpOJJK0bKJjfrDu20kY1Yw0hy9ejZYZEdUZHRm3ei0+3w==",
+    "Microsoft.AspNetCore.Authorization/3.1.2": {
+      "sha512": "bbu9qMsOdmNjLLaRawhT3OfjFHleK9D2ICGfmjvkMVNyfx42P5NgypOlqKgK6SDoqtex3DisWd4E3nePtohPCw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/3.1.0",
+      "path": "microsoft.aspnetcore.authorization/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2243,7 +2243,7 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.3.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.3.1.2.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
@@ -2352,17 +2352,19 @@
         "microsoft.aspnetcore.jsonpatch.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/3.1.0": {
-      "sha512": "ZiNCjglz4kR2OGElM2u/S6cS1ArAxE6lP4BeniCZcr6l+ACzslKgcPGOTY8/Glppx6CDzMKfmyqV+VbFh5CyjQ==",
+    "Microsoft.AspNetCore.Metadata/3.1.2": {
+      "sha512": "4ML2fUxRyfrpXnAppHi8c7MDiTOr9yJ5/Sp6p8XktVw8H5CJJSs6KesM/mc9vREpg6FgC8EvgDRNKom6PLPcjQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/3.1.0",
+      "path": "microsoft.aspnetcore.metadata/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.3.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.3.1.2.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
@@ -2835,17 +2837,17 @@
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.1": {
-      "sha512": "uKZr5b4w9nQE6UAXS4PqBFbg2qe6kS+pdsCbDG2kHjUaWT/B7EOcDraoR52H/4BoBIEH3By5co6Wioru7+v9Zg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.2": {
+      "sha512": "/CZzCSCIm/3FFoXHfUpsfov/Elo268dcvlz/MMINT0vPgphqg2pAgdEn/EjCDyoAT3NAmsRmjfGwBumC1uYJtA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.1",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.2.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
@@ -2907,17 +2909,17 @@
         "microsoft.extensions.logging.nuspec"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/3.1.1": {
-      "sha512": "4/1BLjd9Zvc87xlhfkIsAlHOgMnGJBQFIEmO3CUKLrf38nIFp3W7X+JoFiRmn20WAi5+l2sgUWS4ixaIuB3S0g==",
+    "Microsoft.Extensions.Logging.Abstractions/3.1.2": {
+      "sha512": "cIXPw7VVX3fON4uuHwJFmCi0qDl8uY75xZMKB2oM3In0ZDEB1Ee+p9Ti1DSw92AwRtJ2Zh+QG1joTBednJMzvA==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/3.1.1",
+      "path": "microsoft.extensions.logging.abstractions/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.3.1.1.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.3.1.2.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
@@ -2934,10 +2936,10 @@
         "microsoft.extensions.objectpool.nuspec"
       ]
     },
-    "Microsoft.Extensions.Options/3.1.1": {
-      "sha512": "p2faCNhzXyG5oLLOV8n8dwg2rfqS4aRpIWu4qgwZMq+al3133mAQ+Hb822iwRoj3qnKM8zY4A6Jz/Vm/xWHvrA==",
+    "Microsoft.Extensions.Options/3.1.2": {
+      "sha512": "6F4anwt9yMlnQckac2etjrasRFyqZNIp46p+i9qVps0DXNsOLZIKRkqq4AY4FlxXxKeGkEJC7M77RQEkvd3p8Q==",
       "type": "package",
-      "path": "microsoft.extensions.options/3.1.1",
+      "path": "microsoft.extensions.options/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2946,14 +2948,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.3.1.1.nupkg.sha512",
+        "microsoft.extensions.options.3.1.2.nupkg.sha512",
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.1.1": {
-      "sha512": "tC5Eo5DbJA+NgiIw26R5c97N02tFvtfqstUxqb/4qXPLXI2IAIWSMUkh/1c9Gw59TT9hNkLwlmLErSPlHgyJVQ==",
+    "Microsoft.Extensions.Primitives/3.1.2": {
+      "sha512": "WGtoFWY9yc9HGMG6ObDNQPz9dBP+xz/GqFe2dKjdE/cSdXFEKxCFTyYCzL/e8kxVkc/Bq9qjOsXRWydvn0g9Uw==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.1.1",
+      "path": "microsoft.extensions.primitives/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2962,7 +2964,7 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.1.1.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.2.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -7204,6 +7206,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Authorization >= 3.1.2",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.1",
       "PGManagement.BoundedContext >= 1.0.0",
       "PGManagement.Domain >= 1.0.0",
@@ -7269,6 +7272,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authorization": {
+            "target": "Package",
+            "version": "[3.1.2, )"
+          },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[3.1.1, )"
@@ -7308,7 +7315,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

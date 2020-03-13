@@ -11,7 +11,7 @@ const ROUTES: Routes = [
         component: RequesterListComponent
     },
     {
-        path: 'add',
+        path: 'add/:id',
         component: RequesterAddComponent
     },
     {
