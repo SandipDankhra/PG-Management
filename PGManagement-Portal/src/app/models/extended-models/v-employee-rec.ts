@@ -11,4 +11,9 @@ export class vEmployeeRec extends vEmployeeRecBase
 //#endregion Generated Reference Properties
 
 
+
+
+
+
+
 }

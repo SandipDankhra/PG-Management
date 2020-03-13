@@ -82,6 +82,12 @@ export class vRentalRecordBase {
 //#endregion flatName Prop
 
 
+//#region bedId Prop
+        @gridColumn({visible: true, columnIndex:13, allowSorting: true, headerKey: 'bedId', keyColumn: false})
+        bedId : number;
+//#endregion bedId Prop
+
+
 //#region roomSharing Prop
         @gridColumn({visible: true, columnIndex:14, allowSorting: true, headerKey: 'roomSharing', keyColumn: false})
         roomSharing : string;

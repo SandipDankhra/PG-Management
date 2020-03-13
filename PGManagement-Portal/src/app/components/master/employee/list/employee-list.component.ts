@@ -4,7 +4,6 @@ import { AbstractEmployee } from '../domain/abstract-employee';
 import { Employee } from "@app/models";
 import { Subscription } from 'rxjs';
 import { vEmployeeRecord } from "@app/models";
-import { anonymous } from '@rxweb/angular-router';
 import { Router } from '@angular/router';
 
 @Component({

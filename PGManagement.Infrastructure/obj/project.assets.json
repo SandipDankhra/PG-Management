@@ -6814,11 +6814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
       "projectName": "PGManagement.Infrastructure",
-      "projectPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
+      "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-      "outputPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\obj\\",
+      "outputPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6834,14 +6834,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+            "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
             },
-            "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+            "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
             },
-            "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
-              "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
+            "D:\\Rx Project\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
+              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
             }
           }
         }

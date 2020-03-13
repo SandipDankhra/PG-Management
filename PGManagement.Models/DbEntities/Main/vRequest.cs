@@ -11,7 +11,7 @@ namespace PGManagement.Models.Main
     public partial class vRequest
     {
 
-        public string Locality { get; set; }
+        public string locality { get; set; }
 
 
         public string FlatNumber { get; set; }
@@ -41,6 +41,12 @@ namespace PGManagement.Models.Main
 
 
         public string LastName { get; set; }
+
+
+        public int BedNumber { get; set; }
+
+
+        public int RequesterId { get; set; }
 
 
         public vRequest()

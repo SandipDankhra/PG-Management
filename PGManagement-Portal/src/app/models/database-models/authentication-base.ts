@@ -4,11 +4,6 @@ import { gridColumn } from "@rxweb/grid"
 
 export class AuthenticationBase {
 
-        @prop()
-        mobileNumber:number;
-
-        @prop()
-        userPassword:string;
 //#region authenticationId Prop
         @prop()
         authenticationId : number;
@@ -16,14 +11,14 @@ export class AuthenticationBase {
 
 
 //#region userId Prop
-        @range({minimumNumber:1,maximumNumber:2147483647})
+        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
         @required()
         userId : number;
 //#endregion userId Prop
 
 
 //#region otp Prop
-        @range({minimumNumber:1,maximumNumber:2147483647})
+        @range({ minimumNumber: 1, maximumNumber: 2147483647 })
         @required()
         otp : number;
 //#endregion otp Prop

@@ -11,7 +11,6 @@ namespace PGManagement.Models.Main
     public partial class vBookBed
     {
 
-        public int BookBedId { get; set; }
         public string FirstName { get; set; }
 
 
@@ -56,7 +55,7 @@ namespace PGManagement.Models.Main
         public bool BedStatus { get; set; }
 
 
-        public Nullable<decimal> MobileNumber { get; set; }
+        public decimal MobileNumber { get; set; }
 
 
         public System.DateTime StartDate { get; set; }
@@ -72,6 +71,9 @@ namespace PGManagement.Models.Main
 
 
         public int PaymentAmount { get; set; }
+
+
+        public int BookBedId { get; set; }
 
 
         public vBookBed()

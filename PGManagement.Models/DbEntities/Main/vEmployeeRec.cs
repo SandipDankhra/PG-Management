@@ -34,10 +34,10 @@ namespace PGManagement.Models.Main
         public string Email { get; set; }
 
 
-        public int StatusId { get; set; }
+        public Nullable<int> StatusId { get; set; }
 
 
-        public bool LoginBlocked { get; set; }
+        public Nullable<bool> LoginBlocked { get; set; }
 
 
         public int EmployeeId { get; set; }

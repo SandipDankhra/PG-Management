@@ -11,10 +11,12 @@ import { ROUTING } from './registration.routing'
 import { RegistrationEditComponent } from './edit/registration-edit.component';
 import { RegistrationAddComponent } from './add/registration-add.component';
 import { RegistrationSharedModule } from './registration-shared.module';
+import { ClientHeaderModule } from '../clientheader/clientheader.module';
+import { ClientFooterModule } from '../clientfooter/clientfooter.module';
 
 @NgModule({
     imports: [
-        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,RegistrationSharedModule,
+        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,RegistrationSharedModule,ClientHeaderModule,ClientFooterModule,
         ROUTING
     ],
     declarations: [RegistrationEditComponent,RegistrationAddComponent],

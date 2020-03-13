@@ -1,36 +1,91 @@
-
-<form action="" class="card">
-    <div class="form-row card-header">
-        <h1>Requester list</h1>
-        <table class="table" style="border: 2cm; border-radius: 2px;">
-
+<app-clientheader></app-clientheader>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Confirm Rental Request List</h3>
+        <!-- <table style="float: right; ">
+            <tr>
+                <select id="locality" style="height: 2.6rem; width: 11.5rem; border-radius: 0.3rem;" (change)="onSelect(select)" #select>
+                    <option value="" disabled="" selected="">Select locality</option>
+                    <option value="loc" *ngFor="let loc of vAvailableBed">{{loc.locality}}</option>
+                    <option value="hello">hello</option>
+                    <option value="hello123">hello123</option>
+                </select>
+            </tr>
+        </table> -->
+    </div>
+    <!-- /.card-header -->
+    <div *ngIf="isShow" style="color: red;font-size: xx-large;text-align: center;">
+        <h1 class="far fa-far fa-5x"> 	&#xf119;</h1>
+        <h1> Sorry No request Available </h1>
+    </div>
+    <div class="card-body" *ngIf="!isShow">
+        <table class="table table-bordered">
             <thead>
                 <tr>
+                    <th style="width: 10px">#</th>
                     <th scope="col">RequesterName</th>
                     <th scope="col">FlatNumber</th>
+                    <th scope="col">Locality</th>
+                    <th scope="col">RoomType</th>
+                    <th scope="col">RoomSharing</th>
                     <th scope="col">BedNumber</th>
-                   
-
+                    <th scope="col">Confirm</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
-            <!-- <tbody *ngFor="let req of Requester">
-                <tr>
-                 
-                    <td>{{req.flatName}}</td>
-                    <td>{{bed.flatNumber}}</td>
-                    <td>{{bed.address}}</td>
-                    <td>{{bed.roomNumber}}</td>
-                    <td>{{bed.roomSharing}}</td>
-                    <td>{{bed.bedNumber}}</td>
-                    <td>{{bed.bedPrice}}</td>
-
+            <tbody>
+                <tr *ngFor="let req of requesters index as i">
+                    <td>{{i+1}}.</td>
+                    <td>{{req.firstName+" "+req.lastName}}</td>
+                    <td>{{req.flatNumber}}</td>
+                    <td>{{req.locality}}</td>
+                    <td>{{req.roomType}}</td>
+                    <td>{{req.roomSharing}}</td>
+                    <td>{{req.bedNumber}}</td>
+                   
                     <td>
                         <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal"
-                            (click)="confirmRequest()">ConfirmRequest</button>
+                            (click)="getId(req.requesterId,req.bedId,req.userId)">Confirm</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-danger" (click)="onDelete(req.requesterId,req.bedId)">Delete</button>
                     </td>
                 </tr>
-            </tbody> -->
-
+            </tbody>
         </table>
     </div>
-</form> 
+    <!-- /.card-body -->
+    <div class="card-footer clearfix" *ngIf="!isShow">
+        <ul class="pagination pagination-sm m-0 float-right" >
+            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm Request</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="confirmRequest()" data-dismiss="modal">Confirm
+                    Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-clientfooter></app-clientfooter>

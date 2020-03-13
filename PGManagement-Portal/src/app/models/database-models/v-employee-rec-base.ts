@@ -42,13 +42,13 @@ export class vEmployeeRecBase {
 
 //#region statusId Prop
         @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'statusId', keyColumn: false})
-        statusId : number;
+        statusId : any;
 //#endregion statusId Prop
 
 
 //#region loginBlocked Prop
         @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'loginBlocked', keyColumn: false})
-        loginBlocked : boolean;
+        loginBlocked : any;
 //#endregion loginBlocked Prop
 
 

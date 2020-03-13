@@ -55,6 +55,9 @@ namespace PGManagement.Models.Main
         public string FlatName { get; set; }
 
 
+        public int BedId { get; set; }
+
+
         public string RoomSharing { get; set; }
 
 

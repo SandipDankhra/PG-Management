@@ -7,7 +7,12 @@ namespace PGManagement.Models.Main
 {
     public partial class Authentication
     {
+        [NotMapped]                           
+        public int mobileNumber { get; set; }
+/*
         [NotMapped]
-        public int MobileNumber { get; set; }
+        public string userPassword { get; set; }*/
+
+
     }
 }

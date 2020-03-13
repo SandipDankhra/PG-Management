@@ -1,0 +1,40 @@
+<app-clientheader></app-clientheader>
+<section id="clientReview" class="faq section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Reviews</h2>
+    </div>
+
+    <div class="row  d-flex align-items-stretch" *ngFor="let review of reviews index as i">
+
+      <div class="col-lg-12 faq-item" data-aos="fade-up">
+        <h4> Reviewer : {{review.firstName +" "+ review.lastName}}</h4>
+
+        <p>
+          <b>Rating :</b>
+          <span class="starRating">
+            <input disabled id="rating5" type="radio" name="{{i}}" [checked]="review.rating==5">
+            <label for="rating5">5</label>
+            <input disabled id="rating4" type="radio" name="{{i}}" [checked]="review.rating==4">
+            <label for="rating4">4</label>
+            <input disabled id="rating3" type="radio" name="{{i}}" [checked]="review.rating==3">
+            <label for="rating3">3</label>
+            <input disabled id="rating2" type="radio" name="{{i}}" [checked]="review.rating==2">
+            <label for="rating2">2</label>
+            <input disabled id="rating1" type="radio" name="{{i}}" [checked]="review.rating==1">
+            <label for="rating1">1</label>
+          </span>
+        </p>
+
+        <p style="text-align: justify;">
+          {{review.reviewDescription}}
+        </p>
+      </div>
+
+    </div>
+    <!-- <a href="#" [routerLink]="['/reviews']" routerLinkActive="router-link-active" >View more reviews.....</a> -->
+
+  </div>
+</section><!-- End Frequently Asked Questions Section -->
+<app-clientfooter></app-clientfooter>
