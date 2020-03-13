@@ -1,3 +1,5 @@
+<app-clientheader></app-clientheader>
+
 <section id="Login" class="contact">
     <div class="container">
 
@@ -10,13 +12,14 @@
             <form role="form" class="php-email-form" [formGroup]="loginFormGroup">
                 <div class="form-row">
                     <div class="col-lg-2 form-group">
-                        <label for="mobileNumber">Email : </label>
+                        <label for="mobileNumber">Mobile Number : </label>
                     </div>
                     <div class="col-lg-10 form-group">
-                        <input type="text" class="form-control" placeholder="Mobile Number" data-rule="minlen:10"
-                            minlength="10" maxlength="10" data-msg="Please enter mobile number"
+                        <input type="text" class="form-control" placeholder="Enter Mobile Number"  data-msg="Please enter mobile number"
                             formControlName="email" />
-                        <div class="validate"></div>
+                            <small class="form-text text-danger"  *ngIf="loginFormGroup.controls.email.errors">
+                                {{loginFormGroup.controls.email.errorMessage}}<br /></small>
+
                     </div>
 
                 </div>
@@ -25,9 +28,12 @@
                         <label for="password">Password : </label>
                     </div>
                     <div class="col-lg-10 form-group">
-                        <input type="password" class="form-control" placeholder="password" data-rule="minlen:8"
-                            data-msg="Please enter password" formControlName="password" />
-                        <div class="validate"></div>
+                        <input type="password" class="form-control" placeholder="password" formControlName="password" />
+                        <small class="form-text text-danger"  *ngIf="loginFormGroup.controls.password.errors">
+                            {{loginFormGroup.controls.password.errorMessage}}<br /></small>
+
+
+                        <!-- <div class="validate"></div> -->
                     </div>
                 </div>
                 <div class="form-row">
@@ -35,13 +41,13 @@
                         <label for=""> </label>
                     </div>
                     <div class="col-lg-10 form-group">
-                        <button type="submit" (click)="loginUser()">Submit</button>
+                        <button type="submit" [disabled]="!loginFormGroup.valid" (click)="loginUser()">Submit</button>
                         <p style="margin-top: 1.5rem;">
                             <a href="#" [routerLink]="['/registration']">Don't have an
                                 account? Register Here</a>
                         </p>
                         <p>
-                            <a href="#" [routerLink]="['/forgetpassword']">Forget password ?</a>
+                            <a href="#" [routerLink]="['/forget-password']">Forget password ?</a>
                         </p>
                     </div>
                 </div>
@@ -50,31 +56,30 @@
         </div>
         <br>
 
-        <div class="row">
-
-            <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
-                <div class="info-box">
-                    <i class="bx bx-map"></i>
-                    <h3>Our Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+        <section id="Contact Us" class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                        <div class="icon"><i class="bx bx-map"></i></div>
+                        <h3 class="title">Our Address</h3>
+                        <p class="description">Ekyarth, Malabar County Rd,<br>
+                            Ahmedabad, Gujarat 382481 </p>
+                        <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                    occaecati cupiditate non provident</p> -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-envelope"></i></div>
+                        <h3 class="title">Email Us</h3>
+                        <p class="description">contact@pgmanagement.com</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="bx bx-phone-call"></i></div>
+                        <h3 class="title">Call Us</h3>
+                        <p class="description">+91 9696969696</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                <div class="info-box">
-                    <i class="bx bx-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>info@example.com<br>contact@example.com</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="info-box ">
-                    <i class="bx bx-phone-call"></i>
-                    <h3>Call Us</h3>
-                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 </section>
+<app-clientfooter></app-clientfooter>

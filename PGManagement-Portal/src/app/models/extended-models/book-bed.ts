@@ -28,9 +28,4 @@ rental : RentalBase;
 
 
 
-
-
-
-
-
 }

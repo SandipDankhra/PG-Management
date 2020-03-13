@@ -16,9 +16,4 @@ export class vUser extends vUserBase
 
 
 
-
-
-
-
-
 }

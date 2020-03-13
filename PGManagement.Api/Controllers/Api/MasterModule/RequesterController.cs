@@ -1,4 +1,4 @@
-    using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using PGManagement.UnitOfWork.Main;
 using PGManagement.Models.Main;
@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PGManagement.Api.Controllers.MasterModule
 {
-    
+   
     [ApiController]
     [Route("api/[controller]")]
 	

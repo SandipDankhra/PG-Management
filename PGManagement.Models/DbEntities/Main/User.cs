@@ -73,7 +73,6 @@ namespace PGManagement.Models.Main
 
 		#region Password Annotations
 
-        [Required]
         [MaxLength(132)]
 		#endregion Password Annotations
 
@@ -81,7 +80,6 @@ namespace PGManagement.Models.Main
 
 		#region Salt Annotations
 
-        [Required]
         [MaxLength(140)]
 		#endregion Salt Annotations
 

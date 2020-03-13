@@ -1,89 +1,90 @@
-import { prop,propObject,propArray,required,maxLength,range, password  } from "@rxweb/reactive-form-validators"
+import { prop, propObject, propArray, required, maxLength, range, alpha, numeric, email, password, NumericValueType } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 
 export class UserBase {
 
-//#region userId Prop
+        //#region userId Prop
         @prop()
-        userId : number;
-//#endregion userId Prop
+        userId: number;
+        //#endregion userId Prop
 
 
-//#region firstName Prop
+        //#region firstName Prop
+        @required()
         @maxLength({ value: 50 })
-        firstName : string;
-//#endregion firstName Prop
+        @alpha()
+        firstName: string;
+        //#endregion firstName Prop
 
 
-//#region lastName Prop
+        //#region lastName Prop
+        @required()
         @maxLength({ value: 50 })
-        lastName : string;
-//#endregion lastName Prop
+        @alpha()
+        lastName: string;
+        //#endregion lastName Prop
 
 
-//#region mobileNumber Prop
+        //#region mobileNumber Prop
         @required()
-        mobileNumber : number;
-//#endregion mobileNumber Prop
+        @numeric({ acceptValue: NumericValueType.PositiveNumber, allowDecimal: false })
+        @range({ minimumNumber: 1000000000, maximumNumber: 9999999999 })
+        mobileNumber: number;
+        //#endregion mobileNumber Prop
 
 
-//#region email Prop
+        //#region email Prop
+        @required()
         @maxLength({ value: 50 })
-        email : string;
-//#endregion email Prop
+        @email()
+        email: string;
+        //#endregion email Prop
 
 
-//#region applicationLocaleId Prop
-        @range({minimumNumber:1,maximumNumber:2147483647})
-        @required()
-        applicationLocaleId : number;
-//#endregion applicationLocaleId Prop
+        //#region applicationLocaleId Prop
+        @prop()
+        applicationLocaleId: number;
+        //#endregion applicationLocaleId Prop
 
 
-//#region applicationTimeZoneId Prop
-        @range({minimumNumber:1,maximumNumber:2147483647})
-        @required()
-        applicationTimeZoneId : number;
-//#endregion applicationTimeZoneId Prop
+        //#region applicationTimeZoneId Prop
+        @prop()
+        applicationTimeZoneId: number;
+        //#endregion applicationTimeZoneId Prop
 
 
-//#region languageCode Prop
-        @required()
+        //#region languageCode Prop
         @maxLength({ value: 3 })
-        languageCode : string;
-//#endregion languageCode Prop
+        languageCode: string;
+        //#endregion languageCode Prop
 
 
-//#region password Prop
+        //#region password Prop
         @required()
-        // @password({})
         @maxLength({ value: 132 })
-        userPassword:string;
+        @password({ validation: { maxLength: 20, minLength: 8, digit: true, specialCharacter: true } })
+        userPassword: any;
+        //#endregion password Prop
+        password: any;
 
-
-        password : any;
-//#endregion password Prop
-
-
-//#region salt Prop
+        //#region salt Prop
         @required()
         @maxLength({ value: 140 })
-        salt : any;
-//#endregion salt Prop
+        salt: any;
+        //#endregion salt Prop
 
 
-//#region loginBlocked Prop
-        @required()
-        loginBlocked : boolean;
-//#endregion loginBlocked Prop
+        //#region loginBlocked Prop
+        @prop()
+        loginBlocked: boolean;
+        //#endregion loginBlocked Prop
 
 
-//#region statusId Prop
-        @range({minimumNumber:1,maximumNumber:2147483647})
-        @required()
-        statusId : number;
-//#endregion statusId Prop
+        //#region statusId Prop
+        @prop({ defaultValue: 1 })
+        statusId: number;
+        //#endregion statusId Prop
 
 
 

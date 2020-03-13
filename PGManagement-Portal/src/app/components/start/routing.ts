@@ -1,6 +1,5 @@
 import { Routes, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { RouteProvider } from "@rxweb/angular-router"
-import { Injectable } from '@angular/core';
+
 import { ClientIndexComponent } from '../user/client-index.componet';
 import { RegistrationAddComponent } from '../user/registration/add/registration-add.component';
 var routings = [
@@ -8,10 +7,6 @@ var routings = [
 		path: '', redirectTo: 'client-index', pathMatch: 'full',
 	},
 
-	{
-		path: "clientlogin",
-		loadChildren: () => import("../user/clientlogin/clientlogin.module").then(m => m.clientLoginModule),
-	},
 	{
 		path: "login",
 		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
@@ -72,6 +67,10 @@ var routings = [
 	{
 		path: "reviews",
 		loadChildren: () => import("../master/reviews/review.module").then(m => m.ReviewModule)
+	},
+	{
+		path: "client-reviews",
+		loadChildren: () => import("../user/clientreviews/client-review.module").then(m => m.clientreviewModule)
 	},
 	{
 		path: "role-permission",

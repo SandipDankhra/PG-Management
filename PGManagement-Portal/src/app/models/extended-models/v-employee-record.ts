@@ -16,9 +16,4 @@ export class vEmployeeRecord extends vEmployeeRecordBase
 
 
 
-
-
-
-
-
 }

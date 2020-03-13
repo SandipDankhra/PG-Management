@@ -37,6 +37,7 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<vEmployeeRecord> vEmployeeRecords { get; set; }
         public DbSet<vEmployeeRec> vEmployeeRecs { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<vRequest> vRequests { get; set; }
 
         public DbSet<vBed> vBeds { get; set; }
 
@@ -47,6 +48,7 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<vExpense> vExpense { get; set; }
         public DbSet<Authentication> authentication { get; set; }
         public DbSet<vRentalRecord> vRentalRecords { get; set; }
+        public DbSet<ReviewLookup> ReviewLookups { get; set; }
         #endregion DbSets
 
  

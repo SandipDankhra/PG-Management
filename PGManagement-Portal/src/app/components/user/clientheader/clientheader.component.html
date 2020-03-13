@@ -1,0 +1,50 @@
+<!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-none d-lg-block">
+  <div class="container clearfix">
+    <div class="contact-info float-left">
+      <i class="icofont-envelope "></i><a href="contact@pgmanagement.com">contact@pgmanagement.com</a>
+      <i class="icofont-phone"></i> +91 9696969696
+    </div>
+    <div class="social-links float-right">
+      <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+      <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+      <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+      <a href="#" class="skype"><i class="icofont-skype"></i></a>
+      <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Header ======= -->
+<header id="header">
+  <div class="container">
+
+    <div class="logo float-left">
+      <h1 class="text-light"><a href="#" [routerLink]="['/client-index']" routerLinkActive="router-link-active"><span
+            class="fa fa-home">PG Management</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/client/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav class="nav-menu float-right d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="#" [routerLink]="['/client-index']" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <!-- <li><a href="#">About Us</a></li>
+             <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Team</a></li> -->
+
+        <li><a class="disabled" href="#">Contact Us</a></li>
+        <li *ngIf="isLogin;else logout"><a href="#" [routerLink]="['/clientlogin']"
+            routerLinkActive="router-link-active">Login</a></li>
+        <li *ngIf="isLogin"><a href="#" [routerLink]="['/registration']"
+            routerLinkActive="router-link-active">Register</a></li>
+        <ng-template #logout>
+          <li><a href="#" (click)="onLogout()">Logout</a></li>
+        </ng-template>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->
