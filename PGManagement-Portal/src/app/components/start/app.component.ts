@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
       }
     })
     console.log("before auth");
-    var auth = localStorage.getItem("auth");
+    var auth = this.browserStorage.local.get("auth");
     console.log("hey:" + auth);
     if (auth) {
       // this.router.navigate(["/client-index"])
@@ -77,17 +77,17 @@ export class AppComponent implements OnInit {
         "contains": "The specified value must ' in the input",
         "alpha": "You can use letters only",
         "alphaNumeric": "You can use letters, numbers and periods only",
-        "range": "You need to enter appropriate value in this field",
-        "maxNumber": "You can not enter value more than #n#",
+        "range": "You can enter value must be 10 digits",
+        "maxNumber": "You can not enter value more than 10",
+        "minNumber": "You can enter value must be 10 digits",
         "numeric": "Only number required",
         "email": "Please enter valid email address",
         "latitude": "Please enter a valid latitude",
         "longitude": "Please enter a valid longitude",
         "url": "{{0}} Is not the correct url pattern.",
-        "password": "Password length should be of minimum 5 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
-      }
-      // },"reactiveForm":{"errorMessageBindingStrategy":1}
-
+        "password": "Password length should be of 8 to 20 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
+      },
+      // "reactiveForm": { "errorMessageBindingStrategy": 1 }
     });
   }
 

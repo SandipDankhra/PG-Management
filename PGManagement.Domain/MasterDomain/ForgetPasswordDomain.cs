@@ -12,13 +12,13 @@ namespace PGManagement.Domain.MasterModule
     {
         private IPasswordHash PasswordHash { get; set; }
 
-        public ForgetPasswordDomain(IMasterUow uow,IPasswordHash passwordHash)
+        public ForgetPasswordDomain(IMasterUow uow, IPasswordHash passwordHash)
         {
             this.Uow = uow;
             PasswordHash = passwordHash;
         }
 
-        public async  Task<object> GetBy(User parameters)
+        public async Task<object> GetBy(User parameters)
         {
 
             var mobileValidate = await Uow.Repository<User>().SingleOrDefaultAsync(t => t.MobileNumber == parameters.MobileNumber);
@@ -41,14 +41,14 @@ namespace PGManagement.Domain.MasterModule
         }
 
 
-         
+
         public async Task AddAsync(Authentication parameter)
         {
-            var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp== parameter.Otp && t.UserId == parameter.UserId);
-            
+            var otpvalid = await Uow.Repository<Authentication>().SingleOrDefaultAsync(t => t.Otp == parameter.Otp && t.UserId == parameter.UserId);
+
         }
 
-     
+
 
         public async Task UpdateAsync(Authentication entity)
         {

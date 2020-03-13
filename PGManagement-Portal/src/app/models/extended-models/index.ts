@@ -27,6 +27,7 @@ export {Payment} from './payment';;
 export {Menu} from './menu';;
 export {Requester} from './requester';;
 export {Review} from './review';;
+export {ReviewLookup} from './review-lookup';;
 export {vAvailableBed} from './v-available-bed';;
 export {vBookBed} from './v-book-bed';;
 export {vComplaintRecord} from './v-complaint-record';;

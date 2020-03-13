@@ -17,6 +17,10 @@ const ROUTES: Routes = [
         component: CreateBookBedAddComponent
     },
     {
+        path: 'add/:userId/:bedId',
+        component: CreateBookBedAddComponent
+    },
+    {
         path: ':id',
         component:  CreateBookBedEditComponent
     },

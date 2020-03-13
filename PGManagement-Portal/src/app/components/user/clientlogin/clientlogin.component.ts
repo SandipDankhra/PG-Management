@@ -3,13 +3,15 @@ import { anonymous, middleware } from '@rxweb/angular-router'
 import { multilingual } from '@rxweb/localization'
 import { UserAuthentication } from '../../../models/custom-models/user.model';
 import { CoreComponent } from '@rxweb/angular-router';
-import { RxFormBuilder, IFormGroup } from '@rxweb/reactive-form-validators';
+import { RxFormBuilder, IFormGroup, RxwebValidators, RxFormGroup } from '@rxweb/reactive-form-validators';
 import { LoggedInMiddleware } from '../../../domain/security/middleware/logged-in.middleware';
 import { RxHttp, http } from '@rxweb/http';
 import { Router } from '@angular/router';
 import { LoginService } from '../../login/login.service';
 import { BrowserStorage } from 'src/app/domain/services/browser-storage';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { login } from '@app/custom-models';
+
 
 @anonymous()
 @http({
@@ -22,44 +24,47 @@ import { FormGroup, FormBuilder } from '@angular/forms';
     templateUrl: './clientlogin.component.html',
 })
 export class LoginComponent extends CoreComponent implements OnInit {
-    loginFormGroup: FormGroup
+    loginFormGroup:IFormGroup<login>;
+    logi:login;
 
-    constructor(private formBuilder: FormBuilder, private http: RxHttp, private router: Router, private loginService: LoginService,
+
+    constructor(private formBuilder: RxFormBuilder, private http: RxHttp, private router: Router, private loginService: LoginService,
         private browserStorage: BrowserStorage) {
         super();
     }
 
     ngOnInit(): void {
-        var auth = localStorage.getItem('auth');
+        this.logi = new login();
+        this.loginFormGroup = this.formBuilder.formGroup(this.logi) as IFormGroup<login>;
+        var auth = this.browserStorage.local.get('auth');
         if (!auth) {
 
             this.router.navigate(["/clientlogin"]);
         }
-        this.loginFormGroup = this.formBuilder.group({
-            email: [''],
-            password: ['']
-        })
+        
     }
 
 
     loginUser() {
-        // console.log(localStorage.getItem('auth'));
+        // console.log(this.browserStorage.local.get('auth'));
         // this.http.post({ hostUri: 'https://localhost:44352', path: 'api/Authentication', body: { email: this.loginFormGroup.controls.email.value, password: this.loginFormGroup.controls.password.value } }).subscribe(t => {
         //     console.log(t);
         // })
+        console.log(this.loginFormGroup);
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
             // debugger
             if (response.failedLogin) {
+                alert('Invalid Email and password');
             }
             else {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
-                localStorage.setItem('auth', response);
-                localStorage.setItem('x-request', response.key);
-                localStorage.setItem('userName', response.fullName);
-                localStorage.setItem('userEmail', response.emailId);
-                localStorage.setItem('lcode', response.languageCode);
-                localStorage.setItem('userId', response.userId);
+                this.browserStorage.local.save('auth', response);
+                this.browserStorage.local.save('x-request', response.key);
+                this.browserStorage.local.save('userName', response.fullName);
+                this.browserStorage.local.save('userEmail', response.emailId);
+                this.browserStorage.local.save('lcode', response.languageCode);
+                this.browserStorage.local.save('userId', response.userId);
                 console.log(response.validationMessage)
             }
             // this.spin = false;

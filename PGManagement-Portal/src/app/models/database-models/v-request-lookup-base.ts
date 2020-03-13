@@ -39,4 +39,10 @@ export class vRequestLookupBase {
         bedStatus : boolean;
 //#endregion bedStatus Prop
 
+
+//#region requesterId Prop
+        @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'requesterId', keyColumn: false})
+        requesterId : number;
+//#endregion requesterId Prop
+
 }

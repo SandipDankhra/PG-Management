@@ -8,7 +8,7 @@ import { BrowserStorage } from 'src/app/domain/services/browser-storage';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { RxHttp } from "@rxweb/http";
 import { LoginService } from './login.service';
-import { BaseToastr } from 'src/app/domain/customize-design/toastr';
+
 import { Router } from '@angular/router';
 import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadcaster';
 // export class AuthFilter extends AbstractRequestFilter {
@@ -65,6 +65,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
         //     console.log(t);
         // })
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
+            console.log(this.loginFormGroup.value);
             if (response.failedLogin) {
 
             }

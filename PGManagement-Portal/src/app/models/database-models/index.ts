@@ -27,6 +27,7 @@ export {PaymentBase} from './payment-base';;
 export {MenuBase} from './menu-base';;
 export {RequesterBase} from './requester-base';;
 export {ReviewBase} from './review-base';;
+export {ReviewLookupBase} from './review-lookup-base';;
 export {vAvailableBedBase} from './v-available-bed-base';;
 export {vBookBedBase} from './v-book-bed-base';;
 export {vComplaintRecordBase} from './v-complaint-record-base';;

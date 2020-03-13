@@ -10,13 +10,15 @@ import { ROUTING } from './review.routing'
 import { ReviewListComponent } from './list/review-list.component'
 import { ReviewAddComponent } from './add/review-add.component';
 import { ReviewSharedModule } from './review-shared.module';
+import { ClientHeaderModule } from '../../user/clientheader/clientheader.module';
+import { ClientFooterModule } from '../../user/clientfooter/clientfooter.module';
 
 @NgModule({
     imports: [
-        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,ReviewSharedModule,
+        CommonModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,ReviewSharedModule,ClientHeaderModule,ClientFooterModule,
         ROUTING
     ],
-    declarations: [ReviewListComponent,ReviewAddComponent],
+    declarations: [ReviewListComponent,ReviewAddComponent,],
     exports: [RouterModule],
     providers: []
 })
