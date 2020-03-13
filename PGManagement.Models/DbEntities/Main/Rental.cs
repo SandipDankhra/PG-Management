@@ -62,13 +62,6 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<BookBed> BookBed { get; set; }
 
-		#region Complaints Annotations
-
-        [InverseProperty("Rental")]
-		#endregion Complaints Annotations
-
-        public virtual ICollection<Complaint> Complaints { get; set; }
-
 		#region Reviews Annotations
 
         [InverseProperty("Rental")]
@@ -76,12 +69,19 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Review> Reviews { get; set; }
 
+		#region Complaints Annotations
+
+        [InverseProperty("Rental")]
+		#endregion Complaints Annotations
+
+        public virtual ICollection<Complaint> Complaints { get; set; }
+
 
         public Rental()
         {
 			BookBed = new HashSet<BookBed>();
-			Complaints = new HashSet<Complaint>();
 			Reviews = new HashSet<Review>();
+			Complaints = new HashSet<Complaint>();
         }
 	}
 }

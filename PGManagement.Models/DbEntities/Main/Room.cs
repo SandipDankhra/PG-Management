@@ -23,6 +23,7 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
+        [RelationshipTableAttribue("Flats","dbo","","FlatId")]
 		#endregion FlatId Annotations
 
         public int FlatId { get; set; }
@@ -41,7 +42,7 @@ namespace PGManagement.Models.Main
         [Required]
 		#endregion RoomType Annotations
 
-        public int RoomType { get; set; }
+        public RoomType RoomType { get; set; }
 
 		#region RoomSharing Annotations
 
@@ -50,6 +51,14 @@ namespace PGManagement.Models.Main
 		#endregion RoomSharing Annotations
 
         public string RoomSharing { get; set; }
+
+		#region Flat Annotations
+
+        [ForeignKey(nameof(FlatId))]
+        [InverseProperty(nameof(PGManagement.Models.Main.Flat.Rooms))]
+		#endregion Flat Annotations
+
+        public virtual Flat Flat { get; set; }
 
 		#region Beds Annotations
 

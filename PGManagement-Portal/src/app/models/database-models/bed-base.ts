@@ -1,4 +1,4 @@
-import { prop,propObject,propArray,required,maxLength,range, numeric  } from "@rxweb/reactive-form-validators"
+import { prop,propObject,propArray,required,maxLength,range ,numeric } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 
@@ -18,10 +18,9 @@ export class BedBase {
 
 
 //#region bedNumber Prop
-       
-        @numeric() 
-        @range({minimumNumber:1,maximumNumber:2147483647})     
+        @range({minimumNumber:1,maximumNumber:2147483647})
         @required()
+        @numeric()
         bedNumber : number;
 //#endregion bedNumber Prop
 
@@ -33,9 +32,9 @@ export class BedBase {
 
 
 //#region bedPrice Prop
-        @numeric()
         @range({minimumNumber:1,maximumNumber:2147483647})
         @required()
+        @numeric()
         bedPrice : number;
 //#endregion bedPrice Prop
 

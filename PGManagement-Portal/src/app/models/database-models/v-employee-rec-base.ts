@@ -1,4 +1,4 @@
-import { prop,propObject,propArray,required,maxLength,range ,numeric,alpha,mask,email, NumericValueType } from "@rxweb/reactive-form-validators"
+import { prop,propObject,propArray,required,maxLength,range ,numeric,alpha,mask,email } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 

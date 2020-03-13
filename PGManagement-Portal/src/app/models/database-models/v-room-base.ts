@@ -8,8 +8,8 @@ export class vRoomBase {
         @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'flatId', keyColumn: true})
         flatId : number;
 //#endregion flatId Prop
-        @prop()
-        roomId:number;
+
+
 //#region flatNumber Prop
         @gridColumn({visible: true, columnIndex:1, allowSorting: true, headerKey: 'flatNumber', keyColumn: false})
         flatNumber : string;
@@ -44,5 +44,11 @@ export class vRoomBase {
         @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'locality', keyColumn: false})
         locality : string;
 //#endregion locality Prop
+
+
+//#region roomId Prop
+        @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'roomId', keyColumn: false})
+        roomId : number;
+//#endregion roomId Prop
 
 }

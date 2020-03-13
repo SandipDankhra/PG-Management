@@ -100,6 +100,12 @@ export class vRentalRecordBase {
 //#endregion endDate Prop
 
 
+//#region applicationObjectName Prop
+        @gridColumn({visible: true, columnIndex:16, allowSorting: true, headerKey: 'applicationObjectName', keyColumn: false})
+        applicationObjectName : string;
+//#endregion applicationObjectName Prop
+
+
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
         mobileNumber : number;
@@ -140,17 +146,5 @@ export class vRentalRecordBase {
         @gridColumn({visible: true, columnIndex:22, allowSorting: true, headerKey: 'bedNumber', keyColumn: false})
         bedNumber : number;
 //#endregion bedNumber Prop
-
-
-//#region userId Prop
-        @gridColumn({visible: true, columnIndex:23, allowSorting: true, headerKey: 'userId', keyColumn: false})
-        userId : number;
-//#endregion userId Prop
-
-
-//#region rentalId Prop
-        @gridColumn({visible: true, columnIndex:24, allowSorting: true, headerKey: 'rentalId', keyColumn: false})
-        rentalId : number;
-//#endregion rentalId Prop
 
 }

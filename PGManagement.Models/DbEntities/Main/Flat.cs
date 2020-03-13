@@ -50,9 +50,17 @@ namespace PGManagement.Models.Main
 
         public string locality { get; set; }
 
+		#region Rooms Annotations
+
+        [InverseProperty("Flat")]
+		#endregion Rooms Annotations
+
+        public virtual ICollection<Room> Rooms { get; set; }
+
 
         public Flat()
         {
+			Rooms = new HashSet<Room>();
         }
 	}
 }

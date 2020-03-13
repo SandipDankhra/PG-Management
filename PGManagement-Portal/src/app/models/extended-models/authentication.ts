@@ -1,6 +1,5 @@
 import {AuthenticationBase} from '../database-models/authentication-base';
 import {UserBase} from '../database-models/user-base';
-import { password, numeric, NumericValueType, range } from '@rxweb/reactive-form-validators';
 //Generated Imports
 export class Authentication extends AuthenticationBase 
 {
@@ -17,6 +16,7 @@ user : UserBase;
 //#endregion user Prop
 
 //#endregion Generated Reference Properties
+
 
 
 

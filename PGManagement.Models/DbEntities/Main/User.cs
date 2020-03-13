@@ -113,12 +113,26 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Authentication> Authentication { get; set; }
 
+		#region Notice Annotations
+
+        [InverseProperty("User")]
+		#endregion Notice Annotations
+
+        public virtual ICollection<Notice> Notice { get; set; }
+
 		#region Employees Annotations
 
         [InverseProperty("User")]
 		#endregion Employees Annotations
 
         public virtual ICollection<Employee> Employees { get; set; }
+
+		#region Expenses Annotations
+
+        [InverseProperty("User")]
+		#endregion Expenses Annotations
+
+        public virtual ICollection<Expens> Expenses { get; set; }
 
 		#region Documents Annotations
 
@@ -134,13 +148,6 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Requester> Requesters { get; set; }
 
-		#region Notice Annotations
-
-        [InverseProperty("User")]
-		#endregion Notice Annotations
-
-        public virtual ICollection<Notice> Notice { get; set; }
-
 
         public User()
         {
@@ -148,10 +155,11 @@ namespace PGManagement.Models.Main
 			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
+			Notice = new HashSet<Notice>();
 			Employees = new HashSet<Employee>();
+			Expenses = new HashSet<Expens>();
 			Documents = new HashSet<Document>();
 			Requesters = new HashSet<Requester>();
-			Notice = new HashSet<Notice>();
         }
 	}
 }

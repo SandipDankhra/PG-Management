@@ -16,12 +16,6 @@ export class vNoticeBase {
 //#endregion noticeDescription Prop
 
 
-//#region createdDate Prop
-        @gridColumn({visible: true, columnIndex:4, allowSorting: true, headerKey: 'createdDate', keyColumn: false})
-        createdDate : any;
-//#endregion createdDate Prop
-
-
 //#region createdBy Prop
         @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'createdBy', keyColumn: false})
         createdBy : any;
@@ -38,5 +32,11 @@ export class vNoticeBase {
         @gridColumn({visible: true, columnIndex:2, allowSorting: true, headerKey: 'lastName', keyColumn: false})
         lastName : string;
 //#endregion lastName Prop
+
+
+//#region createdDate Prop
+        @gridColumn({visible: true, columnIndex:4, allowSorting: true, headerKey: 'createdDate', keyColumn: false})
+        createdDate : any;
+//#endregion createdDate Prop
 
 }

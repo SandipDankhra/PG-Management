@@ -22,9 +22,6 @@ namespace PGManagement.Models.Main
         public string NoticeDescription { get; set; }
 
 
-        public Nullable<System.DateTimeOffset> CreatedDate { get; set; }
-
-
         public Nullable<int> CreatedBy { get; set; }
 
 
@@ -32,6 +29,9 @@ namespace PGManagement.Models.Main
 
 
         public string LastName { get; set; }
+
+
+        public Nullable<System.DateTimeOffset> CreatedDate { get; set; }
 
 
         public vNotice()

@@ -33,10 +33,7 @@ namespace PGManagement.Models.Main
 
         [RelationshipTableAttribue("Users","dbo","","CreatedBy")]
 		#endregion CreatedBy Annotations
-        [OnAction("POST",RxWeb.Core.Sanitizers.Enums.ActionValueType.DateTimeOffsetUtc)]
-        public Nullable<System.DateTimeOffset> CreatedDate { get; set; }
 
-        [OnAction("POST", RxWeb.Core.Sanitizers.Enums.ActionValueType.NameClaimIdentifier)]
         public Nullable<int> CreatedBy { get; set; }
 
 		#region User Annotations

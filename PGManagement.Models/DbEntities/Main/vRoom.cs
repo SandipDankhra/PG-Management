@@ -35,8 +35,9 @@ namespace PGManagement.Models.Main
 
 
         public string locality { get; set; }
-        
-        public int roomId { get; set; } 
+
+
+        public int RoomId { get; set; }
 
 
         public vRoom()

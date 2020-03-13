@@ -1,4 +1,4 @@
-import { prop,propObject,propArray,required,maxLength,range ,numeric,email} from "@rxweb/reactive-form-validators"
+import { prop,propObject,propArray,required,maxLength,range ,numeric } from "@rxweb/reactive-form-validators"
 import { gridColumn } from "@rxweb/grid"
 
 
@@ -27,7 +27,6 @@ export class RoomBase {
 
 //#region roomType Prop
         @range({minimumNumber:1,maximumNumber:2147483647})
-        
         @required()
         roomType : number;
 //#endregion roomType Prop
@@ -35,10 +34,11 @@ export class RoomBase {
 
 //#region roomSharing Prop
         @required()
-        //@range1to15()
-        @range({minimumNumber:1,maximumNumber:15})
+        @maxLength({value:50})
         roomSharing : string;
 //#endregion roomSharing Prop
+
+
 
 
 
