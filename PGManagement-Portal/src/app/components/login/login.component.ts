@@ -14,7 +14,7 @@ import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadca
 // export class AuthFilter extends AbstractRequestFilter {
 //     constructor(private browserStorage: BrowserStorage) { super() }
 //     onRequest = (context: XhrContext) => {
-//         context.request.headers.Authorization = localStorage.getItem('Authorization');
+//         context.request.headers.Authorization = this.browserStorage.local.get('Authorization');
 //         this.onRequestExecuting(context);
 //     }
 // }
@@ -39,28 +39,28 @@ export class LoginComponent extends CoreComponent implements OnInit {
     ngOnInit(): void {
         console.log("hello");
         this.applicationBroadcaster.activeMenu(true);
-        var auth = localStorage.getItem('auth');
+        var auth = this.browserStorage.local.get('auth');
         if (auth) {
             this.router.navigate(["/complaints"]);
         }
 
 
 
-        // localStorage.setItem('Authentication', '');
+        // this.browserStorage.local.save('Authentication', '');
         this.loginFormGroup = this.formBuilder.group({
             email: [''],
             password: ['']
         })
         // this.http.get({ hostUri: 'https://localhost:44352', path: 'api/Authentication' }).subscribe(t => {
-        //     // localStorage.setItem('Authentication', t);
+        //     // this.browserStorage.local.save('Authentication', t);
         //     document.cookie = "requestContext='abc'";
-        //     localStorage.setItem('auth', t);
+        //     this.browserStorage.local.save('auth', t);
         //     console.log(t);
         // })
 
     }
     login() {
-        // console.log(localStorage.getItem('auth'));
+        // console.log(this.browserStorage.local.get('auth'));
         // this.http.post({ hostUri: 'https://localhost:44352', path: 'api/Authentication', body: { email: this.loginFormGroup.controls.email.value, password: this.loginFormGroup.controls.password.value } }).subscribe(t => {
         //     console.log(t);
         // })
@@ -73,8 +73,13 @@ export class LoginComponent extends CoreComponent implements OnInit {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
                 this.browserStorage.local.save('auth', response);
-
-                this.router.navigate(["complaints"]);
+                this.browserStorage.local.save('x-request', response.key);
+                this.browserStorage.local.save('userName', response.fullName);
+                this.browserStorage.local.save('userEmail', response.emailId);
+                this.browserStorage.local.save('lcode', response.languageCode);
+                this.browserStorage.local.save('userId', response.userId);
+                this.router.navigate(["dashboard"]);
+                location.reload();
             }
             // this.spin = false;
             // this.routers.navigate(["/users"]);

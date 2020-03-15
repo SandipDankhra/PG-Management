@@ -11,18 +11,18 @@ import { AbstractReview } from '../master/reviews/domain/abstract-review';
     selector: "app-client-index",
     templateUrl: './client-index.componet.html',
     styleUrls: ['review.css'],
-    entryComponents:[]
+    entryComponents: []
 })
 export class ClientIndexComponent extends AbstractReview implements OnInit {
     reviews: List<ReviewLookup>;
     isLogin: boolean = true;
     subscription: Subscription;
-   
+
     constructor(private activateroute: ActivatedRoute, private browserStorage: BrowserStorage, private router: Router) {
         super();
     }
     ngOnInit(): void {
-        var auth = localStorage.getItem('auth');
+        var auth = this.browserStorage.local.get('auth');
         if (auth) {
             this.isLogin = false;
         }

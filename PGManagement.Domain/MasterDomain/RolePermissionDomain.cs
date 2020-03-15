@@ -21,12 +21,12 @@ namespace PGManagement.Domain.MasterModule
             DbContextManager = dbContextManager;
         }
 
-        public async Task<object> GetAsync(RolePermission parameters)
+        public async Task<object> GetAsync(vRolePermission parameters)
         {
-           return await Uow.Repository<RolePermission>().FindByAsync(t => t.RoleId == parameters.RoleId);
+           return await Uow.Repository<vRolePermission>().FindByAsync(t => t.RoleId == parameters.RoleId);
         }
 
-        public Task<object> GetBy(RolePermission parameters)
+        public Task<object> GetBy(vRolePermission parameters)
         {
             throw new NotImplementedException();
         }
@@ -58,19 +58,22 @@ namespace PGManagement.Domain.MasterModule
             await Uow.CommitAsync();
         }
 
-        public HashSet<string> DeleteValidation(RolePermission parameters)
+        public HashSet<string> DeleteValidation(vRolePermission parameters)
         {
             return ValidationMessages;
         }
 
-        public Task DeleteAsync(RolePermission parameters)
+        public Task DeleteAsync(vRolePermission parameters)
         {
             throw new NotImplementedException();
         }
 
-        public Task AddAsync(RolePermissions entity)
+        public async Task AddAsync(RolePermissions entity)
         {
-            throw new NotImplementedException();
+            await DbContextManager.BeginTransactionAsync();
+            var spParameters = new SqlParameter[1];
+            spParameters[0] = new SqlParameter() { ParameterName = "RolePermissions", Value = entity.ToString() };
+            var result = await DbContextManager.StoreProc<RolePermissions>("[dbo].[spRolePermissionAdd]", spParameters);
         }
 
         public IMasterUow Uow { get; set; }
@@ -78,5 +81,5 @@ namespace PGManagement.Domain.MasterModule
         private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
     }
 
-    public interface IRolePermissionDomain : ICoreDomain<RolePermissions, RolePermission> { }
+    public interface IRolePermissionDomain : ICoreDomain<RolePermissions, vRolePermission> { }
 }

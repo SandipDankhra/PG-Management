@@ -19,6 +19,13 @@ namespace PGManagement.Models.Main
 
         public int ApplicationModuleId { get; set; }
 
+		#region ApplicationModuleName Annotations
+
+        [MaxLength(50)]
+		#endregion ApplicationModuleName Annotations
+
+        public string ApplicationModuleName { get; set; }
+
 		#region ModuleMasterId Annotations
 
         [Range(1,int.MaxValue)]

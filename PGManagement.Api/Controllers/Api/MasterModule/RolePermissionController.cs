@@ -13,7 +13,7 @@ namespace PGManagement.Api.Controllers.MasterModule
     [Route("api/[controller]")]
     
 	
-	public class RolePermissionController : BaseDomainController<RolePermissions, RolePermission>
+	public class RolePermissionController : BaseDomainController<RolePermissions, vRolePermission>
 
     {
         public RolePermissionController(IRolePermissionDomain domain):base(domain) {}

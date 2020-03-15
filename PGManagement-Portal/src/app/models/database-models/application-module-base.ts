@@ -10,6 +10,12 @@ export class ApplicationModuleBase {
 //#endregion applicationModuleId Prop
 
 
+//#region applicationModuleName Prop
+        @maxLength({value:50})
+        applicationModuleName : string;
+//#endregion applicationModuleName Prop
+
+
 //#region moduleMasterId Prop
         @range({minimumNumber:1,maximumNumber:2147483647})
         @required()

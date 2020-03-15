@@ -4,7 +4,7 @@ import { BrowserStorage } from 'src/app/domain/services/browser-storage';
 import { Router } from '@angular/router';
 import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
 import { ROUTES } from './routing';
-import { AuthFilter } from 'src/app/temp-service/AuthFilter';
+import { AuthFilter, HttpResponseCode } from 'src/app/temp-service/AuthFilter';
 import { ApplicationBroadcaster } from 'src/app/temp-service/application-broadcaster';
 
 @http({ path: 'api/notices', hostKey: 'server', })
@@ -51,9 +51,9 @@ export class AppComponent extends RxHttp implements OnInit {
 
           // this.router.navigate(["/login"]);
         }
-        // else if (response.statusCode == HttpResponseCode.InternalServerError) {
-        // this.baseToastr.error("Error occur")
-        // }
+        else if (response.statusCode == HttpResponseCode.InternalServerError) {
+          // this.baseToastr.error("Error occur")
+        }
         else if (response.statusCode == 403) {
           this.router.navigate(["/unauthorized"]);
         }
@@ -63,12 +63,12 @@ export class AppComponent extends RxHttp implements OnInit {
     var auth = this.browserStorage.local.get("auth");
     console.log("hey:" + auth);
     if (auth) {
-      // this.router.navigate(["/client-index"])
+      this.router.navigate(["/dashboard"])
       this.isShowDashboard = true;
     }
     else {
       this.browserStorage.local.clearAll();
-      // console.log("Login");
+      console.log("Login");
       // this.router.navigate(["/login"]);
       this.isShowDashboard = false;
     }
@@ -87,7 +87,7 @@ export class AppComponent extends RxHttp implements OnInit {
         "range": "You need to enter appropriate value in this field",
         "maxNumber": "You can not enter value more than #n#",
         "numeric": "Only number required",
-        
+
         "email": "Please enter valid email address",
         "latitude": "Please enter a valid latitude",
         "longitude": "Please enter a valid longitude",

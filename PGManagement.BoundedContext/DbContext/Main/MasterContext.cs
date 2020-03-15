@@ -50,6 +50,8 @@ namespace PGManagement.BoundedContext.Main
         public DbSet<Authentication> authentication { get; set; }
         public DbSet<vRentalRecord> vRentalRecords { get; set; }
         public DbSet<ReviewLookup> ReviewLookups { get; set; }
+        public DbSet<RolePermission> RolePermissions { get; set; }
+        public DbSet<vRolePermission> vRolePermissions { get; set; }
         #endregion DbSets
 
  

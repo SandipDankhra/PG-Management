@@ -6205,19 +6205,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\radix\\.nuget\\packages\\": {}
+    "C:\\Users\\Taher\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+      "projectUniqueName": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
       "projectName": "PGManagement.Models",
-      "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
-      "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-      "outputPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\obj\\",
+      "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+      "packagesPath": "C:\\Users\\Taher\\.nuget\\packages\\",
+      "outputPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Taher\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6273,7 +6273,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

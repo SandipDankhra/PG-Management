@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using System.ComponentModel.DataAnnotations;
+
 namespace PGManagement.Models.Main
 {
     [Table("Users",Schema="dbo")]
@@ -21,31 +23,31 @@ namespace PGManagement.Models.Main
 
 		#region FirstName Annotations
 
-        [Required]
-        [MaxLength(50)]
+        [RxWeb.Core.Annotations.Required]
+        [RxWeb.Core.Annotations.MaxLength(50)]  
 		#endregion FirstName Annotations
 
         public string FirstName { get; set; }
 
 		#region LastName Annotations
 
-        [Required]
-        [MaxLength(50)]
+        [RxWeb.Core.Annotations.Required]
+        [RxWeb.Core.Annotations.MaxLength(50)]
 		#endregion LastName Annotations
 
         public string LastName { get; set; }
 
 		#region MobileNumber Annotations
 
-        [Required]
+        [RxWeb.Core.Annotations.Required]
 		#endregion MobileNumber Annotations
 
         public decimal MobileNumber { get; set; }
 
 		#region Email Annotations
 
-        [Required]
-        [MaxLength(50)]
+        [RxWeb.Core.Annotations.Required]
+        [RxWeb.Core.Annotations.MaxLength(50)]
 		#endregion Email Annotations
 
         public string Email { get; set; }
@@ -58,23 +60,21 @@ namespace PGManagement.Models.Main
 
 		#region LanguageCode Annotations
 
-        [MaxLength(3)]
+        [RxWeb.Core.Annotations.MaxLength(3)]
 		#endregion LanguageCode Annotations
 
         public string LanguageCode { get; set; }
 
 		#region Password Annotations
 
-        [Required]
-        [MaxLength(132)]
+        [RxWeb.Core.Annotations.MaxLength(132)]
 		#endregion Password Annotations
 
         public byte[] Password { get; set; }
 
 		#region Salt Annotations
 
-        [Required]
-        [MaxLength(140)]
+        [RxWeb.Core.Annotations.MaxLength(140)]
 		#endregion Salt Annotations
 
         public byte[] Salt { get; set; }

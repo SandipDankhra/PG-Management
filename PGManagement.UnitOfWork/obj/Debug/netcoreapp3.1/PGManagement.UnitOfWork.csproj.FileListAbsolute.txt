@@ -37,3 +37,16 @@ D:\New\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagemen
 D:\New\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.csproj.CopyComplete
 D:\New\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
 D:\New\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.deps.json
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.csprojAssemblyReference.cache
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.AssemblyInfoInputs.cache
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.AssemblyInfo.cs
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.csproj.CopyComplete
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
+D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb

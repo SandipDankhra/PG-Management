@@ -29,7 +29,7 @@ const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModul
   declarations: [
     AppComponent,
     ClientIndexComponent,
-    RegistrationAddComponent,RestrictInputDirective
+    RegistrationAddComponent, RestrictInputDirective,
     RegistrationAddComponent,
     DashboardComponent
   ],
@@ -50,5 +50,5 @@ const route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModul
 })
 
 export class AppModule {
- 
+
 }

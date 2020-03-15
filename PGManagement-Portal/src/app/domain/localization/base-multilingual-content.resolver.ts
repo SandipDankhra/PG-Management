@@ -28,8 +28,8 @@ export abstract class BaseMultilingualContentResolver extends RxHttp implements 
     resolveData(name: string) {
         if (name && !MultiLingualData.contains(name)) {
             var promise = new Promise<boolean>((resolve, reject) => {
-                var language = localStorage.getItem(STORAGE_KEY) || LANGUAGE_CODE;
-                this.get({  path: `assets/localization/${name}-${language}.json` }).subscribe(t => {
+                var language = this.browserStorage.local.get(STORAGE_KEY) || LANGUAGE_CODE;
+                this.get({ path: `assets/localization/${name}-${language}.json` }).subscribe(t => {
                     MultiLingualData.addOrUpdate(name, t);
                     resolve(true);
                 }, x => {
