@@ -5,7 +5,7 @@ import { RegistrationAddComponent } from '../user/registration/add/registration-
 import { DashboardComponent } from '../master/dashboard/dashboard.component';
 var routings = [
 	{
-		path: '', redirectTo: 'dashboard', pathMatch: 'full',
+		path: '', redirectTo: 'client-index', pathMatch: 'full',
 	},
 	{
 		path: 'dashboard', component: DashboardComponent

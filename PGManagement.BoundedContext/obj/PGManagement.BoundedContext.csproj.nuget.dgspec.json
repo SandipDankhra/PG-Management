@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {}
+    "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {}
   },
   "projects": {
-    "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+    "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
+        "projectUniqueName": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
         "projectName": "PGManagement.BoundedContext",
-        "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
-        "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-        "outputPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\obj\\",
+        "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
+        "packagesPath": "C:\\Users\\sendy\\.nuget\\packages\\",
+        "outputPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-                "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+              "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+                "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
               }
             }
           }
@@ -70,21 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+    "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+        "projectUniqueName": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
         "projectName": "PGManagement.Models",
-        "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
-        "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-        "outputPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\obj\\",
+        "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+        "packagesPath": "C:\\Users\\sendy\\.nuget\\packages\\",
+        "outputPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -140,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -28,9 +28,11 @@ export class ComplaintListComponent extends AbstractComplaint implements OnInit,
         // console.log(id);
         // console.log(this.complaints.first(t => t.complaintId == id));
         this.patch({ params: [id], body: { ComplaintStatus: 1 } }).subscribe(t => {
-            // console.log(t);
+           
         })
+       
     }
+    
     ngOnDestroy(): void {
         if (this.subscription)
             this.subscription.unsubscribe();
