@@ -25,6 +25,7 @@ export class vAvailableBedListComponent extends AbstractvAvailableBed implements
 
     }
     ngOnInit(): void {
+        
         this.subscription = this.get().subscribe((t: List<vAvailableBed>) => {
             this.vAvailableBed = t;
             console.log(t.length);

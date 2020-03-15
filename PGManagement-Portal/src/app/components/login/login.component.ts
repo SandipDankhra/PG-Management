@@ -64,10 +64,11 @@ export class LoginComponent extends CoreComponent implements OnInit {
         // this.http.post({ hostUri: 'https://localhost:44352', path: 'api/Authentication', body: { email: this.loginFormGroup.controls.email.value, password: this.loginFormGroup.controls.password.value } }).subscribe(t => {
         //     console.log(t);
         // })
+    
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
             console.log(this.loginFormGroup.value);
             if (response.failedLogin) {
-
+                alert("Invalid Email and Password!!!");
             }
             else {
                 // this.showComponent = false;

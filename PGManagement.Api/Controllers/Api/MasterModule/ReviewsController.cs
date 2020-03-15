@@ -8,15 +8,15 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PGManagement.Api.Controllers.MasterModule
 {
-   [AllowAnonymous]
+    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
-    
-	//[Access(1)]
-	public class ReviewsController : BaseController<Review,ReviewLookup,Review>
+
+    //[Access(1)]
+    public class ReviewsController : BaseController<Review, ReviewLookup, Review>
 
     {
-        public ReviewsController(IMasterUow uow):base(uow) {}
+        public ReviewsController(IMasterUow uow) : base(uow) { }
 
     }
 }

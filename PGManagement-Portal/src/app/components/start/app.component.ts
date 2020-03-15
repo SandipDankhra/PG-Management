@@ -16,7 +16,7 @@ export class AppComponent extends RxHttp implements OnInit {
 
   route;
   isShowDashboard: boolean = false;
-  isShowSidebar: boolean;
+  isShowSidebar: string;
   userName: string = "Taher";
   notices: any;
 
@@ -96,9 +96,9 @@ export class AppComponent extends RxHttp implements OnInit {
         "password": "Password length should be of 8 to 20 characters and should have atleast one uppercase, one lowercase letter, a number and a special character, without any whitespaces"
       }
     });
-    this.get().subscribe(t => {
-      this.notices = t;
-    })
+    // this.get().subscribe(t => {
+    //   this.notices = t;
+    // })
   }
 
   loginClicked(isClicked: boolean): void {

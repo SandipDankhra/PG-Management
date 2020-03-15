@@ -16,7 +16,7 @@ export class LoginService {
 
 
   login(userCredentialModel: any) {
-    this.browserStorage.local.save("showMenu", true);
+    this.browserStorage.local.save("showMenu", "true");
     return this.http.post<any>({ body: userCredentialModel, path: "api/Authentication", hostUri: 'https://localhost:44352' })
   }
   // forgotPassword(forgotPasswordModel: any) {

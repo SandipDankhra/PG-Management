@@ -13,10 +13,6 @@ export class User extends UserBase
 {
 
 
-    // @prop()
-    userPassword:string;
-
-
 //#region Generated Reference Properties
 //#region rentals Prop
 rentals : RentalBase[];
@@ -47,6 +43,8 @@ requesters : RequesterBase[];
 //#endregion requesters Prop
 
 //#endregion Generated Reference Properties
+
+
 
 
 
