@@ -26,9 +26,9 @@ namespace PGManagement.Domain.MasterModule
            return await Uow.Repository<vRolePermission>().FindByAsync(t => t.RoleId == parameters.RoleId);
         }
 
-        public Task<object> GetBy(vRolePermission parameters)
+        public async Task<object> GetBy(vRolePermission parameters)
         {
-            throw new NotImplementedException();
+            return await Uow.Repository<vRolePermission>().FindByAsync(t => t.RoleId == parameters.RoleId);
         }
         
 

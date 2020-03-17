@@ -3,9 +3,9 @@ import { Subscription } from 'rxjs';
 
 import { RxFormBuilder, IFormGroup, RxFormGroup } from '@rxweb/reactive-form-validators';
 
-import { RolePermission, ApplicationModule } from '@app/models';
+import { RolePermission, ApplicationModule, ApplicationObject } from '@app/models';
 import { AbstractRolePermission } from '../domain/abstract-role-permission';
-import { FormGroup, FormArray } from '@angular/forms';
+import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { List } from '@rxweb/generics';
 
 @Component({
@@ -19,13 +19,17 @@ export class RolePermissionAddComponent extends AbstractRolePermission implement
     permissionFormArray: FormArray;
     applicationModules: List<ApplicationModule>;
 
-    constructor(private formBuilder: RxFormBuilder) {
+    constructor(private formBuilder: FormBuilder) {
         super();
     }
 
     ngOnInit(): void {
         this.get({ path: 'api/ApplicatioModuleLookup/ApplicationModuleLookups' }).subscribe((t: List<ApplicationModule>) => {
             this.applicationModules = t;
+
+            for (var applicationModule of this.applicationModules) {
+                this.addFormGroup(applicationModule);
+            }
         })
         this.rolePermission = new RolePermission();
         this.roleFormGroup = this.formBuilder.group({
@@ -35,8 +39,9 @@ export class RolePermissionAddComponent extends AbstractRolePermission implement
 
     }
     addFormGroup(applicationModule: ApplicationModule) {
+        console.log(applicationModule);
         this.permissionFormArray.push(this.formBuilder.group({
-            RoleId: [],
+            RoleId: ['1'],
             ApplicationModuleId: [applicationModule.applicationModuleId],
             CanView: [],
             CanAdd: [],
@@ -47,11 +52,14 @@ export class RolePermissionAddComponent extends AbstractRolePermission implement
     }
 
     ngOnDestroy(): void {
-        if (this.subscription){
+        if (this.subscription) {
             this.subscription.unsubscribe();
         }
     }
     submit() {
-
+        console.log(JSON.parse(JSON.stringify(this.roleFormGroup.controls.permission.value)));
+        let jsonstring = JSON.parse(JSON.stringify(this.roleFormGroup.controls.permission.value))
+        console.log(jsonstring);
+        this.post({ body: { rolePermissions: jsonstring } }).subscribe(t => { console.log(t) })
     }
 }

@@ -35,6 +35,9 @@ namespace PGManagement.Models.Main
 
         public int PaymentAmount { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region BookBed Annotations
 
         [InverseProperty("Payment")]

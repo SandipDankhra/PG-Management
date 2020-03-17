@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using RxWeb.Core.Sanitizers.Enums;
+
 namespace PGManagement.Models.Main
 {
     [Table("Notice",Schema="dbo")]
@@ -31,6 +33,7 @@ namespace PGManagement.Models.Main
 
 		#region CreatedBy Annotations
 
+        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
         [RelationshipTableAttribue("Users","dbo","","CreatedBy")]
 		#endregion CreatedBy Annotations
 

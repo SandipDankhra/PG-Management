@@ -61,16 +61,17 @@ export class UserBase {
 
         //#region password Prop
         @required()
-        @maxLength({ value: 132 })
         @password({ validation: { maxLength: 20, minLength: 8, digit: true, specialCharacter: true } })
         userPassword: any;
 
+
+        @maxLength({ value: 132 })
         password: any;
         //#endregion password Prop
 
 
         //#region salt Prop
-        @required()
+
         @maxLength({ value: 140 })
         salt: any;
         //#endregion salt Prop
@@ -86,6 +87,14 @@ export class UserBase {
         @prop({ defaultValue: 1 })
         statusId: number;
         //#endregion statusId Prop
+
+
+        //#region softDelete Prop
+        @prop()
+        softDelete: boolean;
+        //#endregion softDelete Prop
+
+
 
 
 

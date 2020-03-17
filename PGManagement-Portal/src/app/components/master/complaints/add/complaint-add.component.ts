@@ -23,7 +23,7 @@ export class ComplaintAddComponent extends AbstractComplaint implements OnInit, 
     }
     submit() {
         // let json = JSON.stringify([{ "RoleId": 1, "ApplicationModuleId": 1, "CanView": 1, "CanAdd": 1, "CanEdit": 1, "CanDelete": 1, "PermissionPriority": 1 }, { "RoleId": 1, "ApplicationModuleId": 1, "CanView": 0, "CanAdd": 0, "CanEdit": 1, "CanDelete": 1, "PermissionPriority": 1 }]);
-        this.post({ body: { complaintName: this.complaintFormGroup.controls.complaintName.value, complaintDescription: this.complaintFormGroup.controls.complaintDescription.value, rentalId: 1 } }).subscribe(t => {
+        this.post({ body: { complaintName: this.complaintFormGroup.controls.complaintName.value, complaintDescription: this.complaintFormGroup.controls.complaintDescription.value } }).subscribe(t => {
             console.log(t);
         });
 

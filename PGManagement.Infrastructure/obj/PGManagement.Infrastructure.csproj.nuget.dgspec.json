@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Radix\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {}
+    "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+    "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
+        "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
         "projectName": "PGManagement.BoundedContext",
-        "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
-        "packagesPath": "C:\\Users\\Taher\\.nuget\\packages\\",
-        "outputPath": "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\obj\\",
+        "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj",
+        "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
+        "outputPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Taher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-                "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+              "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+                "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
               }
             }
           }
@@ -74,17 +74,17 @@
         }
       }
     },
-    "D:\\Radix\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
+    "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Radix\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
+        "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
         "projectName": "PGManagement.Infrastructure",
-        "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Taher\\.nuget\\packages\\",
-        "outputPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Infrastructure\\obj\\",
+        "projectPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
+        "outputPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Taher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,14 +97,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-                "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+              "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+                "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
               },
-              "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-                "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+              "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+                "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
               },
-              "D:\\Radix\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
-                "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
+              "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
+                "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
               }
             }
           }
@@ -161,17 +161,17 @@
         }
       }
     },
-    "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+    "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+        "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
         "projectName": "PGManagement.Models",
-        "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
-        "packagesPath": "C:\\Users\\Taher\\.nuget\\packages\\",
-        "outputPath": "D:\\Radix\\project\\PG-Management\\PGManagement.Models\\obj\\",
+        "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj",
+        "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
+        "outputPath": "D:\\project\\PG-Management\\PGManagement.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Taher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -231,17 +231,17 @@
         }
       }
     },
-    "D:\\Radix\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
+    "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Radix\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
+        "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
         "projectName": "PGManagement.UnitOfWork",
-        "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
-        "packagesPath": "C:\\Users\\Taher\\.nuget\\packages\\",
-        "outputPath": "D:\\Radix\\project\\PG-Management\\PGManagement.UnitOfWork\\obj\\",
+        "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj",
+        "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
+        "outputPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Taher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -254,8 +254,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-                "projectPath": "D:\\Radix\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+              "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+                "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
               }
             }
           }

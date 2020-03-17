@@ -38,5 +38,11 @@ export class FlatBase {
 //#endregion locality Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
+
+
 
 }

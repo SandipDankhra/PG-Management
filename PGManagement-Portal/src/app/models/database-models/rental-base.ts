@@ -37,6 +37,10 @@ export class RentalBase {
 //#endregion isVerfied Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
 
 
 

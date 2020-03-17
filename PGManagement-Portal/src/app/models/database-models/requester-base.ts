@@ -24,6 +24,12 @@ export class RequesterBase {
 //#endregion bedId Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
+
+
 
 
 

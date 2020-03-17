@@ -100,12 +100,6 @@ export class vRentalRecordBase {
 //#endregion endDate Prop
 
 
-//#region applicationObjectName Prop
-        @gridColumn({visible: true, columnIndex:16, allowSorting: true, headerKey: 'applicationObjectName', keyColumn: false})
-        applicationObjectName : string;
-//#endregion applicationObjectName Prop
-
-
 //#region mobileNumber Prop
         @gridColumn({visible: true, columnIndex:17, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
         mobileNumber : number;

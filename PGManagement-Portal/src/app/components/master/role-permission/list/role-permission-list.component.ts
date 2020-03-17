@@ -4,6 +4,7 @@ import { AbstractRolePermission } from "../domain/abstract-role-permission";
 import { RolePermission, vRolePermission, Role } from "@app/models";
 import { Subscription } from "rxjs";
 import { RxHttp } from "@rxweb/http";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-role-permission-list",
@@ -14,7 +15,8 @@ export class RolePermissionListComponent extends AbstractRolePermission
   rolePermission: List<vRolePermission>;
   subscription: Subscription;
   roles: List<Role>;
-  constructor(private http: RxHttp) {
+  roleId: any;
+  constructor(private http: RxHttp, private router: Router) {
     super();
   }
   ngOnInit(): void {
@@ -36,5 +38,8 @@ export class RolePermissionListComponent extends AbstractRolePermission
         this.rolePermission = t;
       }
     );
+  }
+  editRole() {
+    this.router.navigate([this.roleId]);
   }
 }

@@ -19,8 +19,9 @@ export class NoticeListComponent extends AbstractNotice implements OnInit, OnDes
     }
 
     onDelete(id: number) {
-        this.delete({ params: [id], body: {} }).subscribe(t => {
+        this.delete({ params: [id], queryParams: { NoticeId: id }, body: {} }).subscribe(t => {
             console.log(t);
+            location.reload();
         })
     }
     ngOnDestroy(): void {

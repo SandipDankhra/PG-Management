@@ -7217,19 +7217,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sendy\\.nuget\\packages\\": {}
+    "C:\\Users\\radix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
+      "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
       "projectName": "PGManagement.Api",
-      "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
-      "packagesPath": "C:\\Users\\sendy\\.nuget\\packages\\",
-      "outputPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Api\\obj\\",
+      "projectPath": "D:\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
+      "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
+      "outputPath": "D:\\project\\PG-Management\\PGManagement.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7242,20 +7242,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-              "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+            "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
             },
-            "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj": {
-              "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj"
+            "D:\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj"
             },
-            "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
-              "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj"
+            "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj"
             },
-            "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-              "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+            "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
             },
-            "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
-              "projectPath": "F:\\Radixweb\\RxProject\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
+            "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
             }
           }
         }
@@ -7312,7 +7312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
