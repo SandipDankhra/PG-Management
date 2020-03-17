@@ -7,14 +7,14 @@
     <div class="card-header">
       <h3 class="card-title">Book Bed</h3>
     </div>
-    
+
     <form role="form" [formGroup]="createBookBedFormGroup">
       <div class="card-body">
-        
+
         <div class="form-group">
           <label  >User Id</label>
           <input  type="text" class="form-control"   formControlName="userId">
-          
+
       </div>
       <div class="form-group">
         <label  >bed Id</label>
@@ -23,7 +23,7 @@
         <!-- userId get from the dropdown -->
         <!-- <div class="form-group">
           <label >Users</label>
-          <select class="form-control" formControlName="userId" > 
+          <select class="form-control" formControlName="userId" >
             <option *ngFor="let user of users" [value]="user.userId" >{{user.firstName}} {{user.lastName}}</option>
           </select>
         </div> -->
@@ -37,7 +37,8 @@
 
         <div class="form-group">
           <label >Rental Type (select from Dropdown)</label>
-          <select class="form-control" formControlName="rentalType" > 
+          <select class="form-control" formControlName="rentalType">
+            <!-- <option selected disabled>select rental type</option> -->
             <option *ngFor="let key of keys" [value]="key" >{{rentalTypeEnum[key]}}</option>
           </select>
           <small class="form-text text-danger"
@@ -46,7 +47,7 @@
 
         <div class="form-group">
           <label >Payment Type (select from Dropdown)</label>
-          <select class="form-control" formControlName="paymentTypeId"> 
+          <select class="form-control" formControlName="paymentTypeId">
             <option *ngFor="let key of key" [value]="key" >{{paymentTypeEnum[key]}}</option>
           </select>
           <small class="form-text text-danger"
@@ -58,10 +59,10 @@
           <input type="text" class="form-control" placeholder="Enter Payment Amount" formControlName="paymentAmount">
           <small class="form-text text-danger"
             *ngIf="createBookBedFormGroup.controls.paymentAmount.errors">{{createBookBedFormGroup.controls.paymentAmount.errorMessage}}<br /></small>
-          
+
         </div>
 
-      
+
 
         <div class="form-group">
           <label>Start Date</label>
@@ -83,11 +84,11 @@
         <!-- <div class="card-footer">
           <button type="button" class="btn btn-secondary" (click)="onShowRoom()">Show Room</button>
         </div> -->
-   
-      </div>
-      
 
-    
+      </div>
+
+
+
     </form>
   </div>
 </div>

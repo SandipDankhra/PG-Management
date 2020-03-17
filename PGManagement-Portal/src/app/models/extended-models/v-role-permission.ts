@@ -10,9 +10,4 @@ export class vRolePermission extends vRolePermissionBase
 
 //#endregion Generated Reference Properties
 
-
-
-
-
-
 }

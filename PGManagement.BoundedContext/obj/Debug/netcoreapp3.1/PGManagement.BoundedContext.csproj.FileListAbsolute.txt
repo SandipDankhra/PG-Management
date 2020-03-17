@@ -42,3 +42,14 @@ D:\Radix\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3
 D:\Radix\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
 D:\Radix\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
 D:\Radix\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csproj.CopyComplete
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.deps.json
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csprojAssemblyReference.cache
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.AssemblyInfoInputs.cache
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.AssemblyInfo.cs
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.csproj.CopyComplete
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\Rx Project\project\PG-Management\PGManagement.BoundedContext\obj\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb

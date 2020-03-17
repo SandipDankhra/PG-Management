@@ -8,7 +8,7 @@
 
         <div class="col-lg-12" data-aos="fade-up">
 
-            <form action="#" role="form" class="php-email-form" [formGroup]="registrationFormGroup">
+            <form role="form" class="php-email-form" [formGroup]="registrationFormGroup">
                 <div class="form-row">
                     <div class="col-lg-6 form-group">
                         <input type="text" class="form-control" placeholder="First Name"
@@ -60,7 +60,7 @@
                 <div class="form-row">
 
                     <div class="col-lg-12 form-group">
-                        <button type="submit" [disabled]="!registrationFormGroup.valid"  (click)="registerUser()">Submit</button>
+                        <button type="submit"   (click)="registerUser()">Submit</button>
                         <!-- <button type="submit" (click)="registerUser()">Submit</button> -->
 
                         <p>

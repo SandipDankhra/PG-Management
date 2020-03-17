@@ -5,72 +5,53 @@
   <!-- /.card-header -->
   <div class="card-body">
     <form role="form" [formGroup]="roleFormGroup">
-      <div *ngFor="let applicationModul of applicationModules">
-        <label {{addFormGroup(applicationModul)}}>{{
-          applicationModul.applicationModuleName
+      <!-- <div *ngFor="let applicationModule of applicationModules">
+        <label>{{
+          applicationModule.applicationModuleName
         }}</label>
-      </div>
-      <div
-        formArrayName="permission"
-        *ngFor="let a of permissionFormArray.controls; let i = index"
-      >
-        <div [formGroupName]="i">
+      </div> -->
+      <div formArrayName="permission" *ngFor="let a of permissionFormArray.controls; let i = index">
+        <div [formGroupName]="i"> 
           <div class="row">
             <div class="col-sm-6">
               <!-- text input -->
               <div class="form-group">
-                <label>Title</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  hidden
-                  formControlName="roleId"
-                />
-                <input
-                  type="text"
-                  class="form-control"
-                  hidden
-                  formControlName="applicationModuleId"
-                />
+                <input type="text" class="form-control" hidden formControlName="RoleId" />
+                <input type="text" class="form-control" hidden formControlName="ApplicationModuleId" />
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-2">
               <!-- textarea -->
-
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" />
-                  <label class="form-check-label">Checkbox</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" />
-                  <label class="form-check-label">Checkbox</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" />
-                  <label class="form-check-label">Checkbox</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" />
-                  <label class="form-check-label">Checkbox</label>
-                </div>
-              </div>
+              <input class="form-check-input" type="checkbox" formControlName="CanView" />
+              <label class="form-check-label">View</label>
+            </div>
+            <div class="col-2">
+              <input class="form-check-input" type="checkbox" formControlName="CanAdd" />
+              <label class="form-check-label">Addd</label>
+            </div>
+            <div class="col-2">
+              <input class="form-check-input" type="checkbox" formControlName="CanEdit" />
+              <label class="form-check-label">Edit</label>
+            </div>
+            <div class="col-2">
+              <input class="form-check-input" type="checkbox" formControlName="CanDelete" />
+              <label class="form-check-label">Delete</label>
+            </div>
+            <div class="col-2">
+              <input type="text" class="form-control" placeholder="Permission Priority"
+                formControlName="PermissionPriority" />
             </div>
           </div>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Title"
-            formControlName="permissionPriority"
-          />
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary" (click)="submit()">
-              Submit
-            </button>
-          </div>
+
+
         </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary" (click)="submit()">
+          Submit
+        </button>
       </div>
     </form>
   </div>

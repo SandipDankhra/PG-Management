@@ -15,7 +15,7 @@ const ROUTES: Routes = [
         component: BedAddComponent
     },
     {
-        path: 'edit',
+        path: ':id',
         component:  BedEditComponent
     },
 ];

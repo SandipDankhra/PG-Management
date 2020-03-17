@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using RxWeb.Core.Sanitizers.Enums;
+
 namespace PGManagement.Models.Main
 {
     [Table("Rentals",Schema="dbo")]
@@ -39,6 +41,7 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
+        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
         [RelationshipTableAttribue("Users","dbo","","UserId")]
 		#endregion UserId Annotations
 
@@ -72,19 +75,11 @@ namespace PGManagement.Models.Main
 
         public virtual ICollection<Review> Reviews { get; set; }
 
-		#region Complaints Annotations
-
-        [InverseProperty("Rental")]
-		#endregion Complaints Annotations
-
-        public virtual ICollection<Complaint> Complaints { get; set; }
-
 
         public Rental()
         {
 			BookBed = new HashSet<BookBed>();
 			Reviews = new HashSet<Review>();
-			Complaints = new HashSet<Complaint>();
         }
 	}
 }

@@ -17,9 +17,4 @@ export class vBed extends vBedBase
 
 
 
-
-
-
-
-
 }

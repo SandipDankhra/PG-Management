@@ -1,64 +1,67 @@
-<div class="container">
-  <div class="card">
-    
-    <div class="card-header">
-      <h3 class="card-title">EMPLOYEE LIST</h3>      
-    </div>
-    <div class="card-header">
-      <button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#exampleModal"
-      [routerLink]="['add']">Add Employee</button>
-      <input type="text" name="table_search" class="form-control float-center" class="fas fa-search" style="float: right;"
+<h1>Employee LIST</h1>
+
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Employee Record</h3><br>
+          <button class="btn btn-primary float-right" [routerLink]="['add']">Add Employee</button>
+          <div class="card-tools">
+            <div class="col-12">
+              <input type="text" name="table_search" class="form-control float-center" class="fas fa-search"
                 placeholder=" &#61442; search by name / amount / type / date " [(ngModel)]="searchText"
                 autocomplete="off">
-    </div>
-    <!-- /.card-header -->
-    <div class="card-body">
-      <table class="table table-bordered">
-        <thead>                  
-          <tr>
-            <th>Name</th>
-            <th>RoleName</th>
-            <th>Document Url</th>
-            <th>Join Date</th>
-            <th>Email</th>
-            <th>Mobile Number</th>
-            <th>Salary</th>
-            <th style="width: 10px">Update</th>
-            <th style="width: 130px">Add Room</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let emp of vemployee | filter:searchText">
-            <td>{{emp.firstName +" "+ emp.lastName}}</td>
-            <td>{{emp.roleName}}</td>
-            <td>{{emp.documentUrl}}</td>
-            <td>{{emp.joinDate}}</td>
-            <td>{{emp.email}}</td>
-            <td>{{emp.mobileNumber}}</td>
-            <td>{{emp.salary}}</td>
-            <td><button class="card-title" type="button" class="btn btn-info btn-sm"  data-toggle="modal" 
-              [routerLink]="[emp.employeeId]">Update</button></td>
-            <td><button class="card-title" type="button" class="btn btn-danger btn-sm"  data-toggle="modal" data-target="#exampleModal"
-              (click)="Delete(emp.employeeId,emp.userId)">Delete</button></td>  
+            </div>
   
-          </tr>
-          
-          
-        </tbody>
-      </table>
-    </div>
-    <!-- /.card-body -->
-    <!-- <div class="card-footer clearfix">
-      <ul class="pagination pagination-sm m-0 float-right">
-        <li class="page-item"><a class="page-link" href="#" disabled>«</a></li>
-        <li class="page-item"><a class="page-link" href="#" disabled>1</a></li>
-        <li class="page-item"><a class="page-link" href="#" disabled>2</a></li>
-        <li class="page-item"><a class="page-link" href="#" disabled>3</a></li>
-        <li class="page-item"><a class="page-link" href="#" disabled>»</a></li>
-      </ul>
-    </div> -->
-
-    <!-- Modal -->
+           
+            <!-- <div class="input-group input-group-sm" style="width: 500px;">
+              <input type="date" name="table_search" class="form-control float-right" #startDate>
+  
+              <input type="date" name="table_search" class="form-control float-right" #lastDate>
+  
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-default"><i class="fas fa-search"
+                    (click)="onSearch(startDate,lastDate)">Search</i></button>
+  
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <!-- /.card-header -->
+  
+  
+        <div class="card-body table-responsive p-0" style="height: 900px;">
+          <table class="table table-head-fixed text-nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>RoleName</th>                
+                <th>Document Url</th>
+                <th>Join Date</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let emp of vemployee | filter:searchText">
+              <tr>
+                <td>{{emp.firstName +" "+ emp.lastName}}</td>
+                <td>{{emp.roleName}}</td>
+                <td>{{emp.documentUrl}}</td>
+                <td>{{emp.joinDate}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.mobileNumber}}</td>
+                <td>{{emp.salary}}</td>
+                <td><button type="button" class="btn btn-default btn-sm"
+                   [routerLink]="[emp.employeeId]">Edit</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal"
+                    (click)="Delete(emp.employeeId,emp.userId)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -80,5 +83,11 @@
             </div>
           </div>
         </div>
+  
+  
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
   </div>
-  </div>
+  <!-- /.row -->

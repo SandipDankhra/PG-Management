@@ -7,7 +7,7 @@ import { User } from '@app/models';
 import { AbstractRegistration } from '../domain/abstract-registration';
 import { RxHttp, http } from '@rxweb/http';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService, ToastrModule } from 'ngx-toastr';
 
 @Component({
     selector: "app-registration-add",
@@ -31,15 +31,33 @@ export class RegistrationAddComponent extends AbstractRegistration implements On
     }
 
     registerUser() {
-        this.post({ body: this.registration }).subscribe(t => {
-            this.result = t
-            this.showSuccess();
-            // console.log(t);
-            // this.router.navigate(['client-index']);
-        })
-        // this.registrationFormGroup.reset();
-        // this.registrationFormGroup.controls.confirmPassword.reset();
-    }
+
+       
+      
+            this.get({ queryParams: this.registration }).subscribe(t => {
+                // this.showSuccess();
+                if(this.registration.email==t)
+                {
+                    ToastrModule.forRoot({
+                        positionClass: 'toast-top-center', timeOut: 10000
+                      })
+                    this.toastr.warning('User '+ this.registration.email+' Already Exist');
+                }
+                else{
+                    
+                    this.showSuccess();
+
+                    this.router.navigateByUrl('/clientlogin');
+                }
+                // console.log(t);
+                // this.router.navigate(['client-index']);
+            })
+            // this.registrationFormGroup.reset();
+            // this.registrationFormGroup.controls.confirmPassword.reset();
+    
+        
+
+}
 
     showSuccess() {
         this.toastr.success('Registration Successfully  !!!!');

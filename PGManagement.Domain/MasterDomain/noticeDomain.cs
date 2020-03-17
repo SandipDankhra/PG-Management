@@ -15,15 +15,15 @@ namespace PGManagement.Domain.MasterModule
 
         public async Task<object> GetAsync(vNotice parameters)
         {
-            DateTimeOffset dateTimeOffset = DateTimeOffset.Now;
-            vNotice notice = await this.Uow.Repository<vNotice>().SingleOrDefaultAsync(t => t.NoticeId==19);
-            string date = notice.CreatedDate.Value.Date.ToString();
-            return await this.Uow.Repository<vNotice>().FindByAsync(t => t.CreatedDate.Value.Date.ToString().Equals(dateTimeOffset.Date.ToString()));
+            return await this.Uow.Repository<vNotice>().AllAsync();
         }
 
-        public Task<object> GetBy(vNotice parameters)
+        public async Task<object> GetBy(vNotice parameters)
         {
-            throw new NotImplementedException();
+            DateTimeOffset dateTimeOffset = DateTimeOffset.Now;
+            vNotice notice = await this.Uow.Repository<vNotice>().SingleOrDefaultAsync(t => t.NoticeId == 19);
+            string date = notice.CreatedDate.Value.Date.ToString();
+            return await this.Uow.Repository<vNotice>().FindByAsync(t => t.CreatedDate.Value.Date.ToString().Equals(dateTimeOffset.Date.ToString()));
         }
         
 
@@ -54,9 +54,11 @@ namespace PGManagement.Domain.MasterModule
             return ValidationMessages;
         }
 
-        public Task DeleteAsync(vNotice parameters)
+        public async Task DeleteAsync(vNotice parameters)
         {
-            throw new NotImplementedException();
+            Notice notice = await this.Uow.Repository<Notice>().SingleOrDefaultAsync(t => t.NoticeId == parameters.NoticeId);
+            await Uow.RegisterDeletedAsync<Notice>(notice);
+            await Uow.CommitAsync();
         }
 
         public IMasterUow Uow { get; set; }

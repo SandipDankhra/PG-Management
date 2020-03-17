@@ -51,4 +51,10 @@ export class vRolePermissionBase {
         applicationModuleName : string;
 //#endregion applicationModuleName Prop
 
+
+//#region rolePermissionId Prop
+        @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'rolePermissionId', keyColumn: true})
+        rolePermissionId : number;
+//#endregion rolePermissionId Prop
+
 }

@@ -40,6 +40,9 @@ namespace PGManagement.Models.Main
         public string ApplicationModuleName { get; set; }
 
 
+        public int RolePermissionId { get; set; }
+
+
         public vRolePermission()
         {
         }

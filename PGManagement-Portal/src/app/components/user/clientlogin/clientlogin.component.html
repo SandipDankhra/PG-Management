@@ -12,10 +12,10 @@
             <form role="form" class="php-email-form" [formGroup]="loginFormGroup">
                 <div class="form-row">
                     <div class="col-lg-2 form-group">
-                        <label for="mobileNumber">Mobile Number : </label>
+                        <label for="mobileNumber">Email : </label>
                     </div>
                     <div class="col-lg-10 form-group">
-                        <input type="text" class="form-control" placeholder="Enter Mobile Number"
+                        <input type="text" class="form-control" placeholder="Email"
                             formControlName="email" />
                         <small class="form-text text-danger" *ngIf="loginFormGroup.controls.email.errors">
                             {{loginFormGroup.controls.email.errorMessage}}<br /></small>
@@ -40,7 +40,7 @@
 
                     </div>
                     <div class="col-lg-10 form-group">
-                        <button type="submit" (click)="loginUser()">Submit</button>
+                        <button type="submit" [disabled]="!loginFormGroup.valid" (click)="loginUser()">Submit</button>
                         <p style="margin-top: 1.5rem;">
                             <a href="#" [routerLink]="['/registration']">Don't have an
                                 account? Register Here</a>

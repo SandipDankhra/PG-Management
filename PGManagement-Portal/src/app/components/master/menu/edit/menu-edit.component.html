@@ -11,6 +11,9 @@
                     <div class="form-group">
                         <label>Day</label>
                         <input type="text" class="form-control" placeholder="Day" formControlName="day">
+                        <small class="form-text text-danger"
+                            *ngIf="menuFormGroup.controls.day.errors">{{menuFormGroup.controls.day.errorMessage}}<br /></small>
+                        
                     </div>
                 </div>
 
@@ -22,6 +25,8 @@
                         <label>BreakFast</label>
                         <textarea class="form-control" rows="3" placeholder="BreakFast"
                             formControlName="breakFast"></textarea>
+                            <small class="form-text text-danger"
+                            *ngIf="menuFormGroup.controls.breakFast.errors">{{menuFormGroup.controls.breakFast.errorMessage}}<br /></small>
                     </div>
                 </div>
             </div>
@@ -31,6 +36,8 @@
                     <div class="form-group">
                         <label>Lunch</label>
                         <textarea class="form-control" rows="3" placeholder="Lunch" formControlName="lunch"></textarea>
+                        <small class="form-text text-danger"
+                            *ngIf="menuFormGroup.controls.lunch.errors">{{menuFormGroup.controls.lunch.errorMessage}}<br /></small>
                     </div>
                 </div>
             </div>
@@ -41,11 +48,13 @@
                         <label>Dinner</label>
                         <textarea class="form-control" rows="3" placeholder="Dinner"
                             formControlName="dinner"></textarea>
+                            <small class="form-text text-danger"
+                            *ngIf="menuFormGroup.controls.dinner.errors">{{menuFormGroup.controls.dinner.errorMessage}}<br /></small>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" (click)="onUpdate()" class="btn btn-primary">Update</button>
+                <button [disabled]="!menuFormGroup.valid" type="submit" (click)="onUpdate()" class="btn btn-primary">Update</button>
             </div>
         </form>
     </div>

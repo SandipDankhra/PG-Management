@@ -30,3 +30,11 @@ D:\Radix\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGMan
 D:\Radix\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
 D:\Radix\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
 D:\Radix\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.deps.json
+D:\Rx Project\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\Rx Project\project\PG-Management\PGManagement.Models\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.csprojAssemblyReference.cache
+D:\Rx Project\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfoInputs.cache
+D:\Rx Project\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.AssemblyInfo.cs
+D:\Rx Project\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\Rx Project\project\PG-Management\PGManagement.Models\obj\Debug\netcoreapp3.1\PGManagement.Models.pdb

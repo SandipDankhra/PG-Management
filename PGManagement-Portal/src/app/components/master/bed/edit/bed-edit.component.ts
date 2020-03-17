@@ -25,7 +25,7 @@ export class BedEditComponent extends AbstractBed implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        this.activatedRoute.queryParams.subscribe(params => {
+        this.activatedRoute.params.subscribe(params => {
             this.id = params['id'];              
         });
         console.log(this.id);

@@ -40,7 +40,6 @@ export class DocumentAddComponent extends AbstractDocument implements OnInit, On
         this.document.userId = 5;
         this.document.documentUrl = "hello";
         this.post({ body: this.document }).subscribe(t => {
-
             console.log(t);
             this.result = t;
         })

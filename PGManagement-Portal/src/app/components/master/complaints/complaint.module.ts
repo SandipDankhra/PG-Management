@@ -11,6 +11,7 @@ import { ComplaintListComponent } from './list/complaint-list.component'
 import { ComplaintEditComponent } from './edit/complaint-edit.component';
 import { ComplaintAddComponent } from './add/complaint-add.component';
 import { ComplaintSharedModule } from './complaint-shared.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 @NgModule({
     imports: [

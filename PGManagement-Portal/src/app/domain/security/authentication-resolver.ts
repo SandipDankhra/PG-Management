@@ -13,7 +13,7 @@ export class AuthResolver extends CoreComponent implements IAuthResolver {
     }
     resolveAuth(): Promise<{ [key: string]: any; }> | { [key: string]: any; } {
         var promise = new Promise<{ [key: string]: any; }>((resolve, reject) => {
-            var auth = this.storageData.local.get('auth',false);
+            var auth = this.storageData.local.get('auth', false);
             if (auth) {
                 this.http.get({ path: 'api/Authorize/access' }).subscribe(t => {
                     resolve(t);

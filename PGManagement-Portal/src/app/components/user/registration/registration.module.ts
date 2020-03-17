@@ -6,8 +6,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators";
 
 import { ROUTING } from './registration.routing'
-
-
 import { RegistrationEditComponent } from './edit/registration-edit.component';
 import { RegistrationAddComponent } from './add/registration-add.component';
 import { RegistrationSharedModule } from './registration-shared.module';

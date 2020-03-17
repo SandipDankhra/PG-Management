@@ -25,7 +25,7 @@ export class NoticeAddComponent extends AbstractNotice implements OnInit, OnDest
         this.noticeFormGroup = this.formBuilder.formGroup(this.notice) as IFormGroup<Notice>;
     }
     submit() {
-        this.post({ body: { noticeDescription: this.noticeFormGroup.controls.noticeDescription.value, createdBy: 5 } }).subscribe(t => {
+        this.post({ body: { noticeDescription: this.noticeFormGroup.controls.noticeDescription.value } }).subscribe(t => {
             console.log(t);
             this.router.navigateByUrl('/notices');
         });

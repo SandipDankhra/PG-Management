@@ -74,11 +74,11 @@ export class LoginComponent extends CoreComponent implements OnInit {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
                 this.browserStorage.local.save('auth', response,false);
-                // this.browserStorage.local.save('x-request', response.key);
-                // this.browserStorage.local.save('userName', response.fullName);
-                // this.browserStorage.local.save('userEmail', response.emailId);
-                // this.browserStorage.local.save('lcode', response.languageCode);
-                // this.browserStorage.local.save('userId', response.userId);
+                this.browserStorage.local.save('x-request', response.key);
+                this.browserStorage.local.save('userName', response.fullName);
+                this.browserStorage.local.save('userEmail', response.emailId);
+                this.browserStorage.local.save('lcode', response.languageCode);
+                this.browserStorage.local.save('userId', response.userId);
                 this.router.navigate(["dashboard"]);
                 location.reload();
             }

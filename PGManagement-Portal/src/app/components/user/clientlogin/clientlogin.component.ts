@@ -24,8 +24,8 @@ import { login } from '@app/custom-models';
     templateUrl: './clientlogin.component.html',
 })
 export class LoginComponent extends CoreComponent implements OnInit {
-    loginFormGroup:IFormGroup<login>;
-    logi:login;
+    loginFormGroup: IFormGroup<login>;
+    logi: login;
 
 
     constructor(private formBuilder: RxFormBuilder, private http: RxHttp, private router: Router, private loginService: LoginService,
@@ -34,14 +34,14 @@ export class LoginComponent extends CoreComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        console.log("clientlogin");
         this.logi = new login();
         this.loginFormGroup = this.formBuilder.formGroup(this.logi) as IFormGroup<login>;
-        var auth = this.browserStorage.local.get('auth',false);
+        var auth = this.browserStorage.local.get('auth', false);
         if (!auth) {
-
             this.router.navigate(["/clientlogin"]);
         }
-        
+
     }
 
 
@@ -51,26 +51,21 @@ export class LoginComponent extends CoreComponent implements OnInit {
         //     console.log(t);
         // })
         // debugger;
-        this.loginService.login(this.loginFormGroup.value).subscribe(response => {
-             
-            if (response.failedLogin) {
-                alert('Invalid Email and password');
-            }
-            else {
-                // this.showComponent = false;
-                document.cookie = "requestContext='abc'";
-                this.browserStorage.local.save('auth', response,false);
-                this.browserStorage.local.save('x-request', response.key);
-                this.browserStorage.local.save('userName', response.fullName);
-                this.browserStorage.local.save('userEmail', response.emailId);
-                this.browserStorage.local.save('lcode', response.languageCode);
-                this.browserStorage.local.save('userId', response.userId);
-                console.log(response.validationMessage)
-            }
-            // this.spin = false;
-            // this.routers.navigate(["/users"]);
-            this.router.navigate(["/client-index"]);
-        })
+        this.loginService.login(this.loginFormGroup.value).subscribe((response) => {
+            document.cookie = "requestContext='abc'";
+            this.browserStorage.local.save('auth', response);
+            // this.browserStorage.local.save('x-request', response.key);
+            // this.browserStorage.local.save('userName', response.fullName);
+            // this.browserStorage.local.save('userEmail', response.emailId);
+            // this.browserStorage.local.save('lcode', response.languageCode);
+            // this.browserStorage.local.save('userId', response.userId);
+            this.router.navigate(["dashboard"]);
+            location.reload();
+        },
+            // The 2nd callback handles errors.
+            (err) => { alert("Invalid Email and Password!!!"); },
+            // The 3rd callback handles the "complete" event.
+            () => console.log("observable complete"))
 
     }
 }

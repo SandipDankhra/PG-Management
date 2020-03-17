@@ -21,7 +21,7 @@
           <th>Bed Price</th>
           
           
-          <!-- <th style="width: 10px">Update</th> -->
+          <th style="width: 10px">Update</th>
           <!-- <th style="width: 130px">Add Bed</th> -->
         </tr>
       </thead>
@@ -34,8 +34,8 @@
           <td>{{bt.bedStatus}}</td>
           <td>{{bt.bedPrice}}</td>
           
-          <!-- <td><button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" 
-            (click)="editBed()">Update</button></td> -->
+          <td><button class="card-title" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" 
+            [routerLink]="[bt.bedId]">Update</button></td>
           <!-- <td><button class="card-title" type="button" class="btn btn-secondary btn-sm"  data-toggle="modal" 
               >Add Room</button></td>   -->
 

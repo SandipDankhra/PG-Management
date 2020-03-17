@@ -27,8 +27,7 @@ namespace PGManagement.Models.Main
 
 		#region BedId Annotations
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
+
 		#endregion BedId Annotations
 
         public int BedId { get; set; }
@@ -63,7 +62,8 @@ namespace PGManagement.Models.Main
 
         public int RentalId { get; set; }
 
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.DataAnnotations.Key]
         public int UserId { get; set; }
 
 

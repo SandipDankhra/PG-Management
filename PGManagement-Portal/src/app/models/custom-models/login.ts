@@ -4,7 +4,7 @@ export class login {
 
     //#region userId Prop
     @required()
-    @email()
+    // @email()
     email:string ;
     //#endregion userId Prop
     @required()

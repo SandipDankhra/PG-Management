@@ -23,7 +23,7 @@ export class vBookBedBase {
 
 
 //#region flatNumber Prop
-        @gridColumn({visible: true, columnIndex:3, allowSorting: true, headerKey: 'flatNumber', keyColumn: false})
+          @gridColumn({visible: true, columnIndex:3, allowSorting: true, headerKey: 'flatNumber', keyColumn: false})
         flatNumber : string;
 //#endregion flatNumber Prop
 
