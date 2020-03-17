@@ -30,12 +30,7 @@
       "isOpen": true,
       "isActive": true
     },
-    {
-      "title": "change-password",
-      "uri": "change-password",
-      "isOpen": true,
-      "isActive": true
-    },
+    
     {
       "title": "complaints",
       "uri": "complaints",
@@ -98,14 +93,8 @@
       "title": "menu",
       "uri": "menu",
       "isOpen": true,
-      "isActive": true,
-      "childrens": [
-        {
-          "title": "Add",
-          "uri": "menu/add",
-          "isActive": true
-        }
-      ]
+      "isActive": true
+     
     },
     {
       "title": "notices",
@@ -124,14 +113,7 @@
       "title": "rental",
       "uri": "rental",
       "isOpen": true,
-      "isActive": true,
-      "childrens": [
-        {
-          "title": "Add",
-          "uri": "rental/add",
-          "isActive": true
-        }
-      ]
+      "isActive": true
     },
     {
       "title": "requester",
@@ -195,28 +177,10 @@
       "title": "bed",
       "uri": "bed",
       "isOpen": true,
-      "isActive": true,
-      "childrens": [
-        {
-          "title": "Add",
-          "uri": "bed/add",
-          "isActive": true
-        }
-      ]
+      "isActive": true
+      
     },
-    {
-      "title": "create-book-bed",
-      "uri": "create-book-bed",
-      "isOpen": true,
-      "isActive": true,
-      "childrens": [
-        {
-          "title": "Add",
-          "uri": "create-book-bed/add",
-          "isActive": true
-        }
-      ]
-    },
+
     {
       "title": "flat",
       "uri": "flat",
@@ -234,14 +198,8 @@
       "title": "room",
       "uri": "room",
       "isOpen": true,
-      "isActive": true,
-      "childrens": [
-        {
-          "title": "Add",
-          "uri": "room/add",
-          "isActive": true
-        }
-      ]
+      "isActive": true
+      
     }
   ]
 }

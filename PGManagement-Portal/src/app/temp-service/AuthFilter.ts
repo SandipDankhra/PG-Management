@@ -12,10 +12,13 @@ export class AuthFilter extends AbstractRequestFilter implements ResponseFilter 
 
   onRequest = (context: XhrContext) => {
     if (this.byPassApiList.indexOf(context.request.path) != 0) {
-      let Authorization = this.browserStorage.local.get("auth");
-      let xRequest = this.browserStorage.local.get("x-request");
+      
+      let Authorization = this.browserStorage.local.get("auth",false);
+      // let xRequest = this.browserStorage.local.get("x-request");
+      if(Authorization){
       context.request.headers["Authorization"] = Authorization;
-      context.request.headers["x-request"] = xRequest;
+      }
+      // context.request.headers["x-request"] = xRequest;
     }
     this.onRequestExecuting(context);
   }

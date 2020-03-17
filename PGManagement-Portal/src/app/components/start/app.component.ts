@@ -24,7 +24,7 @@ export class AppComponent extends RxHttp implements OnInit {
 
   ngOnInit(): void {
 
-    this.isShowSidebar = this.browserStorage.local.get("showMenu");
+    this.isShowSidebar = this.browserStorage.local.get("showMenu",false);
     console.log("sidebar " + this.isShowSidebar);
     this.http.get('assets/sidebar.json').subscribe((response: any) => {
 
@@ -60,10 +60,10 @@ export class AppComponent extends RxHttp implements OnInit {
       }
     })
     console.log("before auth");
-    var auth = this.browserStorage.local.get("auth");
+    var auth = this.browserStorage.local.get("auth",false);
     console.log("hey:" + auth);
     if (auth) {
-      this.router.navigate(["/dashboard"])
+      // this.router.navigate(["/dashboard"])
       this.isShowDashboard = true;
     }
     else {

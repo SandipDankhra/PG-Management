@@ -36,7 +36,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
     ngOnInit(): void {
         this.logi = new login();
         this.loginFormGroup = this.formBuilder.formGroup(this.logi) as IFormGroup<login>;
-        var auth = this.browserStorage.local.get('auth');
+        var auth = this.browserStorage.local.get('auth',false);
         if (!auth) {
 
             this.router.navigate(["/clientlogin"]);
