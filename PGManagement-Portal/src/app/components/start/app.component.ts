@@ -60,10 +60,10 @@ export class AppComponent extends RxHttp implements OnInit {
       }
     })
     console.log("before auth");
-    var auth = this.browserStorage.local.get("auth");
+    var auth = this.browserStorage.local.get("auth",false);
     console.log("hey:" + auth);
     if (auth) {
-      this.router.navigate(["/dashboard"])
+      // this.router.navigate(["/dashboard"])
       this.isShowDashboard = true;
     }
     else {

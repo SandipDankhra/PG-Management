@@ -51,6 +51,9 @@ namespace PGManagement.Models.Main
 
         public int UserId { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region User Annotations
 
         [ForeignKey(nameof(UserId))]

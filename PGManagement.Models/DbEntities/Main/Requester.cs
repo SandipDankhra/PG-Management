@@ -37,6 +37,9 @@ namespace PGManagement.Models.Main
 
         public int BedId { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region Bed Annotations
 
         [ForeignKey(nameof(BedId))]

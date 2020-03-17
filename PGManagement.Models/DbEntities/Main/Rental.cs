@@ -47,6 +47,9 @@ namespace PGManagement.Models.Main
 
         public Nullable<bool> IsVerfied { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region User Annotations
 
         [ForeignKey(nameof(UserId))]

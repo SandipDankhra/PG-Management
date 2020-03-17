@@ -52,6 +52,9 @@ namespace PGManagement.Models.Main
 
         public string RoomSharing { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region Flat Annotations
 
         [ForeignKey(nameof(FlatId))]
@@ -60,17 +63,9 @@ namespace PGManagement.Models.Main
 
         public virtual Flat Flat { get; set; }
 
-		#region Beds Annotations
-
-        [InverseProperty("Room")]
-		#endregion Beds Annotations
-
-        public virtual ICollection<Bed> Beds { get; set; }
-
 
         public Room()
         {
-			Beds = new HashSet<Bed>();
         }
 	}
 }

@@ -6,9 +6,6 @@ import { AbstractExpense } from '../domain/abstract-expense';
 import { Subscription } from 'rxjs';
 // import {Router} from "@angular/router"
 import { vExpense } from "@app/models";
-import { anonymous } from '@rxweb/angular-router';
-
-
 @Component({
     selector: "app-expense-list",
     templateUrl: './expense-list.component.html'
@@ -39,7 +36,7 @@ export class ExpenseListComponent extends AbstractExpense implements OnInit, OnD
     }
 
     onConfirm() {
-        this.delete({ params: [this.id], body: {} }).subscribe(res => {
+        this.delete({path:"api/Expense", params: [this.id], body: {} }).subscribe(res => {
             this.result = res;
         })
         location.reload();

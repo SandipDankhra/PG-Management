@@ -148,7 +148,7 @@ namespace PGManagement.Domain.MasterModule
 
         public HashSet<string> AddValidation(EmployeeCreate entity)
         {
-            throw new NotImplementedException();
+            return ValidationMessages;
         }
 
         public HashSet<string> UpdateValidation(EmployeeCreate entity)

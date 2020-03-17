@@ -5,7 +5,6 @@ import { RxFormBuilder, IFormGroup, RxwebValidators } from '@rxweb/reactive-form
 
 import { Expens } from '@app/models';
 import { AbstractExpense } from '../domain/abstract-expense';
-import { anonymous } from '@rxweb/angular-router';
 
 
 
@@ -37,9 +36,9 @@ export class ExpenseAddComponent extends AbstractExpense implements OnInit, OnDe
         this.expenseFormGroup.submitted=true;
     }
 
-    // onReset() {
-    //     this.expenseFormGroup.reset();
-    // }
+    onReset() {
+        this.expenseFormGroup.reset();
+    } 
 
     ngOnDestroy(): void {
         if (this.subscription)

@@ -4,10 +4,16 @@ import { gridColumn } from "@rxweb/grid"
 
 export class vRolePermissionBase {
 
-//#region rolePermissionId Prop
-        @gridColumn({visible: true, columnIndex:0, allowSorting: true, headerKey: 'rolePermissionId', keyColumn: true})
-        rolePermissionId : number;
-//#endregion rolePermissionId Prop
+//#region roleId Prop
+        @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'roleId', keyColumn: false})
+        roleId : number;
+//#endregion roleId Prop
+
+
+//#region applicationModuleId Prop
+        @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'applicationModuleId', keyColumn: false})
+        applicationModuleId : number;
+//#endregion applicationModuleId Prop
 
 
 //#region canView Prop
@@ -40,21 +46,9 @@ export class vRolePermissionBase {
 //#endregion permissionPriority Prop
 
 
-//#region applicationModuleId Prop
-        @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'applicationModuleId', keyColumn: false})
-        applicationModuleId : number;
-//#endregion applicationModuleId Prop
-
-
 //#region applicationModuleName Prop
         @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'applicationModuleName', keyColumn: false})
         applicationModuleName : string;
 //#endregion applicationModuleName Prop
-
-
-//#region roleId Prop
-        @gridColumn({visible: true, columnIndex:7, allowSorting: true, headerKey: 'roleId', keyColumn: false})
-        roleId : number;
-//#endregion roleId Prop
 
 }

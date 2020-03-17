@@ -22,10 +22,10 @@ export class vExpenseBase {
 //#endregion lastName Prop
 
 
-//#region expenseAmount Prop
-        @gridColumn({visible: true, columnIndex:3, allowSorting: true, headerKey: 'expenseAmount', keyColumn: false})
-        expenseAmount : number;
-//#endregion expenseAmount Prop
+//#region mobileNumber Prop
+        @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
+        mobileNumber : number;
+//#endregion mobileNumber Prop
 
 
 //#region expenseType Prop
@@ -34,16 +34,16 @@ export class vExpenseBase {
 //#endregion expenseType Prop
 
 
+//#region expenseAmount Prop
+        @gridColumn({visible: true, columnIndex:3, allowSorting: true, headerKey: 'expenseAmount', keyColumn: false})
+        expenseAmount : number;
+//#endregion expenseAmount Prop
+
+
 //#region expenseDetails Prop
         @gridColumn({visible: true, columnIndex:5, allowSorting: true, headerKey: 'expenseDetails', keyColumn: false})
         expenseDetails : string;
 //#endregion expenseDetails Prop
-
-
-//#region mobileNumber Prop
-        @gridColumn({visible: true, columnIndex:6, allowSorting: true, headerKey: 'mobileNumber', keyColumn: false})
-        mobileNumber : number;
-//#endregion mobileNumber Prop
 
 
 //#region expenseDate Prop

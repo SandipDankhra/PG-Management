@@ -1,5 +1,5 @@
 import { prop, propObject, propArray, required, maxLength, range, email, alpha, numeric, password, NumericValueType, minLength, mask, pattern } from "@rxweb/reactive-form-validators"
-import { RestrictInputDirective } from 'src/app/domain/custom-directives/restrict-input';
+
 export class CreateEmployee {
 
     @required()
@@ -17,6 +17,7 @@ export class CreateEmployee {
     salary:number;
 
     @required()
+    // @mask({mask:"99/99/9999"})
     joinDate:Date;
 
    @required()
@@ -25,7 +26,7 @@ export class CreateEmployee {
 
     @required()
     @numeric({acceptValue:NumericValueType.PositiveNumber  ,allowDecimal:false })
-    @mask({mask:'(999)-999 9999' })
+    @mask({mask:'(999)-999 9999'})
     mobileNumber:number;
 
     @required()

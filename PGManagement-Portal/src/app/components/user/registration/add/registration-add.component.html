@@ -48,8 +48,7 @@
                         <input type="password" class="form-control" placeholder="Password"
                             formControlName="userPassword" />
                         <!-- <div class="validate"></div> -->
-                        <small class="form-text text-danger" *ngIf="registrationFormGroup.controls.userPassword.errors">
-                            {{registrationFormGroup.controls.userPassword.errorMessage}}<br /></small>
+                        <small class="form-text text-danger" *ngIf="registrationFormGroup.controls.userPassword.errors">{{registrationFormGroup.controls.userPassword.errorMessage}}<br /></small>
                     </div>
                     <!-- <div class="col-lg-6 form-group">
                         <input type="password" class="form-control" placeholder="Confirm Password" data-rule="minlen:6"

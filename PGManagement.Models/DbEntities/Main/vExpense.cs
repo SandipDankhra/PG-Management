@@ -25,16 +25,16 @@ namespace PGManagement.Models.Main
         public string LastName { get; set; }
 
 
-        public int ExpenseAmount { get; set; }
+        public decimal MobileNumber { get; set; }
 
 
         public string ExpenseType { get; set; }
 
 
+        public int ExpenseAmount { get; set; }
+
+
         public string ExpenseDetails { get; set; }
-
-
-        public decimal MobileNumber { get; set; }
 
 
         public System.DateTime ExpenseDate { get; set; }

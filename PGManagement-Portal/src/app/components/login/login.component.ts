@@ -39,7 +39,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
     ngOnInit(): void {
         console.log("hello");
         this.applicationBroadcaster.activeMenu(true);
-        var auth = this.browserStorage.local.get('auth');
+        var auth = this.browserStorage.local.get('auth',false);
         if (auth) {
             this.router.navigate(["/complaints"]);
         }
@@ -73,12 +73,12 @@ export class LoginComponent extends CoreComponent implements OnInit {
             else {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
-                this.browserStorage.local.save('auth', response);
-                this.browserStorage.local.save('x-request', response.key);
-                this.browserStorage.local.save('userName', response.fullName);
-                this.browserStorage.local.save('userEmail', response.emailId);
-                this.browserStorage.local.save('lcode', response.languageCode);
-                this.browserStorage.local.save('userId', response.userId);
+                this.browserStorage.local.save('auth', response,false);
+                // this.browserStorage.local.save('x-request', response.key);
+                // this.browserStorage.local.save('userName', response.fullName);
+                // this.browserStorage.local.save('userEmail', response.emailId);
+                // this.browserStorage.local.save('lcode', response.languageCode);
+                // this.browserStorage.local.save('userId', response.userId);
                 this.router.navigate(["dashboard"]);
                 location.reload();
             }

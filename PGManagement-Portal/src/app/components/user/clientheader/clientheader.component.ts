@@ -28,7 +28,7 @@ export class clientheaderComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        var auth = this.browserStorage.local.get('auth');
+        var auth = this.browserStorage.local.get('auth',false);
         if (auth) {
             this.isLogin = false;
         }

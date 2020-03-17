@@ -18,8 +18,9 @@ namespace PGManagement.Models.ViewModels
         public int Salary { get; set; }
 
         [Required]
-        public System.DateTimeOffset JoinDate { get; set; }
+        public DateTime JoinDate { get; set; }
 
+       
         //[Required]
         //public string RoleName { get; set; }
 

@@ -23,7 +23,6 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("Rooms","dbo","","RoomId")]
 		#endregion RoomId Annotations
 
         public int RoomId { get; set; }
@@ -51,13 +50,8 @@ namespace PGManagement.Models.Main
 
         public int BedPrice { get; set; }
 
-		#region Room Annotations
 
-        [ForeignKey(nameof(RoomId))]
-        [InverseProperty(nameof(PGManagement.Models.Main.Room.Beds))]
-		#endregion Room Annotations
-
-        public virtual Room Room { get; set; }
+        public Nullable<bool> SoftDelete { get; set; }
 
 		#region Requesters Annotations
 
