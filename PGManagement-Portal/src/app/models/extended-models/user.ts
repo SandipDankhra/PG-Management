@@ -3,6 +3,7 @@ import {RentalBase} from '../database-models/rental-base';
 import {ApplicationUserTokenBase} from '../database-models/application-user-token-base';
 import {UserRoleBase} from '../database-models/user-role-base';
 import {AuthenticationBase} from '../database-models/authentication-base';
+import {ComplaintBase} from '../database-models/complaint-base';
 import {NoticeBase} from '../database-models/notice-base';
 import {EmployeeBase} from '../database-models/employee-base';
 import {ExpensBase} from '../database-models/expens-base';
@@ -26,6 +27,10 @@ userRoles : UserRoleBase[];
 //#region authentication Prop
 authentication : AuthenticationBase[];
 //#endregion authentication Prop
+
+//#region complaints Prop
+        complaints : ComplaintBase[];
+//#endregion complaints Prop
 //#region notice Prop
 notice : NoticeBase[];
 //#endregion notice Prop
@@ -43,6 +48,7 @@ requesters : RequesterBase[];
 //#endregion requesters Prop
 
 //#endregion Generated Reference Properties
+
 
 
 

@@ -11,6 +11,8 @@
                     <div class="form-group">
                         <label>Title</label>
                         <input type="text" class="form-control" placeholder="Title" formControlName="complaintName">
+                        <small class="form-text text-danger"
+            *ngIf="complaintFormGroup.controls.complaintName.errors">{{complaintFormGroup.controls.complaintName.errorMessage}}<br /></small>
                     </div>
                 </div>
 
@@ -22,12 +24,14 @@
                         <label>Description</label>
                         <textarea class="form-control" rows="3" placeholder="Description"
                             formControlName="complaintDescription"></textarea>
+                            <small class="form-text text-danger"
+            *ngIf="complaintFormGroup.controls.complaintDescription.errors">{{complaintFormGroup.controls.complaintDescription.errorMessage}}<br /></small>
                     </div>
                 </div>
             </div>
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+                <button [disabled]="!complaintFormGroup.valid" type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
             </div>
         </form>
     </div>

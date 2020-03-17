@@ -39,6 +39,10 @@ export class RoomBase {
 //#endregion roomSharing Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
 
 
 

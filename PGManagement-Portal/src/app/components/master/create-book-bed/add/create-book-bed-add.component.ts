@@ -119,7 +119,8 @@ export class CreateBookBedAddComponent extends AbstractCreateBookBed implements 
     }
     onSuccess(){
         this.toast.success("Book Bed created successfully");
-        this.router.navigate(['bed/edit'],{queryParams:{id:this.bedid}});
+        // this.router.navigate(['bed/edit'],{queryParams:{id:this.bedid}});
+        this.router.navigateByUrl('/requester');
     }
    
 

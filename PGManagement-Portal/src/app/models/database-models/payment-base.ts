@@ -24,5 +24,11 @@ export class PaymentBase {
 //#endregion paymentAmount Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
+
+
 
 }

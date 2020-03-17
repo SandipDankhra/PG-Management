@@ -22,7 +22,7 @@ export class ClientIndexComponent extends AbstractReview implements OnInit {
         super();
     }
     ngOnInit(): void {
-        var auth = this.browserStorage.local.get('auth',false);
+        var auth = this.browserStorage.local.get('auth', false);
         if (auth) {
             this.isLogin = false;
         }

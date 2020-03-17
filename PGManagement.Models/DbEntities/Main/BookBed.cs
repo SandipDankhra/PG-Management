@@ -63,6 +63,9 @@ namespace PGManagement.Models.Main
 
         public System.DateTime EndDate { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region Bed Annotations
 
         [ForeignKey(nameof(BedId))]

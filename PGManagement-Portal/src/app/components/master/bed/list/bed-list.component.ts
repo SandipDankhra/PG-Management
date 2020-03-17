@@ -34,8 +34,7 @@ export class BedListComponent extends AbstractBed implements OnInit, OnDestroy {
         this.router.navigateByUrl('');
     }
 
-    
-
+   
  
 
 }

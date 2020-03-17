@@ -2151,7 +2151,10 @@
         },
         "runtime": {
           "bin/placeholder/PGManagement.Infrastructure.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "PGManagement.Models/1.0.0": {
         "type": "project",
@@ -7219,11 +7222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
+      "projectUniqueName": "D:\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
       "projectName": "PGManagement.Api",
-      "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
+      "projectPath": "D:\\project\\PG-Management\\PGManagement.Api\\PGManagement.Api.csproj",
       "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-      "outputPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Api\\obj\\",
+      "outputPath": "D:\\project\\PG-Management\\PGManagement.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7239,20 +7242,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
-              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
+            "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.BoundedContext\\PGManagement.BoundedContext.csproj"
             },
-            "D:\\Rx Project\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj": {
-              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj"
+            "D:\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.Domain\\PGManagement.Domain.csproj"
             },
-            "D:\\Rx Project\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
-              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj"
+            "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.Infrastructure\\PGManagement.Infrastructure.csproj"
             },
-            "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
-              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
+            "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.Models\\PGManagement.Models.csproj"
             },
-            "D:\\Rx Project\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
-              "projectPath": "D:\\Rx Project\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
+            "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj": {
+              "projectPath": "D:\\project\\PG-Management\\PGManagement.UnitOfWork\\PGManagement.UnitOfWork.csproj"
             }
           }
         }
@@ -7309,7 +7312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

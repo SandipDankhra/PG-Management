@@ -49,6 +49,12 @@ export class BookBedBase {
 //#endregion endDate Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
+
+
 
 
 

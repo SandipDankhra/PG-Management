@@ -65,7 +65,6 @@ namespace PGManagement.Models.Main
 
 		#region Password Annotations
 
-     //   [Required]
         [MaxLength(132)]
 		#endregion Password Annotations
 
@@ -73,7 +72,6 @@ namespace PGManagement.Models.Main
 
 		#region Salt Annotations
 
-        //[Required]
         [MaxLength(140)]
 		#endregion Salt Annotations
 
@@ -84,6 +82,9 @@ namespace PGManagement.Models.Main
 
 
         public Status StatusId { get; set; }
+
+
+        public Nullable<bool> SoftDelete { get; set; }
 
 		#region Rentals Annotations
 
@@ -112,6 +113,13 @@ namespace PGManagement.Models.Main
 		#endregion Authentication Annotations
 
         public virtual ICollection<Authentication> Authentication { get; set; }
+
+		#region Complaints Annotations
+
+        [InverseProperty("User")]
+		#endregion Complaints Annotations
+
+        public virtual ICollection<Complaint> Complaints { get; set; }
 
 		#region Notice Annotations
 
@@ -155,6 +163,7 @@ namespace PGManagement.Models.Main
 			ApplicationUserTokens = new HashSet<ApplicationUserToken>();
 			UserRoles = new HashSet<UserRole>();
 			Authentication = new HashSet<Authentication>();
+			Complaints = new HashSet<Complaint>();
 			Notice = new HashSet<Notice>();
 			Employees = new HashSet<Employee>();
 			Expenses = new HashSet<Expens>();
