@@ -7,6 +7,6 @@ namespace PGManagement.Models.ViewModels
 {
     public class RolePermissions
     {
-        public string rolePermisions { get; set; }
+        public string rolePermissions { get; set; }
     }
 }

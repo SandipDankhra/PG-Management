@@ -64,9 +64,6 @@ namespace PGManagement.Models.Main
         public System.DateTime EndDate { get; set; }
 
 
-        public string ApplicationObjectName { get; set; }
-
-
         public decimal MobileNumber { get; set; }
 
 

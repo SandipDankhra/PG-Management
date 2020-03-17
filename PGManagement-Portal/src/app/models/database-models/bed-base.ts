@@ -39,6 +39,10 @@ export class BedBase {
 //#endregion bedPrice Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
 
 
 

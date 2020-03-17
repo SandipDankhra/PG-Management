@@ -43,5 +43,11 @@ export class ExpensBase {
 //#endregion employeeId Prop
 
 
+//#region softDelete Prop
+        @prop()
+        softDelete : boolean;
+//#endregion softDelete Prop
+
+
 
 }

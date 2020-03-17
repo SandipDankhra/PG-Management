@@ -50,6 +50,9 @@ namespace PGManagement.Models.Main
 
         public string locality { get; set; }
 
+
+        public Nullable<bool> SoftDelete { get; set; }
+
 		#region Rooms Annotations
 
         [InverseProperty("Flat")]

@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using RxWeb.Core.Sanitizers.Enums;
+
 namespace PGManagement.Models.Main
 {
     [Table("Complaints",Schema="dbo")]
@@ -38,8 +40,9 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
-        [RelationshipTableAttribue("Rentals","dbo","","RentalId")]
-		#endregion RentalId Annotations
+        [RelationshipTableAttribue("Users","dbo","","RentalId")]
+        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
+        #endregion RentalId Annotations
 
         public int RentalId { get; set; }
 
@@ -53,13 +56,13 @@ namespace PGManagement.Models.Main
 
         public Nullable<System.DateTime> CreatedDate { get; set; }
 
-		#region Rental Annotations
+		#region User Annotations
 
         [ForeignKey(nameof(RentalId))]
-        [InverseProperty(nameof(PGManagement.Models.Main.Rental.Complaints))]
-		#endregion Rental Annotations
+        [InverseProperty(nameof(PGManagement.Models.Main.User.Complaints))]
+		#endregion User Annotations
 
-        public virtual Rental Rental { get; set; }
+        public virtual User User { get; set; }
 
 
         public Complaint()

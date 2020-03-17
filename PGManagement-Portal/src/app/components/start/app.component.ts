@@ -24,7 +24,7 @@ export class AppComponent extends RxHttp implements OnInit {
 
   ngOnInit(): void {
 
-    this.isShowSidebar = this.browserStorage.local.get("showMenu",false);
+    this.isShowSidebar = this.browserStorage.local.get("showMenu");
     console.log("sidebar " + this.isShowSidebar);
     this.http.get('assets/sidebar.json').subscribe((response: any) => {
 
@@ -36,11 +36,13 @@ export class AppComponent extends RxHttp implements OnInit {
         name: 'server',
         default: false,
         uri: "https://localhost:44352"
+        // uri: "http://dotnettraining2020-api.live1.dev.radixweb.net/PGManagementSystem"
       },
       {
         name: 'local',
         default: true,
-        uri: "http://localhost:4200"// 'https://localhost:44376' 
+        uri: "http://localhost:4200"
+        // uri: "https://localhost:44319"// 'https://localhost:44376' 
       }],
       filters: [{ model: AuthFilter }],
       onError: (response: HttpResponse) => {
@@ -60,7 +62,7 @@ export class AppComponent extends RxHttp implements OnInit {
       }
     })
     console.log("before auth");
-    var auth = this.browserStorage.local.get("auth",false);
+    var auth = this.browserStorage.local.get("auth", false);
     console.log("hey:" + auth);
     if (auth) {
       // this.router.navigate(["/dashboard"])
@@ -68,7 +70,9 @@ export class AppComponent extends RxHttp implements OnInit {
     }
     else {
       this.browserStorage.local.clearAll();
-      console.log("Login");
+      // this.http.get<any>({ path: "api/Authentication", hostUri: 'https://localhost:44352' }).subscribe(t => {
+      //   this.browserStorage.local.save("auth", t, false);
+      // })
       // this.router.navigate(["/login"]);
       this.isShowDashboard = false;
     }
@@ -109,6 +113,7 @@ export class AppComponent extends RxHttp implements OnInit {
     }
   }
   logout() {
+    this.http.post({ body: {}, path: 'api/Authorize/logout', hostUri: 'http://localhost:44352' })
     this.browserStorage.local.clearAll();
   }
 

@@ -6,6 +6,8 @@ using RxWeb.Core.Data.Annotations;
 using RxWeb.Core.Sanitizers;
 using PGManagement.Models.Enums.Main;
 using PGManagement.BoundedContext.SqlContext;
+using RxWeb.Core.Sanitizers.Enums;
+
 namespace PGManagement.Models.Main
 {
     [Table("Employees",Schema="dbo")]
@@ -38,10 +40,14 @@ namespace PGManagement.Models.Main
 
         [Range(1,int.MaxValue)]
         [Required]
+        [OnAction("POST", ActionValueType.NameClaimIdentifier)]
         [RelationshipTableAttribue("Users","dbo","","UserId")]
 		#endregion UserId Annotations
 
         public int UserId { get; set; }
+
+
+        public Nullable<bool> SoftDelete { get; set; }
 
 		#region User Annotations
 

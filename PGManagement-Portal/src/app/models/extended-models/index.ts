@@ -1,3 +1,4 @@
+export {ApplicationModule} from './application-module';;
 export {User} from './user';;
 export {ApplicationLocale} from './application-locale';;
 export {ApplicationTimeZone} from './application-time-zone';;
@@ -26,7 +27,6 @@ export {Document} from './document';;
 export {Payment} from './payment';;
 export {Menu} from './menu';;
 export {Requester} from './requester';;
-export {ApplicationModule} from './application-module';;
 export {ReviewLookup} from './review-lookup';;
 export {vAvailableBed} from './v-available-bed';;
 export {vBed} from './v-bed';;

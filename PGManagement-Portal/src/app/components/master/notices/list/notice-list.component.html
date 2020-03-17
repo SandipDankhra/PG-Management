@@ -15,6 +15,7 @@
                     <th>Name</th>
                     <th>Notice Description</th>
                     <th>Date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,9 @@
                     <td>{{notice.firstName}} {{notice.lastName}}</td>
                     <td>{{notice.noticeDescription}}</td>
                     <td>{{notice.createdDate}}</td>
+                    <td>
+                        <a (click)="onDelete(notice.noticeId)"><i class="far fa-trash-alt"></i></a>
+                    </td>
                 </tr>
             </tbody>
         </table>

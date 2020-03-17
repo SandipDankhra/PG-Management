@@ -1,3 +1,4 @@
+export {ApplicationModuleBase} from './application-module-base';;
 export {UserBase} from './user-base';;
 export {ApplicationLocaleBase} from './application-locale-base';;
 export {ApplicationTimeZoneBase} from './application-time-zone-base';;
@@ -26,7 +27,6 @@ export {DocumentBase} from './document-base';;
 export {PaymentBase} from './payment-base';;
 export {MenuBase} from './menu-base';;
 export {RequesterBase} from './requester-base';;
-export {ApplicationModuleBase} from './application-module-base';;
 export {ReviewLookupBase} from './review-lookup-base';;
 export {vAvailableBedBase} from './v-available-bed-base';;
 export {vBedBase} from './v-bed-base';;

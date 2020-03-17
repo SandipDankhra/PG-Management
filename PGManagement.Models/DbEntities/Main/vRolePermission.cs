@@ -10,13 +10,16 @@ namespace PGManagement.Models.Main
     [Table("vRolePermissions",Schema="dbo")]
     public partial class vRolePermission
     {
-		#region RolePermissionId Annotations
+		#region RoleId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-		#endregion RolePermissionId Annotations
+		#endregion RoleId Annotations
 
-        public int RolePermissionId { get; set; }
+        public int RoleId { get; set; }
+
+
+        public int ApplicationModuleId { get; set; }
 
 
         public Nullable<bool> CanView { get; set; }
@@ -34,13 +37,10 @@ namespace PGManagement.Models.Main
         public int PermissionPriority { get; set; }
 
 
-        public int ApplicationModuleId { get; set; }
-
-
         public string ApplicationModuleName { get; set; }
 
 
-        public int RoleId { get; set; }
+        public int RolePermissionId { get; set; }
 
 
         public vRolePermission()
