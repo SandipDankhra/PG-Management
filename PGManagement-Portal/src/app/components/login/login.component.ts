@@ -39,7 +39,7 @@ export class LoginComponent extends CoreComponent implements OnInit {
     ngOnInit(): void {
         console.log("hello");
         this.applicationBroadcaster.activeMenu(true);
-        var auth = this.browserStorage.local.get('auth');
+        var auth = this.browserStorage.local.get('auth',false);
         if (auth) {
             this.router.navigate(["/complaints"]);
         }
@@ -51,20 +51,12 @@ export class LoginComponent extends CoreComponent implements OnInit {
             email: [''],
             password: ['']
         })
-        // this.http.get({ hostUri: 'https://localhost:44352', path: 'api/Authentication' }).subscribe(t => {
-        //     // this.browserStorage.local.save('Authentication', t);
-        //     document.cookie = "requestContext='abc'";
-        //     this.browserStorage.local.save('auth', t);
-        //     console.log(t);
-        // })
+
 
     }
     login() {
-        // console.log(this.browserStorage.local.get('auth'));
-        // this.http.post({ hostUri: 'https://localhost:44352', path: 'api/Authentication', body: { email: this.loginFormGroup.controls.email.value, password: this.loginFormGroup.controls.password.value } }).subscribe(t => {
-        //     console.log(t);
-        // })
-    
+
+
         this.loginService.login(this.loginFormGroup.value).subscribe(response => {
             console.log(this.loginFormGroup.value);
             if (response.failedLogin) {
@@ -73,17 +65,16 @@ export class LoginComponent extends CoreComponent implements OnInit {
             else {
                 // this.showComponent = false;
                 document.cookie = "requestContext='abc'";
-                this.browserStorage.local.save('auth', response);
-                this.browserStorage.local.save('x-request', response.key);
-                this.browserStorage.local.save('userName', response.fullName);
-                this.browserStorage.local.save('userEmail', response.emailId);
-                this.browserStorage.local.save('lcode', response.languageCode);
-                this.browserStorage.local.save('userId', response.userId);
+                this.browserStorage.local.save('auth', response,false);
+                // this.browserStorage.local.save('x-request', response.key);
+                // this.browserStorage.local.save('userName', response.fullName);
+                // this.browserStorage.local.save('userEmail', response.emailId);
+                // this.browserStorage.local.save('lcode', response.languageCode);
+                // this.browserStorage.local.save('userId', response.userId);
                 this.router.navigate(["dashboard"]);
                 location.reload();
             }
-            // this.spin = false;
-            // this.routers.navigate(["/users"]);
+
         })
 
     }

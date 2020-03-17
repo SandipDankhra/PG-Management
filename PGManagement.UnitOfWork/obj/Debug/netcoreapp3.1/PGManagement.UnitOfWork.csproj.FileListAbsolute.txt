@@ -50,3 +50,16 @@ D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\P
 D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.csproj.CopyComplete
 D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
 D:\Radix\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.deps.json
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.csprojAssemblyReference.cache
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.AssemblyInfoInputs.cache
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.AssemblyInfo.cs
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.csproj.CopyComplete
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
+D:\Rx Project\project\PG-Management\PGManagement.UnitOfWork\obj\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb

@@ -27,11 +27,11 @@ namespace PGManagement.Domain.MasterModule
             //throw new NotImplementedException();
         }
 
-        public  Task<object> GetBy(CreateBookBed parameters)
+        public async Task<object> GetBy(CreateBookBed parameters)
         {
-           // return await Uow.Repository<BookBed>().SingleOrDefaultAsync(a => a.BookBedId == parameters.BookBedId);
-            //  return await Uow.Repository<BookBed>().FindByAsync(t=>t.BookBedId==parameters.BookBedId);
-             throw new NotImplementedException();
+              return await Uow.Repository<vBookBed>().FindByAsync(t=>t.UserId==parameters.UserId);
+              //return await Uow.Repository<vBookBed>().FirstOrDefaultAsync(t=>t.UserId==parameters.UserId);
+            //throw new NotImplementedException();
         }
 
 

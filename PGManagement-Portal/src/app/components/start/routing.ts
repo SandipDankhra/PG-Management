@@ -5,7 +5,7 @@ import { RegistrationAddComponent } from '../user/registration/add/registration-
 import { DashboardComponent } from '../master/dashboard/dashboard.component';
 var routings = [
 	{
-		path: '', redirectTo: 'client-index', pathMatch: 'full',
+		path: '', redirectTo: 'rental/edit', pathMatch: 'full',
 	},
 	{
 		path: 'dashboard', component: DashboardComponent
@@ -14,6 +14,7 @@ var routings = [
 		path: "login",
 		loadChildren: () => import("../login/login.module").then(m => m.LoginModule),
 	},
+
 	{
 		path: "client-index",
 		component: ClientIndexComponent
@@ -26,6 +27,7 @@ var routings = [
 		path: "clientlogin",
 		loadChildren: () => import("../user/clientlogin/clientlogin.module").then(m => m.clientLoginModule),
 	},
+
 
 	{
 		path: "change-password",

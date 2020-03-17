@@ -30,7 +30,7 @@ namespace PGManagement.Infrastructure.Security
         }
         public async Task<string> GetTokenAsync(vUser user)
         {
-            var expirationTime = user.UserId == 0 ? DateTime.UtcNow.AddDays(1) : DateTime.UtcNow.AddMinutes(30);
+            var expirationTime = user.UserId == 0 ? DateTime.UtcNow.AddDays(1) : DateTime.UtcNow.AddDays(1);
             var token = TokenProvider.WriteToken(new[]{
                 new Claim(
                     ClaimTypes.NameIdentifier, user.UserId.ToString()),

@@ -66,3 +66,20 @@ D:\Radix\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGMan
 D:\Radix\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
 D:\Radix\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Infrastructure.pdb
 D:\Radix\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.csproj.CopyComplete
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Domain.deps.json
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Domain.dll
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Domain.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.dll
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Infrastructure.dll
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Models.dll
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.dll
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.BoundedContext.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.UnitOfWork.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Models.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Domain\bin\Debug\netcoreapp3.1\PGManagement.Infrastructure.pdb
+D:\Rx Project\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.csprojAssemblyReference.cache
+D:\Rx Project\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.AssemblyInfoInputs.cache
+D:\Rx Project\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.AssemblyInfo.cs
+D:\Rx Project\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.csproj.CopyComplete
+D:\Rx Project\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.dll
+D:\Rx Project\project\PG-Management\PGManagement.Domain\obj\Debug\netcoreapp3.1\PGManagement.Domain.pdb

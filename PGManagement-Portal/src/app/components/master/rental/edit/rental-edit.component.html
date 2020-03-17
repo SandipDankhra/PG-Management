@@ -1,114 +1,185 @@
-<h1>Rental EDIT</h1>
+ <section class="content">
+  <div class="container-fluid" *ngIf="isLoad">
+    <div class="row">
+      <div class="col-md-3">
 
-<section class="content">
-	<div class="container-fluid">
-		<div class="row" *ngIf="show">
-			<div class="col-md-9" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto;">
+        <!-- Profile Image -->
+        <div class="card card-primary card-outline">
+          <div class="card-body box-profile">
+            <div class="text-center">
+              <img class="profile-user-img img-fluid img-circle"
+                src="assets/client/img/avatar5.png"
+                alt="User profile picture">
+            </div>
+            <h3 class="profile-username text-center">{{rentalRecord.firstName +
+              ' ' + rentalRecord.lastName}}</h3>
 
-				<!-- Profile Image -->
-				<div class="card card-primary card-outline">
-					<div class="card-body box-profile">
-						<div class="text-center">
-							<img class="profile-user-img img-fluid img-circle"
-								src="../../../../../assets/dist/img/avatar.png" alt="User profile picture">
-						</div>
-						<h3 class="profile-username text-center">{{vrental.firstName + ' ' + vrental.lastName}}</h3>
-						<p class="text-muted text-center">{{vrental.roleName}}</p>
+            <!-- <p class="text-muted text-center">Software Engineer</p> -->
 
-						<ul class="list-group list-group-unbordered mb-3">
-							<li class="list-group-item">
-								<b>Rental Type</b> <a class="float-right">{{vrental.rentalType}}</a>
-							</li>
-							<li class="list-group-item">
-								<b>Email</b> <a class="float-right">{{vrental.email}}</a>
-							</li>
-							<li class="list-group-item">
-								<b>Address</b> <a class="float-right">{{vrental.address}}</a>
-							</li>
+            <ul class="list-group list-group-unbordered mb-3">
+              <li class="list-group-item">
+                <!-- <b>User Type :</b> <a class="float-right" *ngFor="let key of rentalkey" >{{key.rentalType}}</a> -->
+                <b>User Type :</b>
+                <span class="float-right">{{rentalTypeEnum[rentalRecord.rentalType]}}</span>
+                <!-- <a class="float-right" *ngIf="rentalRecord.rentalType == 12">Student</a>
+                <a class="float-right" *ngIf="rentalRecord.rentalType == 13">Job</a> -->
+              </li>
+              <li class="list-group-item">
+                <b>Email :</b> <a class="float-right">{{rentalRecord.email}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Mobile Number :</b> <a class="float-right">{{rentalRecord.mobileNumber}}</a>
+              </li>
+            </ul>
 
-							<li class="list-group-item">
-								<b>Flat Number</b> <a class="float-right">{{vrental.flatNumber}}</a>
-							</li>
-							<li class="list-group-item">
-								<b>Room Number</b> <a class="float-right">{{vrental.roomNumber}}</a>
-							</li>
-							<li class="list-group-item">
-								<b>Bed Number</b> <a class="float-right">{{vrental.bedNumber}}</a>
-							</li>
-
-							<li class="list-group-item">
-								<b>Payment</b> <a class="float-right">{{vrental.paymentAmount}}</a>
-							</li>
-							<li class="list-group-item">
-								<b>Room Number</b> <a class="float-right">{{vrental.roomNumber}}</a>
-							</li>
+            <!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
 
 
+      </div>
+      <!-- /.col -->
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header p-2">
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" href="#settings"
+                  data-toggle="tab">Profile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#activity"
+                  data-toggle="tab">Documents</a></li>
+              <li class="nav-item"><a class="nav-link" href="#timeline"
+                  data-toggle="tab">Change Password</a></li>
 
+            </ul>
+          </div><!-- /.card-header -->
+          <div class="card-body">
+            <div class="tab-content">
+              <!-- /.tab-pane -->
+              <div class="active tab-pane" id="settings">
+                <div class="row-12">
+                  <div class="col-12">
+                    <label class="col-2" for="">FirstName : </label>
+                    <label class="col-4" for="">{{rentalRecord.firstName}}</label>
+                    <label class="col-2" for="">LastName : </label>
+                    <label class="col-4" for="">{{rentalRecord.lastName}}</label>
+                  </div>
+                </div>
+                <br>
+                <!-- <div class="row-12">
+                  <div class="col-12">
+                    <label class="col-2" for="">Address : </label>
+                    <label class="col-8" for=""></label>
+                  </div>
+                </div>
+                <br> -->
+                <div *ngFor="let rentalBookBed of rentalBookBeds">
+                  <div class="row-12">
+                    <div class="col-12">
+                      <label class="col-2" for="">FlatNumber : </label>
+                      <label class="col-4" for="">{{rentalBookBed.flatNumber}}</label>
+                      <label class="col-2" for="">FlatName : </label>
+                      <label class="col-4" for="">{{rentalBookBed.flatName}}</label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row-12">
+                    <div class="col-12">
+                      <label class="col-2" for="">RoomNumber : </label>
+                      <label class="col-4" for="">{{rentalBookBed.roomSharing}}</label>
+                      <label class="col-2" for="">BedNumber : </label>
+                      <label class="col-4" for="">{{rentalBookBed.bedId}}</label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row-12">
+                    <div class="col-12">
+                      <label class="col-2" for="">StartDate : </label>
+                      <label class="col-4" for="">{{rentalBookBed.startDate |
+                        date}}</label>
+                      <label class="col-2" for="">EndDate : </label>
+                      <label class="col-4" for="">{{rentalBookBed.endDate |
+                        date}}</label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row-12">
+                    <div class="col-12">
+                      <label class="col-2" for="">PaymentType : </label>
+                      <!-- <label class="col-4" for="">{{rentalBookBed.paymentTypeId}}</label> -->
+                      <label class="col-4" for="">{{paymentTypeEnum[rentalBookBed.paymentTypeId]}}</label>
+                      <label class="col-2" for="">PaymentAmount : </label>
+                      <label class="col-4" for="">{{rentalBookBed.paymentAmount}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="activity">
+                <!-- Post -->
+                <div class="post">
+                  <div class="row mb-3">
+                    <div class="col-sm-6">
+                      <img class="img-fluid" src="assets/client/img/photo1.png"
+                        alt="Photo">
+                    </div>
+                    <div class="col-sm-6">
+                      <img class="img-fluid" src="assets/client/img/photo1.png"
+                        alt="Photo">
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.post -->
+              </div>
 
-							<li class="list-group-item">
-								<b>Duration</b>
-							</li>
-							<li class="list-group-item">
-								<b>Start Date</b> <a class="float-right">{{vrental.startDate}}</a>
-							</li>
-							<li class="list-group-item">
-								<b>End Date</b> <a class="float-right">{{vrental.endDate}}</a>
-							</li>
-						</ul>
+              <div class="tab-pane" id="timeline">
+                <!-- The timeline -->
+                <form class="form-horizontal">
+                  <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label">Old
+                      Password :</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName"
+                        placeholder="Enter old Password" formControlName="">
+                    </div>
+                  </div>
 
-						<!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
-					</div>
-					<!-- /.card-body -->
-				</div>
-				<!-- /.card -->
+                  <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label">New
+                      Passowrd :</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName"
+                        placeholder="Enter new Password">
+                    </div>
+                  </div>
 
-				<!-- About Me Box -->
-				<div class="card card-primary">
-					<div class="card-header">
-						<h3 class="card-title">About Me</h3>
-					</div>
-					<!-- /.card-header -->
-					<div class="card-body">
-						<strong><i class="fas fa-book mr-1"></i> Education</strong>
-
-						<p class="text-muted">
-							B.S. in Computer Science from the University of Tennessee at Knoxville
-						</p>
-
-						<hr>
-
-						<strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-
-						<p class="text-muted">Malibu, California</p>
-
-						<hr>
-
-						<strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
-
-						<p class="text-muted">
-							<span class="tag tag-danger">UI Design</span>
-							<span class="tag tag-success">Coding</span>
-							<span class="tag tag-info">Javascript</span>
-							<span class="tag tag-warning">PHP</span>
-							<span class="tag tag-primary">Node.js</span>
-						</p>
-
-						<hr>
-
-						<strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
-
-						<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum
-							enim neque.</p>
-					</div>
-					<!-- /.card-body -->
-				</div>
-				<!-- /.card -->
-			</div>
-			<!-- /.col -->
-
-			<!-- /.col -->
-		</div>
-		<!-- /.row -->
-	</div><!-- /.container-fluid -->
+                  <div class="form-group row">
+                    <label for="inputName2" class="col-sm-2 col-form-label">Confirm
+                      Password : </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputName2"
+                        placeholder="ReEnter New Passowrd">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                      <button type="submit" class="btn btn-success">Change
+                        Passowrd</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div><!-- /.card-body -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
 </section>

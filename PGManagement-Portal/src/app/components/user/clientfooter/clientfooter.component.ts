@@ -28,16 +28,7 @@ export class clientfooterComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        var auth = this.browserStorage.local.get('auth');
-        if (auth) {
-            this.isLogin = false;
-        }
-    }
-
-    onLogout() {
-        this.browserStorage.local.clearAll();
-        location.reload();
-    }
+     }
 
 
     ngOnDestroy(): void {
